@@ -1,0 +1,37 @@
+1.0195 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'PTB', 'pyo', 'pygame'] (in that order).
+10.1779 	WARNING 	User requested fullscreen with size [1024  768], but screen is actually [1366, 768]. Using actual size
+12.4221 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, args=UNKNOWN, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0., 0., 0.]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000016B5466E630>, gamma=None, gammaErrorPolicy='raise', kwargs=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x0000016B5450B6A0>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([1366,  768]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+12.4226 	EXP 	window1: mouseVisible = True
+12.4227 	EXP 	window1: recordFrameIntervals = False
+12.5844 	EXP 	window1: recordFrameIntervals = True
+12.7679 	EXP 	window1: recordFrameIntervals = False
+13.2081 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='0.28221067157774704', units='height', win=Window(...), wrapWidth=1)
+13.3193 	EXP 	Sound sound_3 set volume 1.000
+13.3195 	EXP 	Sound Sonido set volume 1.000
+13.3283 	EXP 	Created image_2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_2', opacity=1.0, ori=0.0, pos=array([0. , 0.2]), size=array([0.5, 0.5]), texRes=128, units='height', win=Window(...))
+13.3470 	EXP 	window1: mouseVisible = True
+13.3877 	EXP 	Created slider_2 = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, color='LightGray', depth=0, flip=False, font='HelveticaBold', granularity=0, labelHeight=0.05, labelWrapWidth=None, labels=('0', '1000', '2000', '3000', '4000', '5000'), name='slider_2', pos=(0, -0.3), readOnly=False, self=UNKNOWN, size=(1.0, 0.05), style=method-wrapper(...), ticks=array([1, 2, 3, 4, 5, 6]), units='height', win=Window(...))
+13.4249 	EXP 	slider_2: autoLog = True
+13.4249 	EXP 	slider_2: markerPos = None
+13.4249 	EXP 	slider_2: rating = None
+13.4249 	EXP 	slider_2: markerPos = None
+13.4249 	EXP 	slider_2: contrast = 1.0
+13.4249 	EXP 	slider_2: autoLog = True
+13.4249 	EXP 	slider_2: style = ['rating']
+13.4249 	EXP 	text: autoDraw = True
+14.4394 	EXP 	text: autoDraw = False
+24.6123 	EXP 	Imported ruidos.xlsx as conditions, 4 conditions, 2 params
+24.6146 	EXP 	Created sequence: random, trialTypes=4, nReps=1, seed=None
+24.6150 	EXP 	New trial (rep=0, index=0): OrderedDict([('Hertz', 1000), ('volumen', 0.02)])
+24.6221 	EXP 	Imported imagenes.xlsx as conditions, 20 conditions, 3 params
+24.6223 	EXP 	Created sequence: random, trialTypes=20, nReps=1, seed=None
+24.6226 	EXP 	New trial (rep=0, index=0): OrderedDict([('Imagenes', 'imagenes\\Manzana.jpg'), ('Random', 0.5168162194437935), ('Correcto', None)])
+24.6587 	EXP 	image_2: image = 'imagenes\\Manzana.jpg'
+24.6587 	EXP 	slider_2: markerPos = None
+24.6587 	EXP 	slider_2: markerPos = None
+24.6587 	EXP 	slider_2: rating = None
+26.6696 	EXP 	image_2: autoDraw = True
+26.6696 	EXP 	slider_2: autoDraw = True
+27.6362 	DATA 	Keypress: escape
+28.0194 	DATA 	Keypress: escape
+28.3577 	EXP 	window1: mouseVisible = True
