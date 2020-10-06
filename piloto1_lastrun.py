@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.2.3),
-    on octubre 06, 2020, at 12:13
+    on octubre 06, 2020, at 12:23
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -346,6 +346,7 @@ for thisTrial in trials:
 continueRoutine = True
 routineTimer.add(3.000000)
 # update component parameters for each repeat
+import random
 n_precio_aleatorio = random.random()
 n_precio_sujeto=random.random()
 precio_aleatorio= round(n_precio_aleatorio*5000)
