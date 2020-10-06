@@ -135,7 +135,7 @@ function experimentInit() {
     flip: false,
   });
   
-  var nuestro_slider = [];
+  const nuestro_slider = [];
   
   // Initialize components for Routine "Pago1"
   Pago1Clock = new util.Clock();
