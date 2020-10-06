@@ -88,6 +88,7 @@ function updateInfo() {
 
 
 var InstruccionesClock;
+var sound_3;
 var graveClock;
 var Sonido;
 var image_2;
@@ -101,6 +102,12 @@ var routineTimer;
 function experimentInit() {
   // Initialize components for Routine "Instrucciones"
   InstruccionesClock = new util.Clock();
+  sound_3 = new sound.Sound({
+    win: psychoJS.window,
+    value: 'instr.ogg',
+    secs: (- 1),
+    });
+  sound_3.setVolume(1);
   // Initialize components for Routine "grave"
   graveClock = new util.Clock();
   Sonido = new sound.Sound({
@@ -174,8 +181,10 @@ function InstruccionesRoutineBegin(snapshot) {
     InstruccionesClock.reset(); // clock
     frameN = -1;
     // update component parameters for each repeat
+    sound_3.setVolume(1);
     // keep track of which components have finished
     InstruccionesComponents = [];
+    InstruccionesComponents.push(sound_3);
     
     for (const thisComponent of InstruccionesComponents)
       if ('status' in thisComponent)
@@ -195,6 +204,19 @@ function InstruccionesRoutineEachFrame(snapshot) {
     t = InstruccionesClock.getTime();
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
+    // start/stop sound_3
+    if (t >= 0.0 && sound_3.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      sound_3.tStart = t;  // (not accounting for frame time here)
+      sound_3.frameNStart = frameN;  // exact frame index
+      
+      psychoJS.window.callOnFlip(function(){ sound_3.play(); });  // screen flip
+      sound_3.status = PsychoJS.Status.STARTED;
+    }
+    if (t >= (sound_3.getDuration() + sound_3.tStart)     && sound_3.status === PsychoJS.Status.STARTED) {
+      sound_3.stop();  // stop the sound (if longer than duration)
+      sound_3.status = PsychoJS.Status.FINISHED;
+    }
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
       return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
@@ -230,6 +252,7 @@ function InstruccionesRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
+    sound_3.stop();  // ensure sound has stopped at end of routine
     // the Routine "Instrucciones" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
