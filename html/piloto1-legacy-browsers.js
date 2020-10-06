@@ -452,8 +452,6 @@ function graveRoutineEnd(snapshot) {
     Sonido.stop();  // ensure sound has stopped at end of routine
     psychoJS.experiment.addData('slider_2.response', slider_2.getRating());
     psychoJS.experiment.addData('slider_2.rt', slider_2.getRT());
-    nuestro_slider.push(slider_2.getRating());
-    
     return Scheduler.Event.NEXT;
   };
 }
