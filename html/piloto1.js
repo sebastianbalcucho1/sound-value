@@ -65,6 +65,8 @@ psychoJS.start({
   expInfo: expInfo,
   });
 
+
+var frameDur;
 function updateInfo() {
   expInfo['date'] = util.MonotonicClock.getDateStr();  // add a simple timestamp
   expInfo['expName'] = expName;
@@ -84,6 +86,18 @@ function updateInfo() {
   return Scheduler.Event.NEXT;
 }
 
+
+var InstruccionesClock;
+var graveClock;
+var Sonido;
+var image_2;
+var slider_2;
+var Pago1Clock;
+var text;
+var Pago2Clock;
+var text_4;
+var globalClock;
+var routineTimer;
 function experimentInit() {
   // Initialize components for Routine "Instrucciones"
   InstruccionesClock = new util.Clock();
@@ -149,6 +163,10 @@ function experimentInit() {
   return Scheduler.Event.NEXT;
 }
 
+
+var t;
+var frameN;
+var InstruccionesComponents;
 function InstruccionesRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Instrucciones'-------
@@ -167,6 +185,8 @@ function InstruccionesRoutineBegin(snapshot) {
   };
 }
 
+
+var continueRoutine;
 function InstruccionesRoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'Instrucciones'-------
@@ -201,6 +221,7 @@ function InstruccionesRoutineEachFrame(snapshot) {
   };
 }
 
+
 function InstruccionesRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Instrucciones'-------
@@ -216,6 +237,9 @@ function InstruccionesRoutineEnd(snapshot) {
   };
 }
 
+
+var trials;
+var currentLoop;
 function trialsLoopBegin(trialsLoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   trials = new TrialHandler({
@@ -242,6 +266,8 @@ function trialsLoopBegin(trialsLoopScheduler) {
   return Scheduler.Event.NEXT;
 }
 
+
+var trials_2;
 function trials_2LoopBegin(trials_2LoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   trials_2 = new TrialHandler({
@@ -267,11 +293,13 @@ function trials_2LoopBegin(trials_2LoopScheduler) {
   return Scheduler.Event.NEXT;
 }
 
+
 function trials_2LoopEnd() {
   psychoJS.experiment.removeLoop(trials_2);
 
   return Scheduler.Event.NEXT;
 }
+
 
 function trialsLoopEnd() {
   psychoJS.experiment.removeLoop(trials);
@@ -279,6 +307,8 @@ function trialsLoopEnd() {
   return Scheduler.Event.NEXT;
 }
 
+
+var graveComponents;
 function graveRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'grave'-------
@@ -310,6 +340,8 @@ function graveRoutineBegin(snapshot) {
   };
 }
 
+
+var frameRemains;
 function graveRoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'grave'-------
@@ -391,6 +423,7 @@ function graveRoutineEachFrame(snapshot) {
   };
 }
 
+
 function graveRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'grave'-------
@@ -408,6 +441,15 @@ function graveRoutineEnd(snapshot) {
   };
 }
 
+
+var n_precio_aleatorio;
+var n_precio_sujeto;
+var precio_aleatorio;
+var mensaje_precio_aleatorio;
+var precio_sujeto_pos;
+var precio_sujeto;
+var mensaje_precio_sujeto;
+var Pago1Components;
 function Pago1RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Pago1'-------
@@ -416,10 +458,9 @@ function Pago1RoutineBegin(snapshot) {
     frameN = -1;
     routineTimer.add(3.000000);
     // update component parameters for each repeat
-    import * as random from 'random';
     var mensaje_precio_aleatorio, mensaje_precio_sujeto, n_precio_aleatorio, n_precio_sujeto, precio_aleatorio, precio_sujeto, precio_sujeto_pos;
-    n_precio_aleatorio = random.random();
-    n_precio_sujeto = random.random();
+    n_precio_aleatorio = Math.random();
+    n_precio_sujeto = Math.random();
     precio_aleatorio = Math.round((n_precio_aleatorio * 5000));
     mensaje_precio_aleatorio = `El número aleatorio es ${precio_aleatorio}.`;
     precio_sujeto_pos = Math.round((n_precio_sujeto * nuestro_slider.length));
@@ -438,6 +479,7 @@ function Pago1RoutineBegin(snapshot) {
     return Scheduler.Event.NEXT;
   };
 }
+
 
 function Pago1RoutineEachFrame(snapshot) {
   return function () {
@@ -487,6 +529,7 @@ function Pago1RoutineEachFrame(snapshot) {
   };
 }
 
+
 function Pago1RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Pago1'-------
@@ -499,6 +542,8 @@ function Pago1RoutineEnd(snapshot) {
   };
 }
 
+
+var Pago2Components;
 function Pago2RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Pago2'-------
@@ -519,6 +564,7 @@ function Pago2RoutineBegin(snapshot) {
     return Scheduler.Event.NEXT;
   };
 }
+
 
 function Pago2RoutineEachFrame(snapshot) {
   return function () {
@@ -568,6 +614,7 @@ function Pago2RoutineEachFrame(snapshot) {
   };
 }
 
+
 function Pago2RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Pago2'-------
@@ -579,6 +626,7 @@ function Pago2RoutineEnd(snapshot) {
     return Scheduler.Event.NEXT;
   };
 }
+
 
 function endLoopIteration(scheduler, snapshot) {
   // ------Prepare for next entry------
@@ -602,12 +650,14 @@ function endLoopIteration(scheduler, snapshot) {
   };
 }
 
+
 function importConditions(currentLoop) {
   return function () {
     psychoJS.importAttributes(currentLoop.getCurrentTrial());
     return Scheduler.Event.NEXT;
     };
 }
+
 
 function quitPsychoJS(message, isCompleted) {
   // Check for and save orphaned data

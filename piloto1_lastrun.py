@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.2.3),
-    on octubre 06, 2020, at 11:47
+    on octubre 06, 2020, at 12:13
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -85,7 +85,7 @@ InstruccionesClock = core.Clock()
 
 # Initialize components for Routine "grave"
 graveClock = core.Clock()
-Sonido = sound.Sound('A', secs=0.001, stereo=True, hamming=True,
+Sonido = sound.Sound('A', secs=2, stereo=True, hamming=True,
     name='Sonido')
 Sonido.setVolume(1.0)
 image_2 = visual.ImageStim(
@@ -219,9 +219,9 @@ for thisTrial in trials:
         
         # ------Prepare to start Routine "grave"-------
         continueRoutine = True
-        routineTimer.add(1.000000)
+        routineTimer.add(10.000000)
         # update component parameters for each repeat
-        Sonido.setSound(Hertz, secs=0.001, hamming=True)
+        Sonido.setSound(Hertz, secs=2, hamming=True)
         Sonido.setVolume(volumen, log=False)
         image_2.setImage(Imagenes)
         slider_2.reset()
@@ -257,7 +257,7 @@ for thisTrial in trials:
                 Sonido.play(when=win)  # sync with win flip
             if Sonido.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > Sonido.tStartRefresh + 0.001-frameTolerance:
+                if tThisFlipGlobal > Sonido.tStartRefresh + 2-frameTolerance:
                     # keep track of stop time/frame for later
                     Sonido.tStop = t  # not accounting for scr refresh
                     Sonido.frameNStop = frameN  # exact frame index
@@ -265,7 +265,7 @@ for thisTrial in trials:
                     Sonido.stop()
             
             # *image_2* updates
-            if image_2.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+            if image_2.status == NOT_STARTED and tThisFlip >= 2-frameTolerance:
                 # keep track of start time/frame for later
                 image_2.frameNStart = frameN  # exact frame index
                 image_2.tStart = t  # local t and not account for scr refresh
@@ -274,7 +274,7 @@ for thisTrial in trials:
                 image_2.setAutoDraw(True)
             if image_2.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > image_2.tStartRefresh + 1-frameTolerance:
+                if tThisFlipGlobal > image_2.tStartRefresh + 8-frameTolerance:
                     # keep track of stop time/frame for later
                     image_2.tStop = t  # not accounting for scr refresh
                     image_2.frameNStop = frameN  # exact frame index
@@ -282,7 +282,7 @@ for thisTrial in trials:
                     image_2.setAutoDraw(False)
             
             # *slider_2* updates
-            if slider_2.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+            if slider_2.status == NOT_STARTED and tThisFlip >= 2-frameTolerance:
                 # keep track of start time/frame for later
                 slider_2.frameNStart = frameN  # exact frame index
                 slider_2.tStart = t  # local t and not account for scr refresh
@@ -291,7 +291,7 @@ for thisTrial in trials:
                 slider_2.setAutoDraw(True)
             if slider_2.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > slider_2.tStartRefresh + 1-frameTolerance:
+                if tThisFlipGlobal > slider_2.tStartRefresh + 8-frameTolerance:
                     # keep track of stop time/frame for later
                     slider_2.tStop = t  # not accounting for scr refresh
                     slider_2.frameNStop = frameN  # exact frame index
@@ -346,13 +346,12 @@ for thisTrial in trials:
 continueRoutine = True
 routineTimer.add(3.000000)
 # update component parameters for each repeat
-import random
 n_precio_aleatorio = random.random()
 n_precio_sujeto=random.random()
 precio_aleatorio= round(n_precio_aleatorio*5000)
 mensaje_precio_aleatorio = f"El número aleatorio es {precio_aleatorio}."
 precio_sujeto_pos=round(n_precio_sujeto*len(nuestro_slider))
-precio_sujeto=round(nuestro_slider[precio_sujeto_pos]*1000)
+precio_sujeto=int(round(nuestro_slider[precio_sujeto_pos]*1000))
 mensaje_precio_sujeto = f"El precio seleccionado aleatoriamente es {precio_sujeto}."
 text.setText(mensaje_precio_aleatorio)
 # keep track of which components have finished
