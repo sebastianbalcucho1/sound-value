@@ -461,12 +461,8 @@ function graveRoutineEnd(snapshot) {
 
 
 var n_precio_aleatorio;
-var n_precio_sujeto;
 var precio_aleatorio;
 var mensaje_precio_aleatorio;
-var precio_sujeto_pos;
-var precio_sujeto;
-var mensaje_precio_sujeto;
 var Pago1Components;
 function Pago1RoutineBegin(snapshot) {
   return function () {
@@ -478,12 +474,8 @@ function Pago1RoutineBegin(snapshot) {
     // update component parameters for each repeat
     var mensaje_precio_aleatorio, mensaje_precio_sujeto, n_precio_aleatorio, n_precio_sujeto, precio_aleatorio, precio_sujeto, precio_sujeto_pos;
     n_precio_aleatorio = Math.random();
-    n_precio_sujeto = Math.random();
     precio_aleatorio = Math.round((n_precio_aleatorio * 5000));
     mensaje_precio_aleatorio = `El número aleatorio es ${precio_aleatorio}.`;
-    precio_sujeto_pos = Math.round((n_precio_sujeto * nuestro_slider.length));
-    precio_sujeto = Number.parseInt(Math.round((nuestro_slider[precio_sujeto_pos] * 1000)));
-    mensaje_precio_sujeto = `El precio seleccionado aleatoriamente es ${precio_sujeto}.`;
     
     text.setText(mensaje_precio_aleatorio);
     // keep track of which components have finished
@@ -562,6 +554,10 @@ function Pago1RoutineEnd(snapshot) {
 }
 
 
+var n_precio_sujeto;
+var precio_sujeto_pos;
+var precio_sujeto;
+var mensaje_precio_sujeto;
 var Pago2Components;
 function Pago2RoutineBegin(snapshot) {
   return function () {
@@ -572,6 +568,12 @@ function Pago2RoutineBegin(snapshot) {
     routineTimer.add(3.000000);
     // update component parameters for each repeat
     text_4.setText(mensaje_precio_sujeto);
+    var mensaje_precio_sujeto, n_precio_sujeto, precio_sujeto, precio_sujeto_pos;
+    n_precio_sujeto = Math.random();
+    precio_sujeto_pos = Math.round((n_precio_sujeto * nuestro_slider.length));
+    precio_sujeto = Number.parseInt(Math.round((nuestro_slider[precio_sujeto_pos] * 1000)));
+    mensaje_precio_sujeto = `El precio seleccionado aleatoriamente es ${precio_sujeto}.`;
+    
     // keep track of which components have finished
     Pago2Components = [];
     Pago2Components.push(text_4);
@@ -684,6 +686,8 @@ function quitPsychoJS(message, isCompleted) {
   if (psychoJS.experiment.isEntryEmpty()) {
     psychoJS.experiment.nextEntry();
   }
+  
+  
   
   
   
