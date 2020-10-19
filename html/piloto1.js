@@ -573,7 +573,7 @@ function Pago2RoutineBegin(snapshot) {
     routineTimer.add(3.000000);
     // update component parameters for each repeat
     text_4.setText(mensaje_precio_sujeto);
-    var mensaje_precio_sujeto, n_precio_sujeto, precio_sujeto, precio_sujeto_pos;
+    var mensaje_precio_sujeto, n_precio_sujeto, precio_sujeto, precio_sujeto_pos, nuestro_slider;
     n_precio_sujeto = Math.random();
     precio_sujeto_pos = Math.round((n_precio_sujeto * nuestro_slider.length));
     precio_sujeto = Number.parseInt(Math.round((nuestro_slider[precio_sujeto_pos] * 1000)));
