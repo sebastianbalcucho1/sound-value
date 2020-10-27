@@ -152,7 +152,7 @@ function experimentInit() {
     units: undefined, 
     pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
-    depth: 0.0 
+    depth: -1.0 
   });
   
   // Create some handy timers
@@ -568,13 +568,12 @@ function Pago2RoutineBegin(snapshot) {
     frameN = -1;
     routineTimer.add(3.000000);
     // update component parameters for each repeat
-    text_4.setText(mensaje_precio_sujeto);
     var mensaje_precio_sujeto, n_precio_sujeto, precio_sujeto, precio_sujeto_pos;
     n_precio_sujeto = Math.random();
     precio_sujeto_pos = Math.round((n_precio_sujeto * nuestro_slider.length));
     precio_sujeto = Number.parseInt(Math.round((nuestro_slider[precio_sujeto_pos] * 1000)));
     mensaje_precio_sujeto = `El precio seleccionado aleatoriamente es ${precio_sujeto}.`;
-    
+    text_4.setText(mensaje_precio_sujeto);
     // keep track of which components have finished
     Pago2Components = [];
     Pago2Components.push(text_4);
