@@ -55,6 +55,12 @@ flowScheduler.add(Pago1RoutineEnd());
 flowScheduler.add(Pago2RoutineBegin());
 flowScheduler.add(Pago2RoutineEachFrame());
 flowScheduler.add(Pago2RoutineEnd());
+flowScheduler.add(ProductoRoutineBegin());
+flowScheduler.add(ProductoRoutineEachFrame());
+flowScheduler.add(ProductoRoutineEnd());
+flowScheduler.add(Pago3RoutineBegin());
+flowScheduler.add(Pago3RoutineEachFrame());
+flowScheduler.add(Pago3RoutineEnd());
 flowScheduler.add(quitPsychoJS, '', true);
 
 // quit if user presses Cancel in dialog box:
@@ -93,11 +99,12 @@ var graveClock;
 var Sonido;
 var image_2;
 var slider_2;
-var nuestro_slider;
 var Pago1Clock;
 var text;
 var Pago2Clock;
 var text_4;
+var ProductoClock;
+var Pago3Clock;
 var globalClock;
 var routineTimer;
 function experimentInit() {
@@ -136,8 +143,7 @@ function experimentInit() {
     flip: false,
   });
   
-  var nuestro_slider; 
-  nuestro_slider=[];
+  
   
   // Initialize components for Routine "Pago1"
   Pago1Clock = new util.Clock();
@@ -165,6 +171,10 @@ function experimentInit() {
     depth: -1.0 
   });
   
+  // Initialize components for Routine "Producto"
+  ProductoClock = new util.Clock();
+  // Initialize components for Routine "Pago3"
+  Pago3Clock = new util.Clock();
   // Create some handy timers
   globalClock = new util.Clock();  // to track the time since experiment started
   routineTimer = new util.CountdownTimer();  // to track time remaining of each (non-slip) routine
@@ -654,6 +664,153 @@ function Pago2RoutineEnd(snapshot) {
 }
 
 
+var ProductoComponents;
+function ProductoRoutineBegin(snapshot) {
+  return function () {
+    //------Prepare to start Routine 'Producto'-------
+    t = 0;
+    ProductoClock.reset(); // clock
+    frameN = -1;
+    // update component parameters for each repeat
+    // keep track of which components have finished
+    ProductoComponents = [];
+    
+    for (const thisComponent of ProductoComponents)
+      if ('status' in thisComponent)
+        thisComponent.status = PsychoJS.Status.NOT_STARTED;
+    
+    return Scheduler.Event.NEXT;
+  };
+}
+
+
+function ProductoRoutineEachFrame(snapshot) {
+  return function () {
+    //------Loop for each frame of Routine 'Producto'-------
+    let continueRoutine = true; // until we're told otherwise
+    // get current time
+    t = ProductoClock.getTime();
+    frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
+    // update/draw components on each frame
+    // check for quit (typically the Esc key)
+    if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
+      return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
+    }
+    
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
+    
+    continueRoutine = false;  // reverts to True if at least one component still running
+    for (const thisComponent of ProductoComponents)
+      if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
+        continueRoutine = true;
+        break;
+      }
+    
+    // refresh the screen if continuing
+    if (continueRoutine) {
+      return Scheduler.Event.FLIP_REPEAT;
+    } else {
+      return Scheduler.Event.NEXT;
+    }
+  };
+}
+
+
+function ProductoRoutineEnd(snapshot) {
+  return function () {
+    //------Ending Routine 'Producto'-------
+    for (const thisComponent of ProductoComponents) {
+      if (typeof thisComponent.setAutoDraw === 'function') {
+        thisComponent.setAutoDraw(false);
+      }
+    }
+    // the Routine "Producto" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset();
+    
+    return Scheduler.Event.NEXT;
+  };
+}
+
+
+var mensaje1;
+var Pago3Components;
+function Pago3RoutineBegin(snapshot) {
+  return function () {
+    //------Prepare to start Routine 'Pago3'-------
+    t = 0;
+    Pago3Clock.reset(); // clock
+    frameN = -1;
+    // update component parameters for each repeat
+    if ((precio_sujeto > precio_aleatorio)) {
+        mensaje1 = `Usted ha ganado 20000 pesos + .`;
+    }
+    
+    // keep track of which components have finished
+    Pago3Components = [];
+    
+    for (const thisComponent of Pago3Components)
+      if ('status' in thisComponent)
+        thisComponent.status = PsychoJS.Status.NOT_STARTED;
+    
+    return Scheduler.Event.NEXT;
+  };
+}
+
+
+function Pago3RoutineEachFrame(snapshot) {
+  return function () {
+    //------Loop for each frame of Routine 'Pago3'-------
+    let continueRoutine = true; // until we're told otherwise
+    // get current time
+    t = Pago3Clock.getTime();
+    frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
+    // update/draw components on each frame
+    // check for quit (typically the Esc key)
+    if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
+      return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
+    }
+    
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
+    
+    continueRoutine = false;  // reverts to True if at least one component still running
+    for (const thisComponent of Pago3Components)
+      if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
+        continueRoutine = true;
+        break;
+      }
+    
+    // refresh the screen if continuing
+    if (continueRoutine) {
+      return Scheduler.Event.FLIP_REPEAT;
+    } else {
+      return Scheduler.Event.NEXT;
+    }
+  };
+}
+
+
+function Pago3RoutineEnd(snapshot) {
+  return function () {
+    //------Ending Routine 'Pago3'-------
+    for (const thisComponent of Pago3Components) {
+      if (typeof thisComponent.setAutoDraw === 'function') {
+        thisComponent.setAutoDraw(false);
+      }
+    }
+    // the Routine "Pago3" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset();
+    
+    return Scheduler.Event.NEXT;
+  };
+}
+
+
 function endLoopIteration(scheduler, snapshot) {
   // ------Prepare for next entry------
   return function () {
@@ -690,6 +847,8 @@ function quitPsychoJS(message, isCompleted) {
   if (psychoJS.experiment.isEntryEmpty()) {
     psychoJS.experiment.nextEntry();
   }
+  
+  
   
   
   

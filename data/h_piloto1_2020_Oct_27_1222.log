@@ -1,0 +1,96 @@
+0.7830 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'PTB', 'pyo', 'pygame'] (in that order).
+6.9866 	WARNING 	User requested fullscreen with size [1024  768], but screen is actually [1366, 768]. Using actual size
+8.3854 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, args=UNKNOWN, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0., 0., 0.]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000024521DFD940>, gamma=None, gammaErrorPolicy='raise', kwargs=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x0000024521B1A9B0>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([1366,  768]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+8.3869 	EXP 	window1: mouseVisible = True
+8.3871 	EXP 	window1: recordFrameIntervals = False
+8.5483 	EXP 	window1: recordFrameIntervals = True
+8.7324 	EXP 	window1: recordFrameIntervals = False
+8.9943 	EXP 	Sound sound_3 set volume 1.000
+8.9945 	EXP 	Sound Sonido set volume 1.000
+9.0057 	EXP 	Created image_2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_2', opacity=1.0, ori=0.0, pos=array([0. , 0.2]), size=array([0.5, 0.5]), texRes=128, units='height', win=Window(...))
+9.0238 	EXP 	window1: mouseVisible = True
+9.1225 	EXP 	Created slider_2 = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, color='LightGray', depth=0, flip=False, font='HelveticaBold', granularity=0, labelHeight=0.05, labelWrapWidth=None, labels=('0', '1000', '2000', '3000', '4000', '5000'), name='slider_2', pos=(0, -0.3), readOnly=False, self=UNKNOWN, size=(1.0, 0.05), style=method-wrapper(...), ticks=array([1, 2, 3, 4, 5, 6]), units='height', win=Window(...))
+9.1498 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text', opacity=1.0, ori=0, pos=array([0.  , 0.15]), rgb=array([255., 255., 255.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+9.1520 	EXP 	Created text_4 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_4', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+9.2006 	EXP 	slider_2: autoLog = True
+9.2006 	EXP 	slider_2: markerPos = None
+9.2006 	EXP 	slider_2: rating = None
+9.2006 	EXP 	slider_2: markerPos = None
+9.2006 	EXP 	slider_2: contrast = 1.0
+9.2006 	EXP 	slider_2: autoLog = True
+9.2006 	EXP 	slider_2: style = ['rating']
+19.2557 	EXP 	Imported ruidos.xlsx as conditions, 4 conditions, 2 params
+19.2559 	EXP 	Created sequence: random, trialTypes=4, nReps=1, seed=None
+19.2562 	EXP 	New trial (rep=0, index=0): OrderedDict([('Hertz', 1000), ('volumen', 0.0)])
+19.2625 	EXP 	Imported imagenes.xlsx as conditions, 36 conditions, 3 params
+19.2628 	EXP 	Created sequence: random, trialTypes=36, nReps=1, seed=None
+19.2630 	EXP 	New trial (rep=0, index=0): OrderedDict([('Imagenes', 'imagenes/bon-bon-bun.jpg'), ('Random', 0.7417452724056987), ('Correcto', None)])
+19.3039 	EXP 	image_2: image = 'imagenes/bon-bon-bun.jpg'
+19.3039 	EXP 	slider_2: markerPos = None
+19.3039 	EXP 	slider_2: markerPos = None
+19.3039 	EXP 	slider_2: rating = None
+20.3128 	EXP 	image_2: autoDraw = True
+20.3128 	EXP 	slider_2: autoDraw = True
+21.6035 	DATA 	Mouse: Left button down, pos=(521,149)
+21.6312 	EXP 	slider_2: markerPos = 2.4453125
+21.6476 	EXP 	slider_2: markerPos = 2.4453125
+21.6641 	EXP 	slider_2: markerPos = 2.4453125
+21.6811 	EXP 	slider_2: markerPos = 2.4453125
+21.6975 	EXP 	slider_2: markerPos = 2.4453125
+21.7140 	EXP 	slider_2: markerPos = 2.4453125
+21.7312 	EXP 	slider_2: markerPos = 2.4453125
+21.7374 	DATA 	Mouse:  Left button up, pos=(521,149)
+21.7474 	EXP 	slider_2: markerPos = 2.4453125
+21.7641 	EXP 	slider_2: markerPos = 2.4453125
+21.7641 	EXP 	slider_2: rating = 2.4453125
+21.7688 	EXP 	New trial (rep=0, index=1): OrderedDict([('Imagenes', 'imagenes/Papas-limon.jpg'), ('Random', 0.5280798509093595), ('Correcto', None)])
+21.7903 	EXP 	image_2: autoDraw = False
+21.7903 	EXP 	slider_2: autoDraw = False
+21.7903 	EXP 	image_2: image = 'imagenes/Papas-limon.jpg'
+21.7903 	EXP 	slider_2: markerPos = None
+21.7903 	EXP 	slider_2: markerPos = None
+21.7903 	EXP 	slider_2: rating = None
+22.7813 	EXP 	image_2: autoDraw = True
+22.7813 	EXP 	slider_2: autoDraw = True
+23.3338 	DATA 	Mouse: Left button down, pos=(684,150)
+23.3480 	EXP 	slider_2: markerPos = 3.506510416666667
+23.3641 	EXP 	slider_2: markerPos = 3.506510416666667
+23.3813 	EXP 	slider_2: markerPos = 3.506510416666667
+23.3978 	EXP 	slider_2: markerPos = 3.506510416666667
+23.4140 	EXP 	slider_2: markerPos = 3.506510416666667
+23.4311 	EXP 	slider_2: markerPos = 3.506510416666667
+23.4478 	EXP 	slider_2: markerPos = 3.506510416666667
+23.4521 	DATA 	Mouse:  Left button up, pos=(684,150)
+23.4640 	EXP 	slider_2: markerPos = 3.506510416666667
+23.4811 	EXP 	slider_2: markerPos = 3.506510416666667
+23.4811 	EXP 	slider_2: rating = 3.506510416666667
+23.4836 	EXP 	New trial (rep=0, index=2): OrderedDict([('Imagenes', 'imagenes/Uvas.jpg'), ('Random', 0.4959291644143431), ('Correcto', None)])
+23.5015 	EXP 	image_2: autoDraw = False
+23.5015 	EXP 	slider_2: autoDraw = False
+23.5015 	EXP 	image_2: image = 'imagenes/Uvas.jpg'
+23.5015 	EXP 	slider_2: markerPos = None
+23.5015 	EXP 	slider_2: markerPos = None
+23.5015 	EXP 	slider_2: rating = None
+24.4977 	EXP 	image_2: autoDraw = True
+24.4977 	EXP 	slider_2: autoDraw = True
+24.9338 	DATA 	Mouse: Left button down, pos=(684,151)
+24.9474 	EXP 	slider_2: markerPos = 3.506510416666667
+24.9639 	EXP 	slider_2: markerPos = 3.506510416666667
+24.9810 	EXP 	slider_2: markerPos = 3.506510416666667
+24.9975 	EXP 	slider_2: markerPos = 3.506510416666667
+25.0139 	EXP 	slider_2: markerPos = 3.506510416666667
+25.0311 	EXP 	slider_2: markerPos = 3.506510416666667
+25.0471 	EXP 	slider_2: markerPos = 3.506510416666667
+25.0639 	EXP 	slider_2: markerPos = 3.506510416666667
+25.0666 	DATA 	Mouse:  Left button up, pos=(684,151)
+25.0810 	EXP 	slider_2: markerPos = 3.506510416666667
+25.0810 	EXP 	slider_2: rating = 3.506510416666667
+25.0849 	EXP 	New trial (rep=0, index=3): OrderedDict([('Imagenes', 'imagenes/Papas picantes.jpg'), ('Random', 0.524978898672612), ('Correcto', None)])
+25.0971 	EXP 	image_2: autoDraw = False
+25.0971 	EXP 	slider_2: autoDraw = False
+25.0971 	EXP 	image_2: image = 'imagenes/Papas picantes.jpg'
+25.0971 	EXP 	slider_2: markerPos = None
+25.0971 	EXP 	slider_2: markerPos = None
+25.0971 	EXP 	slider_2: rating = None
+25.5667 	DATA 	Keypress: escape
+25.8890 	EXP 	window1: mouseVisible = True
