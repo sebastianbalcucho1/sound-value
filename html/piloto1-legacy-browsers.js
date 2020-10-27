@@ -83,7 +83,6 @@ var graveClock;
 var Sonido;
 var image_2;
 var slider_2;
-var nuestro_slider;
 var Pago1Clock;
 var text;
 var Pago2Clock;
@@ -126,8 +125,7 @@ function experimentInit() {
     flip: false,
   });
   
-  var nuestro_slider;
-  nuestro_slider = [];
+  var nuestro_slider=[];
   
   // Initialize components for Routine "Pago1"
   Pago1Clock = new util.Clock();
@@ -454,7 +452,6 @@ function graveRoutineEnd(snapshot) {
     Sonido.stop();  // ensure sound has stopped at end of routine
     psychoJS.experiment.addData('slider_2.response', slider_2.getRating());
     psychoJS.experiment.addData('slider_2.rt', slider_2.getRT());
-    var nuestro_slider, slider_2
     nuestro_slider.push(slider_2.response);
     
     return Scheduler.Event.NEXT;
