@@ -98,7 +98,7 @@
         <Param name="storeHistory" updates="constant" val="False" valType="bool"/>
         <Param name="storeRating" updates="constant" val="True" valType="bool"/>
         <Param name="storeRatingTime" updates="constant" val="True" valType="bool"/>
-        <Param name="styles" updates="constant" val="('rating',)" valType="fixedList"/>
+        <Param name="styles" updates="constant" val="['rating']" valType="fixedList"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="ticks" updates="constant" val="(1, 2, 3, 4, 5, 6)" valType="list"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
@@ -107,7 +107,7 @@
         <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="nuestro_slider=[]" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="nuestro_slider = [];&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="var nuestro_slider;&amp;#10;nuestro_slider = [];&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Both" valType="str"/>
@@ -115,7 +115,7 @@
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="nuestro_slider.push(slider_2.getRating());&amp;#10;" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="var nuestro_slider, slider_2&amp;#10;nuestro_slider.push(slider_2.getRating());&amp;#10;" valType="extendedCode"/>
         <Param name="End Routine" updates="constant" val="nuestro_slider.append(slider_2.getRating())" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="code_2" valType="code"/>
@@ -229,6 +229,23 @@
       </CodeComponent>
     </Routine>
     <Routine name="Pago2">
+      <CodeComponent name="code_3">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="var mensaje_precio_sujeto, n_precio_sujeto, precio_sujeto, precio_sujeto_pos;&amp;#10;n_precio_sujeto = Math.random();&amp;#10;precio_sujeto_pos = Math.round((n_precio_sujeto * nuestro_slider.length));&amp;#10;precio_sujeto = Number.parseInt(Math.round((nuestro_slider[precio_sujeto_pos] * 1000)));&amp;#10;mensaje_precio_sujeto = `El precio seleccionado aleatoriamente es ${precio_sujeto}.`;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="import random&amp;#10;n_precio_sujeto=random.random()&amp;#10;precio_sujeto_pos=round(n_precio_sujeto*len(nuestro_slider))&amp;#10;precio_sujeto=int(round(nuestro_slider[precio_sujeto_pos]*1000))&amp;#10;mensaje_precio_sujeto = f&quot;El precio seleccionado aleatoriamente es {precio_sujeto}.&quot;" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Both" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code_3" valType="code"/>
+      </CodeComponent>
       <TextComponent name="text_4">
         <Param name="color" updates="constant" val="white" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
@@ -253,23 +270,6 @@
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
-      <CodeComponent name="code_3">
-        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="var mensaje_precio_sujeto, n_precio_sujeto, precio_sujeto, precio_sujeto_pos;&amp;#10;n_precio_sujeto = Math.random();&amp;#10;precio_sujeto_pos = Math.round((n_precio_sujeto * nuestro_slider.length));&amp;#10;precio_sujeto = Number.parseInt(Math.round((nuestro_slider[precio_sujeto_pos] * 1000)));&amp;#10;mensaje_precio_sujeto = `El precio seleccionado aleatoriamente es ${precio_sujeto}.`;&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="import random&amp;#10;n_precio_sujeto=random.random()&amp;#10;precio_sujeto_pos=round(n_precio_sujeto*len(nuestro_slider))&amp;#10;precio_sujeto=int(round(nuestro_slider[precio_sujeto_pos]*1000))&amp;#10;mensaje_precio_sujeto = f&quot;El precio seleccionado aleatoriamente es {precio_sujeto}.&quot;" valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="Both" valType="str"/>
-        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="name" updates="None" val="code_3" valType="code"/>
-      </CodeComponent>
     </Routine>
     <Routine name="Pago1">
       <CodeComponent name="code">
