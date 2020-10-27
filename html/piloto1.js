@@ -93,6 +93,7 @@ var graveClock;
 var Sonido;
 var image_2;
 var slider_2;
+var nuestro_slider;
 var Pago1Clock;
 var text;
 var Pago2Clock;
@@ -113,7 +114,7 @@ function experimentInit() {
   Sonido = new sound.Sound({
     win: psychoJS.window,
     value: 'A',
-    secs: (- 1),
+    secs: 1,
     });
   Sonido.setVolume(1.0);
   image_2 = new visual.ImageStim({
@@ -135,7 +136,8 @@ function experimentInit() {
     flip: false,
   });
   
-  const nuestro_slider=[];
+  var nuestro_slider; 
+  nuestro_slider=[];
   
   // Initialize components for Routine "Pago1"
   Pago1Clock = new util.Clock();
@@ -338,14 +340,14 @@ function graveRoutineBegin(snapshot) {
     t = 0;
     graveClock.reset(); // clock
     frameN = -1;
-    routineTimer.add(20.000000);
+    routineTimer.add(3.000000);
     // update component parameters for each repeat
     Sonido = new sound.Sound({
     win: psychoJS.window,
     value: Hertz,
-    secs: 5,
+    secs: 1,
     });
-    Sonido.secs=5;
+    Sonido.secs=1;
     Sonido.setVolume(volumen);
     image_2.setImage(Imagenes);
     slider_2.reset()
@@ -382,15 +384,15 @@ function graveRoutineEachFrame(snapshot) {
       psychoJS.window.callOnFlip(function(){ Sonido.play(); });  // screen flip
       Sonido.status = PsychoJS.Status.STARTED;
     }
-    frameRemains = 0.0 + 5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 0.0 + 1 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (Sonido.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-      if (5 > 0.5) {  Sonido.stop();  // stop the sound (if longer than duration)
+      if (1 > 0.5) {  Sonido.stop();  // stop the sound (if longer than duration)
         Sonido.status = PsychoJS.Status.FINISHED;
       }
     }
     
     // *image_2* updates
-    if (t >= 5 && image_2.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= 1 && image_2.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
       image_2.tStart = t;  // (not accounting for frame time here)
       image_2.frameNStart = frameN;  // exact frame index
@@ -398,13 +400,13 @@ function graveRoutineEachFrame(snapshot) {
       image_2.setAutoDraw(true);
     }
 
-    frameRemains = 5 + 15 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 1 + 2 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (image_2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       image_2.setAutoDraw(false);
     }
     
     // *slider_2* updates
-    if (t >= 5 && slider_2.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= 1 && slider_2.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
       slider_2.tStart = t;  // (not accounting for frame time here)
       slider_2.frameNStart = frameN;  // exact frame index
@@ -412,7 +414,7 @@ function graveRoutineEachFrame(snapshot) {
       slider_2.setAutoDraw(true);
     }
 
-    frameRemains = 5 + 15 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 1 + 2 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (slider_2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       slider_2.setAutoDraw(false);
     }
@@ -458,7 +460,7 @@ function graveRoutineEnd(snapshot) {
     Sonido.stop();  // ensure sound has stopped at end of routine
     psychoJS.experiment.addData('slider_2.response', slider_2.getRating());
     psychoJS.experiment.addData('slider_2.rt', slider_2.getRT());
-    nuestro_slider.push(slider_2.response);
+    nuestro_slider.push(slider_2.getRating());
     
     return Scheduler.Event.NEXT;
   };
