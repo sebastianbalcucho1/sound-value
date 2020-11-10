@@ -119,7 +119,6 @@ var text;
 var Pago2Clock;
 var text_4;
 var Producto_2Clock;
-var text_5;
 var image;
 var Pago3Clock;
 var texto_final;
@@ -217,17 +216,6 @@ function experimentInit() {
   
   // Initialize components for Routine "Producto_2"
   Producto_2Clock = new util.Clock();
-  text_5 = new visual.TextStim({
-    win: psychoJS.window,
-    name: 'text_5',
-    text: 'El producto seleccionado es',
-    font: 'Arial',
-    units: undefined, 
-    pos: [0, 0.5], height: 0.1,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('white'),  opacity: 1,
-    depth: -1.0 
-  });
-  
   image = new visual.ImageStim({
     win : psychoJS.window,
     name : 'image', units : undefined, 
@@ -235,7 +223,7 @@ function experimentInit() {
     ori : 0, pos : [0, (- 0.2)], size : [0.5, 0.5],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -2.0 
+    texRes : 128, interpolate : true, depth : -1.0 
   });
   // Initialize components for Routine "Pago3"
   Pago3Clock = new util.Clock();
@@ -940,7 +928,6 @@ function Producto_2RoutineBegin(snapshot) {
     image.setImage(imagen_estimulo);
     // keep track of which components have finished
     Producto_2Components = [];
-    Producto_2Components.push(text_5);
     Producto_2Components.push(image);
     
     for (const thisComponent of Producto_2Components)
@@ -962,20 +949,6 @@ function Producto_2RoutineEachFrame(snapshot) {
     t = Producto_2Clock.getTime();
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
-    
-    // *text_5* updates
-    if (t >= 0.0 && text_5.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      text_5.tStart = t;  // (not accounting for frame time here)
-      text_5.frameNStart = frameN;  // exact frame index
-      
-      text_5.setAutoDraw(true);
-    }
-
-    frameRemains = 0.0 + 1.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if ((text_5.status === PsychoJS.Status.STARTED || text_5.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
-      text_5.setAutoDraw(false);
-    }
     
     // *image* updates
     if (t >= 0.0 && image.status === PsychoJS.Status.NOT_STARTED) {
@@ -1047,7 +1020,6 @@ function Pago3RoutineBegin(snapshot) {
     } else {
         mensaje1 = `Usted ha ganado 20.000 pesos`;
     }
-    thisExp.addData("Pago", mensaje1);
     
     texto_final.setText(mensaje1);
     // keep track of which components have finished
