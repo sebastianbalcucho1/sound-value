@@ -343,8 +343,8 @@
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="imagen_estimulo = image_slider[precio_sujeto_pos];&amp;#10;thisExp.addData(&quot;producto&quot;, imagen_estimulo);&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="imagen_estimulo= image_slider[precio_sujeto_pos]&amp;#10;thisExp.addData('producto', imagen_estimulo)" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="imagen_estimulo = image_slider[precio_sujeto_pos];&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="imagen_estimulo= image_slider[precio_sujeto_pos]&amp;#10;" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>

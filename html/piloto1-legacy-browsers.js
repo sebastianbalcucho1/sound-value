@@ -933,7 +933,6 @@ function Producto_2RoutineBegin(snapshot) {
     routineTimer.add(2.000000);
     // update component parameters for each repeat
     imagen_estimulo = image_slider[precio_sujeto_pos];
-    thisExp.addData("producto", imagen_estimulo);
     
     image.setImage(imagen_estimulo);
     // keep track of which components have finished
