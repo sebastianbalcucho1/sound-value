@@ -39,15 +39,21 @@ const trialsLoopScheduler = new Scheduler(psychoJS);
 flowScheduler.add(trialsLoopBegin, trialsLoopScheduler);
 flowScheduler.add(trialsLoopScheduler);
 flowScheduler.add(trialsLoopEnd);
+flowScheduler.add(subasta1RoutineBegin());
+flowScheduler.add(subasta1RoutineEachFrame());
+flowScheduler.add(subasta1RoutineEnd());
+flowScheduler.add(subasta2RoutineBegin());
+flowScheduler.add(subasta2RoutineEachFrame());
+flowScheduler.add(subasta2RoutineEnd());
 flowScheduler.add(Pago1RoutineBegin());
 flowScheduler.add(Pago1RoutineEachFrame());
 flowScheduler.add(Pago1RoutineEnd());
 flowScheduler.add(Pago2RoutineBegin());
 flowScheduler.add(Pago2RoutineEachFrame());
 flowScheduler.add(Pago2RoutineEnd());
-flowScheduler.add(ProductoRoutineBegin());
-flowScheduler.add(ProductoRoutineEachFrame());
-flowScheduler.add(ProductoRoutineEnd());
+flowScheduler.add(Producto_2RoutineBegin());
+flowScheduler.add(Producto_2RoutineEachFrame());
+flowScheduler.add(Producto_2RoutineEnd());
 flowScheduler.add(Pago3RoutineBegin());
 flowScheduler.add(Pago3RoutineEachFrame());
 flowScheduler.add(Pago3RoutineEnd());
@@ -61,12 +67,14 @@ psychoJS.start({
   expInfo: expInfo,
   });
 
+psychoJS.experimentLogger.setLevel(core.Logger.ServerLevel.EXP);
+
 
 var frameDur;
 function updateInfo() {
   expInfo['date'] = util.MonotonicClock.getDateStr();  // add a simple timestamp
   expInfo['expName'] = expName;
-  expInfo['psychopyVersion'] = '2020.2.3';
+  expInfo['psychopyVersion'] = '2020.2.5';
   expInfo['OS'] = window.navigator.platform;
 
   // store frame rate of monitor if we can measure it successfully
@@ -90,12 +98,20 @@ var Sonido;
 var image_2;
 var slider_2;
 var nuestro_slider;
+var image_slider;
+var subasta1Clock;
+var text_2;
+var subasta2Clock;
+var text_3;
 var Pago1Clock;
 var text;
 var Pago2Clock;
 var text_4;
-var ProductoClock;
+var Producto_2Clock;
+var text_5;
+var image;
 var Pago3Clock;
+var texto_final;
 var globalClock;
 var routineTimer;
 function experimentInit() {
@@ -130,11 +146,37 @@ function experimentInit() {
     labels: ["0", "1000", "2000", "3000", "4000", "5000"], ticks: [1, 2, 3, 4, 5, 6],
     granularity: 0, style: [visual.Slider.Style.RATING],
     color: new util.Color('LightGray'), 
-    fontFamily: 'HelveticaBold', bold: true, italic: false, 
+    fontFamily: 'HelveticaBold', bold: true, italic: false, depth: -2, 
     flip: false,
   });
   
   nuestro_slider = [];
+  image_slider=[]
+  // Initialize components for Routine "subasta1"
+  subasta1Clock = new util.Clock();
+  text_2 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'text_2',
+    text: 'Ahora se realizará una subasta. \n\nUsted en este momento posee 20.000 pesos\n\nEsta subasta consiste en comparar una de las valoraciones que usted dio por uno de los artículos, escogida de forma aleatoria, con una respuesta generada aleatoriamente por la computadora.\n\n',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: 0.0 
+  });
+  
+  // Initialize components for Routine "subasta2"
+  subasta2Clock = new util.Clock();
+  text_3 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'text_3',
+    text: 'Si la valoración que usted dio es MAYOR a la respuesta que genere la computadora, se le entregará el producto por el cuál realizó esa valoración y se le entregará el resultado de la resta de los 20.000 pesos y el valor del producto.\n\nSi la valoración que usted dio es MENOR a la respuesta que genere la computadora, se le entregarán los 20.000 pesos que tenía inicialmente.',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: 0.0 
+  });
   
   // Initialize components for Routine "Pago1"
   Pago1Clock = new util.Clock();
@@ -162,10 +204,41 @@ function experimentInit() {
     depth: -1.0 
   });
   
-  // Initialize components for Routine "Producto"
-  ProductoClock = new util.Clock();
+  // Initialize components for Routine "Producto_2"
+  Producto_2Clock = new util.Clock();
+  text_5 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'text_5',
+    text: 'El producto seleccionado es',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0.5], height: 0.1,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -1.0 
+  });
+  
+  image = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'image', units : undefined, 
+    image : undefined, mask : undefined,
+    ori : 0, pos : [0, (- 0.2)], size : [0.5, 0.5],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 128, interpolate : true, depth : -2.0 
+  });
   // Initialize components for Routine "Pago3"
   Pago3Clock = new util.Clock();
+  texto_final = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'texto_final',
+    text: 'default text',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -1.0 
+  });
+  
   // Create some handy timers
   globalClock = new util.Clock();  // to track the time since experiment started
   routineTimer = new util.CountdownTimer();  // to track time remaining of each (non-slip) routine
@@ -193,8 +266,10 @@ function InstruccionesRoutineBegin(snapshot) {
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
        });
-    
-    return Scheduler.Event.NEXT;
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
   };
 }
 
@@ -365,8 +440,10 @@ function graveRoutineBegin(snapshot) {
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
        });
-    
-    return Scheduler.Event.NEXT;
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
   };
 }
 
@@ -390,7 +467,7 @@ function graveRoutineEachFrame(snapshot) {
       Sonido.status = PsychoJS.Status.STARTED;
     }
     frameRemains = 0.0 + 1 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (Sonido.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+    if ((Sonido.status === PsychoJS.Status.STARTED || Sonido.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       if (1 > 0.5) {  Sonido.stop();  // stop the sound (if longer than duration)
         Sonido.status = PsychoJS.Status.FINISHED;
       }
@@ -406,7 +483,7 @@ function graveRoutineEachFrame(snapshot) {
     }
 
     frameRemains = 1 + 2 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (image_2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+    if ((image_2.status === PsychoJS.Status.STARTED || image_2.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       image_2.setAutoDraw(false);
     }
     
@@ -420,7 +497,7 @@ function graveRoutineEachFrame(snapshot) {
     }
 
     frameRemains = 1 + 2 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (slider_2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+    if ((slider_2.status === PsychoJS.Status.STARTED || slider_2.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       slider_2.setAutoDraw(false);
     }
     
@@ -469,6 +546,184 @@ function graveRoutineEnd(snapshot) {
     rating = slider_2.getRating();
     nuestro_slider.push(rating);
     
+    image_slider.push(Imagenes)
+    
+    return Scheduler.Event.NEXT;
+  };
+}
+
+
+var subasta1Components;
+function subasta1RoutineBegin(snapshot) {
+  return function () {
+    //------Prepare to start Routine 'subasta1'-------
+    t = 0;
+    subasta1Clock.reset(); // clock
+    frameN = -1;
+    routineTimer.add(1.000000);
+    // update component parameters for each repeat
+    console.log(image_slider);
+    
+    // keep track of which components have finished
+    subasta1Components = [];
+    subasta1Components.push(text_2);
+    
+    subasta1Components.forEach( function(thisComponent) {
+      if ('status' in thisComponent)
+        thisComponent.status = PsychoJS.Status.NOT_STARTED;
+       });
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
+  };
+}
+
+
+function subasta1RoutineEachFrame(snapshot) {
+  return function () {
+    //------Loop for each frame of Routine 'subasta1'-------
+    let continueRoutine = true; // until we're told otherwise
+    // get current time
+    t = subasta1Clock.getTime();
+    frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
+    // update/draw components on each frame
+    
+    // *text_2* updates
+    if (t >= 0.0 && text_2.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      text_2.tStart = t;  // (not accounting for frame time here)
+      text_2.frameNStart = frameN;  // exact frame index
+      
+      text_2.setAutoDraw(true);
+    }
+
+    frameRemains = 0.0 + 1 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if ((text_2.status === PsychoJS.Status.STARTED || text_2.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+      text_2.setAutoDraw(false);
+    }
+    // check for quit (typically the Esc key)
+    if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
+      return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
+    }
+    
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
+    
+    continueRoutine = false;  // reverts to True if at least one component still running
+    subasta1Components.forEach( function(thisComponent) {
+      if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
+        continueRoutine = true;
+      }
+    });
+    
+    // refresh the screen if continuing
+    if (continueRoutine && routineTimer.getTime() > 0) {
+      return Scheduler.Event.FLIP_REPEAT;
+    } else {
+      return Scheduler.Event.NEXT;
+    }
+  };
+}
+
+
+function subasta1RoutineEnd(snapshot) {
+  return function () {
+    //------Ending Routine 'subasta1'-------
+    subasta1Components.forEach( function(thisComponent) {
+      if (typeof thisComponent.setAutoDraw === 'function') {
+        thisComponent.setAutoDraw(false);
+      }
+    });
+    return Scheduler.Event.NEXT;
+  };
+}
+
+
+var subasta2Components;
+function subasta2RoutineBegin(snapshot) {
+  return function () {
+    //------Prepare to start Routine 'subasta2'-------
+    t = 0;
+    subasta2Clock.reset(); // clock
+    frameN = -1;
+    routineTimer.add(1.000000);
+    // update component parameters for each repeat
+    // keep track of which components have finished
+    subasta2Components = [];
+    subasta2Components.push(text_3);
+    
+    subasta2Components.forEach( function(thisComponent) {
+      if ('status' in thisComponent)
+        thisComponent.status = PsychoJS.Status.NOT_STARTED;
+       });
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
+  };
+}
+
+
+function subasta2RoutineEachFrame(snapshot) {
+  return function () {
+    //------Loop for each frame of Routine 'subasta2'-------
+    let continueRoutine = true; // until we're told otherwise
+    // get current time
+    t = subasta2Clock.getTime();
+    frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
+    // update/draw components on each frame
+    
+    // *text_3* updates
+    if (t >= 0.0 && text_3.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      text_3.tStart = t;  // (not accounting for frame time here)
+      text_3.frameNStart = frameN;  // exact frame index
+      
+      text_3.setAutoDraw(true);
+    }
+
+    frameRemains = 0.0 + 1 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if ((text_3.status === PsychoJS.Status.STARTED || text_3.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+      text_3.setAutoDraw(false);
+    }
+    // check for quit (typically the Esc key)
+    if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
+      return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
+    }
+    
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
+    
+    continueRoutine = false;  // reverts to True if at least one component still running
+    subasta2Components.forEach( function(thisComponent) {
+      if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
+        continueRoutine = true;
+      }
+    });
+    
+    // refresh the screen if continuing
+    if (continueRoutine && routineTimer.getTime() > 0) {
+      return Scheduler.Event.FLIP_REPEAT;
+    } else {
+      return Scheduler.Event.NEXT;
+    }
+  };
+}
+
+
+function subasta2RoutineEnd(snapshot) {
+  return function () {
+    //------Ending Routine 'subasta2'-------
+    subasta2Components.forEach( function(thisComponent) {
+      if (typeof thisComponent.setAutoDraw === 'function') {
+        thisComponent.setAutoDraw(false);
+      }
+    });
     return Scheduler.Event.NEXT;
   };
 }
@@ -484,7 +739,7 @@ function Pago1RoutineBegin(snapshot) {
     t = 0;
     Pago1Clock.reset(); // clock
     frameN = -1;
-    routineTimer.add(3.000000);
+    routineTimer.add(1.000000);
     // update component parameters for each repeat
     var mensaje_precio_aleatorio, n_precio_aleatorio, precio_aleatorio;
     n_precio_aleatorio = Math.random();
@@ -500,8 +755,10 @@ function Pago1RoutineBegin(snapshot) {
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
        });
-    
-    return Scheduler.Event.NEXT;
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
   };
 }
 
@@ -524,8 +781,8 @@ function Pago1RoutineEachFrame(snapshot) {
       text.setAutoDraw(true);
     }
 
-    frameRemains = 0.0 + 3.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (text.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+    frameRemains = 0.0 + 1 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if ((text.status === PsychoJS.Status.STARTED || text.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       text.setAutoDraw(false);
     }
     // check for quit (typically the Esc key)
@@ -579,7 +836,7 @@ function Pago2RoutineBegin(snapshot) {
     t = 0;
     Pago2Clock.reset(); // clock
     frameN = -1;
-    routineTimer.add(3.000000);
+    routineTimer.add(1.000000);
     // update component parameters for each repeat
     var mensaje_precio_sujeto, n_precio_sujeto, precio_sujeto, precio_sujeto_pos;
     n_precio_sujeto = Math.random();
@@ -595,8 +852,10 @@ function Pago2RoutineBegin(snapshot) {
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
        });
-    
-    return Scheduler.Event.NEXT;
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
   };
 }
 
@@ -619,8 +878,8 @@ function Pago2RoutineEachFrame(snapshot) {
       text_4.setAutoDraw(true);
     }
 
-    frameRemains = 0.0 + 3.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (text_4.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+    frameRemains = 0.0 + 1 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if ((text_4.status === PsychoJS.Status.STARTED || text_4.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       text_4.setAutoDraw(false);
     }
     // check for quit (typically the Esc key)
@@ -663,35 +922,73 @@ function Pago2RoutineEnd(snapshot) {
 }
 
 
-var ProductoComponents;
-function ProductoRoutineBegin(snapshot) {
+var imagen_estimulo;
+var Producto_2Components;
+function Producto_2RoutineBegin(snapshot) {
   return function () {
-    //------Prepare to start Routine 'Producto'-------
+    //------Prepare to start Routine 'Producto_2'-------
     t = 0;
-    ProductoClock.reset(); // clock
+    Producto_2Clock.reset(); // clock
     frameN = -1;
+    routineTimer.add(2.000000);
     // update component parameters for each repeat
-    // keep track of which components have finished
-    ProductoComponents = [];
+    imagen_estimulo = image_slider[precio_sujeto_pos];
+    thisExp.addData("producto", imagen_estimulo);
     
-    ProductoComponents.forEach( function(thisComponent) {
+    image.setImage(imagen_estimulo);
+    // keep track of which components have finished
+    Producto_2Components = [];
+    Producto_2Components.push(text_5);
+    Producto_2Components.push(image);
+    
+    Producto_2Components.forEach( function(thisComponent) {
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
        });
-    
-    return Scheduler.Event.NEXT;
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
   };
 }
 
 
-function ProductoRoutineEachFrame(snapshot) {
+function Producto_2RoutineEachFrame(snapshot) {
   return function () {
-    //------Loop for each frame of Routine 'Producto'-------
+    //------Loop for each frame of Routine 'Producto_2'-------
     let continueRoutine = true; // until we're told otherwise
     // get current time
-    t = ProductoClock.getTime();
+    t = Producto_2Clock.getTime();
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
+    
+    // *text_5* updates
+    if (t >= 0.0 && text_5.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      text_5.tStart = t;  // (not accounting for frame time here)
+      text_5.frameNStart = frameN;  // exact frame index
+      
+      text_5.setAutoDraw(true);
+    }
+
+    frameRemains = 0.0 + 1.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if ((text_5.status === PsychoJS.Status.STARTED || text_5.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+      text_5.setAutoDraw(false);
+    }
+    
+    // *image* updates
+    if (t >= 0.0 && image.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      image.tStart = t;  // (not accounting for frame time here)
+      image.frameNStart = frameN;  // exact frame index
+      
+      image.setAutoDraw(true);
+    }
+
+    frameRemains = 0.0 + 2 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if ((image.status === PsychoJS.Status.STARTED || image.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+      image.setAutoDraw(false);
+    }
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
       return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
@@ -703,14 +1000,14 @@ function ProductoRoutineEachFrame(snapshot) {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    ProductoComponents.forEach( function(thisComponent) {
+    Producto_2Components.forEach( function(thisComponent) {
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
       }
     });
     
     // refresh the screen if continuing
-    if (continueRoutine) {
+    if (continueRoutine && routineTimer.getTime() > 0) {
       return Scheduler.Event.FLIP_REPEAT;
     } else {
       return Scheduler.Event.NEXT;
@@ -719,22 +1016,20 @@ function ProductoRoutineEachFrame(snapshot) {
 }
 
 
-function ProductoRoutineEnd(snapshot) {
+function Producto_2RoutineEnd(snapshot) {
   return function () {
-    //------Ending Routine 'Producto'-------
-    ProductoComponents.forEach( function(thisComponent) {
+    //------Ending Routine 'Producto_2'-------
+    Producto_2Components.forEach( function(thisComponent) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
     });
-    // the Routine "Producto" was not non-slip safe, so reset the non-slip timer
-    routineTimer.reset();
-    
     return Scheduler.Event.NEXT;
   };
 }
 
 
+var diferencia;
 var mensaje1;
 var Pago3Components;
 function Pago3RoutineBegin(snapshot) {
@@ -743,20 +1038,29 @@ function Pago3RoutineBegin(snapshot) {
     t = 0;
     Pago3Clock.reset(); // clock
     frameN = -1;
+    routineTimer.add(3.000000);
     // update component parameters for each repeat
+    diferencia = (20000 - precio_sujeto);
     if ((precio_sujeto > precio_aleatorio)) {
-        mensaje1 = `Usted ha ganado 20000 pesos + .`;
+        mensaje1 = `Usted ha ganado ${diferencia} pesos y el producto por el cuál subastó`;
+    } else {
+        mensaje1 = `Usted ha ganado 20.000 pesos`;
     }
+    thisExp.addData("Pago", mensaje1);
     
+    texto_final.setText(mensaje1);
     // keep track of which components have finished
     Pago3Components = [];
+    Pago3Components.push(texto_final);
     
     Pago3Components.forEach( function(thisComponent) {
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
        });
-    
-    return Scheduler.Event.NEXT;
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
   };
 }
 
@@ -769,6 +1073,20 @@ function Pago3RoutineEachFrame(snapshot) {
     t = Pago3Clock.getTime();
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
+    
+    // *texto_final* updates
+    if (t >= 0.0 && texto_final.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      texto_final.tStart = t;  // (not accounting for frame time here)
+      texto_final.frameNStart = frameN;  // exact frame index
+      
+      texto_final.setAutoDraw(true);
+    }
+
+    frameRemains = 0.0 + 3 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if ((texto_final.status === PsychoJS.Status.STARTED || texto_final.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+      texto_final.setAutoDraw(false);
+    }
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
       return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
@@ -787,7 +1105,7 @@ function Pago3RoutineEachFrame(snapshot) {
     });
     
     // refresh the screen if continuing
-    if (continueRoutine) {
+    if (continueRoutine && routineTimer.getTime() > 0) {
       return Scheduler.Event.FLIP_REPEAT;
     } else {
       return Scheduler.Event.NEXT;
@@ -804,9 +1122,6 @@ function Pago3RoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     });
-    // the Routine "Pago3" was not non-slip safe, so reset the non-slip timer
-    routineTimer.reset();
-    
     return Scheduler.Event.NEXT;
   };
 }
@@ -848,6 +1163,8 @@ function quitPsychoJS(message, isCompleted) {
   if (psychoJS.experiment.isEntryEmpty()) {
     psychoJS.experiment.nextEntry();
   }
+  
+  
   
   
   
