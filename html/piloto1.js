@@ -220,7 +220,7 @@ function experimentInit() {
     win : psychoJS.window,
     name : 'image', units : undefined, 
     image : undefined, mask : undefined,
-    ori : 0, pos : [0, (- 0.2)], size : [0.5, 0.5],
+    ori : 0, pos : [0, 0], size : [0.5, 0.5],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -1.0 
