@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.2.5),
-    on noviembre 09, 2020, at 16:42
+    on noviembre 17, 2020, at 13:19
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -394,7 +394,7 @@ for thisTrial in trials:
         nuestro_slider.append(rating)
         
         image_slider.append(Imagenes)
-        print(trials_2.trialList)
+        
         thisExp.nextEntry()
         
     # completed 1 repeats of 'trials_2'
@@ -697,6 +697,7 @@ continueRoutine = True
 routineTimer.add(2.000000)
 # update component parameters for each repeat
 imagen_estimulo= image_slider[precio_sujeto_pos]
+
 image.setImage(imagen_estimulo)
 # keep track of which components have finished
 Producto_2Components = [image]
@@ -773,7 +774,7 @@ if precio_sujeto > precio_aleatorio:
 else: 
     mensaje1 = f"Usted ha ganado 20.000 pesos"
 
-print(mensaje1)
+
 texto_final.setText(mensaje1)
 # keep track of which components have finished
 Pago3Components = [texto_final]
