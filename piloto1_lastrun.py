@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.2.5),
@@ -763,6 +763,7 @@ for thisComponent in Producto_2Components:
         thisComponent.setAutoDraw(False)
 thisExp.addData('image.started', image.tStartRefresh)
 thisExp.addData('image.stopped', image.tStopRefresh)
+thisExp.addData('imagen', imagen_estimulo)
 
 # ------Prepare to start Routine "Pago3"-------
 continueRoutine = True
@@ -840,6 +841,7 @@ for thisComponent in Pago3Components:
         thisComponent.setAutoDraw(False)
 thisExp.addData('texto_final.started', texto_final.tStartRefresh)
 thisExp.addData('texto_final.stopped', texto_final.tStopRefresh)
+thisExp.addData('Pago', mensaje1)
 
 # Flip one final time so any remaining win.callOnFlip() 
 # and win.timeOnFlip() tasks get executed before quitting

@@ -557,8 +557,6 @@ function subasta1RoutineBegin(snapshot) {
     frameN = -1;
     routineTimer.add(1.000000);
     // update component parameters for each repeat
-    console.log(image_slider);
-    
     // keep track of which components have finished
     subasta1Components = [];
     subasta1Components.push(text_2);
@@ -1135,8 +1133,6 @@ function quitPsychoJS(message, isCompleted) {
   if (psychoJS.experiment.isEntryEmpty()) {
     psychoJS.experiment.nextEntry();
   }
-  
-  
   
   
   
