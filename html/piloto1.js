@@ -577,7 +577,7 @@ function sliderRoutineBegin(snapshot) {
     t = 0;
     sliderClock.reset(); // clock
     frameN = -1;
-    routineTimer.add(1.000000);
+    routineTimer.add(5.000000);
     // update component parameters for each repeat
     text_5.setText(prueba_imagen);
     prueba_imagen = image_slider.toString();
@@ -615,7 +615,7 @@ function sliderRoutineEachFrame(snapshot) {
       text_5.setAutoDraw(true);
     }
 
-    frameRemains = 0.0 + 1.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 0.0 + 5.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((text_5.status === PsychoJS.Status.STARTED || text_5.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       text_5.setAutoDraw(false);
     }
