@@ -541,7 +541,7 @@ function graveRoutineEnd(snapshot) {
     psychoJS.experiment.addData('slider_2.response', slider_2.getRating());
     psychoJS.experiment.addData('slider_2.rt', slider_2.getRT());
     rating = slider_2.getRating();
-    Imagenes1 = Imagenes.toString();
+    Imagenes1 = Imagenes;
     nuestro_slider.push(rating);
     image_slider.push(Imagenes1);
     
@@ -924,7 +924,7 @@ function Producto_2RoutineBegin(snapshot) {
     frameN = -1;
     routineTimer.add(2.000000);
     // update component parameters for each repeat
-    imagen_estimulo = image_slider[precio_sujeto_pos].toString();
+    imagen_estimulo = image_slider[precio_sujeto_pos];
     console.log(imagen_estimulo);
     
     image.setImage(imagen_estimulo);
@@ -1000,6 +1000,8 @@ function Producto_2RoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
+    psychoJS.experiment.addData('imagen_estimulo', imagen)
+    
     return Scheduler.Event.NEXT;
   };
 }
@@ -1096,6 +1098,8 @@ function Pago3RoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
+    psychoJS.experiment.addData('mensaje1', mensaje)
+    
     return Scheduler.Event.NEXT;
   };
 }
