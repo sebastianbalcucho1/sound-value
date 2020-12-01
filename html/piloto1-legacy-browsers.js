@@ -535,8 +535,9 @@ function graveRoutineEnd(snapshot) {
     psychoJS.experiment.addData('slider_2.rt', slider_2.getRT());
     rating = slider_2.getRating();
     Imagenes1 = Imagenes.toString();
-    nuestro_slider.append(rating);
+    nuestro_slider.push(rating);
     image_slider.push(Imagenes1);
+    console.log(Imagenes1);
     
     return Scheduler.Event.NEXT;
   };
