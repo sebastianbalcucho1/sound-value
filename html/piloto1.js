@@ -1001,8 +1001,6 @@ function Producto_2RoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
-    thisExp.addData("imagen_estimulo", imagen);
-    
     return Scheduler.Event.NEXT;
   };
 }
@@ -1099,8 +1097,6 @@ function Pago3RoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
-    thisExp.addData("mensaje1", mensaje);
-    
     return Scheduler.Event.NEXT;
   };
 }
