@@ -150,7 +150,8 @@ function experimentInit() {
   });
   
   nuestro_slider = [];
-  image_slider=[]
+  image_slider = [];
+  
   // Initialize components for Routine "subasta1"
   subasta1Clock = new util.Clock();
   text_2 = new visual.TextStim({
@@ -520,6 +521,7 @@ function graveRoutineEachFrame(snapshot) {
 
 
 var rating;
+var Imagenes1;
 function graveRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'grave'-------
@@ -532,9 +534,9 @@ function graveRoutineEnd(snapshot) {
     psychoJS.experiment.addData('slider_2.response', slider_2.getRating());
     psychoJS.experiment.addData('slider_2.rt', slider_2.getRT());
     rating = slider_2.getRating();
-    nuestro_slider.push(rating);
-    
-    image_slider.push(Imagenes)
+    Imagenes1 = Imagenes.toString();
+    nuestro_slider.append(rating);
+    image_slider.push(Imagenes1);
     
     return Scheduler.Event.NEXT;
   };

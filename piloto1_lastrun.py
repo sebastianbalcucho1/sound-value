@@ -1,8 +1,8 @@
-#!/usr/bin/env python
+﻿#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.2.5),
-    on noviembre 17, 2020, at 13:19
+    on diciembre 01, 2020, at 12:17
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -112,7 +112,7 @@ image_slider=[]
 # Initialize components for Routine "subasta1"
 subasta1Clock = core.Clock()
 text_2 = visual.TextStim(win=win, name='text_2',
-    text='Ahora se realizará una subasta. \n\nUsted en este momento posee 20.000 pesos\n\nEsta subasta consiste en comparar una de las valoraciones que usted dio por uno de los artículos, escogida de forma aleatoria, con una respuesta generada aleatoriamente por la computadora.\n\n',
+    text='Ahora se realizará una subasta. \n\nUsted en este momento posee 20.000 pesos\n\nEsta subasta consiste en comparar una de las valoraciones que usted dio por uno de los artículos, escogida de forma aleatoria, con una respuesta generada aleatoriamente por la computadora!\n\n',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
@@ -391,9 +391,9 @@ for thisTrial in trials:
         trials_2.addData('slider_2.started', slider_2.tStartRefresh)
         trials_2.addData('slider_2.stopped', slider_2.tStopRefresh)
         rating=slider_2.getRating()
+        Imagenes1=str(Imagenes)
         nuestro_slider.append(rating)
-        
-        image_slider.append(Imagenes)
+        image_slider.append(Imagenes1)
         
         thisExp.nextEntry()
         
@@ -408,7 +408,6 @@ for thisTrial in trials:
 continueRoutine = True
 routineTimer.add(1.000000)
 # update component parameters for each repeat
-print(image_slider)
 # keep track of which components have finished
 subasta1Components = [text_2]
 for thisComponent in subasta1Components:
@@ -763,7 +762,6 @@ for thisComponent in Producto_2Components:
         thisComponent.setAutoDraw(False)
 thisExp.addData('image.started', image.tStartRefresh)
 thisExp.addData('image.stopped', image.tStopRefresh)
-thisExp.addData('imagen', imagen_estimulo)
 
 # ------Prepare to start Routine "Pago3"-------
 continueRoutine = True
@@ -841,7 +839,6 @@ for thisComponent in Pago3Components:
         thisComponent.setAutoDraw(False)
 thisExp.addData('texto_final.started', texto_final.tStartRefresh)
 thisExp.addData('texto_final.stopped', texto_final.tStopRefresh)
-thisExp.addData('Pago', mensaje1)
 
 # Flip one final time so any remaining win.callOnFlip() 
 # and win.timeOnFlip() tasks get executed before quitting
