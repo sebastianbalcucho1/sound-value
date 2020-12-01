@@ -544,7 +544,8 @@ function graveRoutineEnd(snapshot) {
     Imagenes1 = Imagenes.toString();
     nuestro_slider.push(rating);
     image_slider.push(Imagenes1);
-    console.log(Imagenes1);
+    console.log(nuestro_slider);
+    console.log(image_slider)
     
     return Scheduler.Event.NEXT;
   };
@@ -924,7 +925,8 @@ function Producto_2RoutineBegin(snapshot) {
     frameN = -1;
     routineTimer.add(2.000000);
     // update component parameters for each repeat
-    imagen_estimulo = image_slider[precio_sujeto_pos];
+    imagen_estimulo = image_slider[precio_sujeto_pos].toString();
+    console.log(imagen_estimulo);
     
     image.setImage(imagen_estimulo);
     // keep track of which components have finished
@@ -999,6 +1001,8 @@ function Producto_2RoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
+    thisExp.addData("imagen_estimulo", imagen);
+    
     return Scheduler.Event.NEXT;
   };
 }
@@ -1095,6 +1099,8 @@ function Pago3RoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
+    thisExp.addData("mensaje1", mensaje);
+    
     return Scheduler.Event.NEXT;
   };
 }
