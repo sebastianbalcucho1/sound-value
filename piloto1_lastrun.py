@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.2.5),
-    on diciembre 01, 2020, at 13:17
+    on diciembre 01, 2020, at 13:44
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -394,8 +394,7 @@ for thisTrial in trials:
         Imagenes1=str(Imagenes)
         nuestro_slider.append(rating)
         image_slider.append(Imagenes1)
-        print(nuestro_slider)
-        print(image_slider)
+        
         thisExp.nextEntry()
         
     # completed 1 repeats of 'trials_2'
@@ -761,7 +760,6 @@ while continueRoutine and routineTimer.getTime() > 0:
 for thisComponent in Producto_2Components:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
-thisExp.addData('imagen_estimulo', imagen)
 thisExp.addData('image.started', image.tStartRefresh)
 thisExp.addData('image.stopped', image.tStopRefresh)
 
@@ -839,8 +837,6 @@ while continueRoutine and routineTimer.getTime() > 0:
 for thisComponent in Pago3Components:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
-thisExp.addData('mensaje1', mensaje)
-
 thisExp.addData('texto_final.started', texto_final.tStartRefresh)
 thisExp.addData('texto_final.stopped', texto_final.tStopRefresh)
 

@@ -544,8 +544,7 @@ function graveRoutineEnd(snapshot) {
     Imagenes1 = Imagenes.toString();
     nuestro_slider.push(rating);
     image_slider.push(Imagenes1);
-    console.log(nuestro_slider);
-    console.log(image_slider)
+    
     
     return Scheduler.Event.NEXT;
   };
