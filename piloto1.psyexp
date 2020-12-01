@@ -115,8 +115,8 @@
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="rating = slider_2.getRating();&amp;#10;Imagenes1 = Imagenes.toString();&amp;#10;nuestro_slider.push(rating);&amp;#10;image_slider.push(Imagenes1);&amp;#10;&amp;#10;" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="rating=slider_2.getRating()&amp;#10;Imagenes1=str(Imagenes)&amp;#10;nuestro_slider.append(rating)&amp;#10;image_slider.append(Imagenes1)&amp;#10;" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="rating = slider_2.getRating();&amp;#10;Imagenes1 = Imagenes;&amp;#10;nuestro_slider.push(rating);&amp;#10;image_slider.push(Imagenes1);&amp;#10;&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="rating=slider_2.getRating()&amp;#10;Imagenes1=Imagenes&amp;#10;nuestro_slider.append(rating)&amp;#10;image_slider.append(Imagenes1)&amp;#10;" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="code_2" valType="code"/>
       </CodeComponent>
@@ -233,12 +233,12 @@
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="diferencia = (20000 - precio_sujeto);&amp;#10;if ((precio_sujeto &gt; precio_aleatorio)) {&amp;#10;    mensaje1 = `Usted ha ganado ${diferencia} pesos y el producto por el cuál subastó`;&amp;#10;} else {&amp;#10;    mensaje1 = `Usted ha ganado 20.000 pesos`;&amp;#10;}&amp;#10;" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="diferencia=20000-precio_sujeto&amp;#10;if precio_sujeto &gt; precio_aleatorio:&amp;#10;   mensaje1 = f&quot;Usted ha ganado {diferencia} pesos y el producto por el cuál subastó&quot;&amp;#10;else: &amp;#10;    mensaje1 = f&quot;Usted ha ganado 20.000 pesos&quot;&amp;#10;&amp;#10;" valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Code Type" updates="None" val="Both" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="psychoJS.experiment.addData('mensaje1', mensaje)&amp;#10;" valType="extendedCode"/>
         <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="code_5" valType="code"/>
@@ -326,14 +326,14 @@
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="imagen_estimulo = image_slider[precio_sujeto_pos].toString();&amp;#10;console.log(imagen_estimulo);&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="imagen_estimulo= str(image_slider[precio_sujeto_pos])&amp;#10;print(imagen_estimulo)" valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Begin JS Routine" updates="constant" val="imagen_estimulo = image_slider[precio_sujeto_pos];&amp;#10;console.log(imagen_estimulo);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="imagen_estimulo= image_slider[precio_sujeto_pos]&amp;#10;print(imagen_estimulo)" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Both" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="psychoJS.experiment.addData('imagen_estimulo', imagen)&amp;#10;" valType="extendedCode"/>
         <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="code_6" valType="code"/>
