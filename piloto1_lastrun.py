@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.2.5),
-    on diciembre 01, 2020, at 12:17
+    on diciembre 01, 2020, at 12:53
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -394,7 +394,8 @@ for thisTrial in trials:
         Imagenes1=str(Imagenes)
         nuestro_slider.append(rating)
         image_slider.append(Imagenes1)
-        
+        print(nuestro_slider)
+        print(image_slider)
         thisExp.nextEntry()
         
     # completed 1 repeats of 'trials_2'
@@ -695,7 +696,7 @@ thisExp.addData('text_4.stopped', text_4.tStopRefresh)
 continueRoutine = True
 routineTimer.add(2.000000)
 # update component parameters for each repeat
-imagen_estimulo= image_slider[precio_sujeto_pos]
+imagen_estimulo= str(image_slider[precio_sujeto_pos])
 
 image.setImage(imagen_estimulo)
 # keep track of which components have finished
