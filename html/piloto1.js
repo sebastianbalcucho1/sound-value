@@ -1000,7 +1000,7 @@ function Producto_2RoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
-    psychoJS.experiment.addData('imagen_estimulo', imagen)
+    psychoJS.experiment.addData('imagen', imagen_estimulo)
     
     return Scheduler.Event.NEXT;
   };
@@ -1098,7 +1098,7 @@ function Pago3RoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
-    psychoJS.experiment.addData('mensaje1', mensaje)
+    psychoJS.experiment.addData('mensaje', mensaje1)
     
     return Scheduler.Event.NEXT;
   };
