@@ -39,6 +39,9 @@ const trialsLoopScheduler = new Scheduler(psychoJS);
 flowScheduler.add(trialsLoopBegin, trialsLoopScheduler);
 flowScheduler.add(trialsLoopScheduler);
 flowScheduler.add(trialsLoopEnd);
+flowScheduler.add(sliderRoutineBegin());
+flowScheduler.add(sliderRoutineEachFrame());
+flowScheduler.add(sliderRoutineEnd());
 flowScheduler.add(subasta1RoutineBegin());
 flowScheduler.add(subasta1RoutineEachFrame());
 flowScheduler.add(subasta1RoutineEnd());
@@ -99,6 +102,8 @@ var image_2;
 var slider_2;
 var nuestro_slider;
 var image_slider;
+var sliderClock;
+var text_5;
 var subasta1Clock;
 var text_2;
 var subasta2Clock;
@@ -151,6 +156,19 @@ function experimentInit() {
   
   nuestro_slider = [];
   image_slider = [];
+  
+  // Initialize components for Routine "slider"
+  sliderClock = new util.Clock();
+  text_5 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'text_5',
+    text: 'default text',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: 0.0 
+  });
   
   // Initialize components for Routine "subasta1"
   subasta1Clock = new util.Clock();
@@ -539,6 +557,97 @@ function graveRoutineEnd(snapshot) {
     image_slider.push(Imagenes1);
     
     
+    return Scheduler.Event.NEXT;
+  };
+}
+
+
+var prueba_imagen;
+var sliderComponents;
+function sliderRoutineBegin(snapshot) {
+  return function () {
+    //------Prepare to start Routine 'slider'-------
+    t = 0;
+    sliderClock.reset(); // clock
+    frameN = -1;
+    routineTimer.add(1.000000);
+    // update component parameters for each repeat
+    text_5.setText(prueba_imagen);
+    prueba_imagen = image_slider.toString();
+    
+    // keep track of which components have finished
+    sliderComponents = [];
+    sliderComponents.push(text_5);
+    
+    sliderComponents.forEach( function(thisComponent) {
+      if ('status' in thisComponent)
+        thisComponent.status = PsychoJS.Status.NOT_STARTED;
+       });
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
+  };
+}
+
+
+function sliderRoutineEachFrame(snapshot) {
+  return function () {
+    //------Loop for each frame of Routine 'slider'-------
+    let continueRoutine = true; // until we're told otherwise
+    // get current time
+    t = sliderClock.getTime();
+    frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
+    // update/draw components on each frame
+    
+    // *text_5* updates
+    if (t >= 0.0 && text_5.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      text_5.tStart = t;  // (not accounting for frame time here)
+      text_5.frameNStart = frameN;  // exact frame index
+      
+      text_5.setAutoDraw(true);
+    }
+
+    frameRemains = 0.0 + 1.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if ((text_5.status === PsychoJS.Status.STARTED || text_5.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+      text_5.setAutoDraw(false);
+    }
+    // check for quit (typically the Esc key)
+    if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
+      return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
+    }
+    
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
+    
+    continueRoutine = false;  // reverts to True if at least one component still running
+    sliderComponents.forEach( function(thisComponent) {
+      if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
+        continueRoutine = true;
+      }
+    });
+    
+    // refresh the screen if continuing
+    if (continueRoutine && routineTimer.getTime() > 0) {
+      return Scheduler.Event.FLIP_REPEAT;
+    } else {
+      return Scheduler.Event.NEXT;
+    }
+  };
+}
+
+
+function sliderRoutineEnd(snapshot) {
+  return function () {
+    //------Ending Routine 'slider'-------
+    sliderComponents.forEach( function(thisComponent) {
+      if (typeof thisComponent.setAutoDraw === 'function') {
+        thisComponent.setAutoDraw(false);
+      }
+    });
     return Scheduler.Event.NEXT;
   };
 }
@@ -1140,6 +1249,8 @@ function quitPsychoJS(message, isCompleted) {
   if (psychoJS.experiment.isEntryEmpty()) {
     psychoJS.experiment.nextEntry();
   }
+  
+  
   
   
   
