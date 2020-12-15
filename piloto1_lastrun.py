@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.2.5),
-    on diciembre 15, 2020, at 14:09
+    on diciembre 15, 2020, at 14:32
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -109,9 +109,6 @@ nuestro_slider=[]
 image_slider=[]
 
 
-# Initialize components for Routine "slider"
-sliderClock = core.Clock()
-
 # Initialize components for Routine "subasta1"
 subasta1Clock = core.Clock()
 text_2 = visual.TextStim(win=win, name='text_2',
@@ -158,7 +155,7 @@ image = visual.ImageStim(
     win=win,
     name='image', 
     image='sin', mask=None,
-    ori=0, pos=(0, 0), size=(0.5, 0.5),
+    ori=0, pos=(0, 0.2), size=(0.5, 0.5),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-1.0)
@@ -406,59 +403,6 @@ for thisTrial in trials:
     
 # completed 1 repeats of 'trials'
 
-
-# ------Prepare to start Routine "slider"-------
-continueRoutine = True
-# update component parameters for each repeat
-imagenes1 = Imagenes
-print(imagenes1[3])
-# keep track of which components have finished
-sliderComponents = []
-for thisComponent in sliderComponents:
-    thisComponent.tStart = None
-    thisComponent.tStop = None
-    thisComponent.tStartRefresh = None
-    thisComponent.tStopRefresh = None
-    if hasattr(thisComponent, 'status'):
-        thisComponent.status = NOT_STARTED
-# reset timers
-t = 0
-_timeToFirstFrame = win.getFutureFlipTime(clock="now")
-sliderClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
-frameN = -1
-
-# -------Run Routine "slider"-------
-while continueRoutine:
-    # get current time
-    t = sliderClock.getTime()
-    tThisFlip = win.getFutureFlipTime(clock=sliderClock)
-    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
-    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-    # update/draw components on each frame
-    
-    # check for quit (typically the Esc key)
-    if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
-        core.quit()
-    
-    # check if all components have finished
-    if not continueRoutine:  # a component has requested a forced-end of Routine
-        break
-    continueRoutine = False  # will revert to True if at least one component still running
-    for thisComponent in sliderComponents:
-        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-            continueRoutine = True
-            break  # at least one component has not yet finished
-    
-    # refresh the screen
-    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-        win.flip()
-
-# -------Ending Routine "slider"-------
-for thisComponent in sliderComponents:
-    if hasattr(thisComponent, "setAutoDraw"):
-        thisComponent.setAutoDraw(False)
-# the Routine "slider" was not non-slip safe, so reset the non-slip timer
-routineTimer.reset()
 
 # ------Prepare to start Routine "subasta1"-------
 continueRoutine = True
