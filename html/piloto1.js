@@ -833,7 +833,7 @@ function Pago2RoutineBegin(snapshot) {
     // update component parameters for each repeat
     var mensaje_precio_sujeto, n_precio_sujeto, precio_sujeto, precio_sujeto_pos;
     n_precio_sujeto = Math.random();
-    precio_sujeto_pos = Math.round((n_precio_sujeto * nuestro_slider.length));
+    precio_sujeto_pos = Number.parseInt(Math.round((n_precio_sujeto * nuestro_slider.length)));
     precio_sujeto = Number.parseInt(Math.round((nuestro_slider[precio_sujeto_pos] * 1000)));
     mensaje_precio_sujeto = `El precio seleccionado aleatoriamente es ${precio_sujeto}.`;
     text_4.setText(mensaje_precio_sujeto);
@@ -924,7 +924,7 @@ function Producto_2RoutineBegin(snapshot) {
     frameN = -1;
     routineTimer.add(2.000000);
     // update component parameters for each repeat
-    imagen_estimulo = image_slider[1];
+    imagen_estimulo = image_slider[precio_sujeto_pos];
     
     image.setImage(imagen_estimulo);
     // keep track of which components have finished
