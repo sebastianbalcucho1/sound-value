@@ -695,7 +695,7 @@ thisExp.addData('text_4.stopped', text_4.tStopRefresh)
 continueRoutine = True
 routineTimer.add(2.000000)
 # update component parameters for each repeat
-imagen_estimulo= image_slider[precio_sujeto_pos]
+imagen_estimulo= image_slider[1]
 image.setImage(imagen_estimulo)
 # keep track of which components have finished
 Producto_2Components = [image]
