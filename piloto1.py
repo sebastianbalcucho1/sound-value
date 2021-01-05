@@ -622,7 +622,7 @@ routineTimer.add(1.000000)
 # update component parameters for each repeat
 import random
 n_precio_sujeto=random.random()
-precio_sujeto_pos=round(n_precio_sujeto*len(nuestro_slider))
+precio_sujeto_pos=int(round(n_precio_sujeto*len(nuestro_slider)))
 precio_sujeto=int(round(nuestro_slider[precio_sujeto_pos]*1000))
 mensaje_precio_sujeto = f"El precio seleccionado aleatoriamente es {precio_sujeto}."
 text_4.setText(mensaje_precio_sujeto)
