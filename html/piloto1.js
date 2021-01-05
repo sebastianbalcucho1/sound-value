@@ -851,7 +851,7 @@ function Pago2RoutineBegin(snapshot) {
     // update component parameters for each repeat
     var mensaje_precio_sujeto, n_precio_sujeto, precio_sujeto, precio_sujeto_pos;
     n_precio_sujeto = Math.random();
-    precio_sujeto_pos = Number.parseInt(Math.round((n_precio_sujeto * nuestro_slider.length)));
+    precio_sujeto_pos = Math.round((n_precio_sujeto * nuestro_slider.length));
     precio_sujeto = Number.parseInt(Math.round((nuestro_slider[precio_sujeto_pos] * 1000)));
     mensaje_precio_sujeto = `El precio seleccionado aleatoriamente es ${precio_sujeto}.`;
     text_4.setText(mensaje_precio_sujeto);
@@ -932,6 +932,7 @@ function Pago2RoutineEnd(snapshot) {
 }
 
 
+var tipo;
 var tipoComponents;
 function tipoRoutineBegin(snapshot) {
   return function () {
@@ -941,6 +942,8 @@ function tipoRoutineBegin(snapshot) {
     frameN = -1;
     routineTimer.add(2.000000);
     // update component parameters for each repeat
+    tipo = Object.getPrototypeOf(precio_sujeto_pos);
+    
     text_5.setText(tipo);
     // keep track of which components have finished
     tipoComponents = [];
@@ -1006,7 +1009,6 @@ function tipoRoutineEachFrame(snapshot) {
 }
 
 
-var tipo;
 function tipoRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'tipo'-------
@@ -1015,8 +1017,6 @@ function tipoRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
-    tipo = Object.getPrototypeOf(precio_sujeto_pos);
-    
     return Scheduler.Event.NEXT;
   };
 }
