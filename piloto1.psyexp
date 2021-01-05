@@ -144,8 +144,8 @@
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="var mensaje_precio_sujeto, n_precio_sujeto, precio_sujeto, precio_sujeto_pos;&amp;#10;n_precio_sujeto = Math.random();&amp;#10;precio_sujeto_pos = Math.round((n_precio_sujeto * nuestro_slider.length));&amp;#10;precio_sujeto = Number.parseInt(Math.round((nuestro_slider[precio_sujeto_pos] * 1000)));&amp;#10;mensaje_precio_sujeto = `El precio seleccionado aleatoriamente es ${precio_sujeto}.`;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="import random&amp;#10;n_precio_sujeto=random.random()&amp;#10;precio_sujeto_pos=round(n_precio_sujeto*len(nuestro_slider))&amp;#10;precio_sujeto=int(round(nuestro_slider[precio_sujeto_pos]*1000))&amp;#10;mensaje_precio_sujeto = f&quot;El precio seleccionado aleatoriamente es {precio_sujeto}.&quot;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="var mensaje_precio_sujeto, n_precio_sujeto, precio_sujeto, precio_sujeto_pos;&amp;#10;n_precio_sujeto = Math.random();&amp;#10;precio_sujeto_pos = Math.round((n_precio_sujeto * nuestro_slider.length));&amp;#10;precio_sujeto = Number.parseInt(Math.round((nuestro_slider[precio_sujeto_pos] * 1000)));&amp;#10;mensaje_precio_sujeto = `El precio seleccionado aleatoriamente es ${precio_sujeto}.`;&amp;#10;imagen_estimulo= image_slider[precio_sujeto_pos]" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="import random&amp;#10;n_precio_sujeto=random.random()&amp;#10;precio_sujeto_pos=round(n_precio_sujeto*len(nuestro_slider))&amp;#10;precio_sujeto=int(round(nuestro_slider[precio_sujeto_pos]*1000))&amp;#10;mensaje_precio_sujeto = f&quot;El precio seleccionado aleatoriamente es {precio_sujeto}.&quot;&amp;#10;imagen_estimulo= image_slider[precio_sujeto_pos]" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Both" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -321,23 +321,6 @@
       </TextComponent>
     </Routine>
     <Routine name="Producto_2">
-      <CodeComponent name="code_6">
-        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="posicion = Number.parseInt(precio_sujeto_pos);&amp;#10;imagen_estimulo = image_slider[posicion];&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="posicion=int(precio_sujeto_pos)&amp;#10;imagen_estimulo= image_slider[posicion]" valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
-        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="name" updates="None" val="code_6" valType="code"/>
-      </CodeComponent>
       <ImageComponent name="image">
         <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
@@ -458,7 +441,6 @@
     <Routine name="subasta2"/>
     <Routine name="Pago1"/>
     <Routine name="Pago2"/>
-    <Routine name="tipo"/>
     <Routine name="Producto_2"/>
     <Routine name="Pago3"/>
   </Flow>
