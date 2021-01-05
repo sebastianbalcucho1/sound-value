@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.2.5),
-    on diciembre 15, 2020, at 14:32
+    on enero 05, 2021, at 16:10
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -142,6 +142,16 @@ text = visual.TextStim(win=win, name='text',
 # Initialize components for Routine "Pago2"
 Pago2Clock = core.Clock()
 text_4 = visual.TextStim(win=win, name='text_4',
+    text='default text',
+    font='Arial',
+    pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
+    color='white', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-1.0);
+
+# Initialize components for Routine "tipo"
+tipoClock = core.Clock()
+text_5 = visual.TextStim(win=win, name='text_5',
     text='default text',
     font='Arial',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
@@ -622,7 +632,7 @@ routineTimer.add(1.000000)
 # update component parameters for each repeat
 import random
 n_precio_sujeto=random.random()
-precio_sujeto_pos=int(round(n_precio_sujeto*len(nuestro_slider)))
+precio_sujeto_pos=round(n_precio_sujeto*len(nuestro_slider))
 precio_sujeto=int(round(nuestro_slider[precio_sujeto_pos]*1000))
 mensaje_precio_sujeto = f"El precio seleccionado aleatoriamente es {precio_sujeto}."
 text_4.setText(mensaje_precio_sujeto)
@@ -690,6 +700,78 @@ for thisComponent in Pago2Components:
         thisComponent.setAutoDraw(False)
 thisExp.addData('text_4.started', text_4.tStartRefresh)
 thisExp.addData('text_4.stopped', text_4.tStopRefresh)
+
+# ------Prepare to start Routine "tipo"-------
+continueRoutine = True
+routineTimer.add(2.000000)
+# update component parameters for each repeat
+tipo= precio_sujeto_pos
+print(type(tipo))
+text_5.setText(tipo)
+# keep track of which components have finished
+tipoComponents = [text_5]
+for thisComponent in tipoComponents:
+    thisComponent.tStart = None
+    thisComponent.tStop = None
+    thisComponent.tStartRefresh = None
+    thisComponent.tStopRefresh = None
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+tipoClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+
+# -------Run Routine "tipo"-------
+while continueRoutine and routineTimer.getTime() > 0:
+    # get current time
+    t = tipoClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=tipoClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # *text_5* updates
+    if text_5.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        text_5.frameNStart = frameN  # exact frame index
+        text_5.tStart = t  # local t and not account for scr refresh
+        text_5.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(text_5, 'tStartRefresh')  # time at next scr refresh
+        text_5.setAutoDraw(True)
+    if text_5.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > text_5.tStartRefresh + 2.0-frameTolerance:
+            # keep track of stop time/frame for later
+            text_5.tStop = t  # not accounting for scr refresh
+            text_5.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(text_5, 'tStopRefresh')  # time at next scr refresh
+            text_5.setAutoDraw(False)
+    
+    # check for quit (typically the Esc key)
+    if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+        core.quit()
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested a forced-end of Routine
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in tipoComponents:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+# -------Ending Routine "tipo"-------
+for thisComponent in tipoComponents:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+thisExp.addData('text_5.started', text_5.tStartRefresh)
+thisExp.addData('text_5.stopped', text_5.tStopRefresh)
 
 # ------Prepare to start Routine "Producto_2"-------
 continueRoutine = True

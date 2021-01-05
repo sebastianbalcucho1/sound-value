@@ -62,9 +62,6 @@ flowScheduler.add(Pago1RoutineEnd());
 flowScheduler.add(Pago2RoutineBegin());
 flowScheduler.add(Pago2RoutineEachFrame());
 flowScheduler.add(Pago2RoutineEnd());
-flowScheduler.add(tipoRoutineBegin());
-flowScheduler.add(tipoRoutineEachFrame());
-flowScheduler.add(tipoRoutineEnd());
 flowScheduler.add(Producto_2RoutineBegin());
 flowScheduler.add(Producto_2RoutineEachFrame());
 flowScheduler.add(Producto_2RoutineEnd());
@@ -121,8 +118,6 @@ var Pago1Clock;
 var text;
 var Pago2Clock;
 var text_4;
-var tipoClock;
-var text_5;
 var Producto_2Clock;
 var image;
 var Pago3Clock;
@@ -212,19 +207,6 @@ function experimentInit() {
   text_4 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_4',
-    text: 'default text',
-    font: 'Arial',
-    units: undefined, 
-    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('white'),  opacity: 1,
-    depth: -1.0 
-  });
-  
-  // Initialize components for Routine "tipo"
-  tipoClock = new util.Clock();
-  text_5 = new visual.TextStim({
-    win: psychoJS.window,
-    name: 'text_5',
     text: 'default text',
     font: 'Arial',
     units: undefined, 
@@ -932,96 +914,7 @@ function Pago2RoutineEnd(snapshot) {
 }
 
 
-var tipo;
-var tipoComponents;
-function tipoRoutineBegin(snapshot) {
-  return function () {
-    //------Prepare to start Routine 'tipo'-------
-    t = 0;
-    tipoClock.reset(); // clock
-    frameN = -1;
-    routineTimer.add(2.000000);
-    // update component parameters for each repeat
-    tipo = Object.getPrototypeOf(precio_sujeto_pos);
-    
-    text_5.setText(tipo);
-    // keep track of which components have finished
-    tipoComponents = [];
-    tipoComponents.push(text_5);
-    
-    for (const thisComponent of tipoComponents)
-      if ('status' in thisComponent)
-        thisComponent.status = PsychoJS.Status.NOT_STARTED;
-    // check if the Routine should terminate
-    if (!continueRoutine) {  // a component has requested a forced-end of Routine
-      return Scheduler.Event.NEXT;
-    }
-  };
-}
-
-
-function tipoRoutineEachFrame(snapshot) {
-  return function () {
-    //------Loop for each frame of Routine 'tipo'-------
-    let continueRoutine = true; // until we're told otherwise
-    // get current time
-    t = tipoClock.getTime();
-    frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
-    // update/draw components on each frame
-    
-    // *text_5* updates
-    if (t >= 0.0 && text_5.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      text_5.tStart = t;  // (not accounting for frame time here)
-      text_5.frameNStart = frameN;  // exact frame index
-      
-      text_5.setAutoDraw(true);
-    }
-
-    frameRemains = 0.0 + 2.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if ((text_5.status === PsychoJS.Status.STARTED || text_5.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
-      text_5.setAutoDraw(false);
-    }
-    // check for quit (typically the Esc key)
-    if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
-      return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
-    }
-    
-    // check if the Routine should terminate
-    if (!continueRoutine) {  // a component has requested a forced-end of Routine
-      return Scheduler.Event.NEXT;
-    }
-    
-    continueRoutine = false;  // reverts to True if at least one component still running
-    for (const thisComponent of tipoComponents)
-      if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
-        continueRoutine = true;
-        break;
-      }
-    
-    // refresh the screen if continuing
-    if (continueRoutine && routineTimer.getTime() > 0) {
-      return Scheduler.Event.FLIP_REPEAT;
-    } else {
-      return Scheduler.Event.NEXT;
-    }
-  };
-}
-
-
-function tipoRoutineEnd(snapshot) {
-  return function () {
-    //------Ending Routine 'tipo'-------
-    for (const thisComponent of tipoComponents) {
-      if (typeof thisComponent.setAutoDraw === 'function') {
-        thisComponent.setAutoDraw(false);
-      }
-    }
-    return Scheduler.Event.NEXT;
-  };
-}
-
-
+var posicion;
 var imagen_estimulo;
 var Producto_2Components;
 function Producto_2RoutineBegin(snapshot) {
@@ -1032,7 +925,8 @@ function Producto_2RoutineBegin(snapshot) {
     frameN = -1;
     routineTimer.add(2.000000);
     // update component parameters for each repeat
-    imagen_estimulo = image_slider[precio_sujeto_pos];
+    posicion = Number.parseInt(precio_sujeto_pos);
+    imagen_estimulo = image_slider[posicion];
     
     image.setImage(imagen_estimulo);
     // keep track of which components have finished
@@ -1107,8 +1001,6 @@ function Producto_2RoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
-    psychoJS.experiment.addData('imagen', imagen_estimulo)
-    
     return Scheduler.Event.NEXT;
   };
 }
