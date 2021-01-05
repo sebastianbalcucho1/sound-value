@@ -94,6 +94,7 @@ function updateInfo() {
 var InstruccionesClock;
 var sound_3;
 var graveClock;
+var Sonido;
 var image_2;
 var slider_2;
 var nuestro_slider;
@@ -106,7 +107,6 @@ var Pago1Clock;
 var text;
 var Pago2Clock;
 var text_4;
-var image_3;
 var Producto_2Clock;
 var image;
 var Pago3Clock;
@@ -124,6 +124,12 @@ function experimentInit() {
   sound_3.setVolume(1);
   // Initialize components for Routine "grave"
   graveClock = new util.Clock();
+  Sonido = new sound.Sound({
+    win: psychoJS.window,
+    value: 'A',
+    secs: 1,
+    });
+  Sonido.setVolume(1.0);
   image_2 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'image_2', units : undefined, 
@@ -131,7 +137,7 @@ function experimentInit() {
     ori : 0, pos : [0, 0.2], size : [0.5, 0.5],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : 0.0 
+    texRes : 128, interpolate : true, depth : -1.0 
   });
   slider_2 = new visual.Slider({
     win: psychoJS.window, name: 'slider_2',
@@ -139,7 +145,7 @@ function experimentInit() {
     labels: ["0", "1000", "2000", "3000", "4000", "5000"], ticks: [1, 2, 3, 4, 5, 6],
     granularity: 0, style: [visual.Slider.Style.RATING],
     color: new util.Color('LightGray'), 
-    fontFamily: 'HelveticaBold', bold: true, italic: false, depth: -1, 
+    fontFamily: 'HelveticaBold', bold: true, italic: false, depth: -2, 
     flip: false,
   });
   
@@ -198,15 +204,6 @@ function experimentInit() {
     depth: -1.0 
   });
   
-  image_3 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'image_3', units : undefined, 
-    image : undefined, mask : undefined,
-    ori : 0, pos : [0, 0], size : [0.5, 0.5],
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -2.0 
-  });
   // Initialize components for Routine "Producto_2"
   Producto_2Clock = new util.Clock();
   image = new visual.ImageStim({
@@ -413,10 +410,18 @@ function graveRoutineBegin(snapshot) {
     frameN = -1;
     routineTimer.add(3.000000);
     // update component parameters for each repeat
+    Sonido = new sound.Sound({
+    win: psychoJS.window,
+    value: Hertz,
+    secs: 1,
+    });
+    Sonido.secs=1;
+    Sonido.setVolume(volumen);
     image_2.setImage(Imagenes);
     slider_2.reset()
     // keep track of which components have finished
     graveComponents = [];
+    graveComponents.push(Sonido);
     graveComponents.push(image_2);
     graveComponents.push(slider_2);
     
@@ -441,6 +446,21 @@ function graveRoutineEachFrame(snapshot) {
     t = graveClock.getTime();
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
+    // start/stop Sonido
+    if (t >= 0.0 && Sonido.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      Sonido.tStart = t;  // (not accounting for frame time here)
+      Sonido.frameNStart = frameN;  // exact frame index
+      
+      psychoJS.window.callOnFlip(function(){ Sonido.play(); });  // screen flip
+      Sonido.status = PsychoJS.Status.STARTED;
+    }
+    frameRemains = 0.0 + 1 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if ((Sonido.status === PsychoJS.Status.STARTED || Sonido.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+      if (1 > 0.5) {  Sonido.stop();  // stop the sound (if longer than duration)
+        Sonido.status = PsychoJS.Status.FINISHED;
+      }
+    }
     
     // *image_2* updates
     if (t >= 1 && image_2.status === PsychoJS.Status.NOT_STARTED) {
@@ -510,6 +530,7 @@ function graveRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     });
+    Sonido.stop();  // ensure sound has stopped at end of routine
     psychoJS.experiment.addData('slider_2.response', slider_2.getRating());
     psychoJS.experiment.addData('slider_2.rt', slider_2.getRT());
     rating = slider_2.getRating();
@@ -814,11 +835,9 @@ function Pago2RoutineBegin(snapshot) {
     mensaje_precio_sujeto = `El precio seleccionado aleatoriamente es ${precio_sujeto}.`;
     imagen_estimulo= image_slider[precio_sujeto_pos]
     text_4.setText(mensaje_precio_sujeto);
-    image_3.setImage(imagen_estimulo);
     // keep track of which components have finished
     Pago2Components = [];
     Pago2Components.push(text_4);
-    Pago2Components.push(image_3);
     
     Pago2Components.forEach( function(thisComponent) {
       if ('status' in thisComponent)
@@ -853,20 +872,6 @@ function Pago2RoutineEachFrame(snapshot) {
     frameRemains = 0.0 + 1 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((text_4.status === PsychoJS.Status.STARTED || text_4.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       text_4.setAutoDraw(false);
-    }
-    
-    // *image_3* updates
-    if (t >= 0.0 && image_3.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      image_3.tStart = t;  // (not accounting for frame time here)
-      image_3.frameNStart = frameN;  // exact frame index
-      
-      image_3.setAutoDraw(true);
-    }
-
-    frameRemains = 0.0 + 1.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if ((image_3.status === PsychoJS.Status.STARTED || image_3.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
-      image_3.setAutoDraw(false);
     }
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
@@ -903,6 +908,7 @@ function Pago2RoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     });
+    psychoJS.experiment.addData('product', imagen_estimulo)
     return Scheduler.Event.NEXT;
   };
 }
