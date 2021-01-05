@@ -117,6 +117,7 @@ var Pago1Clock;
 var text;
 var Pago2Clock;
 var text_4;
+var image_3;
 var Producto_2Clock;
 var image;
 var Pago3Clock;
@@ -208,6 +209,15 @@ function experimentInit() {
     depth: -1.0 
   });
   
+  image_3 = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'image_3', units : undefined, 
+    image : undefined, mask : undefined,
+    ori : 0, pos : [0, 0], size : [0.5, 0.5],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 128, interpolate : true, depth : -2.0 
+  });
   // Initialize components for Routine "Producto_2"
   Producto_2Clock = new util.Clock();
   image = new visual.ImageStim({
@@ -808,9 +818,11 @@ function Pago2RoutineBegin(snapshot) {
     mensaje_precio_sujeto = `El precio seleccionado aleatoriamente es ${precio_sujeto}.`;
     imagen_estimulo= image_slider[precio_sujeto_pos]
     text_4.setText(mensaje_precio_sujeto);
+    image_3.setImage(imagen_estimulo);
     // keep track of which components have finished
     Pago2Components = [];
     Pago2Components.push(text_4);
+    Pago2Components.push(image_3);
     
     for (const thisComponent of Pago2Components)
       if ('status' in thisComponent)
@@ -844,6 +856,20 @@ function Pago2RoutineEachFrame(snapshot) {
     frameRemains = 0.0 + 1 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((text_4.status === PsychoJS.Status.STARTED || text_4.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       text_4.setAutoDraw(false);
+    }
+    
+    // *image_3* updates
+    if (t >= 0.0 && image_3.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      image_3.tStart = t;  // (not accounting for frame time here)
+      image_3.frameNStart = frameN;  // exact frame index
+      
+      image_3.setAutoDraw(true);
+    }
+
+    frameRemains = 0.0 + 1.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if ((image_3.status === PsychoJS.Status.STARTED || image_3.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+      image_3.setAutoDraw(false);
     }
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
