@@ -62,6 +62,9 @@ flowScheduler.add(Pago1RoutineEnd());
 flowScheduler.add(Pago2RoutineBegin());
 flowScheduler.add(Pago2RoutineEachFrame());
 flowScheduler.add(Pago2RoutineEnd());
+flowScheduler.add(tipoRoutineBegin());
+flowScheduler.add(tipoRoutineEachFrame());
+flowScheduler.add(tipoRoutineEnd());
 flowScheduler.add(Producto_2RoutineBegin());
 flowScheduler.add(Producto_2RoutineEachFrame());
 flowScheduler.add(Producto_2RoutineEnd());
@@ -105,7 +108,6 @@ function updateInfo() {
 var InstruccionesClock;
 var sound_3;
 var graveClock;
-var Sonido;
 var image_2;
 var slider_2;
 var nuestro_slider;
@@ -118,6 +120,8 @@ var Pago1Clock;
 var text;
 var Pago2Clock;
 var text_4;
+var tipoClock;
+var text_5;
 var Producto_2Clock;
 var image;
 var Pago3Clock;
@@ -135,12 +139,6 @@ function experimentInit() {
   sound_3.setVolume(1);
   // Initialize components for Routine "grave"
   graveClock = new util.Clock();
-  Sonido = new sound.Sound({
-    win: psychoJS.window,
-    value: 'A',
-    secs: 1,
-    });
-  Sonido.setVolume(1.0);
   image_2 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'image_2', units : undefined, 
@@ -148,7 +146,7 @@ function experimentInit() {
     ori : 0, pos : [0, 0.2], size : [0.5, 0.5],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -1.0 
+    texRes : 128, interpolate : true, depth : 0.0 
   });
   slider_2 = new visual.Slider({
     win: psychoJS.window, name: 'slider_2',
@@ -156,7 +154,7 @@ function experimentInit() {
     labels: ["0", "1000", "2000", "3000", "4000", "5000"], ticks: [1, 2, 3, 4, 5, 6],
     granularity: 0, style: [visual.Slider.Style.RATING],
     color: new util.Color('LightGray'), 
-    fontFamily: 'HelveticaBold', bold: true, italic: false, depth: -2, 
+    fontFamily: 'HelveticaBold', bold: true, italic: false, depth: -1, 
     flip: false,
   });
   
@@ -207,6 +205,19 @@ function experimentInit() {
   text_4 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_4',
+    text: 'default text',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -1.0 
+  });
+  
+  // Initialize components for Routine "tipo"
+  tipoClock = new util.Clock();
+  text_5 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'text_5',
     text: 'default text',
     font: 'Arial',
     units: undefined, 
@@ -418,18 +429,10 @@ function graveRoutineBegin(snapshot) {
     frameN = -1;
     routineTimer.add(3.000000);
     // update component parameters for each repeat
-    Sonido = new sound.Sound({
-    win: psychoJS.window,
-    value: Hertz,
-    secs: 1,
-    });
-    Sonido.secs=1;
-    Sonido.setVolume(volumen);
     image_2.setImage(Imagenes);
     slider_2.reset()
     // keep track of which components have finished
     graveComponents = [];
-    graveComponents.push(Sonido);
     graveComponents.push(image_2);
     graveComponents.push(slider_2);
     
@@ -453,21 +456,6 @@ function graveRoutineEachFrame(snapshot) {
     t = graveClock.getTime();
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
-    // start/stop Sonido
-    if (t >= 0.0 && Sonido.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      Sonido.tStart = t;  // (not accounting for frame time here)
-      Sonido.frameNStart = frameN;  // exact frame index
-      
-      psychoJS.window.callOnFlip(function(){ Sonido.play(); });  // screen flip
-      Sonido.status = PsychoJS.Status.STARTED;
-    }
-    frameRemains = 0.0 + 1 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if ((Sonido.status === PsychoJS.Status.STARTED || Sonido.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
-      if (1 > 0.5) {  Sonido.stop();  // stop the sound (if longer than duration)
-        Sonido.status = PsychoJS.Status.FINISHED;
-      }
-    }
     
     // *image_2* updates
     if (t >= 1 && image_2.status === PsychoJS.Status.NOT_STARTED) {
@@ -537,7 +525,6 @@ function graveRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
-    Sonido.stop();  // ensure sound has stopped at end of routine
     psychoJS.experiment.addData('slider_2.response', slider_2.getRating());
     psychoJS.experiment.addData('slider_2.rt', slider_2.getRT());
     rating = slider_2.getRating();
@@ -905,6 +892,96 @@ function Pago2RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Pago2'-------
     for (const thisComponent of Pago2Components) {
+      if (typeof thisComponent.setAutoDraw === 'function') {
+        thisComponent.setAutoDraw(false);
+      }
+    }
+    return Scheduler.Event.NEXT;
+  };
+}
+
+
+var tipo;
+var tipoComponents;
+function tipoRoutineBegin(snapshot) {
+  return function () {
+    //------Prepare to start Routine 'tipo'-------
+    t = 0;
+    tipoClock.reset(); // clock
+    frameN = -1;
+    routineTimer.add(2.000000);
+    // update component parameters for each repeat
+    tipo = Object.getPrototypeOf(precio_sujeto_pos);
+    
+    text_5.setText(tipo);
+    // keep track of which components have finished
+    tipoComponents = [];
+    tipoComponents.push(text_5);
+    
+    for (const thisComponent of tipoComponents)
+      if ('status' in thisComponent)
+        thisComponent.status = PsychoJS.Status.NOT_STARTED;
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
+  };
+}
+
+
+function tipoRoutineEachFrame(snapshot) {
+  return function () {
+    //------Loop for each frame of Routine 'tipo'-------
+    let continueRoutine = true; // until we're told otherwise
+    // get current time
+    t = tipoClock.getTime();
+    frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
+    // update/draw components on each frame
+    
+    // *text_5* updates
+    if (t >= 0.0 && text_5.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      text_5.tStart = t;  // (not accounting for frame time here)
+      text_5.frameNStart = frameN;  // exact frame index
+      
+      text_5.setAutoDraw(true);
+    }
+
+    frameRemains = 0.0 + 2.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if ((text_5.status === PsychoJS.Status.STARTED || text_5.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+      text_5.setAutoDraw(false);
+    }
+    // check for quit (typically the Esc key)
+    if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
+      return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
+    }
+    
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
+    
+    continueRoutine = false;  // reverts to True if at least one component still running
+    for (const thisComponent of tipoComponents)
+      if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
+        continueRoutine = true;
+        break;
+      }
+    
+    // refresh the screen if continuing
+    if (continueRoutine && routineTimer.getTime() > 0) {
+      return Scheduler.Event.FLIP_REPEAT;
+    } else {
+      return Scheduler.Event.NEXT;
+    }
+  };
+}
+
+
+function tipoRoutineEnd(snapshot) {
+  return function () {
+    //------Ending Routine 'tipo'-------
+    for (const thisComponent of tipoComponents) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
