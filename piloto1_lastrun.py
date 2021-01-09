@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.2.5),
-    on enero 09, 2021, at 00:54
+    on enero 09, 2021, at 01:26
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -82,67 +82,40 @@ defaultKeyboard = keyboard.Keyboard()
 
 # Initialize components for Routine "intro"
 introClock = core.Clock()
-mensaje_intro = visual.TextBox2(
-     win, text='Bienvenido al juego de <b>subasta</b>.\n\nOprima el botón rojo para avanzar.', font='Arial',
-     pos=(0, 0),     letterHeight=0.05,
-     size=None, borderWidth=2.0,
-     color='black', colorSpace='rgb',
-     opacity=1,
-     bold=True, italic=False,
-     lineSpacing=1.0,
-     padding=None,
-     anchor='center',
-     fillColor=None, borderColor=None,
-     flipHoriz=False, flipVert=False,
-     editable=False,
-     name='mensaje_intro',
-     autoLog=True,
-)
+mensaje_intro = visual.TextStim(win=win, name='mensaje_intro',
+    text='Bienvenido al juego de <b>subasta</b>.\n\nOprima el botón rojo para avanzar.',
+    font='Arial',
+    pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
+    color='black', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=0.0);
 key_resp = keyboard.Keyboard()
 
 # Initialize components for Routine "intro_2"
 intro_2Clock = core.Clock()
-mensaje_intro_2 = visual.TextBox2(
-     win, text='A continuación, usted participará en un juego de diferentes subastas.\nEste juego dispondrá de múltiples subastas por diferentes productos, donde deberá indicar la suma de dinero que está dispuesto a pagar por ellos. \n• En cada subasta, usted será expuesto a un sonido durante 5 segundos mientras observa una pantalla gris. \n• Al cabo de este tiempo, se le mostrará una pantalla donde en la parte superior habrá un producto alimenticio y en la parte inferior una barra deslizadora que va desde cero hasta 5 mil pesos colombianos. \n• Para responder, usted debe mover el cursor sobre la barra hasta el valor deseado y hacer click. \n• Luego de esto, el sistema seguirá automáticamente a la siguiente ronda donde se repetirá el proceso con un bien distinto. \n', font='Arial',
-     pos=(0, 0),     letterHeight=0.03,
-     size=None, borderWidth=3.0,
-     color='black', colorSpace='rgb',
-     opacity=1,
-     bold=False, italic=False,
-     lineSpacing=1.5,
-     padding=None,
-     anchor='center',
-     fillColor='white', borderColor=None,
-     flipHoriz=False, flipVert=False,
-     editable=False,
-     name='mensaje_intro_2',
-     autoLog=True,
-)
+mensaje_intro_2 = visual.TextStim(win=win, name='mensaje_intro_2',
+    text='A continuación, usted participará en un juego de diferentes subastas.\nEste juego dispondrá de múltiples subastas por diferentes productos, donde deberá indicar la suma de dinero que está dispuesto a pagar por ellos. \n• En cada subasta, usted será expuesto a un sonido durante 5 segundos mientras observa una pantalla gris. \n• Al cabo de este tiempo, se le mostrará una pantalla donde en la parte superior habrá un producto alimenticio y en la parte inferior una barra deslizadora que va desde cero hasta 5 mil pesos colombianos. \n• Para responder, usted debe mover el cursor sobre la barra hasta el valor deseado y hacer click. \n• Luego de esto, el sistema seguirá automáticamente a la siguiente ronda donde se repetirá el proceso con un bien distinto. ',
+    font='Arial',
+    pos=(0, 0), height=0.03, wrapWidth=None, ori=0, 
+    color='black', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=0.0);
 key_resp_2 = keyboard.Keyboard()
 
 # Initialize components for Routine "intro_prueba"
 intro_pruebaClock = core.Clock()
-textbox_prueba = visual.TextBox2(
-     win, text='En este momento, realizará 2 rondas de prueba del juego, para que se familiarice con su apariencia y dinámica.', font='Arial',
-     pos=(0, 0),     letterHeight=0.04,
-     size=None, borderWidth=2.0,
-     color='black', colorSpace='rgb',
-     opacity=1,
-     bold=False, italic=False,
-     lineSpacing=1.0,
-     padding=None,
-     anchor='center',
-     fillColor=None, borderColor=None,
-     flipHoriz=False, flipVert=False,
-     editable=False,
-     name='textbox_prueba',
-     autoLog=True,
-)
+text_prueba = visual.TextStim(win=win, name='text_prueba',
+    text='En este momento, realizará 2 rondas de prueba del juego, para que se familiarice con su apariencia y dinámica.',
+    font='Arial',
+    pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
+    color='black', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=0.0);
 key_resp_3 = keyboard.Keyboard()
 
 # Initialize components for Routine "prueba_1"
 prueba_1Clock = core.Clock()
-sonido_prueba = sound.Sound('A', secs=-1, stereo=True, hamming=True,
+sonido_prueba = sound.Sound('A', secs=1, stereo=True, hamming=True,
     name='sonido_prueba')
 sonido_prueba.setVolume(1.0)
 image_prueba = visual.ImageStim(
@@ -162,7 +135,7 @@ slider_prueba = visual.Slider(win=win, name='slider_prueba',
 
 # Initialize components for Routine "prueba_2"
 prueba_2Clock = core.Clock()
-sonido_prueba_2 = sound.Sound('A', secs=-1, stereo=True, hamming=True,
+sonido_prueba_2 = sound.Sound('A', secs=1, stereo=True, hamming=True,
     name='sonido_prueba_2')
 sonido_prueba_2.setVolume(1.0)
 image_prueba_2 = visual.ImageStim(
@@ -182,27 +155,18 @@ slider_prueba_2 = visual.Slider(win=win, name='slider_prueba_2',
 
 # Initialize components for Routine "intro_experimento"
 intro_experimentoClock = core.Clock()
-textbox_prueba_2 = visual.TextBox2(
-     win, text='Han acabado las rondas de entrenamiento.\n\nA continuación, empezarán las rondas del juego.', font='Arial',
-     pos=(0, 0),     letterHeight=0.05,
-     size=None, borderWidth=2.0,
-     color='black', colorSpace='rgb',
-     opacity=1,
-     bold=False, italic=False,
-     lineSpacing=1.0,
-     padding=None,
-     anchor='center',
-     fillColor=None, borderColor=None,
-     flipHoriz=False, flipVert=False,
-     editable=False,
-     name='textbox_prueba_2',
-     autoLog=True,
-)
+text_prueba_2 = visual.TextStim(win=win, name='text_prueba_2',
+    text='Han acabado las rondas de entrenamiento.\n\nA continuación, empezarán las rondas del juego',
+    font='Arial',
+    pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
+    color='black', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=0.0);
 key_resp_4 = keyboard.Keyboard()
 
 # Initialize components for Routine "experimento"
 experimentoClock = core.Clock()
-sonido_exp = sound.Sound('A', secs=-1, stereo=True, hamming=True,
+sonido_exp = sound.Sound('A', secs=1, stereo=True, hamming=True,
     name='sonido_exp')
 sonido_exp.setVolume(1.0)
 image_exp = visual.ImageStim(
@@ -346,7 +310,7 @@ while continueRoutine:
     # update/draw components on each frame
     
     # *mensaje_intro* updates
-    if mensaje_intro.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+    if mensaje_intro.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
         mensaje_intro.frameNStart = frameN  # exact frame index
         mensaje_intro.tStart = t  # local t and not account for scr refresh
@@ -355,7 +319,7 @@ while continueRoutine:
         mensaje_intro.setAutoDraw(True)
     if mensaje_intro.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > mensaje_intro.tStartRefresh + 500-frameTolerance:
+        if tThisFlipGlobal > mensaje_intro.tStartRefresh + 120-frameTolerance:
             # keep track of stop time/frame for later
             mensaje_intro.tStop = t  # not accounting for scr refresh
             mensaje_intro.frameNStop = frameN  # exact frame index
@@ -450,7 +414,7 @@ while continueRoutine:
     # update/draw components on each frame
     
     # *mensaje_intro_2* updates
-    if mensaje_intro_2.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+    if mensaje_intro_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
         mensaje_intro_2.frameNStart = frameN  # exact frame index
         mensaje_intro_2.tStart = t  # local t and not account for scr refresh
@@ -459,7 +423,7 @@ while continueRoutine:
         mensaje_intro_2.setAutoDraw(True)
     if mensaje_intro_2.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > mensaje_intro_2.tStartRefresh + 500-frameTolerance:
+        if tThisFlipGlobal > mensaje_intro_2.tStartRefresh + 120-frameTolerance:
             # keep track of stop time/frame for later
             mensaje_intro_2.tStop = t  # not accounting for scr refresh
             mensaje_intro_2.frameNStop = frameN  # exact frame index
@@ -530,7 +494,7 @@ key_resp_3.keys = []
 key_resp_3.rt = []
 _key_resp_3_allKeys = []
 # keep track of which components have finished
-intro_pruebaComponents = [textbox_prueba, key_resp_3]
+intro_pruebaComponents = [text_prueba, key_resp_3]
 for thisComponent in intro_pruebaComponents:
     thisComponent.tStart = None
     thisComponent.tStop = None
@@ -553,22 +517,22 @@ while continueRoutine:
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
-    # *textbox_prueba* updates
-    if textbox_prueba.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+    # *text_prueba* updates
+    if text_prueba.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        textbox_prueba.frameNStart = frameN  # exact frame index
-        textbox_prueba.tStart = t  # local t and not account for scr refresh
-        textbox_prueba.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(textbox_prueba, 'tStartRefresh')  # time at next scr refresh
-        textbox_prueba.setAutoDraw(True)
-    if textbox_prueba.status == STARTED:
+        text_prueba.frameNStart = frameN  # exact frame index
+        text_prueba.tStart = t  # local t and not account for scr refresh
+        text_prueba.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(text_prueba, 'tStartRefresh')  # time at next scr refresh
+        text_prueba.setAutoDraw(True)
+    if text_prueba.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > textbox_prueba.tStartRefresh + 500-frameTolerance:
+        if tThisFlipGlobal > text_prueba.tStartRefresh + 120-frameTolerance:
             # keep track of stop time/frame for later
-            textbox_prueba.tStop = t  # not accounting for scr refresh
-            textbox_prueba.frameNStop = frameN  # exact frame index
-            win.timeOnFlip(textbox_prueba, 'tStopRefresh')  # time at next scr refresh
-            textbox_prueba.setAutoDraw(False)
+            text_prueba.tStop = t  # not accounting for scr refresh
+            text_prueba.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(text_prueba, 'tStopRefresh')  # time at next scr refresh
+            text_prueba.setAutoDraw(False)
     
     # *key_resp_3* updates
     waitOnFlip = False
@@ -613,8 +577,8 @@ while continueRoutine:
 for thisComponent in intro_pruebaComponents:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
-thisExp.addData('textbox_prueba.started', textbox_prueba.tStartRefresh)
-thisExp.addData('textbox_prueba.stopped', textbox_prueba.tStopRefresh)
+thisExp.addData('text_prueba.started', text_prueba.tStartRefresh)
+thisExp.addData('text_prueba.stopped', text_prueba.tStopRefresh)
 # check responses
 if key_resp_3.keys in ['', [], None]:  # No response was made
     key_resp_3.keys = None
@@ -629,9 +593,9 @@ routineTimer.reset()
 
 # ------Prepare to start Routine "prueba_1"-------
 continueRoutine = True
-routineTimer.add(25.000000)
+routineTimer.add(2.000000)
 # update component parameters for each repeat
-sonido_prueba.setSound('800', secs=5, hamming=True)
+sonido_prueba.setSound('800', secs=1, hamming=True)
 sonido_prueba.setVolume(0.02, log=False)
 slider_prueba.reset()
 # keep track of which components have finished
@@ -666,7 +630,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         sonido_prueba.play(when=win)  # sync with win flip
     if sonido_prueba.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > sonido_prueba.tStartRefresh + 5-frameTolerance:
+        if tThisFlipGlobal > sonido_prueba.tStartRefresh + 1-frameTolerance:
             # keep track of stop time/frame for later
             sonido_prueba.tStop = t  # not accounting for scr refresh
             sonido_prueba.frameNStop = frameN  # exact frame index
@@ -674,7 +638,7 @@ while continueRoutine and routineTimer.getTime() > 0:
             sonido_prueba.stop()
     
     # *image_prueba* updates
-    if image_prueba.status == NOT_STARTED and tThisFlip >= 5-frameTolerance:
+    if image_prueba.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
         # keep track of start time/frame for later
         image_prueba.frameNStart = frameN  # exact frame index
         image_prueba.tStart = t  # local t and not account for scr refresh
@@ -683,7 +647,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         image_prueba.setAutoDraw(True)
     if image_prueba.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > image_prueba.tStartRefresh + 20-frameTolerance:
+        if tThisFlipGlobal > image_prueba.tStartRefresh + 1-frameTolerance:
             # keep track of stop time/frame for later
             image_prueba.tStop = t  # not accounting for scr refresh
             image_prueba.frameNStop = frameN  # exact frame index
@@ -691,7 +655,7 @@ while continueRoutine and routineTimer.getTime() > 0:
             image_prueba.setAutoDraw(False)
     
     # *slider_prueba* updates
-    if slider_prueba.status == NOT_STARTED and tThisFlip >= 5-frameTolerance:
+    if slider_prueba.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
         # keep track of start time/frame for later
         slider_prueba.frameNStart = frameN  # exact frame index
         slider_prueba.tStart = t  # local t and not account for scr refresh
@@ -700,7 +664,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         slider_prueba.setAutoDraw(True)
     if slider_prueba.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > slider_prueba.tStartRefresh + 20-frameTolerance:
+        if tThisFlipGlobal > slider_prueba.tStartRefresh + 1-frameTolerance:
             # keep track of stop time/frame for later
             slider_prueba.tStop = t  # not accounting for scr refresh
             slider_prueba.frameNStop = frameN  # exact frame index
@@ -744,9 +708,9 @@ thisExp.addData('slider_prueba.stopped', slider_prueba.tStopRefresh)
 
 # ------Prepare to start Routine "prueba_2"-------
 continueRoutine = True
-routineTimer.add(25.000000)
+routineTimer.add(2.000000)
 # update component parameters for each repeat
-sonido_prueba_2.setSound('800', secs=5, hamming=True)
+sonido_prueba_2.setSound('800', secs=1, hamming=True)
 sonido_prueba_2.setVolume(0.02, log=False)
 slider_prueba_2.reset()
 # keep track of which components have finished
@@ -781,7 +745,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         sonido_prueba_2.play(when=win)  # sync with win flip
     if sonido_prueba_2.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > sonido_prueba_2.tStartRefresh + 5-frameTolerance:
+        if tThisFlipGlobal > sonido_prueba_2.tStartRefresh + 1-frameTolerance:
             # keep track of stop time/frame for later
             sonido_prueba_2.tStop = t  # not accounting for scr refresh
             sonido_prueba_2.frameNStop = frameN  # exact frame index
@@ -789,7 +753,7 @@ while continueRoutine and routineTimer.getTime() > 0:
             sonido_prueba_2.stop()
     
     # *image_prueba_2* updates
-    if image_prueba_2.status == NOT_STARTED and tThisFlip >= 5-frameTolerance:
+    if image_prueba_2.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
         # keep track of start time/frame for later
         image_prueba_2.frameNStart = frameN  # exact frame index
         image_prueba_2.tStart = t  # local t and not account for scr refresh
@@ -798,7 +762,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         image_prueba_2.setAutoDraw(True)
     if image_prueba_2.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > image_prueba_2.tStartRefresh + 20-frameTolerance:
+        if tThisFlipGlobal > image_prueba_2.tStartRefresh + 1-frameTolerance:
             # keep track of stop time/frame for later
             image_prueba_2.tStop = t  # not accounting for scr refresh
             image_prueba_2.frameNStop = frameN  # exact frame index
@@ -806,7 +770,7 @@ while continueRoutine and routineTimer.getTime() > 0:
             image_prueba_2.setAutoDraw(False)
     
     # *slider_prueba_2* updates
-    if slider_prueba_2.status == NOT_STARTED and tThisFlip >= 5-frameTolerance:
+    if slider_prueba_2.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
         # keep track of start time/frame for later
         slider_prueba_2.frameNStart = frameN  # exact frame index
         slider_prueba_2.tStart = t  # local t and not account for scr refresh
@@ -815,7 +779,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         slider_prueba_2.setAutoDraw(True)
     if slider_prueba_2.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > slider_prueba_2.tStartRefresh + 20-frameTolerance:
+        if tThisFlipGlobal > slider_prueba_2.tStartRefresh + 1-frameTolerance:
             # keep track of stop time/frame for later
             slider_prueba_2.tStop = t  # not accounting for scr refresh
             slider_prueba_2.frameNStop = frameN  # exact frame index
@@ -864,7 +828,7 @@ key_resp_4.keys = []
 key_resp_4.rt = []
 _key_resp_4_allKeys = []
 # keep track of which components have finished
-intro_experimentoComponents = [textbox_prueba_2, key_resp_4]
+intro_experimentoComponents = [text_prueba_2, key_resp_4]
 for thisComponent in intro_experimentoComponents:
     thisComponent.tStart = None
     thisComponent.tStop = None
@@ -887,22 +851,22 @@ while continueRoutine:
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
-    # *textbox_prueba_2* updates
-    if textbox_prueba_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+    # *text_prueba_2* updates
+    if text_prueba_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        textbox_prueba_2.frameNStart = frameN  # exact frame index
-        textbox_prueba_2.tStart = t  # local t and not account for scr refresh
-        textbox_prueba_2.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(textbox_prueba_2, 'tStartRefresh')  # time at next scr refresh
-        textbox_prueba_2.setAutoDraw(True)
-    if textbox_prueba_2.status == STARTED:
+        text_prueba_2.frameNStart = frameN  # exact frame index
+        text_prueba_2.tStart = t  # local t and not account for scr refresh
+        text_prueba_2.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(text_prueba_2, 'tStartRefresh')  # time at next scr refresh
+        text_prueba_2.setAutoDraw(True)
+    if text_prueba_2.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > textbox_prueba_2.tStartRefresh + 500-frameTolerance:
+        if tThisFlipGlobal > text_prueba_2.tStartRefresh + 120-frameTolerance:
             # keep track of stop time/frame for later
-            textbox_prueba_2.tStop = t  # not accounting for scr refresh
-            textbox_prueba_2.frameNStop = frameN  # exact frame index
-            win.timeOnFlip(textbox_prueba_2, 'tStopRefresh')  # time at next scr refresh
-            textbox_prueba_2.setAutoDraw(False)
+            text_prueba_2.tStop = t  # not accounting for scr refresh
+            text_prueba_2.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(text_prueba_2, 'tStopRefresh')  # time at next scr refresh
+            text_prueba_2.setAutoDraw(False)
     
     # *key_resp_4* updates
     waitOnFlip = False
@@ -947,8 +911,8 @@ while continueRoutine:
 for thisComponent in intro_experimentoComponents:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
-thisExp.addData('textbox_prueba_2.started', textbox_prueba_2.tStartRefresh)
-thisExp.addData('textbox_prueba_2.stopped', textbox_prueba_2.tStopRefresh)
+thisExp.addData('text_prueba_2.started', text_prueba_2.tStartRefresh)
+thisExp.addData('text_prueba_2.stopped', text_prueba_2.tStopRefresh)
 # check responses
 if key_resp_4.keys in ['', [], None]:  # No response was made
     key_resp_4.keys = None
@@ -1001,9 +965,9 @@ for thisTrial in trials:
         
         # ------Prepare to start Routine "experimento"-------
         continueRoutine = True
-        routineTimer.add(25.000000)
+        routineTimer.add(2.000000)
         # update component parameters for each repeat
-        sonido_exp.setSound(Hertz, secs=5, hamming=True)
+        sonido_exp.setSound(Hertz, secs=1, hamming=True)
         sonido_exp.setVolume(volumen, log=False)
         image_exp.setImage(Imagenes)
         slider_exp.reset()
@@ -1039,7 +1003,7 @@ for thisTrial in trials:
                 sonido_exp.play(when=win)  # sync with win flip
             if sonido_exp.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > sonido_exp.tStartRefresh + 5-frameTolerance:
+                if tThisFlipGlobal > sonido_exp.tStartRefresh + 1-frameTolerance:
                     # keep track of stop time/frame for later
                     sonido_exp.tStop = t  # not accounting for scr refresh
                     sonido_exp.frameNStop = frameN  # exact frame index
@@ -1047,7 +1011,7 @@ for thisTrial in trials:
                     sonido_exp.stop()
             
             # *image_exp* updates
-            if image_exp.status == NOT_STARTED and tThisFlip >= 5-frameTolerance:
+            if image_exp.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
                 # keep track of start time/frame for later
                 image_exp.frameNStart = frameN  # exact frame index
                 image_exp.tStart = t  # local t and not account for scr refresh
@@ -1056,7 +1020,7 @@ for thisTrial in trials:
                 image_exp.setAutoDraw(True)
             if image_exp.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > image_exp.tStartRefresh + 20-frameTolerance:
+                if tThisFlipGlobal > image_exp.tStartRefresh + 1-frameTolerance:
                     # keep track of stop time/frame for later
                     image_exp.tStop = t  # not accounting for scr refresh
                     image_exp.frameNStop = frameN  # exact frame index
@@ -1064,7 +1028,7 @@ for thisTrial in trials:
                     image_exp.setAutoDraw(False)
             
             # *slider_exp* updates
-            if slider_exp.status == NOT_STARTED and tThisFlip >= 5-frameTolerance:
+            if slider_exp.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
                 # keep track of start time/frame for later
                 slider_exp.frameNStart = frameN  # exact frame index
                 slider_exp.tStart = t  # local t and not account for scr refresh
@@ -1073,7 +1037,7 @@ for thisTrial in trials:
                 slider_exp.setAutoDraw(True)
             if slider_exp.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > slider_exp.tStartRefresh + 20-frameTolerance:
+                if tThisFlipGlobal > slider_exp.tStartRefresh + 1-frameTolerance:
                     # keep track of stop time/frame for later
                     slider_exp.tStop = t  # not accounting for scr refresh
                     slider_exp.frameNStop = frameN  # exact frame index
@@ -1168,7 +1132,7 @@ while continueRoutine:
         text_subasta1.setAutoDraw(True)
     if text_subasta1.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > text_subasta1.tStartRefresh + 500-frameTolerance:
+        if tThisFlipGlobal > text_subasta1.tStartRefresh + 120-frameTolerance:
             # keep track of stop time/frame for later
             text_subasta1.tStop = t  # not accounting for scr refresh
             text_subasta1.frameNStop = frameN  # exact frame index
@@ -1272,7 +1236,7 @@ while continueRoutine:
         text_subasta2.setAutoDraw(True)
     if text_subasta2.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > text_subasta2.tStartRefresh + 500-frameTolerance:
+        if tThisFlipGlobal > text_subasta2.tStartRefresh + 120-frameTolerance:
             # keep track of stop time/frame for later
             text_subasta2.tStop = t  # not accounting for scr refresh
             text_subasta2.frameNStop = frameN  # exact frame index
@@ -1381,7 +1345,7 @@ while continueRoutine:
         text.setAutoDraw(True)
     if text.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > text.tStartRefresh + 500-frameTolerance:
+        if tThisFlipGlobal > text.tStartRefresh + 120-frameTolerance:
             # keep track of stop time/frame for later
             text.tStop = t  # not accounting for scr refresh
             text.frameNStop = frameN  # exact frame index
@@ -1492,7 +1456,7 @@ while continueRoutine:
         text_4.setAutoDraw(True)
     if text_4.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > text_4.tStartRefresh + 500-frameTolerance:
+        if tThisFlipGlobal > text_4.tStartRefresh + 120-frameTolerance:
             # keep track of stop time/frame for later
             text_4.tStop = t  # not accounting for scr refresh
             text_4.frameNStop = frameN  # exact frame index
@@ -1597,7 +1561,7 @@ while continueRoutine:
         text_producto.setAutoDraw(True)
     if text_producto.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > text_producto.tStartRefresh + 500-frameTolerance:
+        if tThisFlipGlobal > text_producto.tStartRefresh + 120-frameTolerance:
             # keep track of stop time/frame for later
             text_producto.tStop = t  # not accounting for scr refresh
             text_producto.frameNStop = frameN  # exact frame index
@@ -1614,7 +1578,7 @@ while continueRoutine:
         image.setAutoDraw(True)
     if image.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > image.tStartRefresh + 500-frameTolerance:
+        if tThisFlipGlobal > image.tStartRefresh + 120-frameTolerance:
             # keep track of stop time/frame for later
             image.tStop = t  # not accounting for scr refresh
             image.frameNStop = frameN  # exact frame index
@@ -1729,7 +1693,7 @@ while continueRoutine:
         texto_final.setAutoDraw(True)
     if texto_final.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > texto_final.tStartRefresh + 500-frameTolerance:
+        if tThisFlipGlobal > texto_final.tStartRefresh + 120-frameTolerance:
             # keep track of stop time/frame for later
             texto_final.tStop = t  # not accounting for scr refresh
             texto_final.frameNStop = frameN  # exact frame index
@@ -1833,7 +1797,7 @@ while continueRoutine:
         text_2.setAutoDraw(True)
     if text_2.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > text_2.tStartRefresh + 500-frameTolerance:
+        if tThisFlipGlobal > text_2.tStartRefresh + 120-frameTolerance:
             # keep track of stop time/frame for later
             text_2.tStop = t  # not accounting for scr refresh
             text_2.frameNStop = frameN  # exact frame index
@@ -1945,10 +1909,10 @@ while continueRoutine:
 for thisComponent in encuestaComponents:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
-# the Routine "encuesta" was not non-slip safe, so reset the non-slip timer
-routineTimer.reset()
 import webbrowser
 webbrowser.open("https://www.youtube.com")
+# the Routine "encuesta" was not non-slip safe, so reset the non-slip timer
+routineTimer.reset()
 
 # Flip one final time so any remaining win.callOnFlip() 
 # and win.timeOnFlip() tasks get executed before quitting

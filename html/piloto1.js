@@ -86,6 +86,9 @@ flowScheduler.add(pago3RoutineEnd());
 flowScheduler.add(intro_encuestaRoutineBegin());
 flowScheduler.add(intro_encuestaRoutineEachFrame());
 flowScheduler.add(intro_encuestaRoutineEnd());
+flowScheduler.add(encuestaRoutineBegin());
+flowScheduler.add(encuestaRoutineEachFrame());
+flowScheduler.add(encuestaRoutineEnd());
 flowScheduler.add(quitPsychoJS, '', true);
 
 // quit if user presses Cancel in dialog box:
@@ -127,7 +130,7 @@ function experimentInit() {
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('white'),  opacity: 1,
+    color: new util.Color('black'),  opacity: 1,
     depth: 0.0 
   });
   
@@ -142,7 +145,7 @@ function experimentInit() {
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.03,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('white'),  opacity: 1,
+    color: new util.Color('black'),  opacity: 1,
     depth: 0.0 
   });
   
@@ -157,7 +160,7 @@ function experimentInit() {
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('white'),  opacity: 1,
+    color: new util.Color('black'),  opacity: 1,
     depth: 0.0 
   });
   
@@ -168,7 +171,7 @@ function experimentInit() {
   sonido_prueba = new sound.Sound({
     win: psychoJS.window,
     value: 'A',
-    secs: (- 1),
+    secs: 1,
     });
   sonido_prueba.setVolume(1.0);
   image_prueba = new visual.ImageStim({
@@ -195,7 +198,7 @@ function experimentInit() {
   sonido_prueba_2 = new sound.Sound({
     win: psychoJS.window,
     value: 'A',
-    secs: (- 1),
+    secs: 1,
     });
   sonido_prueba_2.setVolume(1.0);
   image_prueba_2 = new visual.ImageStim({
@@ -226,7 +229,7 @@ function experimentInit() {
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('white'),  opacity: 1,
+    color: new util.Color('black'),  opacity: 1,
     depth: 0.0 
   });
   
@@ -237,7 +240,7 @@ function experimentInit() {
   sonido_exp = new sound.Sound({
     win: psychoJS.window,
     value: 'A',
-    secs: (- 1),
+    secs: 1,
     });
   sonido_exp.setVolume(1.0);
   image_exp = new visual.ImageStim({
@@ -376,6 +379,8 @@ function experimentInit() {
   
   key_resp_11 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
+  // Initialize components for Routine "encuesta"
+  encuestaClock = new util.Clock();
   // Create some handy timers
   globalClock = new util.Clock();  // to track the time since experiment started
   routineTimer = new util.CountdownTimer();  // to track time remaining of each (non-slip) routine
@@ -746,14 +751,14 @@ function prueba_1RoutineBegin(snapshot) {
     t = 0;
     prueba_1Clock.reset(); // clock
     frameN = -1;
-    routineTimer.add(25.000000);
+    routineTimer.add(2.000000);
     // update component parameters for each repeat
     sonido_prueba = new sound.Sound({
     win: psychoJS.window,
     value: '800',
-    secs: 5,
+    secs: 1,
     });
-    sonido_prueba.secs=5;
+    sonido_prueba.secs=1;
     sonido_prueba.setVolume(0.02);
     slider_prueba.reset()
     // keep track of which components have finished
@@ -789,15 +794,15 @@ function prueba_1RoutineEachFrame(snapshot) {
       psychoJS.window.callOnFlip(function(){ sonido_prueba.play(); });  // screen flip
       sonido_prueba.status = PsychoJS.Status.STARTED;
     }
-    frameRemains = 0.0 + 5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 0.0 + 1 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((sonido_prueba.status === PsychoJS.Status.STARTED || sonido_prueba.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
-      if (5 > 0.5) {  sonido_prueba.stop();  // stop the sound (if longer than duration)
+      if (1 > 0.5) {  sonido_prueba.stop();  // stop the sound (if longer than duration)
         sonido_prueba.status = PsychoJS.Status.FINISHED;
       }
     }
     
     // *image_prueba* updates
-    if (t >= 5 && image_prueba.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= 1 && image_prueba.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
       image_prueba.tStart = t;  // (not accounting for frame time here)
       image_prueba.frameNStart = frameN;  // exact frame index
@@ -805,13 +810,13 @@ function prueba_1RoutineEachFrame(snapshot) {
       image_prueba.setAutoDraw(true);
     }
 
-    frameRemains = 5 + 20 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 1 + 1 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((image_prueba.status === PsychoJS.Status.STARTED || image_prueba.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       image_prueba.setAutoDraw(false);
     }
     
     // *slider_prueba* updates
-    if (t >= 5 && slider_prueba.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= 1 && slider_prueba.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
       slider_prueba.tStart = t;  // (not accounting for frame time here)
       slider_prueba.frameNStart = frameN;  // exact frame index
@@ -819,7 +824,7 @@ function prueba_1RoutineEachFrame(snapshot) {
       slider_prueba.setAutoDraw(true);
     }
 
-    frameRemains = 5 + 20 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 1 + 1 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((slider_prueba.status === PsychoJS.Status.STARTED || slider_prueba.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       slider_prueba.setAutoDraw(false);
     }
@@ -874,14 +879,14 @@ function prueba_2RoutineBegin(snapshot) {
     t = 0;
     prueba_2Clock.reset(); // clock
     frameN = -1;
-    routineTimer.add(25.000000);
+    routineTimer.add(2.000000);
     // update component parameters for each repeat
     sonido_prueba_2 = new sound.Sound({
     win: psychoJS.window,
     value: '800',
-    secs: 5,
+    secs: 1,
     });
-    sonido_prueba_2.secs=5;
+    sonido_prueba_2.secs=1;
     sonido_prueba_2.setVolume(0.02);
     slider_prueba_2.reset()
     // keep track of which components have finished
@@ -917,15 +922,15 @@ function prueba_2RoutineEachFrame(snapshot) {
       psychoJS.window.callOnFlip(function(){ sonido_prueba_2.play(); });  // screen flip
       sonido_prueba_2.status = PsychoJS.Status.STARTED;
     }
-    frameRemains = 0.0 + 5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 0.0 + 1 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((sonido_prueba_2.status === PsychoJS.Status.STARTED || sonido_prueba_2.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
-      if (5 > 0.5) {  sonido_prueba_2.stop();  // stop the sound (if longer than duration)
+      if (1 > 0.5) {  sonido_prueba_2.stop();  // stop the sound (if longer than duration)
         sonido_prueba_2.status = PsychoJS.Status.FINISHED;
       }
     }
     
     // *image_prueba_2* updates
-    if (t >= 5 && image_prueba_2.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= 1 && image_prueba_2.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
       image_prueba_2.tStart = t;  // (not accounting for frame time here)
       image_prueba_2.frameNStart = frameN;  // exact frame index
@@ -933,13 +938,13 @@ function prueba_2RoutineEachFrame(snapshot) {
       image_prueba_2.setAutoDraw(true);
     }
 
-    frameRemains = 5 + 20 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 1 + 1 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((image_prueba_2.status === PsychoJS.Status.STARTED || image_prueba_2.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       image_prueba_2.setAutoDraw(false);
     }
     
     // *slider_prueba_2* updates
-    if (t >= 5 && slider_prueba_2.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= 1 && slider_prueba_2.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
       slider_prueba_2.tStart = t;  // (not accounting for frame time here)
       slider_prueba_2.frameNStart = frameN;  // exact frame index
@@ -947,7 +952,7 @@ function prueba_2RoutineEachFrame(snapshot) {
       slider_prueba_2.setAutoDraw(true);
     }
 
-    frameRemains = 5 + 20 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 1 + 1 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((slider_prueba_2.status === PsychoJS.Status.STARTED || slider_prueba_2.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       slider_prueba_2.setAutoDraw(false);
     }
@@ -1184,14 +1189,14 @@ function experimentoRoutineBegin(snapshot) {
     t = 0;
     experimentoClock.reset(); // clock
     frameN = -1;
-    routineTimer.add(25.000000);
+    routineTimer.add(2.000000);
     // update component parameters for each repeat
     sonido_exp = new sound.Sound({
     win: psychoJS.window,
     value: Hertz,
-    secs: 5,
+    secs: 1,
     });
-    sonido_exp.secs=5;
+    sonido_exp.secs=1;
     sonido_exp.setVolume(volumen);
     image_exp.setImage(Imagenes);
     slider_exp.reset()
@@ -1228,15 +1233,15 @@ function experimentoRoutineEachFrame(snapshot) {
       psychoJS.window.callOnFlip(function(){ sonido_exp.play(); });  // screen flip
       sonido_exp.status = PsychoJS.Status.STARTED;
     }
-    frameRemains = 0.0 + 5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 0.0 + 1 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((sonido_exp.status === PsychoJS.Status.STARTED || sonido_exp.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
-      if (5 > 0.5) {  sonido_exp.stop();  // stop the sound (if longer than duration)
+      if (1 > 0.5) {  sonido_exp.stop();  // stop the sound (if longer than duration)
         sonido_exp.status = PsychoJS.Status.FINISHED;
       }
     }
     
     // *image_exp* updates
-    if (t >= 5 && image_exp.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= 1 && image_exp.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
       image_exp.tStart = t;  // (not accounting for frame time here)
       image_exp.frameNStart = frameN;  // exact frame index
@@ -1244,13 +1249,13 @@ function experimentoRoutineEachFrame(snapshot) {
       image_exp.setAutoDraw(true);
     }
 
-    frameRemains = 5 + 20 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 1 + 1 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((image_exp.status === PsychoJS.Status.STARTED || image_exp.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       image_exp.setAutoDraw(false);
     }
     
     // *slider_exp* updates
-    if (t >= 5 && slider_exp.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= 1 && slider_exp.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
       slider_exp.tStart = t;  // (not accounting for frame time here)
       slider_exp.frameNStart = frameN;  // exact frame index
@@ -1258,7 +1263,7 @@ function experimentoRoutineEachFrame(snapshot) {
       slider_exp.setAutoDraw(true);
     }
 
-    frameRemains = 5 + 20 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 1 + 1 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((slider_exp.status === PsychoJS.Status.STARTED || slider_exp.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       slider_exp.setAutoDraw(false);
     }
@@ -2186,6 +2191,78 @@ function intro_encuestaRoutineEnd(snapshot) {
   };
 }
 
+function encuestaRoutineBegin(snapshot) {
+  return function () {
+    //------Prepare to start Routine 'encuesta'-------
+    t = 0;
+    encuestaClock.reset(); // clock
+    frameN = -1;
+    // update component parameters for each repeat
+    // keep track of which components have finished
+    encuestaComponents = [];
+    
+    for (const thisComponent of encuestaComponents)
+      if ('status' in thisComponent)
+        thisComponent.status = PsychoJS.Status.NOT_STARTED;
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
+  };
+}
+
+function encuestaRoutineEachFrame(snapshot) {
+  return function () {
+    //------Loop for each frame of Routine 'encuesta'-------
+    let continueRoutine = true; // until we're told otherwise
+    // get current time
+    t = encuestaClock.getTime();
+    frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
+    // update/draw components on each frame
+    // check for quit (typically the Esc key)
+    if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
+      return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
+    }
+    
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
+    
+    continueRoutine = false;  // reverts to True if at least one component still running
+    for (const thisComponent of encuestaComponents)
+      if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
+        continueRoutine = true;
+        break;
+      }
+    
+    // refresh the screen if continuing
+    if (continueRoutine) {
+      return Scheduler.Event.FLIP_REPEAT;
+    } else {
+      return Scheduler.Event.NEXT;
+    }
+  };
+}
+
+function encuestaRoutineEnd(snapshot) {
+  return function () {
+    //------Ending Routine 'encuesta'-------
+    for (const thisComponent of encuestaComponents) {
+      if (typeof thisComponent.setAutoDraw === 'function') {
+        thisComponent.setAutoDraw(false);
+      }
+    }
+    import * as webbrowser from 'webbrowser';
+    webbrowser.open("https://www.youtube.com");
+    
+    // the Routine "encuesta" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset();
+    
+    return Scheduler.Event.NEXT;
+  };
+}
+
 function endLoopIteration(scheduler, snapshot) {
   // ------Prepare for next entry------
   return function () {
@@ -2232,9 +2309,6 @@ function quitPsychoJS(message, isCompleted) {
   
   
   
-  
-  import * as webbrowser from 'webbrowser';
-  webbrowser.open("https://www.youtube.com");
   
   
   psychoJS.window.close();
