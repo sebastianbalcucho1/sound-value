@@ -59,24 +59,49 @@
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
-      <KeyboardComponent name="key_resp_6">
-        <Param name="allowedKeys" updates="constant" val="'space'," valType="code"/>
-        <Param name="correctAns" updates="constant" val="" valType="str"/>
+      <PolygonComponent name="boton_subasta2">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
-        <Param name="name" updates="None" val="key_resp_6" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[255,0,0]" valType="str"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="lineColor" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="name" updates="None" val="boton_subasta2" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0.7, -0.4)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="size" updates="constant" val="(0.3, 0.2)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </PolygonComponent>
+      <MouseComponent name="mouse_subasta2">
+        <Param name="clickable" updates="constant" val="(boton_subasta2)" valType="code"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutineOnPress" updates="constant" val="valid click" valType="str"/>
+        <Param name="name" updates="None" val="mouse_subasta2" valType="code"/>
+        <Param name="newClicksOnly" updates="constant" val="True" valType="bool"/>
+        <Param name="saveMouseState" updates="None" val="final" valType="str"/>
+        <Param name="saveParamsClickable" updates="constant" val="" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="store" updates="constant" val="last key" valType="str"/>
-        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
-        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
-      </KeyboardComponent>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="False" valType="bool"/>
+        <Param name="timeRelativeTo" updates="constant" val="mouse onset" valType="str"/>
+      </MouseComponent>
     </Routine>
     <Routine name="subasta1">
       <TextComponent name="text_subasta1">
@@ -103,24 +128,49 @@
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
-      <KeyboardComponent name="key_resp_5">
-        <Param name="allowedKeys" updates="constant" val="'space'," valType="code"/>
-        <Param name="correctAns" updates="constant" val="" valType="str"/>
+      <PolygonComponent name="boton_subasta1">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
-        <Param name="name" updates="None" val="key_resp_5" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[255,0,0]" valType="str"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="lineColor" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="name" updates="None" val="boton_subasta1" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0.7, -0.4)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="size" updates="constant" val="(0.3, 0.2)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </PolygonComponent>
+      <MouseComponent name="mouse_subasta1">
+        <Param name="clickable" updates="constant" val="(boton_subasta1)" valType="code"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutineOnPress" updates="constant" val="valid click" valType="str"/>
+        <Param name="name" updates="None" val="mouse_subasta1" valType="code"/>
+        <Param name="newClicksOnly" updates="constant" val="True" valType="bool"/>
+        <Param name="saveMouseState" updates="None" val="final" valType="str"/>
+        <Param name="saveParamsClickable" updates="constant" val="" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="store" updates="constant" val="last key" valType="str"/>
-        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
-        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
-      </KeyboardComponent>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="False" valType="bool"/>
+        <Param name="timeRelativeTo" updates="constant" val="mouse onset" valType="str"/>
+      </MouseComponent>
     </Routine>
     <Routine name="slider">
       <CodeComponent name="code_4">
@@ -226,24 +276,49 @@
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
-      <KeyboardComponent name="key_resp_10">
-        <Param name="allowedKeys" updates="constant" val="'space'," valType="code"/>
-        <Param name="correctAns" updates="constant" val="" valType="str"/>
+      <PolygonComponent name="boton_pago3">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
-        <Param name="name" updates="None" val="key_resp_10" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[255,0,0]" valType="str"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="lineColor" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="name" updates="None" val="boton_pago3" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0.7, -0.4)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="size" updates="constant" val="(0.3, 0.2)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </PolygonComponent>
+      <MouseComponent name="mouse_pago3">
+        <Param name="clickable" updates="constant" val="(boton_pago3)" valType="code"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutineOnPress" updates="constant" val="valid click" valType="str"/>
+        <Param name="name" updates="None" val="mouse_pago3" valType="code"/>
+        <Param name="newClicksOnly" updates="constant" val="True" valType="bool"/>
+        <Param name="saveMouseState" updates="None" val="final" valType="str"/>
+        <Param name="saveParamsClickable" updates="constant" val="" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="store" updates="constant" val="last key" valType="str"/>
-        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
-        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
-      </KeyboardComponent>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="False" valType="bool"/>
+        <Param name="timeRelativeTo" updates="constant" val="mouse onset" valType="str"/>
+      </MouseComponent>
     </Routine>
     <Routine name="pago2">
       <CodeComponent name="code_3">
@@ -287,24 +362,49 @@
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
-      <KeyboardComponent name="key_resp_8">
-        <Param name="allowedKeys" updates="constant" val="'space'," valType="code"/>
-        <Param name="correctAns" updates="constant" val="" valType="str"/>
+      <PolygonComponent name="boton_pago2">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
-        <Param name="name" updates="None" val="key_resp_8" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[255,0,0]" valType="str"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="lineColor" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="name" updates="None" val="boton_pago2" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0.7, -0.4)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="size" updates="constant" val="(0.3, 0.2)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </PolygonComponent>
+      <MouseComponent name="mouse_pago2">
+        <Param name="clickable" updates="constant" val="(boton_pago2)" valType="code"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutineOnPress" updates="constant" val="valid click" valType="str"/>
+        <Param name="name" updates="None" val="mouse_pago2" valType="code"/>
+        <Param name="newClicksOnly" updates="constant" val="True" valType="bool"/>
+        <Param name="saveMouseState" updates="None" val="final" valType="str"/>
+        <Param name="saveParamsClickable" updates="constant" val="" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="store" updates="constant" val="last key" valType="str"/>
-        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
-        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
-      </KeyboardComponent>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="False" valType="bool"/>
+        <Param name="timeRelativeTo" updates="constant" val="mouse onset" valType="str"/>
+      </MouseComponent>
     </Routine>
     <Routine name="pago1">
       <CodeComponent name="code">
@@ -348,24 +448,49 @@
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
-      <KeyboardComponent name="key_resp_7">
-        <Param name="allowedKeys" updates="constant" val="'space'," valType="code"/>
-        <Param name="correctAns" updates="constant" val="" valType="str"/>
+      <PolygonComponent name="boton_pago1">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
-        <Param name="name" updates="None" val="key_resp_7" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[255,0,0]" valType="str"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="lineColor" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="name" updates="None" val="boton_pago1" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0.7, -0.4)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="size" updates="constant" val="(0.3, 0.2)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </PolygonComponent>
+      <MouseComponent name="mouse_pago1">
+        <Param name="clickable" updates="constant" val="(boton_pago1)" valType="code"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutineOnPress" updates="constant" val="valid click" valType="str"/>
+        <Param name="name" updates="None" val="mouse_pago1" valType="code"/>
+        <Param name="newClicksOnly" updates="constant" val="True" valType="bool"/>
+        <Param name="saveMouseState" updates="None" val="final" valType="str"/>
+        <Param name="saveParamsClickable" updates="constant" val="" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="store" updates="constant" val="last key" valType="str"/>
-        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
-        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
-      </KeyboardComponent>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="False" valType="bool"/>
+        <Param name="timeRelativeTo" updates="constant" val="mouse onset" valType="str"/>
+      </MouseComponent>
     </Routine>
     <Routine name="intro">
       <TextComponent name="mensaje_intro">
@@ -376,7 +501,7 @@
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="letterHeight" updates="constant" val="0.07" valType="code"/>
         <Param name="name" updates="None" val="mensaje_intro" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
@@ -388,28 +513,53 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="120" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Bienvenido al juego de &lt;b&gt;subasta&lt;/b&gt;.&amp;#10;&amp;#10;Oprima el botón rojo para avanzar." valType="extendedStr"/>
+        <Param name="text" updates="constant" val="Bienvenido al juego de subasta&amp;#10;&amp;#10;Oprima el botón rojo para avanzar." valType="extendedStr"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
-      <KeyboardComponent name="key_resp">
-        <Param name="allowedKeys" updates="constant" val="'space'," valType="code"/>
-        <Param name="correctAns" updates="constant" val="" valType="str"/>
+      <PolygonComponent name="boton_intro">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
-        <Param name="name" updates="None" val="key_resp" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[255,0,0]" valType="str"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="lineColor" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="name" updates="None" val="boton_intro" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0.7, -0.4)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="size" updates="constant" val="(0.3, 0.2)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </PolygonComponent>
+      <MouseComponent name="mouse_intro">
+        <Param name="clickable" updates="constant" val="(boton_intro)" valType="code"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutineOnPress" updates="constant" val="valid click" valType="str"/>
+        <Param name="name" updates="None" val="mouse_intro" valType="code"/>
+        <Param name="newClicksOnly" updates="constant" val="True" valType="bool"/>
+        <Param name="saveMouseState" updates="None" val="final" valType="str"/>
+        <Param name="saveParamsClickable" updates="constant" val="" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="store" updates="constant" val="last key" valType="str"/>
-        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
-        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
-      </KeyboardComponent>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="False" valType="bool"/>
+        <Param name="timeRelativeTo" updates="constant" val="mouse onset" valType="str"/>
+      </MouseComponent>
     </Routine>
     <Routine name="intro_2">
       <TextComponent name="mensaje_intro_2">
@@ -436,24 +586,49 @@
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
-      <KeyboardComponent name="key_resp_2">
-        <Param name="allowedKeys" updates="constant" val="'space'," valType="code"/>
-        <Param name="correctAns" updates="constant" val="" valType="str"/>
+      <PolygonComponent name="boton_intro_2">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
-        <Param name="name" updates="None" val="key_resp_2" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[255,0,0]" valType="str"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="lineColor" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="name" updates="None" val="boton_intro_2" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0.7, -0.4)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="size" updates="constant" val="(0.3, 0.2)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </PolygonComponent>
+      <MouseComponent name="mouse_intro_2">
+        <Param name="clickable" updates="constant" val="(boton_intro_2)" valType="code"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutineOnPress" updates="constant" val="valid click" valType="str"/>
+        <Param name="name" updates="None" val="mouse_intro_2" valType="code"/>
+        <Param name="newClicksOnly" updates="constant" val="True" valType="bool"/>
+        <Param name="saveMouseState" updates="None" val="final" valType="str"/>
+        <Param name="saveParamsClickable" updates="constant" val="" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="store" updates="constant" val="last key" valType="str"/>
-        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
-        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
-      </KeyboardComponent>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="False" valType="bool"/>
+        <Param name="timeRelativeTo" updates="constant" val="mouse onset" valType="str"/>
+      </MouseComponent>
     </Routine>
     <Routine name="experimento">
       <SoundComponent name="sonido_exp">
@@ -568,24 +743,49 @@
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
-      <KeyboardComponent name="key_resp_3">
-        <Param name="allowedKeys" updates="constant" val="'space'," valType="code"/>
-        <Param name="correctAns" updates="constant" val="" valType="str"/>
+      <PolygonComponent name="boton_intro_prueba">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
-        <Param name="name" updates="None" val="key_resp_3" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[255,0,0]" valType="str"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="lineColor" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="name" updates="None" val="boton_intro_prueba" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0.7, -0.4)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="size" updates="constant" val="(0.3, 0.2)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </PolygonComponent>
+      <MouseComponent name="mouse_intro_prueba">
+        <Param name="clickable" updates="constant" val="(boton_intro_prueba)" valType="code"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutineOnPress" updates="constant" val="valid click" valType="str"/>
+        <Param name="name" updates="None" val="mouse_intro_prueba" valType="code"/>
+        <Param name="newClicksOnly" updates="constant" val="True" valType="bool"/>
+        <Param name="saveMouseState" updates="None" val="final" valType="str"/>
+        <Param name="saveParamsClickable" updates="constant" val="" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="store" updates="constant" val="last key" valType="str"/>
-        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
-        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
-      </KeyboardComponent>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="False" valType="bool"/>
+        <Param name="timeRelativeTo" updates="constant" val="mouse onset" valType="str"/>
+      </MouseComponent>
     </Routine>
     <Routine name="prueba_1">
       <SoundComponent name="sonido_prueba">
@@ -779,24 +979,49 @@
         <Param name="texture resolution" updates="constant" val="128" valType="code"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
       </ImageComponent>
-      <KeyboardComponent name="key_resp_9">
-        <Param name="allowedKeys" updates="constant" val="'space'," valType="code"/>
-        <Param name="correctAns" updates="constant" val="" valType="str"/>
+      <PolygonComponent name="boton_producto">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
-        <Param name="name" updates="None" val="key_resp_9" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[255,0,0]" valType="str"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="lineColor" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="name" updates="None" val="boton_producto" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0.7, -0.4)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="size" updates="constant" val="(0.3, 0.2)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </PolygonComponent>
+      <MouseComponent name="mouse_producto">
+        <Param name="clickable" updates="constant" val="(boton_producto)" valType="code"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutineOnPress" updates="constant" val="valid click" valType="str"/>
+        <Param name="name" updates="None" val="mouse_producto" valType="code"/>
+        <Param name="newClicksOnly" updates="constant" val="True" valType="bool"/>
+        <Param name="saveMouseState" updates="None" val="final" valType="str"/>
+        <Param name="saveParamsClickable" updates="constant" val="" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="store" updates="constant" val="last key" valType="str"/>
-        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
-        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
-      </KeyboardComponent>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="False" valType="bool"/>
+        <Param name="timeRelativeTo" updates="constant" val="mouse onset" valType="str"/>
+      </MouseComponent>
     </Routine>
     <Routine name="intro_experimento">
       <TextComponent name="text_prueba_2">
@@ -823,24 +1048,49 @@
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
-      <KeyboardComponent name="key_resp_4">
-        <Param name="allowedKeys" updates="constant" val="'space'," valType="code"/>
-        <Param name="correctAns" updates="constant" val="" valType="str"/>
+      <PolygonComponent name="boton_intro_exp">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
-        <Param name="name" updates="None" val="key_resp_4" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[255,0,0]" valType="str"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="lineColor" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="name" updates="None" val="boton_intro_exp" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0.7, -0.4)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="size" updates="constant" val="(0.3, 0.2)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </PolygonComponent>
+      <MouseComponent name="mouse_intro_exp">
+        <Param name="clickable" updates="constant" val="(boton_intro_exp)" valType="code"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutineOnPress" updates="constant" val="valid click" valType="str"/>
+        <Param name="name" updates="None" val="mouse_intro_exp" valType="code"/>
+        <Param name="newClicksOnly" updates="constant" val="True" valType="bool"/>
+        <Param name="saveMouseState" updates="None" val="final" valType="str"/>
+        <Param name="saveParamsClickable" updates="constant" val="" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="store" updates="constant" val="last key" valType="str"/>
-        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
-        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
-      </KeyboardComponent>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="False" valType="bool"/>
+        <Param name="timeRelativeTo" updates="constant" val="mouse onset" valType="str"/>
+      </MouseComponent>
     </Routine>
     <Routine name="encuesta">
       <CodeComponent name="code_6">
@@ -886,24 +1136,49 @@
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
-      <KeyboardComponent name="key_resp_11">
-        <Param name="allowedKeys" updates="constant" val="'space'," valType="code"/>
-        <Param name="correctAns" updates="constant" val="" valType="str"/>
+      <PolygonComponent name="boton_intro_encuesta">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
-        <Param name="name" updates="None" val="key_resp_11" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[255,0,0]" valType="str"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="lineColor" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="name" updates="None" val="boton_intro_encuesta" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0.7, -0.4)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="size" updates="constant" val="(0.3, 0.2)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </PolygonComponent>
+      <MouseComponent name="mouse_intro_encuesta">
+        <Param name="clickable" updates="constant" val="(boton_intro_encuesta)" valType="code"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutineOnPress" updates="constant" val="valid click" valType="str"/>
+        <Param name="name" updates="None" val="mouse_intro_encuesta" valType="code"/>
+        <Param name="newClicksOnly" updates="constant" val="True" valType="bool"/>
+        <Param name="saveMouseState" updates="None" val="final" valType="str"/>
+        <Param name="saveParamsClickable" updates="constant" val="" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="store" updates="constant" val="last key" valType="str"/>
-        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
-        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
-      </KeyboardComponent>
+        <Param name="stopVal" updates="constant" val="120" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="False" valType="bool"/>
+        <Param name="timeRelativeTo" updates="constant" val="mouse onset" valType="str"/>
+      </MouseComponent>
     </Routine>
   </Routines>
   <Flow>
