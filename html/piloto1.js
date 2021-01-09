@@ -134,7 +134,7 @@ function experimentInit() {
     fillColor: undefined, borderColor: undefined,
     bold: true, italic: false,
     opacity: 1,
-    padding: undefined,
+    padding: 1,
     editable: false,
     anchor: 'center',
     depth: 0.0 
@@ -155,7 +155,7 @@ function experimentInit() {
     fillColor: 'white', borderColor: undefined,
     bold: false, italic: false,
     opacity: 1,
-    padding: undefined,
+    padding: 1,
     editable: false,
     anchor: 'center',
     depth: 0.0 
@@ -251,7 +251,7 @@ function experimentInit() {
     fillColor: undefined, borderColor: undefined,
     bold: false, italic: false,
     opacity: 1,
-    padding: undefined,
+    padding: 1,
     editable: false,
     anchor: 'center',
     depth: 0.0 
