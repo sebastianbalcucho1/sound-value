@@ -1,0 +1,2 @@
+﻿mensaje_intro.started,mensaje_intro.stopped,boton_intro.started,boton_intro.stopped,mouse_intro.x,mouse_intro.y,mouse_intro.leftButton,mouse_intro.midButton,mouse_intro.rightButton,mouse_intro.clicked_name,mouse_intro.started,mouse_intro.stopped,nombre,date,expName,psychopyVersion,frameRate,
+13.154111799958628,None,13.154111799958628,None,0.6705729166666666,-0.3463541666666667,1,0,0,boton_intro,0.0004844500799663365,None,Sebastián Balcucho,2021_Jan_09_0258,piloto,2020.2.5,59.951535172853625,
