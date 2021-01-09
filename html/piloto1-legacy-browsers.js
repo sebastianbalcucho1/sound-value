@@ -75,9 +75,6 @@ flowScheduler.add(pago3RoutineEnd());
 flowScheduler.add(intro_encuestaRoutineBegin());
 flowScheduler.add(intro_encuestaRoutineEachFrame());
 flowScheduler.add(intro_encuestaRoutineEnd());
-flowScheduler.add(encuestaRoutineBegin());
-flowScheduler.add(encuestaRoutineEachFrame());
-flowScheduler.add(encuestaRoutineEnd());
 flowScheduler.add(quitPsychoJS, '', true);
 
 // quit if user presses Cancel in dialog box:
@@ -368,8 +365,6 @@ function experimentInit() {
   
   key_resp_11 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
-  // Initialize components for Routine "encuesta"
-  encuestaClock = new util.Clock();
   // Create some handy timers
   globalClock = new util.Clock();  // to track the time since experiment started
   routineTimer = new util.CountdownTimer();  // to track time remaining of each (non-slip) routine
@@ -2190,76 +2185,6 @@ function intro_encuestaRoutineEnd(snapshot) {
     
     key_resp_11.stop();
     // the Routine "intro_encuesta" was not non-slip safe, so reset the non-slip timer
-    routineTimer.reset();
-    
-    return Scheduler.Event.NEXT;
-  };
-}
-
-function encuestaRoutineBegin(snapshot) {
-  return function () {
-    //------Prepare to start Routine 'encuesta'-------
-    t = 0;
-    encuestaClock.reset(); // clock
-    frameN = -1;
-    // update component parameters for each repeat
-    // keep track of which components have finished
-    encuestaComponents = [];
-    
-    encuestaComponents.forEach( function(thisComponent) {
-      if ('status' in thisComponent)
-        thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
-    // check if the Routine should terminate
-    if (!continueRoutine) {  // a component has requested a forced-end of Routine
-      return Scheduler.Event.NEXT;
-    }
-  };
-}
-
-function encuestaRoutineEachFrame(snapshot) {
-  return function () {
-    //------Loop for each frame of Routine 'encuesta'-------
-    let continueRoutine = true; // until we're told otherwise
-    // get current time
-    t = encuestaClock.getTime();
-    frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
-    // update/draw components on each frame
-    // check for quit (typically the Esc key)
-    if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
-      return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
-    }
-    
-    // check if the Routine should terminate
-    if (!continueRoutine) {  // a component has requested a forced-end of Routine
-      return Scheduler.Event.NEXT;
-    }
-    
-    continueRoutine = false;  // reverts to True if at least one component still running
-    encuestaComponents.forEach( function(thisComponent) {
-      if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
-        continueRoutine = true;
-      }
-    });
-    
-    // refresh the screen if continuing
-    if (continueRoutine) {
-      return Scheduler.Event.FLIP_REPEAT;
-    } else {
-      return Scheduler.Event.NEXT;
-    }
-  };
-}
-
-function encuestaRoutineEnd(snapshot) {
-  return function () {
-    //------Ending Routine 'encuesta'-------
-    encuestaComponents.forEach( function(thisComponent) {
-      if (typeof thisComponent.setAutoDraw === 'function') {
-        thisComponent.setAutoDraw(false);
-      }
-    });
-    // the Routine "encuesta" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
     return Scheduler.Event.NEXT;
