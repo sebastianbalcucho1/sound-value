@@ -2540,6 +2540,7 @@ function intro_encuestaRoutineEachFrame(snapshot) {
         }
       }
     }
+    message = “Por favor, oprima 'ok' para ser dirigido a la encuesta.”;
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
       return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
@@ -2637,7 +2638,6 @@ function quitPsychoJS(message, isCompleted) {
   
   
   
-  message = “Por favor, oprima 'ok' para ser dirigido a la encuesta.”;
   
   psychoJS.window.close();
   psychoJS.quit({message: message, isCompleted: isCompleted});
