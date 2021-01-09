@@ -86,9 +86,6 @@ flowScheduler.add(pago3RoutineEnd());
 flowScheduler.add(intro_encuestaRoutineBegin());
 flowScheduler.add(intro_encuestaRoutineEachFrame());
 flowScheduler.add(intro_encuestaRoutineEnd());
-flowScheduler.add(encuestaRoutineBegin());
-flowScheduler.add(encuestaRoutineEachFrame());
-flowScheduler.add(encuestaRoutineEnd());
 flowScheduler.add(quitPsychoJS, '', true);
 
 // quit if user presses Cancel in dialog box:
@@ -101,6 +98,8 @@ psychoJS.start({
 
 psychoJS.experimentLogger.setLevel(core.Logger.ServerLevel.EXP);
 
+
+var frameDur;
 function updateInfo() {
   expInfo['date'] = util.MonotonicClock.getDateStr();  // add a simple timestamp
   expInfo['expName'] = expName;
@@ -116,10 +115,62 @@ function updateInfo() {
 
   // add info from the URL:
   util.addInfoFromUrl(expInfo);
-  
+  psychoJS.setRedirectUrls('https://www.youtube.com/', 'https://www.youtube.com/');
+
   return Scheduler.Event.NEXT;
 }
 
+
+var introClock;
+var mensaje_intro;
+var key_resp;
+var intro_2Clock;
+var mensaje_intro_2;
+var key_resp_2;
+var intro_pruebaClock;
+var text_prueba;
+var key_resp_3;
+var prueba_1Clock;
+var sonido_prueba;
+var image_prueba;
+var slider_prueba;
+var prueba_2Clock;
+var sonido_prueba_2;
+var image_prueba_2;
+var slider_prueba_2;
+var intro_experimentoClock;
+var text_prueba_2;
+var key_resp_4;
+var experimentoClock;
+var sonido_exp;
+var image_exp;
+var slider_exp;
+var nuestro_slider;
+var image_slider;
+var subasta1Clock;
+var text_subasta1;
+var key_resp_5;
+var subasta2Clock;
+var text_subasta2;
+var key_resp_6;
+var pago1Clock;
+var text;
+var key_resp_7;
+var pago2Clock;
+var text_4;
+var key_resp_8;
+var productoClock;
+var text_producto;
+var image;
+var key_resp_9;
+var pago3Clock;
+var texto_final;
+var key_resp_10;
+var intro_encuestaClock;
+var text_2;
+var key_resp_11;
+var globalClock;
+var routineTimer;
 function experimentInit() {
   // Initialize components for Routine "intro"
   introClock = new util.Clock();
@@ -379,8 +430,6 @@ function experimentInit() {
   
   key_resp_11 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
-  // Initialize components for Routine "encuesta"
-  encuestaClock = new util.Clock();
   // Create some handy timers
   globalClock = new util.Clock();  // to track the time since experiment started
   routineTimer = new util.CountdownTimer();  // to track time remaining of each (non-slip) routine
@@ -388,6 +437,11 @@ function experimentInit() {
   return Scheduler.Event.NEXT;
 }
 
+
+var t;
+var frameN;
+var _key_resp_allKeys;
+var introComponents;
 function introRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'intro'-------
@@ -413,6 +467,9 @@ function introRoutineBegin(snapshot) {
   };
 }
 
+
+var frameRemains;
+var continueRoutine;
 function introRoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'intro'-------
@@ -485,6 +542,7 @@ function introRoutineEachFrame(snapshot) {
   };
 }
 
+
 function introRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'intro'-------
@@ -507,6 +565,9 @@ function introRoutineEnd(snapshot) {
   };
 }
 
+
+var _key_resp_2_allKeys;
+var intro_2Components;
 function intro_2RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'intro_2'-------
@@ -531,6 +592,7 @@ function intro_2RoutineBegin(snapshot) {
     }
   };
 }
+
 
 function intro_2RoutineEachFrame(snapshot) {
   return function () {
@@ -604,6 +666,7 @@ function intro_2RoutineEachFrame(snapshot) {
   };
 }
 
+
 function intro_2RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'intro_2'-------
@@ -626,6 +689,9 @@ function intro_2RoutineEnd(snapshot) {
   };
 }
 
+
+var _key_resp_3_allKeys;
+var intro_pruebaComponents;
 function intro_pruebaRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'intro_prueba'-------
@@ -650,6 +716,7 @@ function intro_pruebaRoutineBegin(snapshot) {
     }
   };
 }
+
 
 function intro_pruebaRoutineEachFrame(snapshot) {
   return function () {
@@ -723,6 +790,7 @@ function intro_pruebaRoutineEachFrame(snapshot) {
   };
 }
 
+
 function intro_pruebaRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'intro_prueba'-------
@@ -745,6 +813,8 @@ function intro_pruebaRoutineEnd(snapshot) {
   };
 }
 
+
+var prueba_1Components;
 function prueba_1RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'prueba_1'-------
@@ -776,6 +846,7 @@ function prueba_1RoutineBegin(snapshot) {
     }
   };
 }
+
 
 function prueba_1RoutineEachFrame(snapshot) {
   return function () {
@@ -858,6 +929,7 @@ function prueba_1RoutineEachFrame(snapshot) {
   };
 }
 
+
 function prueba_1RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'prueba_1'-------
@@ -873,6 +945,8 @@ function prueba_1RoutineEnd(snapshot) {
   };
 }
 
+
+var prueba_2Components;
 function prueba_2RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'prueba_2'-------
@@ -904,6 +978,7 @@ function prueba_2RoutineBegin(snapshot) {
     }
   };
 }
+
 
 function prueba_2RoutineEachFrame(snapshot) {
   return function () {
@@ -986,6 +1061,7 @@ function prueba_2RoutineEachFrame(snapshot) {
   };
 }
 
+
 function prueba_2RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'prueba_2'-------
@@ -1001,6 +1077,9 @@ function prueba_2RoutineEnd(snapshot) {
   };
 }
 
+
+var _key_resp_4_allKeys;
+var intro_experimentoComponents;
 function intro_experimentoRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'intro_experimento'-------
@@ -1025,6 +1104,7 @@ function intro_experimentoRoutineBegin(snapshot) {
     }
   };
 }
+
 
 function intro_experimentoRoutineEachFrame(snapshot) {
   return function () {
@@ -1098,6 +1178,7 @@ function intro_experimentoRoutineEachFrame(snapshot) {
   };
 }
 
+
 function intro_experimentoRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'intro_experimento'-------
@@ -1120,6 +1201,9 @@ function intro_experimentoRoutineEnd(snapshot) {
   };
 }
 
+
+var trials;
+var currentLoop;
 function trialsLoopBegin(trialsLoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   trials = new TrialHandler({
@@ -1146,6 +1230,8 @@ function trialsLoopBegin(trialsLoopScheduler) {
   return Scheduler.Event.NEXT;
 }
 
+
+var trials_2;
 function trials_2LoopBegin(trials_2LoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   trials_2 = new TrialHandler({
@@ -1171,11 +1257,13 @@ function trials_2LoopBegin(trials_2LoopScheduler) {
   return Scheduler.Event.NEXT;
 }
 
+
 function trials_2LoopEnd() {
   psychoJS.experiment.removeLoop(trials_2);
 
   return Scheduler.Event.NEXT;
 }
+
 
 function trialsLoopEnd() {
   psychoJS.experiment.removeLoop(trials);
@@ -1183,6 +1271,8 @@ function trialsLoopEnd() {
   return Scheduler.Event.NEXT;
 }
 
+
+var experimentoComponents;
 function experimentoRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'experimento'-------
@@ -1215,6 +1305,7 @@ function experimentoRoutineBegin(snapshot) {
     }
   };
 }
+
 
 function experimentoRoutineEachFrame(snapshot) {
   return function () {
@@ -1297,6 +1388,9 @@ function experimentoRoutineEachFrame(snapshot) {
   };
 }
 
+
+var rating;
+var Imagenes1;
 function experimentoRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'experimento'-------
@@ -1318,6 +1412,9 @@ function experimentoRoutineEnd(snapshot) {
   };
 }
 
+
+var _key_resp_5_allKeys;
+var subasta1Components;
 function subasta1RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'subasta1'-------
@@ -1342,6 +1439,7 @@ function subasta1RoutineBegin(snapshot) {
     }
   };
 }
+
 
 function subasta1RoutineEachFrame(snapshot) {
   return function () {
@@ -1415,6 +1513,7 @@ function subasta1RoutineEachFrame(snapshot) {
   };
 }
 
+
 function subasta1RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'subasta1'-------
@@ -1437,6 +1536,9 @@ function subasta1RoutineEnd(snapshot) {
   };
 }
 
+
+var _key_resp_6_allKeys;
+var subasta2Components;
 function subasta2RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'subasta2'-------
@@ -1461,6 +1563,7 @@ function subasta2RoutineBegin(snapshot) {
     }
   };
 }
+
 
 function subasta2RoutineEachFrame(snapshot) {
   return function () {
@@ -1534,6 +1637,7 @@ function subasta2RoutineEachFrame(snapshot) {
   };
 }
 
+
 function subasta2RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'subasta2'-------
@@ -1556,6 +1660,12 @@ function subasta2RoutineEnd(snapshot) {
   };
 }
 
+
+var n_precio_aleatorio;
+var precio_aleatorio;
+var mensaje_precio_aleatorio;
+var _key_resp_7_allKeys;
+var pago1Components;
 function pago1RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'pago1'-------
@@ -1586,6 +1696,7 @@ function pago1RoutineBegin(snapshot) {
     }
   };
 }
+
 
 function pago1RoutineEachFrame(snapshot) {
   return function () {
@@ -1659,6 +1770,7 @@ function pago1RoutineEachFrame(snapshot) {
   };
 }
 
+
 function pago1RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'pago1'-------
@@ -1681,6 +1793,14 @@ function pago1RoutineEnd(snapshot) {
   };
 }
 
+
+var n_precio_sujeto;
+var precio_sujeto_pos;
+var precio_sujeto;
+var mensaje_precio_sujeto;
+var imagen_estimulo;
+var _key_resp_8_allKeys;
+var pago2Components;
 function pago2RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'pago2'-------
@@ -1712,6 +1832,7 @@ function pago2RoutineBegin(snapshot) {
     }
   };
 }
+
 
 function pago2RoutineEachFrame(snapshot) {
   return function () {
@@ -1785,6 +1906,7 @@ function pago2RoutineEachFrame(snapshot) {
   };
 }
 
+
 function pago2RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'pago2'-------
@@ -1808,6 +1930,9 @@ function pago2RoutineEnd(snapshot) {
   };
 }
 
+
+var _key_resp_9_allKeys;
+var productoComponents;
 function productoRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'producto'-------
@@ -1834,6 +1959,7 @@ function productoRoutineBegin(snapshot) {
     }
   };
 }
+
 
 function productoRoutineEachFrame(snapshot) {
   return function () {
@@ -1921,6 +2047,7 @@ function productoRoutineEachFrame(snapshot) {
   };
 }
 
+
 function productoRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'producto'-------
@@ -1943,6 +2070,11 @@ function productoRoutineEnd(snapshot) {
   };
 }
 
+
+var diferencia;
+var mensaje1;
+var _key_resp_10_allKeys;
+var pago3Components;
 function pago3RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'pago3'-------
@@ -1975,6 +2107,7 @@ function pago3RoutineBegin(snapshot) {
     }
   };
 }
+
 
 function pago3RoutineEachFrame(snapshot) {
   return function () {
@@ -2048,6 +2181,7 @@ function pago3RoutineEachFrame(snapshot) {
   };
 }
 
+
 function pago3RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'pago3'-------
@@ -2072,6 +2206,9 @@ function pago3RoutineEnd(snapshot) {
   };
 }
 
+
+var _key_resp_11_allKeys;
+var intro_encuestaComponents;
 function intro_encuestaRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'intro_encuesta'-------
@@ -2096,6 +2233,7 @@ function intro_encuestaRoutineBegin(snapshot) {
     }
   };
 }
+
 
 function intro_encuestaRoutineEachFrame(snapshot) {
   return function () {
@@ -2169,6 +2307,7 @@ function intro_encuestaRoutineEachFrame(snapshot) {
   };
 }
 
+
 function intro_encuestaRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'intro_encuesta'-------
@@ -2191,77 +2330,6 @@ function intro_encuestaRoutineEnd(snapshot) {
   };
 }
 
-function encuestaRoutineBegin(snapshot) {
-  return function () {
-    //------Prepare to start Routine 'encuesta'-------
-    t = 0;
-    encuestaClock.reset(); // clock
-    frameN = -1;
-    // update component parameters for each repeat
-    // keep track of which components have finished
-    encuestaComponents = [];
-    
-    for (const thisComponent of encuestaComponents)
-      if ('status' in thisComponent)
-        thisComponent.status = PsychoJS.Status.NOT_STARTED;
-    // check if the Routine should terminate
-    if (!continueRoutine) {  // a component has requested a forced-end of Routine
-      return Scheduler.Event.NEXT;
-    }
-  };
-}
-
-function encuestaRoutineEachFrame(snapshot) {
-  return function () {
-    //------Loop for each frame of Routine 'encuesta'-------
-    let continueRoutine = true; // until we're told otherwise
-    // get current time
-    t = encuestaClock.getTime();
-    frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
-    // update/draw components on each frame
-    // check for quit (typically the Esc key)
-    if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
-      return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
-    }
-    
-    // check if the Routine should terminate
-    if (!continueRoutine) {  // a component has requested a forced-end of Routine
-      return Scheduler.Event.NEXT;
-    }
-    
-    continueRoutine = false;  // reverts to True if at least one component still running
-    for (const thisComponent of encuestaComponents)
-      if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
-        continueRoutine = true;
-        break;
-      }
-    
-    // refresh the screen if continuing
-    if (continueRoutine) {
-      return Scheduler.Event.FLIP_REPEAT;
-    } else {
-      return Scheduler.Event.NEXT;
-    }
-  };
-}
-
-function encuestaRoutineEnd(snapshot) {
-  return function () {
-    //------Ending Routine 'encuesta'-------
-    for (const thisComponent of encuestaComponents) {
-      if (typeof thisComponent.setAutoDraw === 'function') {
-        thisComponent.setAutoDraw(false);
-      }
-    }
-    import * as webbrowser from 'webbrowser';
-    webbrowser.open("https://www.youtube.com");
-    
-    // the Routine "encuesta" was not non-slip safe, so reset the non-slip timer
-    routineTimer.reset();
-    
-    return Scheduler.Event.NEXT;
-  };
-}
 
 function endLoopIteration(scheduler, snapshot) {
   // ------Prepare for next entry------
@@ -2285,12 +2353,14 @@ function endLoopIteration(scheduler, snapshot) {
   };
 }
 
+
 function importConditions(currentLoop) {
   return function () {
     psychoJS.importAttributes(currentLoop.getCurrentTrial());
     return Scheduler.Event.NEXT;
     };
 }
+
 
 function quitPsychoJS(message, isCompleted) {
   // Check for and save orphaned data
