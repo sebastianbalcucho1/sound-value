@@ -2013,7 +2013,7 @@ function pago2RoutineBegin(snapshot) {
     var mensaje_precio_sujeto, n_precio_sujeto, precio_sujeto, precio_sujeto_pos;
     n_precio_sujeto = Math.random();
     precio_sujeto_pos = Math.round((n_precio_sujeto * nuestro_slider.length));
-    precio_sujeto = Number.parseInt(Math.round((nuestro_slider[precio_sujeto_pos] * 1000)-1000));
+    precio_sujeto = Number.parseInt(Math.round((nuestro_slider[precio_sujeto_pos] * 1000))-1000);
     mensaje_precio_sujeto = `El precio seleccionado aleatoriamente de sus respuestas es ${precio_sujeto}.`;
     imagen_estimulo= image_slider[precio_sujeto_pos]
     text_4.setText(mensaje_precio_sujeto);
