@@ -242,7 +242,7 @@ function experimentInit() {
     edges: 100, size:[0.3, 0.2],
     ori: 0, pos: [0.7, (- 0.4)],
     lineWidth: 1, lineColor: new util.Color([1, 1, 1]),
-    fillColor: new util.Color([255, 0, 0]),
+    fillColor: new util.Color([0, 0, 0]),
     opacity: 1, depth: -1, interpolate: true,
   });
   
@@ -322,7 +322,7 @@ function experimentInit() {
     edges: 100, size:[0.3, 0.2],
     ori: 0, pos: [0.7, (- 0.4)],
     lineWidth: 1, lineColor: new util.Color([1, 1, 1]),
-    fillColor: new util.Color([255, 0, 0]),
+    fillColor: new util.Color([0, 0, 0]),
     opacity: 1, depth: -1, interpolate: true,
   });
   
@@ -378,7 +378,7 @@ function experimentInit() {
     edges: 100, size:[0.3, 0.2],
     ori: 0, pos: [0.7, (- 0.4)],
     lineWidth: 1, lineColor: new util.Color([1, 1, 1]),
-    fillColor: new util.Color([255, 0, 0]),
+    fillColor: new util.Color([0, 0, 0]),
     opacity: 1, depth: -1, interpolate: true,
   });
   
@@ -404,7 +404,7 @@ function experimentInit() {
     edges: 100, size:[0.3, 0.2],
     ori: 0, pos: [0.7, (- 0.4)],
     lineWidth: 1, lineColor: new util.Color([1, 1, 1]),
-    fillColor: new util.Color([255, 0, 0]),
+    fillColor: new util.Color([0, 0, 0]),
     opacity: 1, depth: -1, interpolate: true,
   });
   
@@ -430,7 +430,7 @@ function experimentInit() {
     edges: 100, size:[0.3, 0.2],
     ori: 0, pos: [0.7, (- 0.4)],
     lineWidth: 1, lineColor: new util.Color([1, 1, 1]),
-    fillColor: new util.Color([255, 0, 0]),
+    fillColor: new util.Color([0, 0, 0]),
     opacity: 1, depth: -1, interpolate: true,
   });
   
@@ -456,7 +456,7 @@ function experimentInit() {
     edges: 100, size:[0.3, 0.2],
     ori: 0, pos: [0.7, (- 0.4)],
     lineWidth: 1, lineColor: new util.Color([1, 1, 1]),
-    fillColor: new util.Color([255, 0, 0]),
+    fillColor: new util.Color([0, 0, 0]),
     opacity: 1, depth: -1, interpolate: true,
   });
   
@@ -491,7 +491,7 @@ function experimentInit() {
     edges: 100, size:[0.3, 0.2],
     ori: 0, pos: [0.7, (- 0.4)],
     lineWidth: 1, lineColor: new util.Color([1, 1, 1]),
-    fillColor: new util.Color([255, 0, 0]),
+    fillColor: new util.Color([0, 0, 0]),
     opacity: 1, depth: -1, interpolate: true,
   });
   
@@ -517,7 +517,7 @@ function experimentInit() {
     edges: 100, size:[0.3, 0.2],
     ori: 0, pos: [0.7, (- 0.4)],
     lineWidth: 1, lineColor: new util.Color([1, 1, 1]),
-    fillColor: new util.Color([255, 0, 0]),
+    fillColor: new util.Color([0, 0, 0]),
     opacity: 1, depth: -1, interpolate: true,
   });
   
@@ -543,7 +543,7 @@ function experimentInit() {
     edges: 100, size:[0.3, 0.2],
     ori: 0, pos: [0.7, (- 0.4)],
     lineWidth: 1, lineColor: new util.Color([1, 1, 1]),
-    fillColor: new util.Color([255, 0, 0]),
+    fillColor: new util.Color([0, 0, 0]),
     opacity: 1, depth: -1, interpolate: true,
   });
   
