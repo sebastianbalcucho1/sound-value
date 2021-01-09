@@ -123,20 +123,14 @@ function updateInfo() {
 function experimentInit() {
   // Initialize components for Routine "intro"
   introClock = new util.Clock();
-  mensaje_intro = new visual.TextBox({
+  mensaje_intro = new visual.TextStim({
     win: psychoJS.window,
     name: 'mensaje_intro',
     text: 'Bienvenido al juego de <b>subasta</b>.\n\nOprima el botón rojo para avanzar.',
     font: 'Arial',
-    pos: [0, 0], letterHeight: 0.05,
-    size: undefined,  units: undefined, 
-    color: 'black', colorSpace: 'rgb',
-    fillColor: undefined, borderColor: undefined,
-    bold: true, italic: false,
-    opacity: 1,
-    padding: 1,
-    editable: false,
-    anchor: 'center',
+    units: undefined, 
+    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
     depth: 0.0 
   });
   
@@ -144,20 +138,14 @@ function experimentInit() {
   
   // Initialize components for Routine "intro_2"
   intro_2Clock = new util.Clock();
-  mensaje_intro_2 = new visual.TextBox({
+  mensaje_intro_2 = new visual.TextStim({
     win: psychoJS.window,
     name: 'mensaje_intro_2',
-    text: 'A continuación, usted participará en un juego de diferentes subastas.\nEste juego dispondrá de múltiples subastas por diferentes productos, donde deberá indicar la suma de dinero que está dispuesto a pagar por ellos. \n• En cada subasta, usted será expuesto a un sonido durante 5 segundos mientras observa una pantalla gris. \n• Al cabo de este tiempo, se le mostrará una pantalla donde en la parte superior habrá un producto alimenticio y en la parte inferior una barra deslizadora que va desde cero hasta 5 mil pesos colombianos. \n• Para responder, usted debe mover el cursor sobre la barra hasta el valor deseado y hacer click. \n• Luego de esto, el sistema seguirá automáticamente a la siguiente ronda donde se repetirá el proceso con un bien distinto. \n',
+    text: 'A continuación, usted participará en un juego de diferentes subastas.\nEste juego dispondrá de múltiples subastas por diferentes productos, donde deberá indicar la suma de dinero que está dispuesto a pagar por ellos. \n• En cada subasta, usted será expuesto a un sonido durante 5 segundos mientras observa una pantalla gris. \n• Al cabo de este tiempo, se le mostrará una pantalla donde en la parte superior habrá un producto alimenticio y en la parte inferior una barra deslizadora que va desde cero hasta 5 mil pesos colombianos. \n• Para responder, usted debe mover el cursor sobre la barra hasta el valor deseado y hacer click. \n• Luego de esto, el sistema seguirá automáticamente a la siguiente ronda donde se repetirá el proceso con un bien distinto. ',
     font: 'Arial',
-    pos: [0, 0], letterHeight: 0.03,
-    size: undefined,  units: undefined, 
-    color: 'black', colorSpace: 'rgb',
-    fillColor: 'white', borderColor: undefined,
-    bold: false, italic: false,
-    opacity: 1,
-    padding: 1,
-    editable: false,
-    anchor: 'center',
+    units: undefined, 
+    pos: [0, 0], height: 0.03,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
     depth: 0.0 
   });
   
@@ -165,20 +153,14 @@ function experimentInit() {
   
   // Initialize components for Routine "intro_prueba"
   intro_pruebaClock = new util.Clock();
-  textbox_prueba = new visual.TextBox({
+  text_prueba = new visual.TextStim({
     win: psychoJS.window,
-    name: 'textbox_prueba',
+    name: 'text_prueba',
     text: 'En este momento, realizará 2 rondas de prueba del juego, para que se familiarice con su apariencia y dinámica.',
     font: 'Arial',
-    pos: [0, 0], letterHeight: 0.04,
-    size: undefined,  units: undefined, 
-    color: 'black', colorSpace: 'rgb',
-    fillColor: undefined, borderColor: undefined,
-    bold: false, italic: false,
-    opacity: 1,
-    padding: undefined,
-    editable: false,
-    anchor: 'center',
+    units: undefined, 
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
     depth: 0.0 
   });
   
@@ -240,20 +222,14 @@ function experimentInit() {
   
   // Initialize components for Routine "intro_experimento"
   intro_experimentoClock = new util.Clock();
-  textbox_prueba_2 = new visual.TextBox({
+  text_prueba_2 = new visual.TextStim({
     win: psychoJS.window,
-    name: 'textbox_prueba_2',
-    text: 'Han acabado las rondas de entrenamiento.\n\nA continuación, empezarán las rondas del juego.',
+    name: 'text_prueba_2',
+    text: 'Han acabado las rondas de entrenamiento.\n\nA continuación, empezarán las rondas del juego',
     font: 'Arial',
-    pos: [0, 0], letterHeight: 0.05,
-    size: undefined,  units: undefined, 
-    color: 'black', colorSpace: 'rgb',
-    fillColor: undefined, borderColor: undefined,
-    bold: false, italic: false,
-    opacity: 1,
-    padding: 1,
-    editable: false,
-    anchor: 'center',
+    units: undefined, 
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
     depth: 0.0 
   });
   
@@ -447,7 +423,7 @@ function introRoutineEachFrame(snapshot) {
     // update/draw components on each frame
     
     // *mensaje_intro* updates
-    if (t >= 0 && mensaje_intro.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= 0.0 && mensaje_intro.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
       mensaje_intro.tStart = t;  // (not accounting for frame time here)
       mensaje_intro.frameNStart = frameN;  // exact frame index
@@ -455,7 +431,7 @@ function introRoutineEachFrame(snapshot) {
       mensaje_intro.setAutoDraw(true);
     }
 
-    frameRemains = 0 + 500 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 0.0 + 120 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((mensaje_intro.status === PsychoJS.Status.STARTED || mensaje_intro.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       mensaje_intro.setAutoDraw(false);
     }
@@ -566,7 +542,7 @@ function intro_2RoutineEachFrame(snapshot) {
     // update/draw components on each frame
     
     // *mensaje_intro_2* updates
-    if (t >= 0 && mensaje_intro_2.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= 0.0 && mensaje_intro_2.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
       mensaje_intro_2.tStart = t;  // (not accounting for frame time here)
       mensaje_intro_2.frameNStart = frameN;  // exact frame index
@@ -574,7 +550,7 @@ function intro_2RoutineEachFrame(snapshot) {
       mensaje_intro_2.setAutoDraw(true);
     }
 
-    frameRemains = 0 + 500 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 0.0 + 120 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((mensaje_intro_2.status === PsychoJS.Status.STARTED || mensaje_intro_2.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       mensaje_intro_2.setAutoDraw(false);
     }
@@ -662,7 +638,7 @@ function intro_pruebaRoutineBegin(snapshot) {
     _key_resp_3_allKeys = [];
     // keep track of which components have finished
     intro_pruebaComponents = [];
-    intro_pruebaComponents.push(textbox_prueba);
+    intro_pruebaComponents.push(text_prueba);
     intro_pruebaComponents.push(key_resp_3);
     
     for (const thisComponent of intro_pruebaComponents)
@@ -684,18 +660,18 @@ function intro_pruebaRoutineEachFrame(snapshot) {
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
     
-    // *textbox_prueba* updates
-    if (t >= 0.0 && textbox_prueba.status === PsychoJS.Status.NOT_STARTED) {
+    // *text_prueba* updates
+    if (t >= 0.0 && text_prueba.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
-      textbox_prueba.tStart = t;  // (not accounting for frame time here)
-      textbox_prueba.frameNStart = frameN;  // exact frame index
+      text_prueba.tStart = t;  // (not accounting for frame time here)
+      text_prueba.frameNStart = frameN;  // exact frame index
       
-      textbox_prueba.setAutoDraw(true);
+      text_prueba.setAutoDraw(true);
     }
 
-    frameRemains = 0.0 + 500 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if ((textbox_prueba.status === PsychoJS.Status.STARTED || textbox_prueba.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
-      textbox_prueba.setAutoDraw(false);
+    frameRemains = 0.0 + 120 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if ((text_prueba.status === PsychoJS.Status.STARTED || text_prueba.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+      text_prueba.setAutoDraw(false);
     }
     
     // *key_resp_3* updates
@@ -1037,7 +1013,7 @@ function intro_experimentoRoutineBegin(snapshot) {
     _key_resp_4_allKeys = [];
     // keep track of which components have finished
     intro_experimentoComponents = [];
-    intro_experimentoComponents.push(textbox_prueba_2);
+    intro_experimentoComponents.push(text_prueba_2);
     intro_experimentoComponents.push(key_resp_4);
     
     for (const thisComponent of intro_experimentoComponents)
@@ -1059,18 +1035,18 @@ function intro_experimentoRoutineEachFrame(snapshot) {
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
     
-    // *textbox_prueba_2* updates
-    if (t >= 0.0 && textbox_prueba_2.status === PsychoJS.Status.NOT_STARTED) {
+    // *text_prueba_2* updates
+    if (t >= 0.0 && text_prueba_2.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
-      textbox_prueba_2.tStart = t;  // (not accounting for frame time here)
-      textbox_prueba_2.frameNStart = frameN;  // exact frame index
+      text_prueba_2.tStart = t;  // (not accounting for frame time here)
+      text_prueba_2.frameNStart = frameN;  // exact frame index
       
-      textbox_prueba_2.setAutoDraw(true);
+      text_prueba_2.setAutoDraw(true);
     }
 
-    frameRemains = 0.0 + 500 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if ((textbox_prueba_2.status === PsychoJS.Status.STARTED || textbox_prueba_2.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
-      textbox_prueba_2.setAutoDraw(false);
+    frameRemains = 0.0 + 120 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if ((text_prueba_2.status === PsychoJS.Status.STARTED || text_prueba_2.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+      text_prueba_2.setAutoDraw(false);
     }
     
     // *key_resp_4* updates
@@ -1385,7 +1361,7 @@ function subasta1RoutineEachFrame(snapshot) {
       text_subasta1.setAutoDraw(true);
     }
 
-    frameRemains = 0.0 + 500 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 0.0 + 120 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((text_subasta1.status === PsychoJS.Status.STARTED || text_subasta1.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       text_subasta1.setAutoDraw(false);
     }
@@ -1504,7 +1480,7 @@ function subasta2RoutineEachFrame(snapshot) {
       text_subasta2.setAutoDraw(true);
     }
 
-    frameRemains = 0.0 + 500 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 0.0 + 120 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((text_subasta2.status === PsychoJS.Status.STARTED || text_subasta2.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       text_subasta2.setAutoDraw(false);
     }
@@ -1629,7 +1605,7 @@ function pago1RoutineEachFrame(snapshot) {
       text.setAutoDraw(true);
     }
 
-    frameRemains = 0.0 + 500 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 0.0 + 120 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((text.status === PsychoJS.Status.STARTED || text.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       text.setAutoDraw(false);
     }
@@ -1755,7 +1731,7 @@ function pago2RoutineEachFrame(snapshot) {
       text_4.setAutoDraw(true);
     }
 
-    frameRemains = 0.0 + 500 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 0.0 + 120 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((text_4.status === PsychoJS.Status.STARTED || text_4.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       text_4.setAutoDraw(false);
     }
@@ -1877,7 +1853,7 @@ function productoRoutineEachFrame(snapshot) {
       text_producto.setAutoDraw(true);
     }
 
-    frameRemains = 0.0 + 500 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 0.0 + 120 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((text_producto.status === PsychoJS.Status.STARTED || text_producto.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       text_producto.setAutoDraw(false);
     }
@@ -1891,7 +1867,7 @@ function productoRoutineEachFrame(snapshot) {
       image.setAutoDraw(true);
     }
 
-    frameRemains = 0.0 + 500 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 0.0 + 120 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((image.status === PsychoJS.Status.STARTED || image.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       image.setAutoDraw(false);
     }
@@ -2018,7 +1994,7 @@ function pago3RoutineEachFrame(snapshot) {
       texto_final.setAutoDraw(true);
     }
 
-    frameRemains = 0.0 + 500 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 0.0 + 120 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((texto_final.status === PsychoJS.Status.STARTED || texto_final.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       texto_final.setAutoDraw(false);
     }
@@ -2139,7 +2115,7 @@ function intro_encuestaRoutineEachFrame(snapshot) {
       text_2.setAutoDraw(true);
     }
 
-    frameRemains = 0.0 + 500 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 0.0 + 120 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((text_2.status === PsychoJS.Status.STARTED || text_2.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       text_2.setAutoDraw(false);
     }
