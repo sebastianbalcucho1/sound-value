@@ -131,7 +131,7 @@ function experimentInit() {
   
   boton_intro = new visual.Polygon ({
     win: psychoJS.window, name: 'boton_intro', 
-    edges: 100, size:[0.2, 0.1],
+    edges: 25, size:[0.2, 0.1],
     ori: 0, pos: [0.7, (- 0.4)],
     lineWidth: 1, lineColor: new util.Color([1, 1, 1]),
     fillColor: new util.Color([255, 0, 0]),
@@ -163,7 +163,7 @@ function experimentInit() {
   
   boton_intro_2 = new visual.Polygon ({
     win: psychoJS.window, name: 'boton_intro_2', 
-    edges: 100, size:[0.2, 0.1],
+    edges: 25, size:[0.2, 0.1],
     ori: 0, pos: [0.7, (- 0.4)],
     lineWidth: 1, lineColor: new util.Color([1, 1, 1]),
     fillColor: new util.Color([255, 0, 0]),
@@ -195,7 +195,7 @@ function experimentInit() {
   
   boton_intro_prueba = new visual.Polygon ({
     win: psychoJS.window, name: 'boton_intro_prueba', 
-    edges: 100, size:[0.2, 0.1],
+    edges: 25, size:[0.2, 0.1],
     ori: 0, pos: [0.7, (- 0.4)],
     lineWidth: 1, lineColor: new util.Color([1, 1, 1]),
     fillColor: new util.Color([255, 0, 0]),
@@ -281,7 +281,7 @@ function experimentInit() {
   
   boton_intro_exp = new visual.Polygon ({
     win: psychoJS.window, name: 'boton_intro_exp', 
-    edges: 100, size:[0.2, 0.1],
+    edges: 25, size:[0.2, 0.1],
     ori: 0, pos: [0.7, (- 0.4)],
     lineWidth: 1, lineColor: new util.Color([1, 1, 1]),
     fillColor: new util.Color([255, 0, 0]),
@@ -337,7 +337,7 @@ function experimentInit() {
   
   boton_subasta1 = new visual.Polygon ({
     win: psychoJS.window, name: 'boton_subasta1', 
-    edges: 100, size:[0.2, 0.1],
+    edges: 25, size:[0.2, 0.1],
     ori: 0, pos: [0.7, (- 0.4)],
     lineWidth: 1, lineColor: new util.Color([1, 1, 1]),
     fillColor: new util.Color([255, 0, 0]),
@@ -363,7 +363,7 @@ function experimentInit() {
   
   boton_subasta2 = new visual.Polygon ({
     win: psychoJS.window, name: 'boton_subasta2', 
-    edges: 100, size:[0.2, 0.1],
+    edges: 25, size:[0.2, 0.1],
     ori: 0, pos: [0.7, (- 0.4)],
     lineWidth: 1, lineColor: new util.Color([1, 1, 1]),
     fillColor: new util.Color([255, 0, 0]),
@@ -415,7 +415,7 @@ function experimentInit() {
   
   boton_pago2 = new visual.Polygon ({
     win: psychoJS.window, name: 'boton_pago2', 
-    edges: 100, size:[0.2, 0.1],
+    edges: 25, size:[0.2, 0.1],
     ori: 0, pos: [0.7, (- 0.4)],
     lineWidth: 1, lineColor: new util.Color([1, 1, 1]),
     fillColor: new util.Color([255, 0, 0]),
@@ -450,7 +450,7 @@ function experimentInit() {
   });
   boton_producto = new visual.Polygon ({
     win: psychoJS.window, name: 'boton_producto', 
-    edges: 100, size:[0.2, 0.1],
+    edges: 25, size:[0.2, 0.1],
     ori: 0, pos: [0.7, (- 0.4)],
     lineWidth: 1, lineColor: new util.Color([1, 1, 1]),
     fillColor: new util.Color([255, 0, 0]),
@@ -476,7 +476,7 @@ function experimentInit() {
   
   boton_pago3 = new visual.Polygon ({
     win: psychoJS.window, name: 'boton_pago3', 
-    edges: 100, size:[0.2, 0.1],
+    edges: 25, size:[0.2, 0.1],
     ori: 0, pos: [0.7, (- 0.4)],
     lineWidth: 1, lineColor: new util.Color([1, 1, 1]),
     fillColor: new util.Color([255, 0, 0]),
@@ -502,11 +502,11 @@ function experimentInit() {
   
   boton_intro_encuesta = new visual.Polygon ({
     win: psychoJS.window, name: 'boton_intro_encuesta', 
-    edges: 100, size:[0.2, 0.1],
+    edges: 25, size:[0.2, 0.1],
     ori: 0, pos: [0.7, (- 0.4)],
     lineWidth: 1, lineColor: new util.Color([1, 1, 1]),
     fillColor: new util.Color([255, 0, 0]),
-    opacity: 1, depth: -2, interpolate: true,
+    opacity: 1, depth: -1, interpolate: true,
   });
   
   mouse_intro_encuesta = new core.Mouse({
