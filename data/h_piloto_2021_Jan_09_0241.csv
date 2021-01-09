@@ -1,0 +1,2 @@
+﻿mensaje_intro.started,mensaje_intro.stopped,boton_intro.started,boton_intro.stopped,mouse_intro.x,mouse_intro.y,mouse_intro.leftButton,mouse_intro.midButton,mouse_intro.rightButton,mouse_intro.clicked_name,mouse_intro.started,mouse_intro.stopped,Nombre del participante,date,expName,psychopyVersion,frameRate,
+8.635820299969055,None,8.635820299969055,None,0.671875,-0.3658854166666667,1,0,0,boton_intro,0.01612804998876527,None,h,2021_Jan_09_0241,piloto,2020.2.5,60.214193928323944,
