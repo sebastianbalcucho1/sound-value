@@ -1,8 +1,8 @@
-#!/usr/bin/env python
+﻿#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.2.5),
-    on diciembre 01, 2020, at 16:39
+    on enero 06, 2021, at 20:55
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -80,11 +80,25 @@ else:
 # create a default keyboard (e.g. to check for escape)
 defaultKeyboard = keyboard.Keyboard()
 
-# Initialize components for Routine "Instrucciones"
-InstruccionesClock = core.Clock()
-sound_3 = sound.Sound('instr.ogg', secs=-1, stereo=True, hamming=True,
-    name='sound_3')
-sound_3.setVolume(1)
+# Initialize components for Routine "instrucciones"
+instruccionesClock = core.Clock()
+intro = visual.TextBox2(
+     win, text='Any text\n\nincluding line breaks', font='Arial',
+     pos=(0, 0),     letterHeight=0.05,
+     size=None, borderWidth=2.0,
+     color='white', colorSpace='rgb',
+     opacity=1,
+     bold=False, italic=False,
+     lineSpacing=1.0,
+     padding=None,
+     anchor='center',
+     fillColor=None, borderColor=None,
+     flipHoriz=False, flipVert=False,
+     editable=False,
+     name='intro',
+     autoLog=True,
+)
+next = keyboard.Keyboard()
 
 # Initialize components for Routine "grave"
 graveClock = core.Clock()
@@ -129,8 +143,8 @@ text_3 = visual.TextStim(win=win, name='text_3',
     languageStyle='LTR',
     depth=0.0);
 
-# Initialize components for Routine "Pago1"
-Pago1Clock = core.Clock()
+# Initialize components for Routine "pago1"
+pago1Clock = core.Clock()
 text = visual.TextStim(win=win, name='text',
     text='default text',
     font='Arial',
@@ -139,8 +153,8 @@ text = visual.TextStim(win=win, name='text',
     languageStyle='LTR',
     depth=-1.0);
 
-# Initialize components for Routine "Pago2"
-Pago2Clock = core.Clock()
+# Initialize components for Routine "pago2"
+pago2Clock = core.Clock()
 text_4 = visual.TextStim(win=win, name='text_4',
     text='default text',
     font='Arial',
@@ -149,19 +163,19 @@ text_4 = visual.TextStim(win=win, name='text_4',
     languageStyle='LTR',
     depth=-1.0);
 
-# Initialize components for Routine "Producto_2"
-Producto_2Clock = core.Clock()
+# Initialize components for Routine "producto_2"
+producto_2Clock = core.Clock()
 image = visual.ImageStim(
     win=win,
     name='image', 
     image='sin', mask=None,
-    ori=0, pos=(0, 0), size=(0.5, 0.5),
+    ori=0, pos=(0, 0.2), size=(0.5, 0.5),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
-    texRes=128, interpolate=True, depth=-1.0)
+    texRes=128, interpolate=True, depth=0.0)
 
-# Initialize components for Routine "Pago3"
-Pago3Clock = core.Clock()
+# Initialize components for Routine "pago3"
+pago3Clock = core.Clock()
 texto_final = visual.TextStim(win=win, name='texto_final',
     text='default text',
     font='Arial',
@@ -170,18 +184,22 @@ texto_final = visual.TextStim(win=win, name='texto_final',
     languageStyle='LTR',
     depth=-1.0);
 
+# Initialize components for Routine "survey"
+surveyClock = core.Clock()
+
 # Create some handy timers
 globalClock = core.Clock()  # to track the time since experiment started
 routineTimer = core.CountdownTimer()  # to track time remaining of each (non-slip) routine 
 
-# ------Prepare to start Routine "Instrucciones"-------
+# ------Prepare to start Routine "instrucciones"-------
 continueRoutine = True
 # update component parameters for each repeat
-sound_3.setSound('instr.ogg', hamming=True)
-sound_3.setVolume(1, log=False)
+next.keys = []
+next.rt = []
+_next_allKeys = []
 # keep track of which components have finished
-InstruccionesComponents = [sound_3]
-for thisComponent in InstruccionesComponents:
+instruccionesComponents = [intro, next]
+for thisComponent in instruccionesComponents:
     thisComponent.tStart = None
     thisComponent.tStop = None
     thisComponent.tStartRefresh = None
@@ -191,24 +209,56 @@ for thisComponent in InstruccionesComponents:
 # reset timers
 t = 0
 _timeToFirstFrame = win.getFutureFlipTime(clock="now")
-InstruccionesClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+instruccionesClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
 frameN = -1
 
-# -------Run Routine "Instrucciones"-------
+# -------Run Routine "instrucciones"-------
 while continueRoutine:
     # get current time
-    t = InstruccionesClock.getTime()
-    tThisFlip = win.getFutureFlipTime(clock=InstruccionesClock)
+    t = instruccionesClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=instruccionesClock)
     tThisFlipGlobal = win.getFutureFlipTime(clock=None)
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
-    # start/stop sound_3
-    if sound_3.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+    
+    # *intro* updates
+    if intro.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        sound_3.frameNStart = frameN  # exact frame index
-        sound_3.tStart = t  # local t and not account for scr refresh
-        sound_3.tStartRefresh = tThisFlipGlobal  # on global time
-        sound_3.play(when=win)  # sync with win flip
+        intro.frameNStart = frameN  # exact frame index
+        intro.tStart = t  # local t and not account for scr refresh
+        intro.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(intro, 'tStartRefresh')  # time at next scr refresh
+        intro.setAutoDraw(True)
+    if intro.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > intro.tStartRefresh + 1.0-frameTolerance:
+            # keep track of stop time/frame for later
+            intro.tStop = t  # not accounting for scr refresh
+            intro.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(intro, 'tStopRefresh')  # time at next scr refresh
+            intro.setAutoDraw(False)
+    
+    # *next* updates
+    waitOnFlip = False
+    if next.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        next.frameNStart = frameN  # exact frame index
+        next.tStart = t  # local t and not account for scr refresh
+        next.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(next, 'tStartRefresh')  # time at next scr refresh
+        next.status = STARTED
+        # keyboard checking is just starting
+        waitOnFlip = True
+        win.callOnFlip(next.clock.reset)  # t=0 on next screen flip
+        win.callOnFlip(next.clearEvents, eventType='keyboard')  # clear events on next screen flip
+    if next.status == STARTED and not waitOnFlip:
+        theseKeys = next.getKeys(keyList=['space'], waitRelease=False)
+        _next_allKeys.extend(theseKeys)
+        if len(_next_allKeys):
+            next.keys = _next_allKeys[-1].name  # just the last key pressed
+            next.rt = _next_allKeys[-1].rt
+            # a response ends the routine
+            continueRoutine = False
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -218,7 +268,7 @@ while continueRoutine:
     if not continueRoutine:  # a component has requested a forced-end of Routine
         break
     continueRoutine = False  # will revert to True if at least one component still running
-    for thisComponent in InstruccionesComponents:
+    for thisComponent in instruccionesComponents:
         if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
             continueRoutine = True
             break  # at least one component has not yet finished
@@ -227,14 +277,13 @@ while continueRoutine:
     if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
         win.flip()
 
-# -------Ending Routine "Instrucciones"-------
-for thisComponent in InstruccionesComponents:
+# -------Ending Routine "instrucciones"-------
+for thisComponent in instruccionesComponents:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
-sound_3.stop()  # ensure sound has stopped at end of routine
-thisExp.addData('sound_3.started', sound_3.tStartRefresh)
-thisExp.addData('sound_3.stopped', sound_3.tStopRefresh)
-# the Routine "Instrucciones" was not non-slip safe, so reset the non-slip timer
+thisExp.addData('intro.started', intro.tStartRefresh)
+thisExp.addData('intro.stopped', intro.tStopRefresh)
+# the Routine "instrucciones" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
 
 # set up handler to look after randomisation of conditions etc
@@ -542,7 +591,7 @@ for thisComponent in subasta2Components:
 thisExp.addData('text_3.started', text_3.tStartRefresh)
 thisExp.addData('text_3.stopped', text_3.tStopRefresh)
 
-# ------Prepare to start Routine "Pago1"-------
+# ------Prepare to start Routine "pago1"-------
 continueRoutine = True
 routineTimer.add(1.000000)
 # update component parameters for each repeat
@@ -552,8 +601,8 @@ precio_aleatorio= round(n_precio_aleatorio*5000)
 mensaje_precio_aleatorio = f"El número aleatorio es {precio_aleatorio}."
 text.setText(mensaje_precio_aleatorio)
 # keep track of which components have finished
-Pago1Components = [text]
-for thisComponent in Pago1Components:
+pago1Components = [text]
+for thisComponent in pago1Components:
     thisComponent.tStart = None
     thisComponent.tStop = None
     thisComponent.tStartRefresh = None
@@ -563,14 +612,14 @@ for thisComponent in Pago1Components:
 # reset timers
 t = 0
 _timeToFirstFrame = win.getFutureFlipTime(clock="now")
-Pago1Clock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+pago1Clock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
 frameN = -1
 
-# -------Run Routine "Pago1"-------
+# -------Run Routine "pago1"-------
 while continueRoutine and routineTimer.getTime() > 0:
     # get current time
-    t = Pago1Clock.getTime()
-    tThisFlip = win.getFutureFlipTime(clock=Pago1Clock)
+    t = pago1Clock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=pago1Clock)
     tThisFlipGlobal = win.getFutureFlipTime(clock=None)
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
@@ -600,7 +649,7 @@ while continueRoutine and routineTimer.getTime() > 0:
     if not continueRoutine:  # a component has requested a forced-end of Routine
         break
     continueRoutine = False  # will revert to True if at least one component still running
-    for thisComponent in Pago1Components:
+    for thisComponent in pago1Components:
         if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
             continueRoutine = True
             break  # at least one component has not yet finished
@@ -609,26 +658,27 @@ while continueRoutine and routineTimer.getTime() > 0:
     if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
         win.flip()
 
-# -------Ending Routine "Pago1"-------
-for thisComponent in Pago1Components:
+# -------Ending Routine "pago1"-------
+for thisComponent in pago1Components:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
 thisExp.addData('text.started', text.tStartRefresh)
 thisExp.addData('text.stopped', text.tStopRefresh)
 
-# ------Prepare to start Routine "Pago2"-------
+# ------Prepare to start Routine "pago2"-------
 continueRoutine = True
 routineTimer.add(1.000000)
 # update component parameters for each repeat
 import random
 n_precio_sujeto=random.random()
-precio_sujeto_pos=int(round(n_precio_sujeto*len(nuestro_slider)))
+precio_sujeto_pos=round(n_precio_sujeto*len(nuestro_slider))
 precio_sujeto=int(round(nuestro_slider[precio_sujeto_pos]*1000))
 mensaje_precio_sujeto = f"El precio seleccionado aleatoriamente es {precio_sujeto}."
+imagen_estimulo= image_slider[precio_sujeto_pos]
 text_4.setText(mensaje_precio_sujeto)
 # keep track of which components have finished
-Pago2Components = [text_4]
-for thisComponent in Pago2Components:
+pago2Components = [text_4]
+for thisComponent in pago2Components:
     thisComponent.tStart = None
     thisComponent.tStop = None
     thisComponent.tStartRefresh = None
@@ -638,14 +688,14 @@ for thisComponent in Pago2Components:
 # reset timers
 t = 0
 _timeToFirstFrame = win.getFutureFlipTime(clock="now")
-Pago2Clock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+pago2Clock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
 frameN = -1
 
-# -------Run Routine "Pago2"-------
+# -------Run Routine "pago2"-------
 while continueRoutine and routineTimer.getTime() > 0:
     # get current time
-    t = Pago2Clock.getTime()
-    tThisFlip = win.getFutureFlipTime(clock=Pago2Clock)
+    t = pago2Clock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=pago2Clock)
     tThisFlipGlobal = win.getFutureFlipTime(clock=None)
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
@@ -675,7 +725,7 @@ while continueRoutine and routineTimer.getTime() > 0:
     if not continueRoutine:  # a component has requested a forced-end of Routine
         break
     continueRoutine = False  # will revert to True if at least one component still running
-    for thisComponent in Pago2Components:
+    for thisComponent in pago2Components:
         if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
             continueRoutine = True
             break  # at least one component has not yet finished
@@ -684,23 +734,21 @@ while continueRoutine and routineTimer.getTime() > 0:
     if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
         win.flip()
 
-# -------Ending Routine "Pago2"-------
-for thisComponent in Pago2Components:
+# -------Ending Routine "pago2"-------
+for thisComponent in pago2Components:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
 thisExp.addData('text_4.started', text_4.tStartRefresh)
 thisExp.addData('text_4.stopped', text_4.tStopRefresh)
 
-# ------Prepare to start Routine "Producto_2"-------
+# ------Prepare to start Routine "producto_2"-------
 continueRoutine = True
 routineTimer.add(2.000000)
 # update component parameters for each repeat
-imagen_estimulo= image_slider[precio_sujeto_pos]
-print(imagen_estimulo)
 image.setImage(imagen_estimulo)
 # keep track of which components have finished
-Producto_2Components = [image]
-for thisComponent in Producto_2Components:
+producto_2Components = [image]
+for thisComponent in producto_2Components:
     thisComponent.tStart = None
     thisComponent.tStop = None
     thisComponent.tStartRefresh = None
@@ -710,14 +758,14 @@ for thisComponent in Producto_2Components:
 # reset timers
 t = 0
 _timeToFirstFrame = win.getFutureFlipTime(clock="now")
-Producto_2Clock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+producto_2Clock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
 frameN = -1
 
-# -------Run Routine "Producto_2"-------
+# -------Run Routine "producto_2"-------
 while continueRoutine and routineTimer.getTime() > 0:
     # get current time
-    t = Producto_2Clock.getTime()
-    tThisFlip = win.getFutureFlipTime(clock=Producto_2Clock)
+    t = producto_2Clock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=producto_2Clock)
     tThisFlipGlobal = win.getFutureFlipTime(clock=None)
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
@@ -747,7 +795,7 @@ while continueRoutine and routineTimer.getTime() > 0:
     if not continueRoutine:  # a component has requested a forced-end of Routine
         break
     continueRoutine = False  # will revert to True if at least one component still running
-    for thisComponent in Producto_2Components:
+    for thisComponent in producto_2Components:
         if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
             continueRoutine = True
             break  # at least one component has not yet finished
@@ -756,14 +804,14 @@ while continueRoutine and routineTimer.getTime() > 0:
     if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
         win.flip()
 
-# -------Ending Routine "Producto_2"-------
-for thisComponent in Producto_2Components:
+# -------Ending Routine "producto_2"-------
+for thisComponent in producto_2Components:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
 thisExp.addData('image.started', image.tStartRefresh)
 thisExp.addData('image.stopped', image.tStopRefresh)
 
-# ------Prepare to start Routine "Pago3"-------
+# ------Prepare to start Routine "pago3"-------
 continueRoutine = True
 routineTimer.add(3.000000)
 # update component parameters for each repeat
@@ -776,8 +824,8 @@ else:
 
 texto_final.setText(mensaje1)
 # keep track of which components have finished
-Pago3Components = [texto_final]
-for thisComponent in Pago3Components:
+pago3Components = [texto_final]
+for thisComponent in pago3Components:
     thisComponent.tStart = None
     thisComponent.tStop = None
     thisComponent.tStartRefresh = None
@@ -787,14 +835,14 @@ for thisComponent in Pago3Components:
 # reset timers
 t = 0
 _timeToFirstFrame = win.getFutureFlipTime(clock="now")
-Pago3Clock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+pago3Clock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
 frameN = -1
 
-# -------Run Routine "Pago3"-------
+# -------Run Routine "pago3"-------
 while continueRoutine and routineTimer.getTime() > 0:
     # get current time
-    t = Pago3Clock.getTime()
-    tThisFlip = win.getFutureFlipTime(clock=Pago3Clock)
+    t = pago3Clock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=pago3Clock)
     tThisFlipGlobal = win.getFutureFlipTime(clock=None)
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
@@ -824,7 +872,7 @@ while continueRoutine and routineTimer.getTime() > 0:
     if not continueRoutine:  # a component has requested a forced-end of Routine
         break
     continueRoutine = False  # will revert to True if at least one component still running
-    for thisComponent in Pago3Components:
+    for thisComponent in pago3Components:
         if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
             continueRoutine = True
             break  # at least one component has not yet finished
@@ -833,12 +881,63 @@ while continueRoutine and routineTimer.getTime() > 0:
     if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
         win.flip()
 
-# -------Ending Routine "Pago3"-------
-for thisComponent in Pago3Components:
+# -------Ending Routine "pago3"-------
+for thisComponent in pago3Components:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
 thisExp.addData('texto_final.started', texto_final.tStartRefresh)
 thisExp.addData('texto_final.stopped', texto_final.tStopRefresh)
+
+# ------Prepare to start Routine "survey"-------
+continueRoutine = True
+# update component parameters for each repeat
+# keep track of which components have finished
+surveyComponents = []
+for thisComponent in surveyComponents:
+    thisComponent.tStart = None
+    thisComponent.tStop = None
+    thisComponent.tStartRefresh = None
+    thisComponent.tStopRefresh = None
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+surveyClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+
+# -------Run Routine "survey"-------
+while continueRoutine:
+    # get current time
+    t = surveyClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=surveyClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # check for quit (typically the Esc key)
+    if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+        core.quit()
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested a forced-end of Routine
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in surveyComponents:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+# -------Ending Routine "survey"-------
+for thisComponent in surveyComponents:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+# the Routine "survey" was not non-slip safe, so reset the non-slip timer
+routineTimer.reset()
 
 # Flip one final time so any remaining win.callOnFlip() 
 # and win.timeOnFlip() tasks get executed before quitting

@@ -1,0 +1,437 @@
+0.8026 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'PTB', 'pyo', 'pygame'] (in that order).
+10.9293 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, args=UNKNOWN, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([1., 1., 1.]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x000002790DE75BA8>, gamma=None, gammaErrorPolicy='raise', kwargs=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x000002790DDCB390>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([1366,  768]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+10.9295 	EXP 	window1: mouseVisible = True
+10.9295 	EXP 	window1: recordFrameIntervals = False
+11.0957 	EXP 	window1: recordFrameIntervals = True
+11.2798 	EXP 	window1: recordFrameIntervals = False
+11.4853 	ERROR 	Unknown colorSpace: named
+11.7582 	ERROR 	Unknown colorSpace: named
+11.8587 	EXP 	Sound sonido_prueba set volume 1.000
+11.8882 	EXP 	Created image_prueba = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='imagenes/lapicero.jpg', interpolate=True, mask=None, maskParams=None, name='image_prueba', opacity=1.0, ori=0.0, pos=array([0. , 0.2]), size=array([0.5, 0.5]), texRes=128, units='height', win=Window(...))
+11.8931 	EXP 	window1: mouseVisible = True
+11.9442 	EXP 	Created slider_prueba = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, color='DimGrey', depth=-2, flip=False, font='HelveticaBold', granularity=0, labelHeight=0.05, labelWrapWidth=None, labels=('0', '1000', '2000', '3000', '4000', '5000'), name='slider_prueba', pos=(0, -0.3), readOnly=False, self=UNKNOWN, size=(1.0, 0.05), style=method-wrapper(...), ticks=array([1, 2, 3, 4, 5, 6]), units='height', win=Window(...))
+11.9444 	EXP 	Sound sonido_prueba_2 set volume 1.000
+12.0094 	EXP 	Created image_prueba_2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='imagenes/jabon.jpg', interpolate=True, mask=None, maskParams=None, name='image_prueba_2', opacity=1.0, ori=0.0, pos=array([0. , 0.2]), size=array([0.5, 0.5]), texRes=128, units='height', win=Window(...))
+12.0099 	EXP 	window1: mouseVisible = True
+12.0192 	EXP 	Created slider_prueba_2 = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, color='DimGrey', depth=-2, flip=False, font='HelveticaBold', granularity=0, labelHeight=0.05, labelWrapWidth=None, labels=('0', '1000', '2000', '3000', '4000', '5000'), name='slider_prueba_2', pos=(0, -0.3), readOnly=False, self=UNKNOWN, size=(1.0, 0.05), style=method-wrapper(...), ticks=array([1, 2, 3, 4, 5, 6]), units='height', win=Window(...))
+12.0194 	EXP 	Sound sonido_exp set volume 1.000
+12.0220 	EXP 	Created image_exp = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_exp', opacity=1.0, ori=0.0, pos=array([0. , 0.2]), size=array([0.5, 0.5]), texRes=128, units='height', win=Window(...))
+12.0224 	EXP 	window1: mouseVisible = True
+12.0321 	EXP 	Created slider_exp = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, color='DimGrey', depth=-2, flip=False, font='HelveticaBold', granularity=0, labelHeight=0.05, labelWrapWidth=None, labels=('0', '1000', '2000', '3000', '4000', '5000'), name='slider_exp', pos=(0, -0.3), readOnly=False, self=UNKNOWN, size=(1.0, 0.05), style=method-wrapper(...), ticks=array([1, 2, 3, 4, 5, 6]), units='height', win=Window(...))
+12.0643 	EXP 	Created text_subasta1 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_subasta1', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+12.0830 	EXP 	Created text_subasta2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_subasta2', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+12.0970 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text', opacity=1.0, ori=0, pos=array([0.  , 0.15]), rgb=array([255., 255., 255.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+12.0992 	EXP 	Created text_4 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_4', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+12.1062 	EXP 	Created text_producto = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_producto', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+12.1081 	EXP 	Created image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image', opacity=1.0, ori=0.0, pos=array([0. , 0.2]), size=array([0.5, 0.5]), texRes=128, units='height', win=Window(...))
+12.1104 	EXP 	Created texto_final = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='texto_final', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+12.1432 	EXP 	mensaje_intro: autoLog = True
+12.1432 	EXP 	mensaje_intro_2: autoLog = True
+12.1432 	EXP 	textbox_prueba: autoLog = True
+12.1432 	EXP 	slider_prueba: autoLog = True
+12.1432 	EXP 	slider_prueba: markerPos = None
+12.1432 	EXP 	slider_prueba: rating = None
+12.1432 	EXP 	slider_prueba: markerPos = None
+12.1432 	EXP 	slider_prueba: contrast = 1.0
+12.1432 	EXP 	slider_prueba: autoLog = True
+12.1432 	EXP 	slider_prueba: style = ['whiteOnBlack']
+12.1432 	EXP 	slider_prueba_2: autoLog = True
+12.1432 	EXP 	slider_prueba_2: markerPos = None
+12.1432 	EXP 	slider_prueba_2: rating = None
+12.1432 	EXP 	slider_prueba_2: markerPos = None
+12.1432 	EXP 	slider_prueba_2: contrast = 1.0
+12.1432 	EXP 	slider_prueba_2: autoLog = True
+12.1432 	EXP 	slider_prueba_2: style = ['whiteOnBlack']
+12.1432 	EXP 	slider_exp: autoLog = True
+12.1432 	EXP 	slider_exp: markerPos = None
+12.1432 	EXP 	slider_exp: rating = None
+12.1432 	EXP 	slider_exp: markerPos = None
+12.1432 	EXP 	slider_exp: contrast = 1.0
+12.1432 	EXP 	slider_exp: autoLog = True
+12.1432 	EXP 	slider_exp: style = ['whiteOnBlack']
+12.1432 	EXP 	mensaje_intro: autoDraw = True
+13.3198 	DATA 	Keypress: space
+13.3317 	EXP 	mensaje_intro: autoDraw = False
+13.3317 	EXP 	mensaje_intro_2: autoDraw = True
+14.8837 	DATA 	Keypress: space
+14.8938 	EXP 	mensaje_intro_2: autoDraw = False
+14.8938 	EXP 	textbox_prueba: autoDraw = True
+18.7361 	DATA 	Keypress: space
+18.7442 	EXP 	textbox_prueba: autoDraw = False
+18.7442 	EXP 	slider_prueba: markerPos = None
+18.7442 	EXP 	slider_prueba: markerPos = None
+18.7442 	EXP 	slider_prueba: rating = None
+19.7603 	EXP 	image_prueba: autoDraw = True
+19.7603 	EXP 	slider_prueba: autoDraw = True
+20.7629 	DATA 	Mouse: Left button down, pos=(699,161)
+20.7775 	EXP 	slider_prueba: markerPos = 3.604166666666667
+20.7936 	EXP 	slider_prueba: markerPos = 3.604166666666667
+20.8106 	EXP 	slider_prueba: markerPos = 3.604166666666667
+20.8272 	EXP 	slider_prueba: markerPos = 3.604166666666667
+20.8299 	DATA 	Mouse:  Left button up, pos=(699,161)
+20.8440 	EXP 	slider_prueba: markerPos = 3.604166666666667
+20.8440 	EXP 	slider_prueba: rating = 3.604166666666667
+20.8603 	EXP 	image_prueba: autoDraw = False
+20.8603 	EXP 	slider_prueba: autoDraw = False
+20.8603 	EXP 	slider_prueba_2: markerPos = None
+20.8603 	EXP 	slider_prueba_2: markerPos = None
+20.8603 	EXP 	slider_prueba_2: rating = None
+21.8583 	EXP 	image_prueba_2: autoDraw = True
+21.8583 	EXP 	slider_prueba_2: autoDraw = True
+22.6797 	DATA 	Mouse: Left button down, pos=(853,154)
+22.6940 	EXP 	slider_prueba_2: markerPos = 4.606770833333333
+22.7104 	EXP 	slider_prueba_2: markerPos = 4.606770833333333
+22.7276 	EXP 	slider_prueba_2: markerPos = 4.606770833333333
+22.7437 	EXP 	slider_prueba_2: markerPos = 4.606770833333333
+22.7604 	EXP 	slider_prueba_2: markerPos = 4.606770833333333
+22.7622 	DATA 	Mouse:  Left button up, pos=(853,154)
+22.7775 	EXP 	slider_prueba_2: markerPos = 4.606770833333333
+22.7775 	EXP 	slider_prueba_2: rating = 4.606770833333333
+22.8089 	EXP 	Imported ruidos.xlsx as conditions, 4 conditions, 2 params
+22.8092 	EXP 	Created sequence: random, trialTypes=4, nReps=1, seed=None
+22.8094 	EXP 	New trial (rep=0, index=0): OrderedDict([('Hertz', 1500), ('volumen', 0.02)])
+22.8148 	EXP 	Imported imagenes.xlsx as conditions, 36 conditions, 3 params
+22.8150 	EXP 	Created sequence: random, trialTypes=36, nReps=1, seed=None
+22.8152 	EXP 	New trial (rep=0, index=0): OrderedDict([('Imagenes', 'imagenes/Pepinillos.png'), ('Random', 0.0038966441241518046), ('Correcto', None)])
+22.8526 	EXP 	image_prueba_2: autoDraw = False
+22.8526 	EXP 	slider_prueba_2: autoDraw = False
+22.8526 	EXP 	image_exp: image = 'imagenes/Pepinillos.png'
+22.8526 	EXP 	slider_exp: markerPos = None
+22.8526 	EXP 	slider_exp: markerPos = None
+22.8526 	EXP 	slider_exp: rating = None
+23.8438 	EXP 	image_exp: autoDraw = True
+23.8438 	EXP 	slider_exp: autoDraw = True
+24.7466 	DATA 	Mouse: Left button down, pos=(849,154)
+24.7603 	EXP 	slider_exp: markerPos = 4.580729166666667
+24.7775 	EXP 	slider_exp: markerPos = 4.580729166666667
+24.7939 	EXP 	slider_exp: markerPos = 4.580729166666667
+24.8103 	EXP 	slider_exp: markerPos = 4.580729166666667
+24.8270 	EXP 	slider_exp: markerPos = 4.580729166666667
+24.8289 	DATA 	Mouse:  Left button up, pos=(849,154)
+24.8435 	EXP 	slider_exp: markerPos = 4.580729166666667
+24.8435 	EXP 	slider_exp: rating = 4.580729166666667
+24.8468 	EXP 	New trial (rep=0, index=1): OrderedDict([('Imagenes', 'imagenes/Rollo de queso.png'), ('Random', 0.9201641182756888), ('Correcto', None)])
+24.8773 	EXP 	image_exp: autoDraw = False
+24.8773 	EXP 	slider_exp: autoDraw = False
+24.8773 	EXP 	image_exp: image = 'imagenes/Rollo de queso.png'
+24.8773 	EXP 	slider_exp: markerPos = None
+24.8773 	EXP 	slider_exp: markerPos = None
+24.8773 	EXP 	slider_exp: rating = None
+25.8775 	EXP 	image_exp: autoDraw = True
+25.8775 	EXP 	slider_exp: autoDraw = True
+26.3146 	DATA 	Mouse: Left button down, pos=(671,152)
+26.3272 	EXP 	slider_exp: markerPos = 3.421875
+26.3441 	EXP 	slider_exp: markerPos = 3.421875
+26.3602 	EXP 	slider_exp: markerPos = 3.421875
+26.3772 	EXP 	slider_exp: markerPos = 3.421875
+26.3939 	EXP 	slider_exp: markerPos = 3.421875
+26.3961 	DATA 	Mouse:  Left button up, pos=(671,152)
+26.4104 	EXP 	slider_exp: markerPos = 3.421875
+26.4104 	EXP 	slider_exp: rating = 3.421875
+26.4132 	EXP 	New trial (rep=0, index=2): OrderedDict([('Imagenes', 'imagenes/Papas-limon.jpg'), ('Random', 0.5280798509093595), ('Correcto', None)])
+26.4287 	EXP 	image_exp: autoDraw = False
+26.4287 	EXP 	slider_exp: autoDraw = False
+26.4287 	EXP 	image_exp: image = 'imagenes/Papas-limon.jpg'
+26.4287 	EXP 	slider_exp: markerPos = None
+26.4287 	EXP 	slider_exp: markerPos = None
+26.4287 	EXP 	slider_exp: rating = None
+27.4277 	EXP 	image_exp: autoDraw = True
+27.4277 	EXP 	slider_exp: autoDraw = True
+27.9133 	DATA 	Mouse: Left button down, pos=(572,158)
+27.9274 	EXP 	slider_exp: markerPos = 2.77734375
+27.9439 	EXP 	slider_exp: markerPos = 2.77734375
+27.9604 	EXP 	slider_exp: markerPos = 2.77734375
+27.9776 	EXP 	slider_exp: markerPos = 2.77734375
+27.9941 	EXP 	slider_exp: markerPos = 2.77734375
+27.9969 	DATA 	Mouse:  Left button up, pos=(572,158)
+28.0106 	EXP 	slider_exp: markerPos = 2.77734375
+28.0106 	EXP 	slider_exp: rating = 2.77734375
+28.0143 	EXP 	New trial (rep=0, index=3): OrderedDict([('Imagenes', 'imagenes/Muffin de banano.png'), ('Random', 0.9610615059009696), ('Correcto', None)])
+28.0604 	EXP 	image_exp: autoDraw = False
+28.0604 	EXP 	slider_exp: autoDraw = False
+28.0604 	EXP 	image_exp: image = 'imagenes/Muffin de banano.png'
+28.0604 	EXP 	slider_exp: markerPos = None
+28.0604 	EXP 	slider_exp: markerPos = None
+28.0604 	EXP 	slider_exp: rating = None
+29.0605 	EXP 	image_exp: autoDraw = True
+29.0605 	EXP 	slider_exp: autoDraw = True
+29.3619 	DATA 	Mouse: Left button down, pos=(704,151)
+29.3769 	EXP 	slider_exp: markerPos = 3.63671875
+29.3939 	EXP 	slider_exp: markerPos = 3.63671875
+29.4101 	EXP 	slider_exp: markerPos = 3.63671875
+29.4270 	EXP 	slider_exp: markerPos = 3.63671875
+29.4288 	DATA 	Mouse:  Left button up, pos=(704,151)
+29.4437 	EXP 	slider_exp: markerPos = 3.63671875
+29.4437 	EXP 	slider_exp: rating = 3.63671875
+29.4459 	EXP 	New trial (rep=0, index=4): OrderedDict([('Imagenes', 'imagenes/Brocoli.jpg'), ('Random', 0.24293074945529525), ('Correcto', None)])
+29.4602 	EXP 	image_exp: autoDraw = False
+29.4602 	EXP 	slider_exp: autoDraw = False
+29.4602 	EXP 	image_exp: image = 'imagenes/Brocoli.jpg'
+29.4602 	EXP 	slider_exp: markerPos = None
+29.4602 	EXP 	slider_exp: markerPos = None
+29.4602 	EXP 	slider_exp: rating = None
+30.4472 	EXP 	image_exp: autoDraw = True
+30.4472 	EXP 	slider_exp: autoDraw = True
+30.6818 	DATA 	Mouse: Left button down, pos=(857,150)
+30.6960 	EXP 	slider_exp: markerPos = 4.6328125
+30.7125 	EXP 	slider_exp: markerPos = 4.6328125
+30.7290 	EXP 	slider_exp: markerPos = 4.6328125
+30.7458 	EXP 	slider_exp: markerPos = 4.6328125
+30.7623 	EXP 	slider_exp: markerPos = 4.6328125
+30.7648 	DATA 	Mouse:  Left button up, pos=(857,150)
+30.7792 	EXP 	slider_exp: markerPos = 4.6328125
+30.7792 	EXP 	slider_exp: rating = 4.6328125
+30.7830 	EXP 	New trial (rep=0, index=5): OrderedDict([('Imagenes', 'imagenes/Alpinito.jpg'), ('Random', 0.7416150880621702), ('Correcto', None)])
+30.8174 	EXP 	image_exp: autoDraw = False
+30.8174 	EXP 	slider_exp: autoDraw = False
+30.8174 	EXP 	image_exp: image = 'imagenes/Alpinito.jpg'
+30.8174 	EXP 	slider_exp: markerPos = None
+30.8174 	EXP 	slider_exp: markerPos = None
+30.8174 	EXP 	slider_exp: rating = None
+31.8107 	EXP 	image_exp: autoDraw = True
+31.8107 	EXP 	slider_exp: autoDraw = True
+32.4973 	DATA 	Mouse: Left button down, pos=(668,154)
+32.5107 	EXP 	slider_exp: markerPos = 3.40234375
+32.5274 	EXP 	slider_exp: markerPos = 3.40234375
+32.5436 	EXP 	slider_exp: markerPos = 3.40234375
+32.5600 	EXP 	slider_exp: markerPos = 3.40234375
+32.5768 	EXP 	slider_exp: markerPos = 3.40234375
+32.5806 	DATA 	Mouse:  Left button up, pos=(668,154)
+32.5937 	EXP 	slider_exp: markerPos = 3.40234375
+32.6103 	EXP 	slider_exp: markerPos = 3.40234375
+32.6103 	EXP 	slider_exp: rating = 3.40234375
+32.6125 	EXP 	New trial (rep=0, index=6): OrderedDict([('Imagenes', 'imagenes/Pescadito.png'), ('Random', 0.7172825011486081), ('Correcto', None)])
+32.6280 	EXP 	image_exp: autoDraw = False
+32.6280 	EXP 	slider_exp: autoDraw = False
+32.6280 	EXP 	image_exp: image = 'imagenes/Pescadito.png'
+32.6280 	EXP 	slider_exp: markerPos = None
+32.6280 	EXP 	slider_exp: markerPos = None
+32.6280 	EXP 	slider_exp: rating = None
+33.6273 	EXP 	image_exp: autoDraw = True
+33.6273 	EXP 	slider_exp: autoDraw = True
+34.2831 	DATA 	Mouse: Left button down, pos=(511,162)
+34.3103 	EXP 	slider_exp: markerPos = 2.380208333333333
+34.3271 	EXP 	slider_exp: markerPos = 2.380208333333333
+34.3437 	EXP 	slider_exp: markerPos = 2.380208333333333
+34.3602 	EXP 	slider_exp: markerPos = 2.380208333333333
+34.3770 	EXP 	slider_exp: markerPos = 2.380208333333333
+34.3788 	DATA 	Mouse:  Left button up, pos=(511,162)
+34.3937 	EXP 	slider_exp: markerPos = 2.380208333333333
+34.3937 	EXP 	slider_exp: rating = 2.380208333333333
+34.3971 	EXP 	New trial (rep=0, index=7): OrderedDict([('Imagenes', 'imagenes/Brownie.jpg'), ('Random', 0.2838924074864093), ('Correcto', None)])
+34.4329 	EXP 	image_exp: autoDraw = False
+34.4329 	EXP 	slider_exp: autoDraw = False
+34.4329 	EXP 	image_exp: image = 'imagenes/Brownie.jpg'
+34.4329 	EXP 	slider_exp: markerPos = None
+34.4329 	EXP 	slider_exp: markerPos = None
+34.4329 	EXP 	slider_exp: rating = None
+35.4111 	EXP 	image_exp: autoDraw = True
+35.4111 	EXP 	slider_exp: autoDraw = True
+35.9119 	DATA 	Mouse: Left button down, pos=(697,147)
+35.9270 	EXP 	slider_exp: markerPos = 3.591145833333333
+35.9436 	EXP 	slider_exp: markerPos = 3.591145833333333
+35.9602 	EXP 	slider_exp: markerPos = 3.591145833333333
+35.9770 	EXP 	slider_exp: markerPos = 3.591145833333333
+35.9938 	EXP 	slider_exp: markerPos = 3.591145833333333
+36.0102 	EXP 	slider_exp: markerPos = 3.591145833333333
+36.0119 	DATA 	Mouse:  Left button up, pos=(697,147)
+36.0270 	EXP 	slider_exp: markerPos = 3.591145833333333
+36.0270 	EXP 	slider_exp: rating = 3.591145833333333
+36.0305 	EXP 	New trial (rep=0, index=8): OrderedDict([('Imagenes', 'imagenes/Mango.jpeg'), ('Random', 0.4341155418941499), ('Correcto', None)])
+36.0497 	EXP 	image_exp: autoDraw = False
+36.0497 	EXP 	slider_exp: autoDraw = False
+36.0497 	EXP 	image_exp: image = 'imagenes/Mango.jpeg'
+36.0497 	EXP 	slider_exp: markerPos = None
+36.0497 	EXP 	slider_exp: markerPos = None
+36.0497 	EXP 	slider_exp: rating = None
+37.0440 	EXP 	image_exp: autoDraw = True
+37.0440 	EXP 	slider_exp: autoDraw = True
+37.5470 	DATA 	Mouse: Left button down, pos=(857,150)
+37.5605 	EXP 	slider_exp: markerPos = 4.6328125
+37.5772 	EXP 	slider_exp: markerPos = 4.6328125
+37.5938 	EXP 	slider_exp: markerPos = 4.6328125
+37.6105 	EXP 	slider_exp: markerPos = 4.6328125
+37.6163 	DATA 	Mouse:  Left button up, pos=(857,150)
+37.6271 	EXP 	slider_exp: markerPos = 4.6328125
+37.6440 	EXP 	slider_exp: markerPos = 4.6328125
+37.6440 	EXP 	slider_exp: rating = 4.6328125
+37.6478 	EXP 	New trial (rep=0, index=9): OrderedDict([('Imagenes', 'imagenes/Papas picantes.jpg'), ('Random', 0.524978898672612), ('Correcto', None)])
+37.6603 	EXP 	image_exp: autoDraw = False
+37.6603 	EXP 	slider_exp: autoDraw = False
+37.6603 	EXP 	image_exp: image = 'imagenes/Papas picantes.jpg'
+37.6603 	EXP 	slider_exp: markerPos = None
+37.6603 	EXP 	slider_exp: markerPos = None
+37.6603 	EXP 	slider_exp: rating = None
+38.6609 	EXP 	image_exp: autoDraw = True
+38.6609 	EXP 	slider_exp: autoDraw = True
+39.0471 	DATA 	Mouse: Left button down, pos=(995,160)
+39.0608 	EXP 	slider_exp: markerPos = 5.53125
+39.0775 	EXP 	slider_exp: markerPos = 5.53125
+39.0943 	EXP 	slider_exp: markerPos = 5.53125
+39.1108 	EXP 	slider_exp: markerPos = 5.53125
+39.1277 	EXP 	slider_exp: markerPos = 5.53125
+39.1443 	EXP 	slider_exp: markerPos = 5.53125
+39.1466 	DATA 	Mouse:  Left button up, pos=(995,160)
+39.1605 	EXP 	slider_exp: markerPos = 5.53125
+39.1605 	EXP 	slider_exp: rating = 5.53125
+39.1646 	EXP 	New trial (rep=0, index=10): OrderedDict([('Imagenes', 'imagenes/Papas-pollo.jpg'), ('Random', 0.08373485417902837), ('Correcto', None)])
+39.1792 	EXP 	image_exp: autoDraw = False
+39.1792 	EXP 	slider_exp: autoDraw = False
+39.1792 	EXP 	image_exp: image = 'imagenes/Papas-pollo.jpg'
+39.1792 	EXP 	slider_exp: markerPos = None
+39.1792 	EXP 	slider_exp: markerPos = None
+39.1792 	EXP 	slider_exp: rating = None
+40.1776 	EXP 	image_exp: autoDraw = True
+40.1776 	EXP 	slider_exp: autoDraw = True
+40.4802 	DATA 	Mouse: Left button down, pos=(731,146)
+40.4940 	EXP 	slider_exp: markerPos = 3.8125
+40.5108 	EXP 	slider_exp: markerPos = 3.8125
+40.5276 	EXP 	slider_exp: markerPos = 3.8125
+40.5442 	EXP 	slider_exp: markerPos = 3.8125
+40.5608 	EXP 	slider_exp: markerPos = 3.8125
+40.5775 	EXP 	slider_exp: markerPos = 3.8125
+40.5796 	DATA 	Mouse:  Left button up, pos=(731,146)
+40.5934 	EXP 	slider_exp: markerPos = 3.8125
+40.5934 	EXP 	slider_exp: rating = 3.8125
+40.5959 	EXP 	New trial (rep=0, index=11): OrderedDict([('Imagenes', 'imagenes/Kiwi.jpg'), ('Random', 0.3929145850942286), ('Correcto', None)])
+40.6101 	EXP 	image_exp: autoDraw = False
+40.6101 	EXP 	slider_exp: autoDraw = False
+40.6101 	EXP 	image_exp: image = 'imagenes/Kiwi.jpg'
+40.6101 	EXP 	slider_exp: markerPos = None
+40.6101 	EXP 	slider_exp: markerPos = None
+40.6101 	EXP 	slider_exp: rating = None
+41.5938 	EXP 	image_exp: autoDraw = True
+41.5938 	EXP 	slider_exp: autoDraw = True
+42.1694 	DATA 	Mouse: Left button down, pos=(551,152)
+42.1944 	EXP 	slider_exp: markerPos = 2.640625
+42.2108 	EXP 	slider_exp: markerPos = 2.640625
+42.2276 	EXP 	slider_exp: markerPos = 2.640625
+42.2444 	EXP 	slider_exp: markerPos = 2.640625
+42.2609 	EXP 	slider_exp: markerPos = 2.640625
+42.2771 	EXP 	slider_exp: markerPos = 2.640625
+42.2796 	DATA 	Mouse:  Left button up, pos=(551,152)
+42.2940 	EXP 	slider_exp: markerPos = 2.640625
+42.2940 	EXP 	slider_exp: rating = 2.640625
+42.2978 	EXP 	New trial (rep=0, index=12): OrderedDict([('Imagenes', 'imagenes/Canelazo.png'), ('Random', 0.6730479360767814), ('Correcto', None)])
+42.3283 	EXP 	image_exp: autoDraw = False
+42.3283 	EXP 	slider_exp: autoDraw = False
+42.3283 	EXP 	image_exp: image = 'imagenes/Canelazo.png'
+42.3283 	EXP 	slider_exp: markerPos = None
+42.3283 	EXP 	slider_exp: markerPos = None
+42.3283 	EXP 	slider_exp: rating = None
+43.3272 	EXP 	image_exp: autoDraw = True
+43.3272 	EXP 	slider_exp: autoDraw = True
+43.8798 	DATA 	Mouse: Left button down, pos=(719,153)
+43.8939 	EXP 	slider_exp: markerPos = 3.734375
+43.9102 	EXP 	slider_exp: markerPos = 3.734375
+43.9268 	EXP 	slider_exp: markerPos = 3.734375
+43.9438 	EXP 	slider_exp: markerPos = 3.734375
+43.9605 	EXP 	slider_exp: markerPos = 3.734375
+43.9770 	EXP 	slider_exp: markerPos = 3.734375
+43.9792 	DATA 	Mouse:  Left button up, pos=(719,153)
+43.9940 	EXP 	slider_exp: markerPos = 3.734375
+43.9940 	EXP 	slider_exp: rating = 3.734375
+43.9974 	EXP 	New trial (rep=0, index=13): OrderedDict([('Imagenes', 'imagenes/Leche-de-almendras.jpg'), ('Random', 0.3886559457994673), ('Correcto', None)])
+44.0856 	EXP 	image_exp: autoDraw = False
+44.0856 	EXP 	slider_exp: autoDraw = False
+44.0856 	EXP 	image_exp: image = 'imagenes/Leche-de-almendras.jpg'
+44.0856 	EXP 	slider_exp: markerPos = None
+44.0856 	EXP 	slider_exp: markerPos = None
+44.0856 	EXP 	slider_exp: rating = None
+45.0773 	EXP 	image_exp: autoDraw = True
+45.0773 	EXP 	slider_exp: autoDraw = True
+45.3662 	DATA 	Mouse: Left button down, pos=(806,156)
+45.3937 	EXP 	slider_exp: markerPos = 4.30078125
+45.4106 	EXP 	slider_exp: markerPos = 4.30078125
+45.4272 	EXP 	slider_exp: markerPos = 4.30078125
+45.4439 	EXP 	slider_exp: markerPos = 4.30078125
+45.4455 	DATA 	Mouse:  Left button up, pos=(806,156)
+45.4603 	EXP 	slider_exp: markerPos = 4.30078125
+45.4603 	EXP 	slider_exp: rating = 4.30078125
+45.4626 	EXP 	New trial (rep=0, index=14): OrderedDict([('Imagenes', 'imagenes/pistachos.jpg'), ('Random', 0.7450869742741464), ('Correcto', None)])
+45.4771 	EXP 	image_exp: autoDraw = False
+45.4771 	EXP 	slider_exp: autoDraw = False
+45.4771 	EXP 	image_exp: image = 'imagenes/pistachos.jpg'
+45.4771 	EXP 	slider_exp: markerPos = None
+45.4771 	EXP 	slider_exp: markerPos = None
+45.4771 	EXP 	slider_exp: rating = None
+46.4605 	EXP 	image_exp: autoDraw = True
+46.4605 	EXP 	slider_exp: autoDraw = True
+46.8300 	DATA 	Mouse: Left button down, pos=(655,159)
+46.8441 	EXP 	slider_exp: markerPos = 3.3177083333333335
+46.8606 	EXP 	slider_exp: markerPos = 3.3177083333333335
+46.8774 	EXP 	slider_exp: markerPos = 3.3177083333333335
+46.8940 	EXP 	slider_exp: markerPos = 3.3177083333333335
+46.9001 	DATA 	Mouse:  Left button up, pos=(655,159)
+46.9105 	EXP 	slider_exp: markerPos = 3.3177083333333335
+46.9273 	EXP 	slider_exp: markerPos = 3.3177083333333335
+46.9273 	EXP 	slider_exp: rating = 3.3177083333333335
+46.9311 	EXP 	New trial (rep=0, index=15): OrderedDict([('Imagenes', 'imagenes/Uvas.jpg'), ('Random', 0.4959291644143431), ('Correcto', None)])
+46.9489 	EXP 	image_exp: autoDraw = False
+46.9489 	EXP 	slider_exp: autoDraw = False
+46.9489 	EXP 	image_exp: image = 'imagenes/Uvas.jpg'
+46.9489 	EXP 	slider_exp: markerPos = None
+46.9489 	EXP 	slider_exp: markerPos = None
+46.9489 	EXP 	slider_exp: rating = None
+47.9282 	EXP 	image_exp: autoDraw = True
+47.9282 	EXP 	slider_exp: autoDraw = True
+48.2318 	DATA 	Mouse: Left button down, pos=(530,161)
+48.2445 	EXP 	slider_exp: markerPos = 2.50390625
+48.2612 	EXP 	slider_exp: markerPos = 2.50390625
+48.2780 	EXP 	slider_exp: markerPos = 2.50390625
+48.2947 	EXP 	slider_exp: markerPos = 2.50390625
+48.3105 	EXP 	slider_exp: markerPos = 2.50390625
+48.3133 	DATA 	Mouse:  Left button up, pos=(530,161)
+48.3272 	EXP 	slider_exp: markerPos = 2.50390625
+48.3272 	EXP 	slider_exp: rating = 2.50390625
+48.3303 	EXP 	New trial (rep=0, index=16): OrderedDict([('Imagenes', 'imagenes/Chocoramo.jfif.jpg'), ('Random', 0.7425528559884101), ('Correcto', None)])
+48.3566 	EXP 	image_exp: autoDraw = False
+48.3566 	EXP 	slider_exp: autoDraw = False
+48.3566 	EXP 	image_exp: image = 'imagenes/Chocoramo.jfif.jpg'
+48.3566 	EXP 	slider_exp: markerPos = None
+48.3566 	EXP 	slider_exp: markerPos = None
+48.3566 	EXP 	slider_exp: rating = None
+49.3437 	EXP 	image_exp: autoDraw = True
+49.3437 	EXP 	slider_exp: autoDraw = True
+49.8483 	DATA 	Mouse: Left button down, pos=(728,155)
+49.8606 	EXP 	slider_exp: markerPos = 3.79296875
+49.8779 	EXP 	slider_exp: markerPos = 3.79296875
+49.8942 	EXP 	slider_exp: markerPos = 3.79296875
+49.9102 	EXP 	slider_exp: markerPos = 3.79296875
+49.9271 	EXP 	slider_exp: markerPos = 3.79296875
+49.9438 	EXP 	slider_exp: markerPos = 3.79296875
+49.9602 	EXP 	slider_exp: markerPos = 3.79296875
+49.9630 	DATA 	Mouse:  Left button up, pos=(728,155)
+49.9770 	EXP 	slider_exp: markerPos = 3.79296875
+49.9770 	EXP 	slider_exp: rating = 3.79296875
+49.9809 	EXP 	New trial (rep=0, index=17): OrderedDict([('Imagenes', 'imagenes/Papas-naturales.jpg'), ('Random', 0.37590629905521566), ('Correcto', None)])
+49.9959 	EXP 	image_exp: autoDraw = False
+49.9959 	EXP 	slider_exp: autoDraw = False
+49.9959 	EXP 	image_exp: image = 'imagenes/Papas-naturales.jpg'
+49.9959 	EXP 	slider_exp: markerPos = None
+49.9959 	EXP 	slider_exp: markerPos = None
+49.9959 	EXP 	slider_exp: rating = None
+50.9956 	EXP 	image_exp: autoDraw = True
+50.9956 	EXP 	slider_exp: autoDraw = True
+51.2848 	DATA 	Mouse: Left button down, pos=(696,159)
+51.3107 	EXP 	slider_exp: markerPos = 3.584635416666667
+51.3276 	EXP 	slider_exp: markerPos = 3.584635416666667
+51.3443 	EXP 	slider_exp: markerPos = 3.584635416666667
+51.3608 	EXP 	slider_exp: markerPos = 3.584635416666667
+51.3777 	EXP 	slider_exp: markerPos = 3.584635416666667
+51.3943 	EXP 	slider_exp: markerPos = 3.584635416666667
+51.4006 	DATA 	Mouse:  Left button up, pos=(696,159)
+51.4105 	EXP 	slider_exp: markerPos = 3.584635416666667
+51.4274 	EXP 	slider_exp: markerPos = 3.584635416666667
+51.4274 	EXP 	slider_exp: rating = 3.584635416666667
+51.4310 	EXP 	New trial (rep=0, index=18): OrderedDict([('Imagenes', 'imagenes/Yogurt-alpina.jpg'), ('Random', 0.5445152936222175), ('Correcto', None)])
+51.4507 	EXP 	image_exp: autoDraw = False
+51.4507 	EXP 	slider_exp: autoDraw = False
+51.4507 	EXP 	image_exp: image = 'imagenes/Yogurt-alpina.jpg'
+51.4507 	EXP 	slider_exp: markerPos = None
+51.4507 	EXP 	slider_exp: markerPos = None
+51.4507 	EXP 	slider_exp: rating = None
+52.4441 	EXP 	image_exp: autoDraw = True
+52.4441 	EXP 	slider_exp: autoDraw = True
+53.7634 	DATA 	Keypress: escape
+54.0874 	EXP 	window1: mouseVisible = True
