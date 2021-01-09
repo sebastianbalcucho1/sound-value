@@ -7,7 +7,7 @@
     <Param name="Data file delimiter" updates="None" val="auto" valType="str"/>
     <Param name="Data filename" updates="None" val="u'data/%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])" valType="code"/>
     <Param name="Enable Escape" updates="None" val="True" valType="bool"/>
-    <Param name="Experiment info" updates="None" val="{'participant': '', 'session': '001'}" valType="code"/>
+    <Param name="Experiment info" updates="None" val="{'Nombre del participante': ''}" valType="code"/>
     <Param name="Force stereo" updates="None" val="True" valType="bool"/>
     <Param name="Full-screen window" updates="None" val="True" valType="bool"/>
     <Param name="HTML path" updates="None" val="html" valType="str"/>
@@ -28,7 +28,7 @@
     <Param name="blendMode" updates="None" val="avg" valType="str"/>
     <Param name="color" updates="None" val="$[1,1,1]" valType="str"/>
     <Param name="colorSpace" updates="None" val="rgb" valType="str"/>
-    <Param name="expName" updates="None" val="piloto1" valType="str"/>
+    <Param name="expName" updates="None" val="piloto" valType="str"/>
     <Param name="exportHTML" updates="None" val="on Sync" valType="str"/>
     <Param name="logging level" updates="None" val="exp" valType="code"/>
   </Settings>
@@ -1120,7 +1120,7 @@
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.07" valType="code"/>
+        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
         <Param name="name" updates="None" val="text_2" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
@@ -1132,7 +1132,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="120" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Ha finalizado el juego de subasta.&amp;#10;&amp;#10;Le pediremos que de click en el botón rojo para ser redirigido a una encuesta donde se le harán preguntas de interés para nuestro estudio.&amp;#10;&amp;#10;Muchas gracias por su participación en este juego.&amp;#10;&amp;#10;" valType="extendedStr"/>
+        <Param name="text" updates="constant" val="Ha finalizado el juego de subasta.&amp;#10;&amp;#10;Le pediremos que de click en el botón rojo para acabar la sesión. A continuación aparecerá un mensaje &quot;Thank you for your patience&quot; seguido de un botón &quot;Ok&quot;. &amp;#10;&amp;#10;Por favor, oprima el botón para ser redirigido a una encuesta que nos servirá en nuestro estudio.&amp;#10;&amp;#10;Muchas gracias por su participación en este juego.&amp;#10;&amp;#10;" valType="extendedStr"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -1179,23 +1179,6 @@
         <Param name="syncScreenRefresh" updates="None" val="False" valType="bool"/>
         <Param name="timeRelativeTo" updates="constant" val="mouse onset" valType="str"/>
       </MouseComponent>
-      <CodeComponent name="code_2">
-        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="JS" valType="str"/>
-        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Each JS Frame" updates="constant" val="message = “Por favor, oprima 'ok' para ser dirigido a la encuesta.”;" valType="extendedCode"/>
-        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="name" updates="None" val="code_2" valType="code"/>
-      </CodeComponent>
     </Routine>
   </Routines>
   <Flow>
