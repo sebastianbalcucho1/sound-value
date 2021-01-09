@@ -1,6 +1,6 @@
-﻿/**************** 
- * Piloto1 Test *
- ****************/
+﻿/*************** 
+ * Piloto Test *
+ ***************/
 
 import { PsychoJS } from './lib/core-2020.2.js';
 import * as core from './lib/core-2020.2.js';
