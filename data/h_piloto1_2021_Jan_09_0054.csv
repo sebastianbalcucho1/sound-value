@@ -1,0 +1,4 @@
+﻿mensaje_intro.started,mensaje_intro.stopped,key_resp.keys,key_resp.rt,key_resp.started,key_resp.stopped,mensaje_intro_2.started,mensaje_intro_2.stopped,key_resp_2.keys,key_resp_2.rt,key_resp_2.started,key_resp_2.stopped,textbox_prueba.started,textbox_prueba.stopped,key_resp_3.keys,key_resp_3.rt,key_resp_3.started,key_resp_3.stopped,participant,session,date,expName,psychopyVersion,frameRate,
+10.905014300020412,None,space,0.8846686000470072,10.905014300020412,None,,,,,,,,,,,,,h,001,2021_Jan_09_0054,piloto1,2020.2.5,60.18320974191479,
+,,,,,,11.810611599998083,None,space,0.8216739999479614,11.810611599998083,None,,,,,,,h,001,2021_Jan_09_0054,piloto1,2020.2.5,60.18320974191479,
+,,,,,,,,,,,,12.654591500002425,None,space,1.2707675999845378,12.654591500002425,None,h,001,2021_Jan_09_0054,piloto1,2020.2.5,60.18320974191479,
