@@ -87,8 +87,6 @@ psychoJS.start({
 
 psychoJS.experimentLogger.setLevel(core.Logger.ServerLevel.EXP);
 
-
-var frameDur;
 function updateInfo() {
   expInfo['date'] = util.MonotonicClock.getDateStr();  // add a simple timestamp
   expInfo['expName'] = expName;
@@ -109,68 +107,6 @@ function updateInfo() {
   return Scheduler.Event.NEXT;
 }
 
-
-var introClock;
-var mensaje_intro;
-var boton_intro;
-var mouse_intro;
-var intro_2Clock;
-var mensaje_intro_2;
-var boton_intro_2;
-var mouse_intro_2;
-var intro_pruebaClock;
-var text_prueba;
-var boton_intro_prueba;
-var mouse_intro_prueba;
-var prueba_1Clock;
-var sonido_prueba;
-var image_prueba;
-var slider_prueba;
-var prueba_2Clock;
-var sonido_prueba_2;
-var image_prueba_2;
-var slider_prueba_2;
-var intro_experimentoClock;
-var text_prueba_2;
-var boton_intro_exp;
-var mouse_intro_exp;
-var experimentoClock;
-var sonido_exp;
-var image_exp;
-var slider_exp;
-var nuestro_slider;
-var image_slider;
-var subasta1Clock;
-var text_subasta1;
-var boton_subasta1;
-var mouse_subasta1;
-var subasta2Clock;
-var text_subasta2;
-var boton_subasta2;
-var mouse_subasta2;
-var pago1Clock;
-var text;
-var boton_pago1;
-var mouse_pago1;
-var pago2Clock;
-var text_4;
-var boton_pago2;
-var mouse_pago2;
-var productoClock;
-var text_producto;
-var image;
-var boton_producto;
-var mouse_producto;
-var pago3Clock;
-var texto_final;
-var boton_pago3;
-var mouse_pago3;
-var intro_encuestaClock;
-var text_2;
-var boton_intro_encuesta;
-var mouse_intro_encuesta;
-var globalClock;
-var routineTimer;
 function experimentInit() {
   // Initialize components for Routine "intro"
   introClock = new util.Clock();
@@ -530,11 +466,11 @@ function experimentInit() {
   text_2 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_2',
-    text: 'Ha finalizado el juego de subasta.\n\nLe pediremos que de click en el botón rojo para ser redirigido a una encuesta donde se le harán preguntas de interés para nuestro estudio.\n\nMuchas gracias por su participación en este juego.',
+    text: 'Ha finalizado el juego de subasta.\n\nLe pediremos que de click en el botón rojo para ser redirigido a una encuesta donde se le harán preguntas de interés para nuestro estudio.\n\nMuchas gracias por su participación en este juego.\n\n',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.07,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('white'),  opacity: 1,
+    color: new util.Color('black'),  opacity: 1,
     depth: 0.0 
   });
   
@@ -558,11 +494,6 @@ function experimentInit() {
   return Scheduler.Event.NEXT;
 }
 
-
-var t;
-var frameN;
-var gotValidClick;
-var introComponents;
 function introRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'intro'-------
@@ -591,11 +522,6 @@ function introRoutineBegin(snapshot) {
   };
 }
 
-
-var frameRemains;
-var prevButtonState;
-var _mouseButtons;
-var continueRoutine;
 function introRoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'intro'-------
@@ -691,8 +617,6 @@ function introRoutineEachFrame(snapshot) {
   };
 }
 
-
-var _mouseXYs;
 function introRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'intro'-------
@@ -715,8 +639,6 @@ function introRoutineEnd(snapshot) {
   };
 }
 
-
-var intro_2Components;
 function intro_2RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'intro_2'-------
@@ -744,7 +666,6 @@ function intro_2RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function intro_2RoutineEachFrame(snapshot) {
   return function () {
@@ -841,7 +762,6 @@ function intro_2RoutineEachFrame(snapshot) {
   };
 }
 
-
 function intro_2RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'intro_2'-------
@@ -864,8 +784,6 @@ function intro_2RoutineEnd(snapshot) {
   };
 }
 
-
-var intro_pruebaComponents;
 function intro_pruebaRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'intro_prueba'-------
@@ -893,7 +811,6 @@ function intro_pruebaRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function intro_pruebaRoutineEachFrame(snapshot) {
   return function () {
@@ -990,7 +907,6 @@ function intro_pruebaRoutineEachFrame(snapshot) {
   };
 }
 
-
 function intro_pruebaRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'intro_prueba'-------
@@ -1013,8 +929,6 @@ function intro_pruebaRoutineEnd(snapshot) {
   };
 }
 
-
-var prueba_1Components;
 function prueba_1RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'prueba_1'-------
@@ -1047,7 +961,6 @@ function prueba_1RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function prueba_1RoutineEachFrame(snapshot) {
   return function () {
@@ -1130,7 +1043,6 @@ function prueba_1RoutineEachFrame(snapshot) {
   };
 }
 
-
 function prueba_1RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'prueba_1'-------
@@ -1146,8 +1058,6 @@ function prueba_1RoutineEnd(snapshot) {
   };
 }
 
-
-var prueba_2Components;
 function prueba_2RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'prueba_2'-------
@@ -1180,7 +1090,6 @@ function prueba_2RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function prueba_2RoutineEachFrame(snapshot) {
   return function () {
@@ -1263,7 +1172,6 @@ function prueba_2RoutineEachFrame(snapshot) {
   };
 }
 
-
 function prueba_2RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'prueba_2'-------
@@ -1279,8 +1187,6 @@ function prueba_2RoutineEnd(snapshot) {
   };
 }
 
-
-var intro_experimentoComponents;
 function intro_experimentoRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'intro_experimento'-------
@@ -1308,7 +1214,6 @@ function intro_experimentoRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function intro_experimentoRoutineEachFrame(snapshot) {
   return function () {
@@ -1405,7 +1310,6 @@ function intro_experimentoRoutineEachFrame(snapshot) {
   };
 }
 
-
 function intro_experimentoRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'intro_experimento'-------
@@ -1428,9 +1332,6 @@ function intro_experimentoRoutineEnd(snapshot) {
   };
 }
 
-
-var trials;
-var currentLoop;
 function trialsLoopBegin(trialsLoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   trials = new TrialHandler({
@@ -1458,8 +1359,6 @@ function trialsLoopBegin(trialsLoopScheduler) {
   return Scheduler.Event.NEXT;
 }
 
-
-var trials_2;
 function trials_2LoopBegin(trials_2LoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   trials_2 = new TrialHandler({
@@ -1486,13 +1385,11 @@ function trials_2LoopBegin(trials_2LoopScheduler) {
   return Scheduler.Event.NEXT;
 }
 
-
 function trials_2LoopEnd() {
   psychoJS.experiment.removeLoop(trials_2);
 
   return Scheduler.Event.NEXT;
 }
-
 
 function trialsLoopEnd() {
   psychoJS.experiment.removeLoop(trials);
@@ -1500,8 +1397,6 @@ function trialsLoopEnd() {
   return Scheduler.Event.NEXT;
 }
 
-
-var experimentoComponents;
 function experimentoRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'experimento'-------
@@ -1535,7 +1430,6 @@ function experimentoRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function experimentoRoutineEachFrame(snapshot) {
   return function () {
@@ -1618,9 +1512,6 @@ function experimentoRoutineEachFrame(snapshot) {
   };
 }
 
-
-var rating;
-var Imagenes1;
 function experimentoRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'experimento'-------
@@ -1642,8 +1533,6 @@ function experimentoRoutineEnd(snapshot) {
   };
 }
 
-
-var subasta1Components;
 function subasta1RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'subasta1'-------
@@ -1671,7 +1560,6 @@ function subasta1RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function subasta1RoutineEachFrame(snapshot) {
   return function () {
@@ -1768,7 +1656,6 @@ function subasta1RoutineEachFrame(snapshot) {
   };
 }
 
-
 function subasta1RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'subasta1'-------
@@ -1791,8 +1678,6 @@ function subasta1RoutineEnd(snapshot) {
   };
 }
 
-
-var subasta2Components;
 function subasta2RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'subasta2'-------
@@ -1820,7 +1705,6 @@ function subasta2RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function subasta2RoutineEachFrame(snapshot) {
   return function () {
@@ -1917,7 +1801,6 @@ function subasta2RoutineEachFrame(snapshot) {
   };
 }
 
-
 function subasta2RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'subasta2'-------
@@ -1940,11 +1823,6 @@ function subasta2RoutineEnd(snapshot) {
   };
 }
 
-
-var n_precio_aleatorio;
-var precio_aleatorio;
-var mensaje_precio_aleatorio;
-var pago1Components;
 function pago1RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'pago1'-------
@@ -1978,7 +1856,6 @@ function pago1RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function pago1RoutineEachFrame(snapshot) {
   return function () {
@@ -2075,7 +1952,6 @@ function pago1RoutineEachFrame(snapshot) {
   };
 }
 
-
 function pago1RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'pago1'-------
@@ -2098,13 +1974,6 @@ function pago1RoutineEnd(snapshot) {
   };
 }
 
-
-var n_precio_sujeto;
-var precio_sujeto_pos;
-var precio_sujeto;
-var mensaje_precio_sujeto;
-var imagen_estimulo;
-var pago2Components;
 function pago2RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'pago2'-------
@@ -2139,7 +2008,6 @@ function pago2RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function pago2RoutineEachFrame(snapshot) {
   return function () {
@@ -2236,7 +2104,6 @@ function pago2RoutineEachFrame(snapshot) {
   };
 }
 
-
 function pago2RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'pago2'-------
@@ -2260,8 +2127,6 @@ function pago2RoutineEnd(snapshot) {
   };
 }
 
-
-var productoComponents;
 function productoRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'producto'-------
@@ -2291,7 +2156,6 @@ function productoRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function productoRoutineEachFrame(snapshot) {
   return function () {
@@ -2402,7 +2266,6 @@ function productoRoutineEachFrame(snapshot) {
   };
 }
 
-
 function productoRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'producto'-------
@@ -2425,10 +2288,6 @@ function productoRoutineEnd(snapshot) {
   };
 }
 
-
-var diferencia;
-var mensaje1;
-var pago3Components;
 function pago3RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'pago3'-------
@@ -2464,7 +2323,6 @@ function pago3RoutineBegin(snapshot) {
     }
   };
 }
-
 
 function pago3RoutineEachFrame(snapshot) {
   return function () {
@@ -2561,7 +2419,6 @@ function pago3RoutineEachFrame(snapshot) {
   };
 }
 
-
 function pago3RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'pago3'-------
@@ -2586,8 +2443,6 @@ function pago3RoutineEnd(snapshot) {
   };
 }
 
-
-var intro_encuestaComponents;
 function intro_encuestaRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'intro_encuesta'-------
@@ -2615,7 +2470,6 @@ function intro_encuestaRoutineBegin(snapshot) {
     }
   };
 }
-
 
 function intro_encuestaRoutineEachFrame(snapshot) {
   return function () {
@@ -2712,7 +2566,6 @@ function intro_encuestaRoutineEachFrame(snapshot) {
   };
 }
 
-
 function intro_encuestaRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'intro_encuesta'-------
@@ -2734,7 +2587,6 @@ function intro_encuestaRoutineEnd(snapshot) {
     return Scheduler.Event.NEXT;
   };
 }
-
 
 function endLoopIteration(scheduler, snapshot) {
   // ------Prepare for next entry------
@@ -2758,14 +2610,12 @@ function endLoopIteration(scheduler, snapshot) {
   };
 }
 
-
 function importConditions(currentLoop) {
   return function () {
     psychoJS.importAttributes(currentLoop.getCurrentTrial());
     return Scheduler.Event.NEXT;
     };
 }
-
 
 function quitPsychoJS(message, isCompleted) {
   // Check for and save orphaned data
@@ -2785,6 +2635,9 @@ function quitPsychoJS(message, isCompleted) {
   
   
   
+  
+  
+  message = “Por favor, oprima 'ok' para ser dirigido a la encuesta.”;
   
   psychoJS.window.close();
   psychoJS.quit({message: message, isCompleted: isCompleted});
