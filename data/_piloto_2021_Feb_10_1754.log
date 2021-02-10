@@ -1,0 +1,180 @@
+4.5961 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'PTB', 'pyo', 'pygame'] (in that order).
+24.4858 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, args=UNKNOWN, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([1., 1., 1.]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000024642AD5160>, gamma=None, gammaErrorPolicy='raise', kwargs=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x0000024642ADDB00>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([1366,  768]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+24.4864 	EXP 	window1: mouseVisible = True
+24.4865 	EXP 	window1: recordFrameIntervals = False
+24.6505 	EXP 	window1: recordFrameIntervals = True
+24.8343 	EXP 	window1: recordFrameIntervals = False
+25.4152 	EXP 	Created mensaje_intro = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.07, italic=False, languageStyle='LTR', name='mensaje_intro', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+25.4350 	EXP 	Created boton_intro = Polygon(__class__=<class 'psychopy.visual.polygon.Polygon'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=-1.0, fillColor=array([0., 0., 0.]), fillColorSpace='rgb', fillRGB=array([0., 0., 0.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1., 1., 1.]), lineWidth=1, name='boton_intro', opacity=1.0, ori=array(0.), pos=array([ 0.7, -0.4]), size=array([0.3, 0.2]), units='height', vertices=ndarray(...), win=Window(...))
+25.4352 	EXP 	window1: mouseVisible = True
+25.5535 	EXP 	Created mensaje_intro_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='mensaje_intro_2', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+25.5608 	EXP 	Created boton_intro_2 = Polygon(__class__=<class 'psychopy.visual.polygon.Polygon'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=-1.0, fillColor=array([0., 0., 0.]), fillColorSpace='rgb', fillRGB=array([0., 0., 0.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1., 1., 1.]), lineWidth=1, name='boton_intro_2', opacity=1.0, ori=array(0.), pos=array([ 0.7, -0.4]), size=array([0.3, 0.2]), units='height', vertices=ndarray(...), win=Window(...))
+25.5610 	EXP 	window1: mouseVisible = True
+25.6234 	EXP 	Created text_prueba = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_prueba', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+25.6332 	EXP 	Created boton_intro_prueba = Polygon(__class__=<class 'psychopy.visual.polygon.Polygon'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=-1.0, fillColor=array([0., 0., 0.]), fillColorSpace='rgb', fillRGB=array([0., 0., 0.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1., 1., 1.]), lineWidth=1, name='boton_intro_prueba', opacity=1.0, ori=array(0.), pos=array([ 0.7, -0.4]), size=array([0.3, 0.2]), units='height', vertices=ndarray(...), win=Window(...))
+25.6334 	EXP 	window1: mouseVisible = True
+25.8402 	EXP 	Sound sonido_prueba set volume 1.000
+25.8654 	EXP 	Created image_prueba = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='imagenes/lapicero.jpg', interpolate=True, mask=None, maskParams=None, name='image_prueba', opacity=1.0, ori=0.0, pos=array([0. , 0.2]), size=array([0.5, 0.5]), texRes=128, units='height', win=Window(...))
+25.9089 	EXP 	window1: mouseVisible = True
+25.9529 	EXP 	Created slider_prueba = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, color='DimGrey', depth=-2, flip=False, font='HelveticaBold', granularity=0, labelHeight=0.05, labelWrapWidth=None, labels=('0', '1000', '2000', '3000', '4000', '5000'), name='slider_prueba', pos=(0, -0.3), readOnly=False, self=UNKNOWN, size=(1.0, 0.05), style=method-wrapper(...), ticks=array([1, 2, 3, 4, 5, 6]), units='height', win=Window(...))
+25.9534 	EXP 	Sound sonido_prueba_2 set volume 1.000
+26.0762 	EXP 	Created image_prueba_2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='imagenes/jabon.jpg', interpolate=True, mask=None, maskParams=None, name='image_prueba_2', opacity=1.0, ori=0.0, pos=array([0. , 0.2]), size=array([0.5, 0.5]), texRes=128, units='height', win=Window(...))
+26.0773 	EXP 	window1: mouseVisible = True
+26.0992 	EXP 	Created slider_prueba_2 = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, color='DimGrey', depth=-2, flip=False, font='HelveticaBold', granularity=0, labelHeight=0.05, labelWrapWidth=None, labels=('0', '1000', '2000', '3000', '4000', '5000'), name='slider_prueba_2', pos=(0, -0.3), readOnly=False, self=UNKNOWN, size=(1.0, 0.05), style=method-wrapper(...), ticks=array([1, 2, 3, 4, 5, 6]), units='height', win=Window(...))
+26.1182 	EXP 	Created text_prueba_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_prueba_2', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+26.1215 	EXP 	Created boton_intro_exp = Polygon(__class__=<class 'psychopy.visual.polygon.Polygon'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=-1.0, fillColor=array([0., 0., 0.]), fillColorSpace='rgb', fillRGB=array([0., 0., 0.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1., 1., 1.]), lineWidth=1, name='boton_intro_exp', opacity=1.0, ori=array(0.), pos=array([ 0.7, -0.4]), size=array([0.3, 0.2]), units='height', vertices=ndarray(...), win=Window(...))
+26.1216 	EXP 	window1: mouseVisible = True
+26.1217 	EXP 	Sound sonido_exp set volume 1.000
+26.1248 	EXP 	Created image_exp = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_exp', opacity=1.0, ori=0.0, pos=array([0. , 0.2]), size=array([0.5, 0.5]), texRes=128, units='height', win=Window(...))
+26.1253 	EXP 	window1: mouseVisible = True
+26.1349 	EXP 	Created slider_exp = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, color='DimGrey', depth=-2, flip=False, font='HelveticaBold', granularity=0, labelHeight=0.05, labelWrapWidth=None, labels=('0', '1000', '2000', '3000', '4000', '5000'), name='slider_exp', pos=(0, -0.3), readOnly=False, self=UNKNOWN, size=(1.0, 0.05), style=method-wrapper(...), ticks=array([1, 2, 3, 4, 5, 6]), units='height', win=Window(...))
+26.1506 	EXP 	Created text_subasta1 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_subasta1', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+26.1540 	EXP 	Created boton_subasta1 = Polygon(__class__=<class 'psychopy.visual.polygon.Polygon'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=-1.0, fillColor=array([0., 0., 0.]), fillColorSpace='rgb', fillRGB=array([0., 0., 0.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1., 1., 1.]), lineWidth=1, name='boton_subasta1', opacity=1.0, ori=array(0.), pos=array([ 0.7, -0.4]), size=array([0.3, 0.2]), units='height', vertices=ndarray(...), win=Window(...))
+26.1541 	EXP 	window1: mouseVisible = True
+26.1759 	EXP 	Created text_subasta2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_subasta2', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+26.1793 	EXP 	Created boton_subasta2 = Polygon(__class__=<class 'psychopy.visual.polygon.Polygon'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=-1.0, fillColor=array([0., 0., 0.]), fillColorSpace='rgb', fillRGB=array([0., 0., 0.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1., 1., 1.]), lineWidth=1, name='boton_subasta2', opacity=1.0, ori=array(0.), pos=array([ 0.7, -0.4]), size=array([0.3, 0.2]), units='height', vertices=ndarray(...), win=Window(...))
+26.1794 	EXP 	window1: mouseVisible = True
+26.1967 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text', opacity=1.0, ori=0, pos=array([0.  , 0.15]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+26.2006 	EXP 	Created boton_pago1 = Polygon(__class__=<class 'psychopy.visual.polygon.Polygon'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=-2.0, fillColor=array([0., 0., 0.]), fillColorSpace='rgb', fillRGB=array([0., 0., 0.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1., 1., 1.]), lineWidth=1, name='boton_pago1', opacity=1.0, ori=array(0.), pos=array([ 0.7, -0.4]), size=array([0.3, 0.2]), units='height', vertices=ndarray(...), win=Window(...))
+26.2007 	EXP 	window1: mouseVisible = True
+26.2032 	EXP 	Created text_4 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_4', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+26.2065 	EXP 	Created boton_pago2 = Polygon(__class__=<class 'psychopy.visual.polygon.Polygon'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=-2.0, fillColor=array([0., 0., 0.]), fillColorSpace='rgb', fillRGB=array([0., 0., 0.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1., 1., 1.]), lineWidth=1, name='boton_pago2', opacity=1.0, ori=array(0.), pos=array([ 0.7, -0.4]), size=array([0.3, 0.2]), units='height', vertices=ndarray(...), win=Window(...))
+26.2065 	EXP 	window1: mouseVisible = True
+26.2179 	EXP 	Created text_producto = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_producto', opacity=1.0, ori=0, pos=array([0.   , 0.275]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+26.2199 	EXP 	Created image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image', opacity=1.0, ori=0.0, pos=array([ 0.  , -0.15]), size=array([0.5, 0.5]), texRes=128, units='height', win=Window(...))
+26.2234 	EXP 	Created boton_producto = Polygon(__class__=<class 'psychopy.visual.polygon.Polygon'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=-2.0, fillColor=array([0., 0., 0.]), fillColorSpace='rgb', fillRGB=array([0., 0., 0.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1., 1., 1.]), lineWidth=1, name='boton_producto', opacity=1.0, ori=array(0.), pos=array([ 0.7, -0.4]), size=array([0.3, 0.2]), units='height', vertices=ndarray(...), win=Window(...))
+26.2235 	EXP 	window1: mouseVisible = True
+26.2258 	EXP 	Created texto_final = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='texto_final', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+26.2291 	EXP 	Created boton_pago3 = Polygon(__class__=<class 'psychopy.visual.polygon.Polygon'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=-2.0, fillColor=array([0., 0., 0.]), fillColorSpace='rgb', fillRGB=array([0., 0., 0.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1., 1., 1.]), lineWidth=1, name='boton_pago3', opacity=1.0, ori=array(0.), pos=array([ 0.7, -0.4]), size=array([0.3, 0.2]), units='height', vertices=ndarray(...), win=Window(...))
+26.2292 	EXP 	window1: mouseVisible = True
+26.2532 	EXP 	Created text_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_2', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+26.2565 	EXP 	Created boton_intro_encuesta = Polygon(__class__=<class 'psychopy.visual.polygon.Polygon'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=-1.0, fillColor=array([0., 0., 0.]), fillColorSpace='rgb', fillRGB=array([0., 0., 0.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1., 1., 1.]), lineWidth=1, name='boton_intro_encuesta', opacity=1.0, ori=array(0.), pos=array([ 0.7, -0.4]), size=array([0.3, 0.2]), units='height', vertices=ndarray(...), win=Window(...))
+26.2566 	EXP 	window1: mouseVisible = True
+26.2933 	EXP 	slider_prueba: autoLog = True
+26.2933 	EXP 	slider_prueba: markerPos = None
+26.2933 	EXP 	slider_prueba: rating = None
+26.2933 	EXP 	slider_prueba: markerPos = None
+26.2933 	EXP 	slider_prueba: contrast = 1.0
+26.2933 	EXP 	slider_prueba: autoLog = True
+26.2933 	EXP 	slider_prueba: style = ('whiteOnBlack',)
+26.2933 	EXP 	slider_prueba_2: autoLog = True
+26.2933 	EXP 	slider_prueba_2: markerPos = None
+26.2933 	EXP 	slider_prueba_2: rating = None
+26.2933 	EXP 	slider_prueba_2: markerPos = None
+26.2933 	EXP 	slider_prueba_2: contrast = 1.0
+26.2933 	EXP 	slider_prueba_2: autoLog = True
+26.2933 	EXP 	slider_prueba_2: style = ('whiteOnBlack',)
+26.2933 	EXP 	slider_exp: autoLog = True
+26.2933 	EXP 	slider_exp: markerPos = None
+26.2933 	EXP 	slider_exp: rating = None
+26.2933 	EXP 	slider_exp: markerPos = None
+26.2933 	EXP 	slider_exp: contrast = 1.0
+26.2933 	EXP 	slider_exp: autoLog = True
+26.2933 	EXP 	slider_exp: style = ('whiteOnBlack',)
+26.2933 	EXP 	mensaje_intro: autoDraw = True
+26.2933 	EXP 	boton_intro: autoDraw = True
+27.1511 	DATA 	Mouse: Left button down, pos=(1140,136)
+27.2507 	DATA 	Mouse:  Left button up, pos=(1140,136)
+27.5703 	DATA 	Mouse: Left button down, pos=(1195,98)
+27.5840 	EXP 	mensaje_intro: autoDraw = False
+27.5840 	EXP 	boton_intro: autoDraw = False
+27.5840 	EXP 	mensaje_intro_2: autoDraw = True
+27.5840 	EXP 	boton_intro_2: autoDraw = True
+27.6676 	DATA 	Mouse:  Left button up, pos=(1195,98)
+28.0342 	DATA 	Mouse: Left button down, pos=(1195,98)
+28.0503 	EXP 	mensaje_intro_2: autoDraw = False
+28.0503 	EXP 	boton_intro_2: autoDraw = False
+28.0503 	EXP 	text_prueba: autoDraw = True
+28.0503 	EXP 	boton_intro_prueba: autoDraw = True
+28.1011 	DATA 	Mouse:  Left button up, pos=(1195,98)
+28.3352 	DATA 	Mouse: Left button down, pos=(1195,98)
+28.3504 	EXP 	text_prueba: autoDraw = False
+28.3504 	EXP 	boton_intro_prueba: autoDraw = False
+28.3504 	EXP 	slider_prueba: markerPos = None
+28.3504 	EXP 	slider_prueba: markerPos = None
+28.3504 	EXP 	slider_prueba: rating = None
+28.4032 	DATA 	Mouse:  Left button up, pos=(1195,98)
+33.3848 	EXP 	image_prueba: autoDraw = True
+33.3848 	EXP 	slider_prueba: autoDraw = True
+34.0358 	DATA 	Mouse: Left button down, pos=(687,150)
+34.0503 	EXP 	slider_prueba: markerPos = 3.526041666666667
+34.0670 	EXP 	slider_prueba: markerPos = 3.526041666666667
+34.0836 	EXP 	slider_prueba: markerPos = 3.526041666666667
+34.1004 	EXP 	slider_prueba: markerPos = 3.526041666666667
+34.1060 	DATA 	Mouse:  Left button up, pos=(687,150)
+34.1170 	EXP 	slider_prueba: markerPos = 3.526041666666667
+34.1335 	EXP 	slider_prueba: markerPos = 3.526041666666667
+34.1335 	EXP 	slider_prueba: rating = 3.526041666666667
+34.1504 	EXP 	image_prueba: autoDraw = False
+34.1504 	EXP 	slider_prueba: autoDraw = False
+34.1504 	EXP 	slider_prueba_2: markerPos = None
+34.1504 	EXP 	slider_prueba_2: markerPos = None
+34.1504 	EXP 	slider_prueba_2: rating = None
+39.1660 	EXP 	image_prueba_2: autoDraw = True
+39.1660 	EXP 	slider_prueba_2: autoDraw = True
+39.9201 	DATA 	Mouse: Left button down, pos=(844,158)
+39.9334 	EXP 	slider_prueba_2: markerPos = 4.548177083333333
+39.9504 	EXP 	slider_prueba_2: markerPos = 4.548177083333333
+39.9669 	EXP 	slider_prueba_2: markerPos = 4.548177083333333
+39.9831 	EXP 	slider_prueba_2: markerPos = 4.548177083333333
+40.0003 	EXP 	slider_prueba_2: markerPos = 4.548177083333333
+40.0169 	EXP 	slider_prueba_2: markerPos = 4.548177083333333
+40.0197 	DATA 	Mouse:  Left button up, pos=(844,158)
+40.0331 	EXP 	slider_prueba_2: markerPos = 4.548177083333333
+40.0331 	EXP 	slider_prueba_2: rating = 4.548177083333333
+40.0502 	EXP 	image_prueba_2: autoDraw = False
+40.0502 	EXP 	slider_prueba_2: autoDraw = False
+40.0502 	EXP 	text_prueba_2: autoDraw = True
+40.0502 	EXP 	boton_intro_exp: autoDraw = True
+40.8675 	DATA 	Mouse: Left button down, pos=(1185,101)
+40.9222 	EXP 	Imported ruidos.xlsx as conditions, 4 conditions, 2 params
+40.9258 	EXP 	Created sequence: random, trialTypes=4, nReps=1, seed=None
+40.9262 	EXP 	New trial (rep=0, index=0): OrderedDict([('Hertz', 1000), ('volumen', 0.0)])
+40.9330 	EXP 	Imported imagenes.xlsx as conditions, 36 conditions, 3 params
+40.9333 	EXP 	Created sequence: random, trialTypes=36, nReps=1, seed=None
+40.9335 	EXP 	New trial (rep=0, index=0): OrderedDict([('Imagenes', 'imagenes/Rollo de queso.png'), ('Random', 0.9201641182756888), ('Correcto', None)])
+40.9650 	DATA 	Mouse:  Left button up, pos=(1185,101)
+40.9667 	EXP 	text_prueba_2: autoDraw = False
+40.9667 	EXP 	boton_intro_exp: autoDraw = False
+40.9667 	EXP 	image_exp: image = 'imagenes/Rollo de queso.png'
+40.9667 	EXP 	slider_exp: markerPos = None
+40.9667 	EXP 	slider_exp: markerPos = None
+40.9667 	EXP 	slider_exp: rating = None
+45.9667 	EXP 	image_exp: autoDraw = True
+45.9667 	EXP 	slider_exp: autoDraw = True
+46.7691 	DATA 	Mouse: Left button down, pos=(664,149)
+46.7829 	EXP 	slider_exp: markerPos = 3.3763020833333335
+46.7997 	EXP 	slider_exp: markerPos = 3.3763020833333335
+46.8164 	EXP 	slider_exp: markerPos = 3.3763020833333335
+46.8329 	EXP 	slider_exp: markerPos = 3.3763020833333335
+46.8496 	EXP 	slider_exp: markerPos = 3.3763020833333335
+46.8661 	EXP 	slider_exp: markerPos = 3.3763020833333335
+46.8688 	DATA 	Mouse:  Left button up, pos=(664,149)
+46.8828 	EXP 	slider_exp: markerPos = 3.3763020833333335
+46.8828 	EXP 	slider_exp: rating = 3.3763020833333335
+46.8867 	EXP 	New trial (rep=0, index=1): OrderedDict([('Imagenes', 'imagenes/pistachos.jpg'), ('Random', 0.7450869742741464), ('Correcto', None)])
+46.9036 	EXP 	image_exp: autoDraw = False
+46.9036 	EXP 	slider_exp: autoDraw = False
+46.9036 	EXP 	image_exp: image = 'imagenes/pistachos.jpg'
+46.9036 	EXP 	slider_exp: markerPos = None
+46.9036 	EXP 	slider_exp: markerPos = None
+46.9036 	EXP 	slider_exp: rating = None
+51.8992 	EXP 	image_exp: autoDraw = True
+51.8992 	EXP 	slider_exp: autoDraw = True
+52.5512 	DATA 	Mouse: Left button down, pos=(852,148)
+52.5660 	EXP 	slider_exp: markerPos = 4.600260416666667
+52.5828 	EXP 	slider_exp: markerPos = 4.600260416666667
+52.5993 	EXP 	slider_exp: markerPos = 4.600260416666667
+52.6163 	EXP 	slider_exp: markerPos = 4.600260416666667
+52.6181 	DATA 	Mouse:  Left button up, pos=(852,148)
+52.6326 	EXP 	slider_exp: markerPos = 4.600260416666667
+52.6326 	EXP 	slider_exp: rating = 4.600260416666667
+52.6356 	EXP 	New trial (rep=0, index=2): OrderedDict([('Imagenes', 'imagenes/Yogurt-alpina.jpg'), ('Random', 0.5445152936222175), ('Correcto', None)])
+52.6496 	EXP 	image_exp: autoDraw = False
+52.6496 	EXP 	slider_exp: autoDraw = False
+52.6496 	EXP 	image_exp: image = 'imagenes/Yogurt-alpina.jpg'
+52.6496 	EXP 	slider_exp: markerPos = None
+52.6496 	EXP 	slider_exp: markerPos = None
+52.6496 	EXP 	slider_exp: rating = None
+53.0686 	DATA 	Keypress: escape
+53.5184 	EXP 	window1: mouseVisible = True

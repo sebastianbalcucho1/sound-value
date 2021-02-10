@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.2.5),
-    on febrero 10, 2021, at 17:56
+    on febrero 10, 2021, at 18:02
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -36,7 +36,7 @@ os.chdir(_thisDir)
 
 # Store info about the experiment session
 psychopyVersion = '2020.2.5'
-expName = 'piloto'  # from the Builder filename that created this script
+expName = 'sonido'  # from the Builder filename that created this script
 expInfo = {'nombre': ''}
 dlg = gui.DlgFromDict(dictionary=expInfo, sort_keys=False, title=expName)
 if dlg.OK == False:
@@ -51,7 +51,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['nombre'], expName, e
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='C:\\Users\\LENOVO\\OneDrive\\Desktop\\sonico-master\\piloto1_lastrun.py',
+    originPath='C:\\Users\\LENOVO\\OneDrive\\Desktop\\sonico-master\\sonido.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -156,7 +156,7 @@ image_prueba = visual.ImageStim(
 slider_prueba = visual.Slider(win=win, name='slider_prueba',
     size=(1.0, 0.05), pos=(0, -0.3), units=None,
     labels=("0","1000","2000","3000","4000","5000"), ticks=(1, 2, 3, 4, 5, 6),
-    granularity=0, style=['whiteOnBlack'],
+    granularity=0, style=('whiteOnBlack',),
     color='DimGrey', font='HelveticaBold',
     flip=False, depth=-2)
 
@@ -176,7 +176,7 @@ image_prueba_2 = visual.ImageStim(
 slider_prueba_2 = visual.Slider(win=win, name='slider_prueba_2',
     size=(1.0, 0.05), pos=(0, -0.3), units=None,
     labels=("0","1000","2000","3000","4000","5000"), ticks=(1, 2, 3, 4, 5, 6),
-    granularity=0, style=['whiteOnBlack'],
+    granularity=0, style=('whiteOnBlack',),
     color='DimGrey', font='HelveticaBold',
     flip=False, depth=-2)
 
@@ -216,7 +216,7 @@ image_exp = visual.ImageStim(
 slider_exp = visual.Slider(win=win, name='slider_exp',
     size=(1.0, 0.05), pos=(0, -0.3), units=None,
     labels=("0","1000","2000","3000","4000","5000"), ticks=(1, 2, 3, 4, 5, 6),
-    granularity=0, style=['whiteOnBlack'],
+    granularity=0, style=('whiteOnBlack',),
     color='DimGrey', font='HelveticaBold',
     flip=False, depth=-2)
 nuestro_slider=[]
