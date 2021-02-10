@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.2.5),
-    on enero 09, 2021, at 02:57
+    on febrero 10, 2021, at 17:40
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -38,9 +38,6 @@ os.chdir(_thisDir)
 psychopyVersion = '2020.2.5'
 expName = 'piloto'  # from the Builder filename that created this script
 expInfo = {'nombre': ''}
-dlg = gui.DlgFromDict(dictionary=expInfo, sort_keys=False, title=expName)
-if dlg.OK == False:
-    core.quit()  # user pressed cancel
 expInfo['date'] = data.getDateStr()  # add a simple timestamp
 expInfo['expName'] = expName
 expInfo['psychopyVersion'] = psychopyVersion
@@ -142,7 +139,7 @@ mouse_intro_prueba.mouseClock = core.Clock()
 
 # Initialize components for Routine "prueba_1"
 prueba_1Clock = core.Clock()
-sonido_prueba = sound.Sound('A', secs=1, stereo=True, hamming=True,
+sonido_prueba = sound.Sound('A', secs=-1, stereo=True, hamming=True,
     name='sonido_prueba')
 sonido_prueba.setVolume(1.0)
 image_prueba = visual.ImageStim(
@@ -156,13 +153,13 @@ image_prueba = visual.ImageStim(
 slider_prueba = visual.Slider(win=win, name='slider_prueba',
     size=(1.0, 0.05), pos=(0, -0.3), units=None,
     labels=("0","1000","2000","3000","4000","5000"), ticks=(1, 2, 3, 4, 5, 6),
-    granularity=0, style=['whiteOnBlack'],
+    granularity=0, style=('whiteOnBlack',),
     color='DimGrey', font='HelveticaBold',
     flip=False, depth=-2)
 
 # Initialize components for Routine "prueba_2"
 prueba_2Clock = core.Clock()
-sonido_prueba_2 = sound.Sound('A', secs=1, stereo=True, hamming=True,
+sonido_prueba_2 = sound.Sound('A', secs=-1, stereo=True, hamming=True,
     name='sonido_prueba_2')
 sonido_prueba_2.setVolume(1.0)
 image_prueba_2 = visual.ImageStim(
@@ -176,7 +173,7 @@ image_prueba_2 = visual.ImageStim(
 slider_prueba_2 = visual.Slider(win=win, name='slider_prueba_2',
     size=(1.0, 0.05), pos=(0, -0.3), units=None,
     labels=("0","1000","2000","3000","4000","5000"), ticks=(1, 2, 3, 4, 5, 6),
-    granularity=0, style=['whiteOnBlack'],
+    granularity=0, style=('whiteOnBlack',),
     color='DimGrey', font='HelveticaBold',
     flip=False, depth=-2)
 
@@ -202,7 +199,7 @@ mouse_intro_exp.mouseClock = core.Clock()
 
 # Initialize components for Routine "experimento"
 experimentoClock = core.Clock()
-sonido_exp = sound.Sound('A', secs=1, stereo=True, hamming=True,
+sonido_exp = sound.Sound('A', secs=-1, stereo=True, hamming=True,
     name='sonido_exp')
 sonido_exp.setVolume(1.0)
 image_exp = visual.ImageStim(
@@ -216,7 +213,7 @@ image_exp = visual.ImageStim(
 slider_exp = visual.Slider(win=win, name='slider_exp',
     size=(1.0, 0.05), pos=(0, -0.3), units=None,
     labels=("0","1000","2000","3000","4000","5000"), ticks=(1, 2, 3, 4, 5, 6),
-    granularity=0, style=['whiteOnBlack'],
+    granularity=0, style=('whiteOnBlack',),
     color='DimGrey', font='HelveticaBold',
     flip=False, depth=-2)
 nuestro_slider=[]
@@ -278,7 +275,7 @@ boton_pago1 = visual.Polygon(
     ori=0, pos=(0.7, -0.4),
     lineWidth=1, lineColor=[1,1,1], lineColorSpace='rgb',
     fillColor=[0,0,0], fillColorSpace='rgb',
-    opacity=1, depth=-1.0, interpolate=True)
+    opacity=1, depth=-2.0, interpolate=True)
 mouse_pago1 = event.Mouse(win=win)
 x, y = [None, None]
 mouse_pago1.mouseClock = core.Clock()
@@ -298,7 +295,7 @@ boton_pago2 = visual.Polygon(
     ori=0, pos=(0.7, -0.4),
     lineWidth=1, lineColor=[1,1,1], lineColorSpace='rgb',
     fillColor=[0,0,0], fillColorSpace='rgb',
-    opacity=1, depth=-1.0, interpolate=True)
+    opacity=1, depth=-2.0, interpolate=True)
 mouse_pago2 = event.Mouse(win=win)
 x, y = [None, None]
 mouse_pago2.mouseClock = core.Clock()
@@ -326,7 +323,7 @@ boton_producto = visual.Polygon(
     ori=0, pos=(0.7, -0.4),
     lineWidth=1, lineColor=[1,1,1], lineColorSpace='rgb',
     fillColor=[0,0,0], fillColorSpace='rgb',
-    opacity=1, depth=-1.0, interpolate=True)
+    opacity=1, depth=-2.0, interpolate=True)
 mouse_producto = event.Mouse(win=win)
 x, y = [None, None]
 mouse_producto.mouseClock = core.Clock()
@@ -346,7 +343,7 @@ boton_pago3 = visual.Polygon(
     ori=0, pos=(0.7, -0.4),
     lineWidth=1, lineColor=[1,1,1], lineColorSpace='rgb',
     fillColor=[0,0,0], fillColorSpace='rgb',
-    opacity=1, depth=-1.0, interpolate=True)
+    opacity=1, depth=-2.0, interpolate=True)
 mouse_pago3 = event.Mouse(win=win)
 x, y = [None, None]
 mouse_pago3.mouseClock = core.Clock()
@@ -803,9 +800,9 @@ thisExp.nextEntry()
 
 # ------Prepare to start Routine "prueba_1"-------
 continueRoutine = True
-routineTimer.add(2.000000)
+routineTimer.add(30.000000)
 # update component parameters for each repeat
-sonido_prueba.setSound('800', secs=1, hamming=True)
+sonido_prueba.setSound('800', secs=5, hamming=True)
 sonido_prueba.setVolume(0.02, log=False)
 slider_prueba.reset()
 # keep track of which components have finished
@@ -840,7 +837,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         sonido_prueba.play(when=win)  # sync with win flip
     if sonido_prueba.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > sonido_prueba.tStartRefresh + 1-frameTolerance:
+        if tThisFlipGlobal > sonido_prueba.tStartRefresh + 5-frameTolerance:
             # keep track of stop time/frame for later
             sonido_prueba.tStop = t  # not accounting for scr refresh
             sonido_prueba.frameNStop = frameN  # exact frame index
@@ -848,7 +845,7 @@ while continueRoutine and routineTimer.getTime() > 0:
             sonido_prueba.stop()
     
     # *image_prueba* updates
-    if image_prueba.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
+    if image_prueba.status == NOT_STARTED and tThisFlip >= 5-frameTolerance:
         # keep track of start time/frame for later
         image_prueba.frameNStart = frameN  # exact frame index
         image_prueba.tStart = t  # local t and not account for scr refresh
@@ -857,7 +854,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         image_prueba.setAutoDraw(True)
     if image_prueba.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > image_prueba.tStartRefresh + 1-frameTolerance:
+        if tThisFlipGlobal > image_prueba.tStartRefresh + 25-frameTolerance:
             # keep track of stop time/frame for later
             image_prueba.tStop = t  # not accounting for scr refresh
             image_prueba.frameNStop = frameN  # exact frame index
@@ -865,7 +862,7 @@ while continueRoutine and routineTimer.getTime() > 0:
             image_prueba.setAutoDraw(False)
     
     # *slider_prueba* updates
-    if slider_prueba.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
+    if slider_prueba.status == NOT_STARTED and tThisFlip >= 5-frameTolerance:
         # keep track of start time/frame for later
         slider_prueba.frameNStart = frameN  # exact frame index
         slider_prueba.tStart = t  # local t and not account for scr refresh
@@ -874,7 +871,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         slider_prueba.setAutoDraw(True)
     if slider_prueba.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > slider_prueba.tStartRefresh + 1-frameTolerance:
+        if tThisFlipGlobal > slider_prueba.tStartRefresh + 25-frameTolerance:
             # keep track of stop time/frame for later
             slider_prueba.tStop = t  # not accounting for scr refresh
             slider_prueba.frameNStop = frameN  # exact frame index
@@ -918,9 +915,9 @@ thisExp.addData('slider_prueba.stopped', slider_prueba.tStopRefresh)
 
 # ------Prepare to start Routine "prueba_2"-------
 continueRoutine = True
-routineTimer.add(2.000000)
+routineTimer.add(30.000000)
 # update component parameters for each repeat
-sonido_prueba_2.setSound('800', secs=1, hamming=True)
+sonido_prueba_2.setSound('800', secs=5, hamming=True)
 sonido_prueba_2.setVolume(0.02, log=False)
 slider_prueba_2.reset()
 # keep track of which components have finished
@@ -955,7 +952,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         sonido_prueba_2.play(when=win)  # sync with win flip
     if sonido_prueba_2.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > sonido_prueba_2.tStartRefresh + 1-frameTolerance:
+        if tThisFlipGlobal > sonido_prueba_2.tStartRefresh + 5-frameTolerance:
             # keep track of stop time/frame for later
             sonido_prueba_2.tStop = t  # not accounting for scr refresh
             sonido_prueba_2.frameNStop = frameN  # exact frame index
@@ -963,7 +960,7 @@ while continueRoutine and routineTimer.getTime() > 0:
             sonido_prueba_2.stop()
     
     # *image_prueba_2* updates
-    if image_prueba_2.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
+    if image_prueba_2.status == NOT_STARTED and tThisFlip >= 5-frameTolerance:
         # keep track of start time/frame for later
         image_prueba_2.frameNStart = frameN  # exact frame index
         image_prueba_2.tStart = t  # local t and not account for scr refresh
@@ -972,7 +969,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         image_prueba_2.setAutoDraw(True)
     if image_prueba_2.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > image_prueba_2.tStartRefresh + 1-frameTolerance:
+        if tThisFlipGlobal > image_prueba_2.tStartRefresh + 25-frameTolerance:
             # keep track of stop time/frame for later
             image_prueba_2.tStop = t  # not accounting for scr refresh
             image_prueba_2.frameNStop = frameN  # exact frame index
@@ -980,7 +977,7 @@ while continueRoutine and routineTimer.getTime() > 0:
             image_prueba_2.setAutoDraw(False)
     
     # *slider_prueba_2* updates
-    if slider_prueba_2.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
+    if slider_prueba_2.status == NOT_STARTED and tThisFlip >= 5-frameTolerance:
         # keep track of start time/frame for later
         slider_prueba_2.frameNStart = frameN  # exact frame index
         slider_prueba_2.tStart = t  # local t and not account for scr refresh
@@ -989,7 +986,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         slider_prueba_2.setAutoDraw(True)
     if slider_prueba_2.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > slider_prueba_2.tStartRefresh + 1-frameTolerance:
+        if tThisFlipGlobal > slider_prueba_2.tStartRefresh + 25-frameTolerance:
             # keep track of stop time/frame for later
             slider_prueba_2.tStop = t  # not accounting for scr refresh
             slider_prueba_2.frameNStop = frameN  # exact frame index
@@ -1213,9 +1210,9 @@ for thisTrial in trials:
         
         # ------Prepare to start Routine "experimento"-------
         continueRoutine = True
-        routineTimer.add(2.000000)
+        routineTimer.add(30.000000)
         # update component parameters for each repeat
-        sonido_exp.setSound(Hertz, secs=1, hamming=True)
+        sonido_exp.setSound(Hertz, secs=5, hamming=True)
         sonido_exp.setVolume(volumen, log=False)
         image_exp.setImage(Imagenes)
         slider_exp.reset()
@@ -1251,7 +1248,7 @@ for thisTrial in trials:
                 sonido_exp.play(when=win)  # sync with win flip
             if sonido_exp.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > sonido_exp.tStartRefresh + 1-frameTolerance:
+                if tThisFlipGlobal > sonido_exp.tStartRefresh + 5-frameTolerance:
                     # keep track of stop time/frame for later
                     sonido_exp.tStop = t  # not accounting for scr refresh
                     sonido_exp.frameNStop = frameN  # exact frame index
@@ -1259,7 +1256,7 @@ for thisTrial in trials:
                     sonido_exp.stop()
             
             # *image_exp* updates
-            if image_exp.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
+            if image_exp.status == NOT_STARTED and tThisFlip >= 5-frameTolerance:
                 # keep track of start time/frame for later
                 image_exp.frameNStart = frameN  # exact frame index
                 image_exp.tStart = t  # local t and not account for scr refresh
@@ -1268,7 +1265,7 @@ for thisTrial in trials:
                 image_exp.setAutoDraw(True)
             if image_exp.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > image_exp.tStartRefresh + 1-frameTolerance:
+                if tThisFlipGlobal > image_exp.tStartRefresh + 25-frameTolerance:
                     # keep track of stop time/frame for later
                     image_exp.tStop = t  # not accounting for scr refresh
                     image_exp.frameNStop = frameN  # exact frame index
@@ -1276,7 +1273,7 @@ for thisTrial in trials:
                     image_exp.setAutoDraw(False)
             
             # *slider_exp* updates
-            if slider_exp.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
+            if slider_exp.status == NOT_STARTED and tThisFlip >= 5-frameTolerance:
                 # keep track of start time/frame for later
                 slider_exp.frameNStart = frameN  # exact frame index
                 slider_exp.tStart = t  # local t and not account for scr refresh
@@ -1285,7 +1282,7 @@ for thisTrial in trials:
                 slider_exp.setAutoDraw(True)
             if slider_exp.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > slider_exp.tStartRefresh + 1-frameTolerance:
+                if tThisFlipGlobal > slider_exp.tStartRefresh + 25-frameTolerance:
                     # keep track of stop time/frame for later
                     slider_exp.tStop = t  # not accounting for scr refresh
                     slider_exp.frameNStop = frameN  # exact frame index
