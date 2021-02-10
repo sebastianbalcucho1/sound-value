@@ -16,7 +16,7 @@ psychoJS.openWindow({
 });
 
 // store info about the experiment session:
-let expName = 'piloto';  // from the Builder filename that created this script
+let expName = 'piloto1';  // from the Builder filename that created this script
 let expInfo = {'nombre': ''};
 
 // schedule the experiment:
@@ -255,7 +255,7 @@ function experimentInit() {
   sonido_prueba = new sound.Sound({
     win: psychoJS.window,
     value: 'A',
-    secs: 1,
+    secs: (- 1),
     });
   sonido_prueba.setVolume(1.0);
   image_prueba = new visual.ImageStim({
@@ -282,7 +282,7 @@ function experimentInit() {
   sonido_prueba_2 = new sound.Sound({
     win: psychoJS.window,
     value: 'A',
-    secs: 1,
+    secs: (- 1),
     });
   sonido_prueba_2.setVolume(1.0);
   image_prueba_2 = new visual.ImageStim({
@@ -335,7 +335,7 @@ function experimentInit() {
   sonido_exp = new sound.Sound({
     win: psychoJS.window,
     value: 'A',
-    secs: 1,
+    secs: (- 1),
     });
   sonido_exp.setVolume(1.0);
   image_exp = new visual.ImageStim({
@@ -431,7 +431,7 @@ function experimentInit() {
     ori: 0, pos: [0.7, (- 0.4)],
     lineWidth: 1, lineColor: new util.Color([1, 1, 1]),
     fillColor: new util.Color([0, 0, 0]),
-    opacity: 1, depth: -1, interpolate: true,
+    opacity: 1, depth: -2, interpolate: true,
   });
   
   mouse_pago1 = new core.Mouse({
@@ -457,7 +457,7 @@ function experimentInit() {
     ori: 0, pos: [0.7, (- 0.4)],
     lineWidth: 1, lineColor: new util.Color([1, 1, 1]),
     fillColor: new util.Color([0, 0, 0]),
-    opacity: 1, depth: -1, interpolate: true,
+    opacity: 1, depth: -2, interpolate: true,
   });
   
   mouse_pago2 = new core.Mouse({
@@ -492,7 +492,7 @@ function experimentInit() {
     ori: 0, pos: [0.7, (- 0.4)],
     lineWidth: 1, lineColor: new util.Color([1, 1, 1]),
     fillColor: new util.Color([0, 0, 0]),
-    opacity: 1, depth: -1, interpolate: true,
+    opacity: 1, depth: -2, interpolate: true,
   });
   
   mouse_producto = new core.Mouse({
@@ -518,7 +518,7 @@ function experimentInit() {
     ori: 0, pos: [0.7, (- 0.4)],
     lineWidth: 1, lineColor: new util.Color([1, 1, 1]),
     fillColor: new util.Color([0, 0, 0]),
-    opacity: 1, depth: -1, interpolate: true,
+    opacity: 1, depth: -2, interpolate: true,
   });
   
   mouse_pago3 = new core.Mouse({
@@ -1021,14 +1021,14 @@ function prueba_1RoutineBegin(snapshot) {
     t = 0;
     prueba_1Clock.reset(); // clock
     frameN = -1;
-    routineTimer.add(2.000000);
+    routineTimer.add(30.000000);
     // update component parameters for each repeat
     sonido_prueba = new sound.Sound({
     win: psychoJS.window,
     value: '800',
-    secs: 1,
+    secs: 5,
     });
-    sonido_prueba.secs=1;
+    sonido_prueba.secs=5;
     sonido_prueba.setVolume(0.02);
     slider_prueba.reset()
     // keep track of which components have finished
@@ -1066,15 +1066,15 @@ function prueba_1RoutineEachFrame(snapshot) {
       psychoJS.window.callOnFlip(function(){ sonido_prueba.play(); });  // screen flip
       sonido_prueba.status = PsychoJS.Status.STARTED;
     }
-    frameRemains = 0.0 + 1 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 0.0 + 5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((sonido_prueba.status === PsychoJS.Status.STARTED || sonido_prueba.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
-      if (1 > 0.5) {  sonido_prueba.stop();  // stop the sound (if longer than duration)
+      if (5 > 0.5) {  sonido_prueba.stop();  // stop the sound (if longer than duration)
         sonido_prueba.status = PsychoJS.Status.FINISHED;
       }
     }
     
     // *image_prueba* updates
-    if (t >= 1 && image_prueba.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= 5 && image_prueba.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
       image_prueba.tStart = t;  // (not accounting for frame time here)
       image_prueba.frameNStart = frameN;  // exact frame index
@@ -1082,13 +1082,13 @@ function prueba_1RoutineEachFrame(snapshot) {
       image_prueba.setAutoDraw(true);
     }
 
-    frameRemains = 1 + 1 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 5 + 25 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((image_prueba.status === PsychoJS.Status.STARTED || image_prueba.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       image_prueba.setAutoDraw(false);
     }
     
     // *slider_prueba* updates
-    if (t >= 1 && slider_prueba.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= 5 && slider_prueba.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
       slider_prueba.tStart = t;  // (not accounting for frame time here)
       slider_prueba.frameNStart = frameN;  // exact frame index
@@ -1096,7 +1096,7 @@ function prueba_1RoutineEachFrame(snapshot) {
       slider_prueba.setAutoDraw(true);
     }
 
-    frameRemains = 1 + 1 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 5 + 25 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((slider_prueba.status === PsychoJS.Status.STARTED || slider_prueba.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       slider_prueba.setAutoDraw(false);
     }
@@ -1154,14 +1154,14 @@ function prueba_2RoutineBegin(snapshot) {
     t = 0;
     prueba_2Clock.reset(); // clock
     frameN = -1;
-    routineTimer.add(2.000000);
+    routineTimer.add(30.000000);
     // update component parameters for each repeat
     sonido_prueba_2 = new sound.Sound({
     win: psychoJS.window,
     value: '800',
-    secs: 1,
+    secs: 5,
     });
-    sonido_prueba_2.secs=1;
+    sonido_prueba_2.secs=5;
     sonido_prueba_2.setVolume(0.02);
     slider_prueba_2.reset()
     // keep track of which components have finished
@@ -1199,15 +1199,15 @@ function prueba_2RoutineEachFrame(snapshot) {
       psychoJS.window.callOnFlip(function(){ sonido_prueba_2.play(); });  // screen flip
       sonido_prueba_2.status = PsychoJS.Status.STARTED;
     }
-    frameRemains = 0.0 + 1 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 0.0 + 5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((sonido_prueba_2.status === PsychoJS.Status.STARTED || sonido_prueba_2.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
-      if (1 > 0.5) {  sonido_prueba_2.stop();  // stop the sound (if longer than duration)
+      if (5 > 0.5) {  sonido_prueba_2.stop();  // stop the sound (if longer than duration)
         sonido_prueba_2.status = PsychoJS.Status.FINISHED;
       }
     }
     
     // *image_prueba_2* updates
-    if (t >= 1 && image_prueba_2.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= 5 && image_prueba_2.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
       image_prueba_2.tStart = t;  // (not accounting for frame time here)
       image_prueba_2.frameNStart = frameN;  // exact frame index
@@ -1215,13 +1215,13 @@ function prueba_2RoutineEachFrame(snapshot) {
       image_prueba_2.setAutoDraw(true);
     }
 
-    frameRemains = 1 + 1 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 5 + 25 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((image_prueba_2.status === PsychoJS.Status.STARTED || image_prueba_2.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       image_prueba_2.setAutoDraw(false);
     }
     
     // *slider_prueba_2* updates
-    if (t >= 1 && slider_prueba_2.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= 5 && slider_prueba_2.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
       slider_prueba_2.tStart = t;  // (not accounting for frame time here)
       slider_prueba_2.frameNStart = frameN;  // exact frame index
@@ -1229,7 +1229,7 @@ function prueba_2RoutineEachFrame(snapshot) {
       slider_prueba_2.setAutoDraw(true);
     }
 
-    frameRemains = 1 + 1 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 5 + 25 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((slider_prueba_2.status === PsychoJS.Status.STARTED || slider_prueba_2.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       slider_prueba_2.setAutoDraw(false);
     }
@@ -1508,14 +1508,14 @@ function experimentoRoutineBegin(snapshot) {
     t = 0;
     experimentoClock.reset(); // clock
     frameN = -1;
-    routineTimer.add(2.000000);
+    routineTimer.add(30.000000);
     // update component parameters for each repeat
     sonido_exp = new sound.Sound({
     win: psychoJS.window,
     value: Hertz,
-    secs: 1,
+    secs: 5,
     });
-    sonido_exp.secs=1;
+    sonido_exp.secs=5;
     sonido_exp.setVolume(volumen);
     image_exp.setImage(Imagenes);
     slider_exp.reset()
@@ -1554,15 +1554,15 @@ function experimentoRoutineEachFrame(snapshot) {
       psychoJS.window.callOnFlip(function(){ sonido_exp.play(); });  // screen flip
       sonido_exp.status = PsychoJS.Status.STARTED;
     }
-    frameRemains = 0.0 + 1 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 0.0 + 5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((sonido_exp.status === PsychoJS.Status.STARTED || sonido_exp.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
-      if (1 > 0.5) {  sonido_exp.stop();  // stop the sound (if longer than duration)
+      if (5 > 0.5) {  sonido_exp.stop();  // stop the sound (if longer than duration)
         sonido_exp.status = PsychoJS.Status.FINISHED;
       }
     }
     
     // *image_exp* updates
-    if (t >= 1 && image_exp.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= 5 && image_exp.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
       image_exp.tStart = t;  // (not accounting for frame time here)
       image_exp.frameNStart = frameN;  // exact frame index
@@ -1570,13 +1570,13 @@ function experimentoRoutineEachFrame(snapshot) {
       image_exp.setAutoDraw(true);
     }
 
-    frameRemains = 1 + 1 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 5 + 25 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((image_exp.status === PsychoJS.Status.STARTED || image_exp.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       image_exp.setAutoDraw(false);
     }
     
     // *slider_exp* updates
-    if (t >= 1 && slider_exp.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= 5 && slider_exp.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
       slider_exp.tStart = t;  // (not accounting for frame time here)
       slider_exp.frameNStart = frameN;  // exact frame index
@@ -1584,7 +1584,7 @@ function experimentoRoutineEachFrame(snapshot) {
       slider_exp.setAutoDraw(true);
     }
 
-    frameRemains = 1 + 1 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 5 + 25 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if ((slider_exp.status === PsychoJS.Status.STARTED || slider_exp.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
       slider_exp.setAutoDraw(false);
     }
