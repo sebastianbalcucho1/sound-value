@@ -1,8 +1,8 @@
-#!/usr/bin/env python
+﻿#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-This experiment was created using PsychoPy3 Experiment Builder (v2020.2.5),
-    on enero 09, 2021, at 02:57
+This experiment was created using PsychoPy3 Experiment Builder (v2020.2.3),
+    on febrero 16, 2021, at 15:34
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -35,7 +35,7 @@ _thisDir = os.path.dirname(os.path.abspath(__file__))
 os.chdir(_thisDir)
 
 # Store info about the experiment session
-psychopyVersion = '2020.2.5'
+psychopyVersion = '2020.2.3'
 expName = 'piloto'  # from the Builder filename that created this script
 expInfo = {'nombre': ''}
 dlg = gui.DlgFromDict(dictionary=expInfo, sort_keys=False, title=expName)
@@ -51,7 +51,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['nombre'], expName, e
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='C:\\Users\\LENOVO\\OneDrive\\Desktop\\sonico-master\\piloto1.py',
+    originPath='C:\\Users\\usuario\\Downloads\\experimento_sonido-master\\experimento_sonido-master\\piloto1.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -91,10 +91,10 @@ mensaje_intro = visual.TextStim(win=win, name='mensaje_intro',
     depth=0.0);
 boton_intro = visual.Polygon(
     win=win, name='boton_intro',
-    edges=100, size=(0.3, 0.2),
+    edges=100, size=(0.2, 0.2),
     ori=0, pos=(0.7, -0.4),
     lineWidth=1, lineColor=[1,1,1], lineColorSpace='rgb',
-    fillColor=[0,0,0], fillColorSpace='rgb',
+    fillColor=[202,0,0], fillColorSpace='rgb',
     opacity=1, depth=-1.0, interpolate=True)
 mouse_intro = event.Mouse(win=win)
 x, y = [None, None]
@@ -111,10 +111,10 @@ mensaje_intro_2 = visual.TextStim(win=win, name='mensaje_intro_2',
     depth=0.0);
 boton_intro_2 = visual.Polygon(
     win=win, name='boton_intro_2',
-    edges=100, size=(0.3, 0.2),
+    edges=100, size=(0.2, 0.2),
     ori=0, pos=(0.7, -0.4),
     lineWidth=1, lineColor=[1,1,1], lineColorSpace='rgb',
-    fillColor=[0,0,0], fillColorSpace='rgb',
+    fillColor=[202,0,0], fillColorSpace='rgb',
     opacity=1, depth=-1.0, interpolate=True)
 mouse_intro_2 = event.Mouse(win=win)
 x, y = [None, None]
@@ -131,10 +131,10 @@ text_prueba = visual.TextStim(win=win, name='text_prueba',
     depth=0.0);
 boton_intro_prueba = visual.Polygon(
     win=win, name='boton_intro_prueba',
-    edges=100, size=(0.3, 0.2),
+    edges=100, size=(0.2, 0.2),
     ori=0, pos=(0.7, -0.4),
     lineWidth=1, lineColor=[1,1,1], lineColorSpace='rgb',
-    fillColor=[0,0,0], fillColorSpace='rgb',
+    fillColor=[202,0,0], fillColorSpace='rgb',
     opacity=1, depth=-1.0, interpolate=True)
 mouse_intro_prueba = event.Mouse(win=win)
 x, y = [None, None]
@@ -142,7 +142,7 @@ mouse_intro_prueba.mouseClock = core.Clock()
 
 # Initialize components for Routine "prueba_1"
 prueba_1Clock = core.Clock()
-sonido_prueba = sound.Sound('A', secs=1, stereo=True, hamming=True,
+sonido_prueba = sound.Sound('A', secs=-1, stereo=True, hamming=True,
     name='sonido_prueba')
 sonido_prueba.setVolume(1.0)
 image_prueba = visual.ImageStim(
@@ -158,11 +158,11 @@ slider_prueba = visual.Slider(win=win, name='slider_prueba',
     labels=("0","1000","2000","3000","4000","5000"), ticks=(1, 2, 3, 4, 5, 6),
     granularity=0, style=['whiteOnBlack'],
     color='DimGrey', font='HelveticaBold',
-    flip=False, depth=-2)
+    flip=False)
 
 # Initialize components for Routine "prueba_2"
 prueba_2Clock = core.Clock()
-sonido_prueba_2 = sound.Sound('A', secs=1, stereo=True, hamming=True,
+sonido_prueba_2 = sound.Sound('A', secs=-1, stereo=True, hamming=True,
     name='sonido_prueba_2')
 sonido_prueba_2.setVolume(1.0)
 image_prueba_2 = visual.ImageStim(
@@ -178,7 +178,7 @@ slider_prueba_2 = visual.Slider(win=win, name='slider_prueba_2',
     labels=("0","1000","2000","3000","4000","5000"), ticks=(1, 2, 3, 4, 5, 6),
     granularity=0, style=['whiteOnBlack'],
     color='DimGrey', font='HelveticaBold',
-    flip=False, depth=-2)
+    flip=False)
 
 # Initialize components for Routine "intro_experimento"
 intro_experimentoClock = core.Clock()
@@ -191,37 +191,14 @@ text_prueba_2 = visual.TextStim(win=win, name='text_prueba_2',
     depth=0.0);
 boton_intro_exp = visual.Polygon(
     win=win, name='boton_intro_exp',
-    edges=100, size=(0.3, 0.2),
+    edges=100, size=(0.2, 0.2),
     ori=0, pos=(0.7, -0.4),
     lineWidth=1, lineColor=[1,1,1], lineColorSpace='rgb',
-    fillColor=[0,0,0], fillColorSpace='rgb',
+    fillColor=[202,0,0], fillColorSpace='rgb',
     opacity=1, depth=-1.0, interpolate=True)
 mouse_intro_exp = event.Mouse(win=win)
 x, y = [None, None]
 mouse_intro_exp.mouseClock = core.Clock()
-
-# Initialize components for Routine "experimento"
-experimentoClock = core.Clock()
-sonido_exp = sound.Sound('A', secs=1, stereo=True, hamming=True,
-    name='sonido_exp')
-sonido_exp.setVolume(1.0)
-image_exp = visual.ImageStim(
-    win=win,
-    name='image_exp', 
-    image='sin', mask=None,
-    ori=0, pos=(0, 0.2), size=(0.5, 0.5),
-    color=[1,1,1], colorSpace='rgb', opacity=1,
-    flipHoriz=False, flipVert=False,
-    texRes=128, interpolate=True, depth=-1.0)
-slider_exp = visual.Slider(win=win, name='slider_exp',
-    size=(1.0, 0.05), pos=(0, -0.3), units=None,
-    labels=("0","1000","2000","3000","4000","5000"), ticks=(1, 2, 3, 4, 5, 6),
-    granularity=0, style=['whiteOnBlack'],
-    color='DimGrey', font='HelveticaBold',
-    flip=False, depth=-2)
-nuestro_slider=[]
-image_slider=[]
-
 
 # Initialize components for Routine "subasta1"
 subasta1Clock = core.Clock()
@@ -234,10 +211,10 @@ text_subasta1 = visual.TextStim(win=win, name='text_subasta1',
     depth=0.0);
 boton_subasta1 = visual.Polygon(
     win=win, name='boton_subasta1',
-    edges=100, size=(0.3, 0.2),
+    edges=100, size=(0.2, 0.2),
     ori=0, pos=(0.7, -0.4),
     lineWidth=1, lineColor=[1,1,1], lineColorSpace='rgb',
-    fillColor=[0,0,0], fillColorSpace='rgb',
+    fillColor=[202,0,0], fillColorSpace='rgb',
     opacity=1, depth=-1.0, interpolate=True)
 mouse_subasta1 = event.Mouse(win=win)
 x, y = [None, None]
@@ -254,14 +231,57 @@ text_subasta2 = visual.TextStim(win=win, name='text_subasta2',
     depth=0.0);
 boton_subasta2 = visual.Polygon(
     win=win, name='boton_subasta2',
-    edges=100, size=(0.3, 0.2),
+    edges=100, size=(0.2, 0.2),
     ori=0, pos=(0.7, -0.4),
     lineWidth=1, lineColor=[1,1,1], lineColorSpace='rgb',
-    fillColor=[0,0,0], fillColorSpace='rgb',
+    fillColor=[202,0,0], fillColorSpace='rgb',
     opacity=1, depth=-1.0, interpolate=True)
 mouse_subasta2 = event.Mouse(win=win)
 x, y = [None, None]
 mouse_subasta2.mouseClock = core.Clock()
+
+# Initialize components for Routine "experimento"
+experimentoClock = core.Clock()
+sonido_exp = sound.Sound('A', secs=-1, stereo=True, hamming=True,
+    name='sonido_exp')
+sonido_exp.setVolume(1.0)
+image_exp = visual.ImageStim(
+    win=win,
+    name='image_exp', 
+    image='sin', mask=None,
+    ori=0, pos=(0, 0.2), size=(0.5, 0.5),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-1.0)
+slider_exp = visual.Slider(win=win, name='slider_exp',
+    size=(1.0, 0.05), pos=(0, -0.3), units=None,
+    labels=("0","1000","2000","3000","4000","5000"), ticks=(1, 2, 3, 4, 5, 6),
+    granularity=0, style=['whiteOnBlack'],
+    color='DimGrey', font='HelveticaBold',
+    flip=False)
+nuestro_slider=[]
+image_slider=[]
+
+
+# Initialize components for Routine "text_pago"
+text_pagoClock = core.Clock()
+text_3 = visual.TextStim(win=win, name='text_3',
+    text='default text',
+    font='Arial',
+    pos=(0, 0.15), height=0.1, wrapWidth=None, ori=0, 
+    color='black', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=0.0);
+boton_pago1_2 = visual.Polygon(
+    win=win, name='boton_pago1_2',
+    edges=100, size=(0.2, 0.2),
+    ori=0, pos=(0.7, -0.4),
+    lineWidth=1, lineColor=[1,1,1], lineColorSpace='rgb',
+    fillColor=[202,0,0], fillColorSpace='rgb',
+    opacity=1, depth=-1.0, interpolate=True)
+mouse_pago1_2 = event.Mouse(win=win)
+x, y = [None, None]
+mouse_pago1_2.mouseClock = core.Clock()
 
 # Initialize components for Routine "pago1"
 pago1Clock = core.Clock()
@@ -274,11 +294,11 @@ text = visual.TextStim(win=win, name='text',
     depth=-1.0);
 boton_pago1 = visual.Polygon(
     win=win, name='boton_pago1',
-    edges=100, size=(0.3, 0.2),
+    edges=100, size=(0.2, 0.2),
     ori=0, pos=(0.7, -0.4),
     lineWidth=1, lineColor=[1,1,1], lineColorSpace='rgb',
-    fillColor=[0,0,0], fillColorSpace='rgb',
-    opacity=1, depth=-1.0, interpolate=True)
+    fillColor=[202,0,0], fillColorSpace='rgb',
+    opacity=1, depth=-2.0, interpolate=True)
 mouse_pago1 = event.Mouse(win=win)
 x, y = [None, None]
 mouse_pago1.mouseClock = core.Clock()
@@ -294,11 +314,11 @@ text_4 = visual.TextStim(win=win, name='text_4',
     depth=-1.0);
 boton_pago2 = visual.Polygon(
     win=win, name='boton_pago2',
-    edges=100, size=(0.3, 0.2),
+    edges=100, size=(0.2, 0.2),
     ori=0, pos=(0.7, -0.4),
     lineWidth=1, lineColor=[1,1,1], lineColorSpace='rgb',
-    fillColor=[0,0,0], fillColorSpace='rgb',
-    opacity=1, depth=-1.0, interpolate=True)
+    fillColor=[202,0,0], fillColorSpace='rgb',
+    opacity=1, depth=-2.0, interpolate=True)
 mouse_pago2 = event.Mouse(win=win)
 x, y = [None, None]
 mouse_pago2.mouseClock = core.Clock()
@@ -322,11 +342,11 @@ image = visual.ImageStim(
     texRes=128, interpolate=True, depth=-1.0)
 boton_producto = visual.Polygon(
     win=win, name='boton_producto',
-    edges=100, size=(0.3, 0.2),
+    edges=100, size=(0.2, 0.2),
     ori=0, pos=(0.7, -0.4),
     lineWidth=1, lineColor=[1,1,1], lineColorSpace='rgb',
-    fillColor=[0,0,0], fillColorSpace='rgb',
-    opacity=1, depth=-1.0, interpolate=True)
+    fillColor=[202,0,0], fillColorSpace='rgb',
+    opacity=1, depth=-2.0, interpolate=True)
 mouse_producto = event.Mouse(win=win)
 x, y = [None, None]
 mouse_producto.mouseClock = core.Clock()
@@ -342,11 +362,11 @@ texto_final = visual.TextStim(win=win, name='texto_final',
     depth=-1.0);
 boton_pago3 = visual.Polygon(
     win=win, name='boton_pago3',
-    edges=100, size=(0.3, 0.2),
+    edges=100, size=(0.2, 0.2),
     ori=0, pos=(0.7, -0.4),
     lineWidth=1, lineColor=[1,1,1], lineColorSpace='rgb',
-    fillColor=[0,0,0], fillColorSpace='rgb',
-    opacity=1, depth=-1.0, interpolate=True)
+    fillColor=[202,0,0], fillColorSpace='rgb',
+    opacity=1, depth=-2.0, interpolate=True)
 mouse_pago3 = event.Mouse(win=win)
 x, y = [None, None]
 mouse_pago3.mouseClock = core.Clock()
@@ -362,10 +382,10 @@ text_2 = visual.TextStim(win=win, name='text_2',
     depth=0.0);
 boton_intro_encuesta = visual.Polygon(
     win=win, name='boton_intro_encuesta',
-    edges=100, size=(0.3, 0.2),
+    edges=100, size=(0.2, 0.2),
     ori=0, pos=(0.7, -0.4),
     lineWidth=1, lineColor=[1,1,1], lineColorSpace='rgb',
-    fillColor=[0,0,0], fillColorSpace='rgb',
+    fillColor=[202,0,0], fillColorSpace='rgb',
     opacity=1, depth=-1.0, interpolate=True)
 mouse_intro_encuesta = event.Mouse(win=win)
 x, y = [None, None]
@@ -803,9 +823,9 @@ thisExp.nextEntry()
 
 # ------Prepare to start Routine "prueba_1"-------
 continueRoutine = True
-routineTimer.add(2.000000)
+routineTimer.add(28.000000)
 # update component parameters for each repeat
-sonido_prueba.setSound('800', secs=1, hamming=True)
+sonido_prueba.setSound('800', secs=3, hamming=True)
 sonido_prueba.setVolume(0.02, log=False)
 slider_prueba.reset()
 # keep track of which components have finished
@@ -840,7 +860,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         sonido_prueba.play(when=win)  # sync with win flip
     if sonido_prueba.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > sonido_prueba.tStartRefresh + 1-frameTolerance:
+        if tThisFlipGlobal > sonido_prueba.tStartRefresh + 3-frameTolerance:
             # keep track of stop time/frame for later
             sonido_prueba.tStop = t  # not accounting for scr refresh
             sonido_prueba.frameNStop = frameN  # exact frame index
@@ -848,7 +868,7 @@ while continueRoutine and routineTimer.getTime() > 0:
             sonido_prueba.stop()
     
     # *image_prueba* updates
-    if image_prueba.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
+    if image_prueba.status == NOT_STARTED and tThisFlip >= 3-frameTolerance:
         # keep track of start time/frame for later
         image_prueba.frameNStart = frameN  # exact frame index
         image_prueba.tStart = t  # local t and not account for scr refresh
@@ -857,7 +877,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         image_prueba.setAutoDraw(True)
     if image_prueba.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > image_prueba.tStartRefresh + 1-frameTolerance:
+        if tThisFlipGlobal > image_prueba.tStartRefresh + 25-frameTolerance:
             # keep track of stop time/frame for later
             image_prueba.tStop = t  # not accounting for scr refresh
             image_prueba.frameNStop = frameN  # exact frame index
@@ -865,7 +885,7 @@ while continueRoutine and routineTimer.getTime() > 0:
             image_prueba.setAutoDraw(False)
     
     # *slider_prueba* updates
-    if slider_prueba.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
+    if slider_prueba.status == NOT_STARTED and tThisFlip >= 3-frameTolerance:
         # keep track of start time/frame for later
         slider_prueba.frameNStart = frameN  # exact frame index
         slider_prueba.tStart = t  # local t and not account for scr refresh
@@ -874,7 +894,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         slider_prueba.setAutoDraw(True)
     if slider_prueba.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > slider_prueba.tStartRefresh + 1-frameTolerance:
+        if tThisFlipGlobal > slider_prueba.tStartRefresh + 25-frameTolerance:
             # keep track of stop time/frame for later
             slider_prueba.tStop = t  # not accounting for scr refresh
             slider_prueba.frameNStop = frameN  # exact frame index
@@ -918,9 +938,9 @@ thisExp.addData('slider_prueba.stopped', slider_prueba.tStopRefresh)
 
 # ------Prepare to start Routine "prueba_2"-------
 continueRoutine = True
-routineTimer.add(2.000000)
+routineTimer.add(28.000000)
 # update component parameters for each repeat
-sonido_prueba_2.setSound('800', secs=1, hamming=True)
+sonido_prueba_2.setSound('800', secs=3, hamming=True)
 sonido_prueba_2.setVolume(0.02, log=False)
 slider_prueba_2.reset()
 # keep track of which components have finished
@@ -955,7 +975,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         sonido_prueba_2.play(when=win)  # sync with win flip
     if sonido_prueba_2.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > sonido_prueba_2.tStartRefresh + 1-frameTolerance:
+        if tThisFlipGlobal > sonido_prueba_2.tStartRefresh + 3-frameTolerance:
             # keep track of stop time/frame for later
             sonido_prueba_2.tStop = t  # not accounting for scr refresh
             sonido_prueba_2.frameNStop = frameN  # exact frame index
@@ -963,7 +983,7 @@ while continueRoutine and routineTimer.getTime() > 0:
             sonido_prueba_2.stop()
     
     # *image_prueba_2* updates
-    if image_prueba_2.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
+    if image_prueba_2.status == NOT_STARTED and tThisFlip >= 3-frameTolerance:
         # keep track of start time/frame for later
         image_prueba_2.frameNStart = frameN  # exact frame index
         image_prueba_2.tStart = t  # local t and not account for scr refresh
@@ -972,7 +992,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         image_prueba_2.setAutoDraw(True)
     if image_prueba_2.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > image_prueba_2.tStartRefresh + 1-frameTolerance:
+        if tThisFlipGlobal > image_prueba_2.tStartRefresh + 25-frameTolerance:
             # keep track of stop time/frame for later
             image_prueba_2.tStop = t  # not accounting for scr refresh
             image_prueba_2.frameNStop = frameN  # exact frame index
@@ -980,7 +1000,7 @@ while continueRoutine and routineTimer.getTime() > 0:
             image_prueba_2.setAutoDraw(False)
     
     # *slider_prueba_2* updates
-    if slider_prueba_2.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
+    if slider_prueba_2.status == NOT_STARTED and tThisFlip >= 3-frameTolerance:
         # keep track of start time/frame for later
         slider_prueba_2.frameNStart = frameN  # exact frame index
         slider_prueba_2.tStart = t  # local t and not account for scr refresh
@@ -989,7 +1009,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         slider_prueba_2.setAutoDraw(True)
     if slider_prueba_2.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > slider_prueba_2.tStartRefresh + 1-frameTolerance:
+        if tThisFlipGlobal > slider_prueba_2.tStartRefresh + 25-frameTolerance:
             # keep track of stop time/frame for later
             slider_prueba_2.tStop = t  # not accounting for scr refresh
             slider_prueba_2.frameNStop = frameN  # exact frame index
@@ -1172,173 +1192,6 @@ if len(mouse_intro_exp.clicked_name):
 thisExp.addData('mouse_intro_exp.started', mouse_intro_exp.tStart)
 thisExp.addData('mouse_intro_exp.stopped', mouse_intro_exp.tStop)
 thisExp.nextEntry()
-
-# set up handler to look after randomisation of conditions etc
-trials = data.TrialHandler(nReps=1, method='random', 
-    extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('ruidos.xlsx'),
-    seed=None, name='trials')
-thisExp.addLoop(trials)  # add the loop to the experiment
-thisTrial = trials.trialList[0]  # so we can initialise stimuli with some values
-# abbreviate parameter names if possible (e.g. rgb = thisTrial.rgb)
-if thisTrial != None:
-    for paramName in thisTrial:
-        exec('{} = thisTrial[paramName]'.format(paramName))
-
-for thisTrial in trials:
-    currentLoop = trials
-    # abbreviate parameter names if possible (e.g. rgb = thisTrial.rgb)
-    if thisTrial != None:
-        for paramName in thisTrial:
-            exec('{} = thisTrial[paramName]'.format(paramName))
-    
-    # set up handler to look after randomisation of conditions etc
-    trials_2 = data.TrialHandler(nReps=1, method='random', 
-        extraInfo=expInfo, originPath=-1,
-        trialList=data.importConditions('imagenes.xlsx'),
-        seed=None, name='trials_2')
-    thisExp.addLoop(trials_2)  # add the loop to the experiment
-    thisTrial_2 = trials_2.trialList[0]  # so we can initialise stimuli with some values
-    # abbreviate parameter names if possible (e.g. rgb = thisTrial_2.rgb)
-    if thisTrial_2 != None:
-        for paramName in thisTrial_2:
-            exec('{} = thisTrial_2[paramName]'.format(paramName))
-    
-    for thisTrial_2 in trials_2:
-        currentLoop = trials_2
-        # abbreviate parameter names if possible (e.g. rgb = thisTrial_2.rgb)
-        if thisTrial_2 != None:
-            for paramName in thisTrial_2:
-                exec('{} = thisTrial_2[paramName]'.format(paramName))
-        
-        # ------Prepare to start Routine "experimento"-------
-        continueRoutine = True
-        routineTimer.add(2.000000)
-        # update component parameters for each repeat
-        sonido_exp.setSound(Hertz, secs=1, hamming=True)
-        sonido_exp.setVolume(volumen, log=False)
-        image_exp.setImage(Imagenes)
-        slider_exp.reset()
-        # keep track of which components have finished
-        experimentoComponents = [sonido_exp, image_exp, slider_exp]
-        for thisComponent in experimentoComponents:
-            thisComponent.tStart = None
-            thisComponent.tStop = None
-            thisComponent.tStartRefresh = None
-            thisComponent.tStopRefresh = None
-            if hasattr(thisComponent, 'status'):
-                thisComponent.status = NOT_STARTED
-        # reset timers
-        t = 0
-        _timeToFirstFrame = win.getFutureFlipTime(clock="now")
-        experimentoClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
-        frameN = -1
-        
-        # -------Run Routine "experimento"-------
-        while continueRoutine and routineTimer.getTime() > 0:
-            # get current time
-            t = experimentoClock.getTime()
-            tThisFlip = win.getFutureFlipTime(clock=experimentoClock)
-            tThisFlipGlobal = win.getFutureFlipTime(clock=None)
-            frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-            # update/draw components on each frame
-            # start/stop sonido_exp
-            if sonido_exp.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                # keep track of start time/frame for later
-                sonido_exp.frameNStart = frameN  # exact frame index
-                sonido_exp.tStart = t  # local t and not account for scr refresh
-                sonido_exp.tStartRefresh = tThisFlipGlobal  # on global time
-                sonido_exp.play(when=win)  # sync with win flip
-            if sonido_exp.status == STARTED:
-                # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > sonido_exp.tStartRefresh + 1-frameTolerance:
-                    # keep track of stop time/frame for later
-                    sonido_exp.tStop = t  # not accounting for scr refresh
-                    sonido_exp.frameNStop = frameN  # exact frame index
-                    win.timeOnFlip(sonido_exp, 'tStopRefresh')  # time at next scr refresh
-                    sonido_exp.stop()
-            
-            # *image_exp* updates
-            if image_exp.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
-                # keep track of start time/frame for later
-                image_exp.frameNStart = frameN  # exact frame index
-                image_exp.tStart = t  # local t and not account for scr refresh
-                image_exp.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(image_exp, 'tStartRefresh')  # time at next scr refresh
-                image_exp.setAutoDraw(True)
-            if image_exp.status == STARTED:
-                # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > image_exp.tStartRefresh + 1-frameTolerance:
-                    # keep track of stop time/frame for later
-                    image_exp.tStop = t  # not accounting for scr refresh
-                    image_exp.frameNStop = frameN  # exact frame index
-                    win.timeOnFlip(image_exp, 'tStopRefresh')  # time at next scr refresh
-                    image_exp.setAutoDraw(False)
-            
-            # *slider_exp* updates
-            if slider_exp.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
-                # keep track of start time/frame for later
-                slider_exp.frameNStart = frameN  # exact frame index
-                slider_exp.tStart = t  # local t and not account for scr refresh
-                slider_exp.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(slider_exp, 'tStartRefresh')  # time at next scr refresh
-                slider_exp.setAutoDraw(True)
-            if slider_exp.status == STARTED:
-                # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > slider_exp.tStartRefresh + 1-frameTolerance:
-                    # keep track of stop time/frame for later
-                    slider_exp.tStop = t  # not accounting for scr refresh
-                    slider_exp.frameNStop = frameN  # exact frame index
-                    win.timeOnFlip(slider_exp, 'tStopRefresh')  # time at next scr refresh
-                    slider_exp.setAutoDraw(False)
-            
-            # Check slider_exp for response to end routine
-            if slider_exp.getRating() is not None and slider_exp.status == STARTED:
-                continueRoutine = False
-            
-            # check for quit (typically the Esc key)
-            if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
-                core.quit()
-            
-            # check if all components have finished
-            if not continueRoutine:  # a component has requested a forced-end of Routine
-                break
-            continueRoutine = False  # will revert to True if at least one component still running
-            for thisComponent in experimentoComponents:
-                if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-                    continueRoutine = True
-                    break  # at least one component has not yet finished
-            
-            # refresh the screen
-            if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-                win.flip()
-        
-        # -------Ending Routine "experimento"-------
-        for thisComponent in experimentoComponents:
-            if hasattr(thisComponent, "setAutoDraw"):
-                thisComponent.setAutoDraw(False)
-        sonido_exp.stop()  # ensure sound has stopped at end of routine
-        trials_2.addData('sonido_exp.started', sonido_exp.tStartRefresh)
-        trials_2.addData('sonido_exp.stopped', sonido_exp.tStopRefresh)
-        trials_2.addData('image_exp.started', image_exp.tStartRefresh)
-        trials_2.addData('image_exp.stopped', image_exp.tStopRefresh)
-        trials_2.addData('slider_exp.response', slider_exp.getRating())
-        trials_2.addData('slider_exp.rt', slider_exp.getRT())
-        trials_2.addData('slider_exp.started', slider_exp.tStartRefresh)
-        trials_2.addData('slider_exp.stopped', slider_exp.tStopRefresh)
-        rating=slider_exp.getRating()
-        Imagenes1=Imagenes
-        nuestro_slider.append(rating)
-        image_slider.append(Imagenes1)
-        
-        thisExp.nextEntry()
-        
-    # completed 1 repeats of 'trials_2'
-    
-    thisExp.nextEntry()
-    
-# completed 1 repeats of 'trials'
-
 
 # ------Prepare to start Routine "subasta1"-------
 continueRoutine = True
@@ -1622,6 +1475,316 @@ if len(mouse_subasta2.clicked_name):
     thisExp.addData('mouse_subasta2.clicked_name', mouse_subasta2.clicked_name[0])
 thisExp.addData('mouse_subasta2.started', mouse_subasta2.tStart)
 thisExp.addData('mouse_subasta2.stopped', mouse_subasta2.tStop)
+thisExp.nextEntry()
+
+# set up handler to look after randomisation of conditions etc
+trials = data.TrialHandler(nReps=1, method='random', 
+    extraInfo=expInfo, originPath=-1,
+    trialList=data.importConditions('ruidos.xlsx'),
+    seed=None, name='trials')
+thisExp.addLoop(trials)  # add the loop to the experiment
+thisTrial = trials.trialList[0]  # so we can initialise stimuli with some values
+# abbreviate parameter names if possible (e.g. rgb = thisTrial.rgb)
+if thisTrial != None:
+    for paramName in thisTrial:
+        exec('{} = thisTrial[paramName]'.format(paramName))
+
+for thisTrial in trials:
+    currentLoop = trials
+    # abbreviate parameter names if possible (e.g. rgb = thisTrial.rgb)
+    if thisTrial != None:
+        for paramName in thisTrial:
+            exec('{} = thisTrial[paramName]'.format(paramName))
+    
+    # set up handler to look after randomisation of conditions etc
+    trials_2 = data.TrialHandler(nReps=1, method='random', 
+        extraInfo=expInfo, originPath=-1,
+        trialList=data.importConditions('imagenes.xlsx'),
+        seed=None, name='trials_2')
+    thisExp.addLoop(trials_2)  # add the loop to the experiment
+    thisTrial_2 = trials_2.trialList[0]  # so we can initialise stimuli with some values
+    # abbreviate parameter names if possible (e.g. rgb = thisTrial_2.rgb)
+    if thisTrial_2 != None:
+        for paramName in thisTrial_2:
+            exec('{} = thisTrial_2[paramName]'.format(paramName))
+    
+    for thisTrial_2 in trials_2:
+        currentLoop = trials_2
+        # abbreviate parameter names if possible (e.g. rgb = thisTrial_2.rgb)
+        if thisTrial_2 != None:
+            for paramName in thisTrial_2:
+                exec('{} = thisTrial_2[paramName]'.format(paramName))
+        
+        # ------Prepare to start Routine "experimento"-------
+        continueRoutine = True
+        routineTimer.add(28.000000)
+        # update component parameters for each repeat
+        sonido_exp.setSound(Hertz, secs=3, hamming=True)
+        sonido_exp.setVolume(volumen, log=False)
+        image_exp.setImage(Imagenes)
+        slider_exp.reset()
+        # keep track of which components have finished
+        experimentoComponents = [sonido_exp, image_exp, slider_exp]
+        for thisComponent in experimentoComponents:
+            thisComponent.tStart = None
+            thisComponent.tStop = None
+            thisComponent.tStartRefresh = None
+            thisComponent.tStopRefresh = None
+            if hasattr(thisComponent, 'status'):
+                thisComponent.status = NOT_STARTED
+        # reset timers
+        t = 0
+        _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+        experimentoClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+        frameN = -1
+        
+        # -------Run Routine "experimento"-------
+        while continueRoutine and routineTimer.getTime() > 0:
+            # get current time
+            t = experimentoClock.getTime()
+            tThisFlip = win.getFutureFlipTime(clock=experimentoClock)
+            tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+            frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+            # update/draw components on each frame
+            # start/stop sonido_exp
+            if sonido_exp.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                sonido_exp.frameNStart = frameN  # exact frame index
+                sonido_exp.tStart = t  # local t and not account for scr refresh
+                sonido_exp.tStartRefresh = tThisFlipGlobal  # on global time
+                sonido_exp.play(when=win)  # sync with win flip
+            if sonido_exp.status == STARTED:
+                # is it time to stop? (based on global clock, using actual start)
+                if tThisFlipGlobal > sonido_exp.tStartRefresh + 3-frameTolerance:
+                    # keep track of stop time/frame for later
+                    sonido_exp.tStop = t  # not accounting for scr refresh
+                    sonido_exp.frameNStop = frameN  # exact frame index
+                    win.timeOnFlip(sonido_exp, 'tStopRefresh')  # time at next scr refresh
+                    sonido_exp.stop()
+            
+            # *image_exp* updates
+            if image_exp.status == NOT_STARTED and tThisFlip >= 3-frameTolerance:
+                # keep track of start time/frame for later
+                image_exp.frameNStart = frameN  # exact frame index
+                image_exp.tStart = t  # local t and not account for scr refresh
+                image_exp.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(image_exp, 'tStartRefresh')  # time at next scr refresh
+                image_exp.setAutoDraw(True)
+            if image_exp.status == STARTED:
+                # is it time to stop? (based on global clock, using actual start)
+                if tThisFlipGlobal > image_exp.tStartRefresh + 25-frameTolerance:
+                    # keep track of stop time/frame for later
+                    image_exp.tStop = t  # not accounting for scr refresh
+                    image_exp.frameNStop = frameN  # exact frame index
+                    win.timeOnFlip(image_exp, 'tStopRefresh')  # time at next scr refresh
+                    image_exp.setAutoDraw(False)
+            
+            # *slider_exp* updates
+            if slider_exp.status == NOT_STARTED and tThisFlip >= 3-frameTolerance:
+                # keep track of start time/frame for later
+                slider_exp.frameNStart = frameN  # exact frame index
+                slider_exp.tStart = t  # local t and not account for scr refresh
+                slider_exp.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(slider_exp, 'tStartRefresh')  # time at next scr refresh
+                slider_exp.setAutoDraw(True)
+            if slider_exp.status == STARTED:
+                # is it time to stop? (based on global clock, using actual start)
+                if tThisFlipGlobal > slider_exp.tStartRefresh + 25-frameTolerance:
+                    # keep track of stop time/frame for later
+                    slider_exp.tStop = t  # not accounting for scr refresh
+                    slider_exp.frameNStop = frameN  # exact frame index
+                    win.timeOnFlip(slider_exp, 'tStopRefresh')  # time at next scr refresh
+                    slider_exp.setAutoDraw(False)
+            
+            # Check slider_exp for response to end routine
+            if slider_exp.getRating() is not None and slider_exp.status == STARTED:
+                continueRoutine = False
+            
+            # check for quit (typically the Esc key)
+            if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+                core.quit()
+            
+            # check if all components have finished
+            if not continueRoutine:  # a component has requested a forced-end of Routine
+                break
+            continueRoutine = False  # will revert to True if at least one component still running
+            for thisComponent in experimentoComponents:
+                if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                    continueRoutine = True
+                    break  # at least one component has not yet finished
+            
+            # refresh the screen
+            if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                win.flip()
+        
+        # -------Ending Routine "experimento"-------
+        for thisComponent in experimentoComponents:
+            if hasattr(thisComponent, "setAutoDraw"):
+                thisComponent.setAutoDraw(False)
+        sonido_exp.stop()  # ensure sound has stopped at end of routine
+        trials_2.addData('sonido_exp.started', sonido_exp.tStartRefresh)
+        trials_2.addData('sonido_exp.stopped', sonido_exp.tStopRefresh)
+        trials_2.addData('image_exp.started', image_exp.tStartRefresh)
+        trials_2.addData('image_exp.stopped', image_exp.tStopRefresh)
+        trials_2.addData('slider_exp.response', slider_exp.getRating())
+        trials_2.addData('slider_exp.rt', slider_exp.getRT())
+        trials_2.addData('slider_exp.started', slider_exp.tStartRefresh)
+        trials_2.addData('slider_exp.stopped', slider_exp.tStopRefresh)
+        rating=slider_exp.getRating()
+        Imagenes1=Imagenes
+        nuestro_slider.append(rating)
+        image_slider.append(Imagenes1)
+        
+        thisExp.nextEntry()
+        
+    # completed 1 repeats of 'trials_2'
+    
+    thisExp.nextEntry()
+    
+# completed 1 repeats of 'trials'
+
+
+# ------Prepare to start Routine "text_pago"-------
+continueRoutine = True
+routineTimer.add(120.000000)
+# update component parameters for each repeat
+text_3.setText('El precio del bien seleccionado aleatoriamente, el precio que usted seleccionó, el producto seleccionado aleatoriamente y el pago que recivirá despues de descuentos se encuentra a continuación')
+# setup some python lists for storing info about the mouse_pago1_2
+mouse_pago1_2.clicked_name = []
+gotValidClick = False  # until a click is received
+# keep track of which components have finished
+text_pagoComponents = [text_3, boton_pago1_2, mouse_pago1_2]
+for thisComponent in text_pagoComponents:
+    thisComponent.tStart = None
+    thisComponent.tStop = None
+    thisComponent.tStartRefresh = None
+    thisComponent.tStopRefresh = None
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+text_pagoClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+
+# -------Run Routine "text_pago"-------
+while continueRoutine and routineTimer.getTime() > 0:
+    # get current time
+    t = text_pagoClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=text_pagoClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # *text_3* updates
+    if text_3.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        text_3.frameNStart = frameN  # exact frame index
+        text_3.tStart = t  # local t and not account for scr refresh
+        text_3.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(text_3, 'tStartRefresh')  # time at next scr refresh
+        text_3.setAutoDraw(True)
+    if text_3.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > text_3.tStartRefresh + 120-frameTolerance:
+            # keep track of stop time/frame for later
+            text_3.tStop = t  # not accounting for scr refresh
+            text_3.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(text_3, 'tStopRefresh')  # time at next scr refresh
+            text_3.setAutoDraw(False)
+    
+    # *boton_pago1_2* updates
+    if boton_pago1_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        boton_pago1_2.frameNStart = frameN  # exact frame index
+        boton_pago1_2.tStart = t  # local t and not account for scr refresh
+        boton_pago1_2.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(boton_pago1_2, 'tStartRefresh')  # time at next scr refresh
+        boton_pago1_2.setAutoDraw(True)
+    if boton_pago1_2.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > boton_pago1_2.tStartRefresh + 120-frameTolerance:
+            # keep track of stop time/frame for later
+            boton_pago1_2.tStop = t  # not accounting for scr refresh
+            boton_pago1_2.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(boton_pago1_2, 'tStopRefresh')  # time at next scr refresh
+            boton_pago1_2.setAutoDraw(False)
+    # *mouse_pago1_2* updates
+    if mouse_pago1_2.status == NOT_STARTED and t >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        mouse_pago1_2.frameNStart = frameN  # exact frame index
+        mouse_pago1_2.tStart = t  # local t and not account for scr refresh
+        mouse_pago1_2.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(mouse_pago1_2, 'tStartRefresh')  # time at next scr refresh
+        mouse_pago1_2.status = STARTED
+        mouse_pago1_2.mouseClock.reset()
+        prevButtonState = mouse_pago1_2.getPressed()  # if button is down already this ISN'T a new click
+    if mouse_pago1_2.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > mouse_pago1_2.tStartRefresh + 120-frameTolerance:
+            # keep track of stop time/frame for later
+            mouse_pago1_2.tStop = t  # not accounting for scr refresh
+            mouse_pago1_2.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(mouse_pago1_2, 'tStopRefresh')  # time at next scr refresh
+            mouse_pago1_2.status = FINISHED
+    if mouse_pago1_2.status == STARTED:  # only update if started and not finished!
+        buttons = mouse_pago1_2.getPressed()
+        if buttons != prevButtonState:  # button state changed?
+            prevButtonState = buttons
+            if sum(buttons) > 0:  # state changed to a new click
+                # check if the mouse was inside our 'clickable' objects
+                gotValidClick = False
+                for obj in [(boton_pago1)]:
+                    if obj.contains(mouse_pago1_2):
+                        gotValidClick = True
+                        mouse_pago1_2.clicked_name.append(obj.name)
+                if gotValidClick:  # abort routine on response
+                    continueRoutine = False
+    
+    # check for quit (typically the Esc key)
+    if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+        core.quit()
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested a forced-end of Routine
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in text_pagoComponents:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+# -------Ending Routine "text_pago"-------
+for thisComponent in text_pagoComponents:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+thisExp.addData('text_3.started', text_3.tStartRefresh)
+thisExp.addData('text_3.stopped', text_3.tStopRefresh)
+thisExp.addData('boton_pago1_2.started', boton_pago1_2.tStartRefresh)
+thisExp.addData('boton_pago1_2.stopped', boton_pago1_2.tStopRefresh)
+# store data for thisExp (ExperimentHandler)
+x, y = mouse_pago1_2.getPos()
+buttons = mouse_pago1_2.getPressed()
+if sum(buttons):
+    # check if the mouse was inside our 'clickable' objects
+    gotValidClick = False
+    for obj in [(boton_pago1)]:
+        if obj.contains(mouse_pago1_2):
+            gotValidClick = True
+            mouse_pago1_2.clicked_name.append(obj.name)
+thisExp.addData('mouse_pago1_2.x', x)
+thisExp.addData('mouse_pago1_2.y', y)
+thisExp.addData('mouse_pago1_2.leftButton', buttons[0])
+thisExp.addData('mouse_pago1_2.midButton', buttons[1])
+thisExp.addData('mouse_pago1_2.rightButton', buttons[2])
+if len(mouse_pago1_2.clicked_name):
+    thisExp.addData('mouse_pago1_2.clicked_name', mouse_pago1_2.clicked_name[0])
+thisExp.addData('mouse_pago1_2.started', mouse_pago1_2.tStart)
+thisExp.addData('mouse_pago1_2.stopped', mouse_pago1_2.tStop)
 thisExp.nextEntry()
 
 # ------Prepare to start Routine "pago1"-------
