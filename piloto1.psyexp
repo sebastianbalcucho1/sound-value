@@ -632,7 +632,7 @@
     </Routine>
     <Routine name="experimento">
       <SoundComponent name="sonido_exp">
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="disabled" updates="None" val="True" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="hamming" updates="constant" val="True" valType="bool"/>
         <Param name="name" updates="None" val="sonido_exp" valType="code"/>
@@ -649,7 +649,7 @@
       <ImageComponent name="image_exp">
         <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="disabled" updates="None" val="True" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
@@ -674,7 +674,7 @@
       <SliderComponent name="slider_exp">
         <Param name="color" updates="constant" val="DimGrey" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="disabled" updates="None" val="True" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flip" updates="constant" val="False" valType="bool"/>
         <Param name="font" updates="constant" val="HelveticaBold" valType="str"/>
@@ -695,7 +695,7 @@
         <Param name="storeHistory" updates="constant" val="False" valType="bool"/>
         <Param name="storeRating" updates="constant" val="True" valType="bool"/>
         <Param name="storeRatingTime" updates="constant" val="True" valType="bool"/>
-        <Param name="styles" updates="constant" val="['whiteOnBlack']" valType="fixedList"/>
+        <Param name="styles" updates="constant" val="('whiteOnBlack',)" valType="fixedList"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="ticks" updates="constant" val="(1, 2, 3, 4, 5, 6)" valType="list"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
@@ -1189,7 +1189,7 @@
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
         <Param name="name" updates="None" val="text_3" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
