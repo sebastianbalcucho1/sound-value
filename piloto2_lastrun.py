@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.2.5),
-    on febrero 17, 2021, at 12:53
+    on febrero 17, 2021, at 13:35
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -37,7 +37,7 @@ os.chdir(_thisDir)
 # Store info about the experiment session
 psychopyVersion = '2020.2.5'
 expName = 'piloto'  # from the Builder filename that created this script
-expInfo = {'nombre': ''}
+expInfo = {'cedula': ''}
 dlg = gui.DlgFromDict(dictionary=expInfo, sort_keys=False, title=expName)
 if dlg.OK == False:
     core.quit()  # user pressed cancel
@@ -46,12 +46,12 @@ expInfo['expName'] = expName
 expInfo['psychopyVersion'] = psychopyVersion
 
 # Data file name stem = absolute path + name; later add .psyexp, .csv, .log, etc
-filename = _thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['nombre'], expName, expInfo['date'])
+filename = _thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['cedula'], expName, expInfo['date'])
 
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='C:\\Users\\LENOVO\\OneDrive\\Desktop\\sonico-master\\piloto1_lastrun.py',
+    originPath='C:\\Users\\LENOVO\\OneDrive\\Desktop\\sonico-master\\piloto2_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -93,8 +93,8 @@ boton_intro = visual.Polygon(
     win=win, name='boton_intro',
     edges=100, size=(0.2, 0.2),
     ori=0, pos=(0.7, -0.4),
-    lineWidth=1, lineColor=[1,1,1], lineColorSpace='rgb',
-    fillColor=[202,0,0], fillColorSpace='rgb',
+    lineWidth=1, lineColor=[1.0,-1,-1], lineColorSpace='rgb',
+    fillColor=[1.0,-1,-1], fillColorSpace='rgb',
     opacity=1, depth=-1.0, interpolate=True)
 mouse_intro = event.Mouse(win=win)
 x, y = [None, None]
@@ -113,8 +113,8 @@ boton_intro_2 = visual.Polygon(
     win=win, name='boton_intro_2',
     edges=100, size=(0.2, 0.2),
     ori=0, pos=(0.7, -0.4),
-    lineWidth=1, lineColor=[1,1,1], lineColorSpace='rgb',
-    fillColor=[202,0,0], fillColorSpace='rgb',
+    lineWidth=1, lineColor=[1.0,-1,-1], lineColorSpace='rgb',
+    fillColor=[1.0,-1,-1], fillColorSpace='rgb',
     opacity=1, depth=-1.0, interpolate=True)
 mouse_intro_2 = event.Mouse(win=win)
 x, y = [None, None]
@@ -133,8 +133,8 @@ boton_intro_prueba = visual.Polygon(
     win=win, name='boton_intro_prueba',
     edges=100, size=(0.2, 0.2),
     ori=0, pos=(0.7, -0.4),
-    lineWidth=1, lineColor=[1,1,1], lineColorSpace='rgb',
-    fillColor=[202,0,0], fillColorSpace='rgb',
+    lineWidth=1, lineColor=[1.0,-1,-1], lineColorSpace='rgb',
+    fillColor=[1.0,-1,-1], fillColorSpace='rgb',
     opacity=1, depth=-1.0, interpolate=True)
 mouse_intro_prueba = event.Mouse(win=win)
 x, y = [None, None]
@@ -193,8 +193,8 @@ boton_intro_exp = visual.Polygon(
     win=win, name='boton_intro_exp',
     edges=100, size=(0.2, 0.2),
     ori=0, pos=(0.7, -0.4),
-    lineWidth=1, lineColor=[1,1,1], lineColorSpace='rgb',
-    fillColor=[202,0,0], fillColorSpace='rgb',
+    lineWidth=1, lineColor=[1.0,-1,-1], lineColorSpace='rgb',
+    fillColor=[1.0,-1,-1], fillColorSpace='rgb',
     opacity=1, depth=-1.0, interpolate=True)
 mouse_intro_exp = event.Mouse(win=win)
 x, y = [None, None]
@@ -213,8 +213,8 @@ boton_subasta1 = visual.Polygon(
     win=win, name='boton_subasta1',
     edges=100, size=(0.2, 0.2),
     ori=0, pos=(0.7, -0.4),
-    lineWidth=1, lineColor=[1,1,1], lineColorSpace='rgb',
-    fillColor=[202,0,0], fillColorSpace='rgb',
+    lineWidth=1, lineColor=[1.0,-1,-1], lineColorSpace='rgb',
+    fillColor=[1.0,-1,-1], fillColorSpace='rgb',
     opacity=1, depth=-1.0, interpolate=True)
 mouse_subasta1 = event.Mouse(win=win)
 x, y = [None, None]
@@ -233,8 +233,8 @@ boton_subasta2 = visual.Polygon(
     win=win, name='boton_subasta2',
     edges=100, size=(0.2, 0.2),
     ori=0, pos=(0.7, -0.4),
-    lineWidth=1, lineColor=[1,1,1], lineColorSpace='rgb',
-    fillColor=[202,0,0], fillColorSpace='rgb',
+    lineWidth=1, lineColor=[1.0,-1,-1], lineColorSpace='rgb',
+    fillColor=[1.0,-1,-1], fillColorSpace='rgb',
     opacity=1, depth=-1.0, interpolate=True)
 mouse_subasta2 = event.Mouse(win=win)
 x, y = [None, None]
@@ -242,6 +242,23 @@ mouse_subasta2.mouseClock = core.Clock()
 
 # Initialize components for Routine "experimento"
 experimentoClock = core.Clock()
+sonido_exp = sound.Sound('A', secs=-1, stereo=True, hamming=True,
+    name='sonido_exp')
+sonido_exp.setVolume(1.0)
+image_exp = visual.ImageStim(
+    win=win,
+    name='image_exp', 
+    image='sin', mask=None,
+    ori=0, pos=(0, 0.2), size=(0.5, 0.5),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-1.0)
+slider_exp = visual.Slider(win=win, name='slider_exp',
+    size=(1.0, 0.05), pos=(0, -0.3), units=None,
+    labels=("0","1000","2000","3000","4000","5000"), ticks=(1, 2, 3, 4, 5, 6),
+    granularity=0, style=['whiteOnBlack'],
+    color='DimGrey', font='HelveticaBold',
+    flip=False, depth=-2)
 nuestro_slider=[]
 image_slider=[]
 
@@ -259,8 +276,8 @@ boton_pago1_2 = visual.Polygon(
     win=win, name='boton_pago1_2',
     edges=100, size=(0.2, 0.2),
     ori=0, pos=(0.7, -0.4),
-    lineWidth=1, lineColor=[1,1,1], lineColorSpace='rgb',
-    fillColor=[202,0,0], fillColorSpace='rgb',
+    lineWidth=1, lineColor=[1.0,-1,-1], lineColorSpace='rgb',
+    fillColor=[1.0,-1,-1], fillColorSpace='rgb',
     opacity=1, depth=-1.0, interpolate=True)
 mouse_pago1_2 = event.Mouse(win=win)
 x, y = [None, None]
@@ -279,8 +296,8 @@ boton_pago1 = visual.Polygon(
     win=win, name='boton_pago1',
     edges=100, size=(0.2, 0.2),
     ori=0, pos=(0.7, -0.4),
-    lineWidth=1, lineColor=[1,1,1], lineColorSpace='rgb',
-    fillColor=[202,0,0], fillColorSpace='rgb',
+    lineWidth=1, lineColor=[1.0,-1,-1], lineColorSpace='rgb',
+    fillColor=[1.0,-1,-1], fillColorSpace='rgb',
     opacity=1, depth=-2.0, interpolate=True)
 mouse_pago1 = event.Mouse(win=win)
 x, y = [None, None]
@@ -299,8 +316,8 @@ boton_pago2 = visual.Polygon(
     win=win, name='boton_pago2',
     edges=100, size=(0.2, 0.2),
     ori=0, pos=(0.7, -0.4),
-    lineWidth=1, lineColor=[1,1,1], lineColorSpace='rgb',
-    fillColor=[202,0,0], fillColorSpace='rgb',
+    lineWidth=1, lineColor=[1.0,-1,-1], lineColorSpace='rgb',
+    fillColor=[1.0,-1,-1], fillColorSpace='rgb',
     opacity=1, depth=-2.0, interpolate=True)
 mouse_pago2 = event.Mouse(win=win)
 x, y = [None, None]
@@ -327,8 +344,8 @@ boton_producto = visual.Polygon(
     win=win, name='boton_producto',
     edges=100, size=(0.2, 0.2),
     ori=0, pos=(0.7, -0.4),
-    lineWidth=1, lineColor=[1,1,1], lineColorSpace='rgb',
-    fillColor=[202,0,0], fillColorSpace='rgb',
+    lineWidth=1, lineColor=[1.0,-1,-1], lineColorSpace='rgb',
+    fillColor=[1.0,-1,-1], fillColorSpace='rgb',
     opacity=1, depth=-2.0, interpolate=True)
 mouse_producto = event.Mouse(win=win)
 x, y = [None, None]
@@ -347,8 +364,8 @@ boton_pago3 = visual.Polygon(
     win=win, name='boton_pago3',
     edges=100, size=(0.2, 0.2),
     ori=0, pos=(0.7, -0.4),
-    lineWidth=1, lineColor=[1,1,1], lineColorSpace='rgb',
-    fillColor=[202,0,0], fillColorSpace='rgb',
+    lineWidth=1, lineColor=[1.0,-1,-1], lineColorSpace='rgb',
+    fillColor=[1.0,-1,-1], fillColorSpace='rgb',
     opacity=1, depth=-2.0, interpolate=True)
 mouse_pago3 = event.Mouse(win=win)
 x, y = [None, None]
@@ -367,8 +384,8 @@ boton_intro_encuesta = visual.Polygon(
     win=win, name='boton_intro_encuesta',
     edges=100, size=(0.2, 0.2),
     ori=0, pos=(0.7, -0.4),
-    lineWidth=1, lineColor=[1,1,1], lineColorSpace='rgb',
-    fillColor=[202,0,0], fillColorSpace='rgb',
+    lineWidth=1, lineColor=[1.0,-1,-1], lineColorSpace='rgb',
+    fillColor=[1.0,-1,-1], fillColorSpace='rgb',
     opacity=1, depth=-1.0, interpolate=True)
 mouse_intro_encuesta = event.Mouse(win=win)
 x, y = [None, None]
@@ -1500,9 +1517,14 @@ for thisTrial in trials:
         
         # ------Prepare to start Routine "experimento"-------
         continueRoutine = True
+        routineTimer.add(28.000000)
         # update component parameters for each repeat
+        sonido_exp.setSound(Hertz, secs=3, hamming=True)
+        sonido_exp.setVolume(volumen, log=False)
+        image_exp.setImage(Imagenes)
+        slider_exp.reset()
         # keep track of which components have finished
-        experimentoComponents = []
+        experimentoComponents = [sonido_exp, image_exp, slider_exp]
         for thisComponent in experimentoComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -1517,13 +1539,66 @@ for thisTrial in trials:
         frameN = -1
         
         # -------Run Routine "experimento"-------
-        while continueRoutine:
+        while continueRoutine and routineTimer.getTime() > 0:
             # get current time
             t = experimentoClock.getTime()
             tThisFlip = win.getFutureFlipTime(clock=experimentoClock)
             tThisFlipGlobal = win.getFutureFlipTime(clock=None)
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
+            # start/stop sonido_exp
+            if sonido_exp.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                sonido_exp.frameNStart = frameN  # exact frame index
+                sonido_exp.tStart = t  # local t and not account for scr refresh
+                sonido_exp.tStartRefresh = tThisFlipGlobal  # on global time
+                sonido_exp.play(when=win)  # sync with win flip
+            if sonido_exp.status == STARTED:
+                # is it time to stop? (based on global clock, using actual start)
+                if tThisFlipGlobal > sonido_exp.tStartRefresh + 3-frameTolerance:
+                    # keep track of stop time/frame for later
+                    sonido_exp.tStop = t  # not accounting for scr refresh
+                    sonido_exp.frameNStop = frameN  # exact frame index
+                    win.timeOnFlip(sonido_exp, 'tStopRefresh')  # time at next scr refresh
+                    sonido_exp.stop()
+            
+            # *image_exp* updates
+            if image_exp.status == NOT_STARTED and tThisFlip >= 3-frameTolerance:
+                # keep track of start time/frame for later
+                image_exp.frameNStart = frameN  # exact frame index
+                image_exp.tStart = t  # local t and not account for scr refresh
+                image_exp.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(image_exp, 'tStartRefresh')  # time at next scr refresh
+                image_exp.setAutoDraw(True)
+            if image_exp.status == STARTED:
+                # is it time to stop? (based on global clock, using actual start)
+                if tThisFlipGlobal > image_exp.tStartRefresh + 25-frameTolerance:
+                    # keep track of stop time/frame for later
+                    image_exp.tStop = t  # not accounting for scr refresh
+                    image_exp.frameNStop = frameN  # exact frame index
+                    win.timeOnFlip(image_exp, 'tStopRefresh')  # time at next scr refresh
+                    image_exp.setAutoDraw(False)
+            
+            # *slider_exp* updates
+            if slider_exp.status == NOT_STARTED and tThisFlip >= 3-frameTolerance:
+                # keep track of start time/frame for later
+                slider_exp.frameNStart = frameN  # exact frame index
+                slider_exp.tStart = t  # local t and not account for scr refresh
+                slider_exp.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(slider_exp, 'tStartRefresh')  # time at next scr refresh
+                slider_exp.setAutoDraw(True)
+            if slider_exp.status == STARTED:
+                # is it time to stop? (based on global clock, using actual start)
+                if tThisFlipGlobal > slider_exp.tStartRefresh + 25-frameTolerance:
+                    # keep track of stop time/frame for later
+                    slider_exp.tStop = t  # not accounting for scr refresh
+                    slider_exp.frameNStop = frameN  # exact frame index
+                    win.timeOnFlip(slider_exp, 'tStopRefresh')  # time at next scr refresh
+                    slider_exp.setAutoDraw(False)
+            
+            # Check slider_exp for response to end routine
+            if slider_exp.getRating() is not None and slider_exp.status == STARTED:
+                continueRoutine = False
             
             # check for quit (typically the Esc key)
             if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -1546,13 +1621,20 @@ for thisTrial in trials:
         for thisComponent in experimentoComponents:
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
+        sonido_exp.stop()  # ensure sound has stopped at end of routine
+        trials_2.addData('sonido_exp.started', sonido_exp.tStartRefresh)
+        trials_2.addData('sonido_exp.stopped', sonido_exp.tStopRefresh)
+        trials_2.addData('image_exp.started', image_exp.tStartRefresh)
+        trials_2.addData('image_exp.stopped', image_exp.tStopRefresh)
+        trials_2.addData('slider_exp.response', slider_exp.getRating())
+        trials_2.addData('slider_exp.rt', slider_exp.getRT())
+        trials_2.addData('slider_exp.started', slider_exp.tStartRefresh)
+        trials_2.addData('slider_exp.stopped', slider_exp.tStopRefresh)
         rating=slider_exp.getRating()
         Imagenes1=Imagenes
         nuestro_slider.append(rating)
         image_slider.append(Imagenes1)
         
-        # the Routine "experimento" was not non-slip safe, so reset the non-slip timer
-        routineTimer.reset()
         thisExp.nextEntry()
         
     # completed 1 repeats of 'trials_2'

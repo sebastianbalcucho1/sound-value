@@ -1,0 +1,2 @@
+﻿mensaje_intro.started,mensaje_intro.stopped,boton_intro.started,boton_intro.stopped,mouse_intro.x,mouse_intro.y,mouse_intro.leftButton,mouse_intro.midButton,mouse_intro.rightButton,mouse_intro.clicked_name,mouse_intro.started,mouse_intro.stopped,nombre,date,expName,psychopyVersion,frameRate,
+9.700027300001238,None,9.700027300001238,None,0.7122395833333334,-0.375,1,0,0,boton_intro,0.005265970045002177,None,s,2021_Feb_17_1314,piloto,2020.2.5,59.91500457250611,

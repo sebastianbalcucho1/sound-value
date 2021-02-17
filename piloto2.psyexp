@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" ?>
-<PsychoPy2experiment encoding="utf-8" version="2020.2.3">
+<PsychoPy2experiment encoding="utf-8" version="2020.2.5">
   <Settings>
     <Param name="Audio latency priority" updates="None" val="use prefs" valType="str"/>
     <Param name="Audio lib" updates="None" val="use prefs" valType="str"/>
@@ -7,7 +7,7 @@
     <Param name="Data file delimiter" updates="None" val="auto" valType="str"/>
     <Param name="Data filename" updates="None" val="u'data/%s_%s_%s' % (expInfo['nombre'], expName, expInfo['date'])" valType="code"/>
     <Param name="Enable Escape" updates="None" val="True" valType="bool"/>
-    <Param name="Experiment info" updates="None" val="{'nombre': ''}" valType="code"/>
+    <Param name="Experiment info" updates="None" val="{'cedula': ''}" valType="code"/>
     <Param name="Force stereo" updates="None" val="True" valType="bool"/>
     <Param name="Full-screen window" updates="None" val="True" valType="bool"/>
     <Param name="HTML path" updates="None" val="html" valType="str"/>
@@ -62,10 +62,10 @@
       <PolygonComponent name="boton_subasta2">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="fillColor" updates="constant" val="$[202,0,0]" valType="str"/>
+        <Param name="fillColor" updates="constant" val="$[1.0,-1,-1]" valType="str"/>
         <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="lineColor" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="lineColor" updates="constant" val="$[1.0,-1,-1]" valType="str"/>
         <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="lineWidth" updates="constant" val="1" valType="code"/>
         <Param name="nVertices" updates="constant" val="100" valType="int"/>
@@ -131,10 +131,10 @@
       <PolygonComponent name="boton_subasta1">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="fillColor" updates="constant" val="$[202,0,0]" valType="str"/>
+        <Param name="fillColor" updates="constant" val="$[1.0,-1,-1]" valType="str"/>
         <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="lineColor" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="lineColor" updates="constant" val="$[1.0,-1,-1]" valType="str"/>
         <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="lineWidth" updates="constant" val="1" valType="code"/>
         <Param name="nVertices" updates="constant" val="100" valType="int"/>
@@ -279,10 +279,10 @@
       <PolygonComponent name="boton_pago3">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="fillColor" updates="constant" val="$[202,0,0]" valType="str"/>
+        <Param name="fillColor" updates="constant" val="$[1.0,-1,-1]" valType="str"/>
         <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="lineColor" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="lineColor" updates="constant" val="$[1.0,-1,-1]" valType="str"/>
         <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="lineWidth" updates="constant" val="1" valType="code"/>
         <Param name="nVertices" updates="constant" val="100" valType="int"/>
@@ -365,10 +365,10 @@
       <PolygonComponent name="boton_pago2">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="fillColor" updates="constant" val="$[202,0,0]" valType="str"/>
+        <Param name="fillColor" updates="constant" val="$[1.0,-1,-1]" valType="str"/>
         <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="lineColor" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="lineColor" updates="constant" val="$[1.0,-1,-1]" valType="str"/>
         <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="lineWidth" updates="constant" val="1" valType="code"/>
         <Param name="nVertices" updates="constant" val="100" valType="int"/>
@@ -451,10 +451,10 @@
       <PolygonComponent name="boton_pago1">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="fillColor" updates="constant" val="$[202,0,0]" valType="str"/>
+        <Param name="fillColor" updates="constant" val="$[1.0,-1,-1]" valType="str"/>
         <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="lineColor" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="lineColor" updates="constant" val="$[1.0,-1,-1]" valType="str"/>
         <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="lineWidth" updates="constant" val="1" valType="code"/>
         <Param name="nVertices" updates="constant" val="100" valType="int"/>
@@ -520,10 +520,10 @@
       <PolygonComponent name="boton_intro">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="fillColor" updates="constant" val="$[202,0,0]" valType="str"/>
+        <Param name="fillColor" updates="constant" val="$[1.0,-1,-1]" valType="str"/>
         <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="lineColor" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="lineColor" updates="constant" val="$[1.0,-1,-1]" valType="str"/>
         <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="lineWidth" updates="constant" val="1" valType="code"/>
         <Param name="nVertices" updates="constant" val="100" valType="int"/>
@@ -589,10 +589,10 @@
       <PolygonComponent name="boton_intro_2">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="fillColor" updates="constant" val="$[202,0,0]" valType="str"/>
+        <Param name="fillColor" updates="constant" val="$[1.0,-1,-1]" valType="str"/>
         <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="lineColor" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="lineColor" updates="constant" val="$[1.0,-1,-1]" valType="str"/>
         <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="lineWidth" updates="constant" val="1" valType="code"/>
         <Param name="nVertices" updates="constant" val="100" valType="int"/>
@@ -632,7 +632,7 @@
     </Routine>
     <Routine name="experimento">
       <SoundComponent name="sonido_exp">
-        <Param name="disabled" updates="None" val="True" valType="bool"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="hamming" updates="constant" val="True" valType="bool"/>
         <Param name="name" updates="None" val="sonido_exp" valType="code"/>
@@ -649,7 +649,7 @@
       <ImageComponent name="image_exp">
         <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="True" valType="bool"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
@@ -674,7 +674,7 @@
       <SliderComponent name="slider_exp">
         <Param name="color" updates="constant" val="DimGrey" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="True" valType="bool"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flip" updates="constant" val="False" valType="bool"/>
         <Param name="font" updates="constant" val="HelveticaBold" valType="str"/>
@@ -746,10 +746,10 @@
       <PolygonComponent name="boton_intro_prueba">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="fillColor" updates="constant" val="$[202,0,0]" valType="str"/>
+        <Param name="fillColor" updates="constant" val="$[1.0,-1,-1]" valType="str"/>
         <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="lineColor" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="lineColor" updates="constant" val="$[1.0,-1,-1]" valType="str"/>
         <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="lineWidth" updates="constant" val="1" valType="code"/>
         <Param name="nVertices" updates="constant" val="100" valType="int"/>
@@ -982,10 +982,10 @@
       <PolygonComponent name="boton_producto">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="fillColor" updates="constant" val="$[202,0,0]" valType="str"/>
+        <Param name="fillColor" updates="constant" val="$[1.0,-1,-1]" valType="str"/>
         <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="lineColor" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="lineColor" updates="constant" val="$[1.0,-1,-1]" valType="str"/>
         <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="lineWidth" updates="constant" val="1" valType="code"/>
         <Param name="nVertices" updates="constant" val="100" valType="int"/>
@@ -1051,10 +1051,10 @@
       <PolygonComponent name="boton_intro_exp">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="fillColor" updates="constant" val="$[202,0,0]" valType="str"/>
+        <Param name="fillColor" updates="constant" val="$[1.0,-1,-1]" valType="str"/>
         <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="lineColor" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="lineColor" updates="constant" val="$[1.0,-1,-1]" valType="str"/>
         <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="lineWidth" updates="constant" val="1" valType="code"/>
         <Param name="nVertices" updates="constant" val="100" valType="int"/>
@@ -1139,10 +1139,10 @@
       <PolygonComponent name="boton_intro_encuesta">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="fillColor" updates="constant" val="$[202,0,0]" valType="str"/>
+        <Param name="fillColor" updates="constant" val="$[1.0,-1,-1]" valType="str"/>
         <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="lineColor" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="lineColor" updates="constant" val="$[1.0,-1,-1]" valType="str"/>
         <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="lineWidth" updates="constant" val="1" valType="code"/>
         <Param name="nVertices" updates="constant" val="100" valType="int"/>
@@ -1208,10 +1208,10 @@
       <PolygonComponent name="boton_pago1_2">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="fillColor" updates="constant" val="$[202,0,0]" valType="str"/>
+        <Param name="fillColor" updates="constant" val="$[1.0,-1,-1]" valType="str"/>
         <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="lineColor" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="lineColor" updates="constant" val="$[1.0,-1,-1]" valType="str"/>
         <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="lineWidth" updates="constant" val="1" valType="code"/>
         <Param name="nVertices" updates="constant" val="100" valType="int"/>

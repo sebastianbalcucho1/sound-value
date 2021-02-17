@@ -17,7 +17,7 @@ psychoJS.openWindow({
 
 // store info about the experiment session:
 let expName = 'piloto2';  // from the Builder filename that created this script
-let expInfo = {'nombre': ''};
+let expInfo = {'cedula': ''};
 
 // schedule the experiment:
 psychoJS.schedule(psychoJS.gui.DlgFromDict({
@@ -146,6 +146,9 @@ var text_subasta2;
 var boton_subasta2;
 var mouse_subasta2;
 var experimentoClock;
+var sonido_exp;
+var image_exp;
+var slider_exp;
 var nuestro_slider;
 var image_slider;
 var text_pagoClock;
@@ -193,8 +196,8 @@ function experimentInit() {
     win: psychoJS.window, name: 'boton_intro', 
     edges: 100, size:[0.2, 0.2],
     ori: 0, pos: [0.7, (- 0.4)],
-    lineWidth: 1, lineColor: new util.Color([1, 1, 1]),
-    fillColor: new util.Color([202, 0, 0]),
+    lineWidth: 1, lineColor: new util.Color([1.0, (- 1), (- 1)]),
+    fillColor: new util.Color([1.0, (- 1), (- 1)]),
     opacity: 1, depth: -1, interpolate: true,
   });
   
@@ -219,8 +222,8 @@ function experimentInit() {
     win: psychoJS.window, name: 'boton_intro_2', 
     edges: 100, size:[0.2, 0.2],
     ori: 0, pos: [0.7, (- 0.4)],
-    lineWidth: 1, lineColor: new util.Color([1, 1, 1]),
-    fillColor: new util.Color([202, 0, 0]),
+    lineWidth: 1, lineColor: new util.Color([1.0, (- 1), (- 1)]),
+    fillColor: new util.Color([1.0, (- 1), (- 1)]),
     opacity: 1, depth: -1, interpolate: true,
   });
   
@@ -245,8 +248,8 @@ function experimentInit() {
     win: psychoJS.window, name: 'boton_intro_prueba', 
     edges: 100, size:[0.2, 0.2],
     ori: 0, pos: [0.7, (- 0.4)],
-    lineWidth: 1, lineColor: new util.Color([1, 1, 1]),
-    fillColor: new util.Color([202, 0, 0]),
+    lineWidth: 1, lineColor: new util.Color([1.0, (- 1), (- 1)]),
+    fillColor: new util.Color([1.0, (- 1), (- 1)]),
     opacity: 1, depth: -1, interpolate: true,
   });
   
@@ -325,8 +328,8 @@ function experimentInit() {
     win: psychoJS.window, name: 'boton_intro_exp', 
     edges: 100, size:[0.2, 0.2],
     ori: 0, pos: [0.7, (- 0.4)],
-    lineWidth: 1, lineColor: new util.Color([1, 1, 1]),
-    fillColor: new util.Color([202, 0, 0]),
+    lineWidth: 1, lineColor: new util.Color([1.0, (- 1), (- 1)]),
+    fillColor: new util.Color([1.0, (- 1), (- 1)]),
     opacity: 1, depth: -1, interpolate: true,
   });
   
@@ -351,8 +354,8 @@ function experimentInit() {
     win: psychoJS.window, name: 'boton_subasta1', 
     edges: 100, size:[0.2, 0.2],
     ori: 0, pos: [0.7, (- 0.4)],
-    lineWidth: 1, lineColor: new util.Color([1, 1, 1]),
-    fillColor: new util.Color([202, 0, 0]),
+    lineWidth: 1, lineColor: new util.Color([1.0, (- 1), (- 1)]),
+    fillColor: new util.Color([1.0, (- 1), (- 1)]),
     opacity: 1, depth: -1, interpolate: true,
   });
   
@@ -377,8 +380,8 @@ function experimentInit() {
     win: psychoJS.window, name: 'boton_subasta2', 
     edges: 100, size:[0.2, 0.2],
     ori: 0, pos: [0.7, (- 0.4)],
-    lineWidth: 1, lineColor: new util.Color([1, 1, 1]),
-    fillColor: new util.Color([202, 0, 0]),
+    lineWidth: 1, lineColor: new util.Color([1.0, (- 1), (- 1)]),
+    fillColor: new util.Color([1.0, (- 1), (- 1)]),
     opacity: 1, depth: -1, interpolate: true,
   });
   
@@ -388,6 +391,31 @@ function experimentInit() {
   mouse_subasta2.mouseClock = new util.Clock();
   // Initialize components for Routine "experimento"
   experimentoClock = new util.Clock();
+  sonido_exp = new sound.Sound({
+    win: psychoJS.window,
+    value: 'A',
+    secs: (- 1),
+    });
+  sonido_exp.setVolume(1.0);
+  image_exp = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'image_exp', units : undefined, 
+    image : undefined, mask : undefined,
+    ori : 0, pos : [0, 0.2], size : [0.5, 0.5],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 128, interpolate : true, depth : -1.0 
+  });
+  slider_exp = new visual.Slider({
+    win: psychoJS.window, name: 'slider_exp',
+    size: [1.0, 0.05], pos: [0, (- 0.3)], units: 'height',
+    labels: ["0", "1000", "2000", "3000", "4000", "5000"], ticks: [1, 2, 3, 4, 5, 6],
+    granularity: 0, style: [visual.Slider.Style.WHITE_ON_BLACK],
+    color: new util.Color('DimGrey'), 
+    fontFamily: 'HelveticaBold', bold: true, italic: false, depth: -2, 
+    flip: false,
+  });
+  
   nuestro_slider = [];
   image_slider = [];
   
@@ -408,8 +436,8 @@ function experimentInit() {
     win: psychoJS.window, name: 'boton_pago1_2', 
     edges: 100, size:[0.2, 0.2],
     ori: 0, pos: [0.7, (- 0.4)],
-    lineWidth: 1, lineColor: new util.Color([1, 1, 1]),
-    fillColor: new util.Color([202, 0, 0]),
+    lineWidth: 1, lineColor: new util.Color([1.0, (- 1), (- 1)]),
+    fillColor: new util.Color([1.0, (- 1), (- 1)]),
     opacity: 1, depth: -1, interpolate: true,
   });
   
@@ -434,8 +462,8 @@ function experimentInit() {
     win: psychoJS.window, name: 'boton_pago1', 
     edges: 100, size:[0.2, 0.2],
     ori: 0, pos: [0.7, (- 0.4)],
-    lineWidth: 1, lineColor: new util.Color([1, 1, 1]),
-    fillColor: new util.Color([202, 0, 0]),
+    lineWidth: 1, lineColor: new util.Color([1.0, (- 1), (- 1)]),
+    fillColor: new util.Color([1.0, (- 1), (- 1)]),
     opacity: 1, depth: -2, interpolate: true,
   });
   
@@ -460,8 +488,8 @@ function experimentInit() {
     win: psychoJS.window, name: 'boton_pago2', 
     edges: 100, size:[0.2, 0.2],
     ori: 0, pos: [0.7, (- 0.4)],
-    lineWidth: 1, lineColor: new util.Color([1, 1, 1]),
-    fillColor: new util.Color([202, 0, 0]),
+    lineWidth: 1, lineColor: new util.Color([1.0, (- 1), (- 1)]),
+    fillColor: new util.Color([1.0, (- 1), (- 1)]),
     opacity: 1, depth: -2, interpolate: true,
   });
   
@@ -495,8 +523,8 @@ function experimentInit() {
     win: psychoJS.window, name: 'boton_producto', 
     edges: 100, size:[0.2, 0.2],
     ori: 0, pos: [0.7, (- 0.4)],
-    lineWidth: 1, lineColor: new util.Color([1, 1, 1]),
-    fillColor: new util.Color([202, 0, 0]),
+    lineWidth: 1, lineColor: new util.Color([1.0, (- 1), (- 1)]),
+    fillColor: new util.Color([1.0, (- 1), (- 1)]),
     opacity: 1, depth: -2, interpolate: true,
   });
   
@@ -521,8 +549,8 @@ function experimentInit() {
     win: psychoJS.window, name: 'boton_pago3', 
     edges: 100, size:[0.2, 0.2],
     ori: 0, pos: [0.7, (- 0.4)],
-    lineWidth: 1, lineColor: new util.Color([1, 1, 1]),
-    fillColor: new util.Color([202, 0, 0]),
+    lineWidth: 1, lineColor: new util.Color([1.0, (- 1), (- 1)]),
+    fillColor: new util.Color([1.0, (- 1), (- 1)]),
     opacity: 1, depth: -2, interpolate: true,
   });
   
@@ -547,8 +575,8 @@ function experimentInit() {
     win: psychoJS.window, name: 'boton_intro_encuesta', 
     edges: 100, size:[0.2, 0.2],
     ori: 0, pos: [0.7, (- 0.4)],
-    lineWidth: 1, lineColor: new util.Color([1, 1, 1]),
-    fillColor: new util.Color([202, 0, 0]),
+    lineWidth: 1, lineColor: new util.Color([1.0, (- 1), (- 1)]),
+    fillColor: new util.Color([1.0, (- 1), (- 1)]),
     opacity: 1, depth: -1, interpolate: true,
   });
   
@@ -1811,9 +1839,22 @@ function experimentoRoutineBegin(snapshot) {
     t = 0;
     experimentoClock.reset(); // clock
     frameN = -1;
+    routineTimer.add(28.000000);
     // update component parameters for each repeat
+    sonido_exp = new sound.Sound({
+    win: psychoJS.window,
+    value: Hertz,
+    secs: 3,
+    });
+    sonido_exp.secs=3;
+    sonido_exp.setVolume(volumen);
+    image_exp.setImage(Imagenes);
+    slider_exp.reset()
     // keep track of which components have finished
     experimentoComponents = [];
+    experimentoComponents.push(sonido_exp);
+    experimentoComponents.push(image_exp);
+    experimentoComponents.push(slider_exp);
     
     experimentoComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent)
@@ -1835,6 +1876,53 @@ function experimentoRoutineEachFrame(snapshot) {
     t = experimentoClock.getTime();
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
+    // start/stop sonido_exp
+    if (t >= 0.0 && sonido_exp.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      sonido_exp.tStart = t;  // (not accounting for frame time here)
+      sonido_exp.frameNStart = frameN;  // exact frame index
+      
+      psychoJS.window.callOnFlip(function(){ sonido_exp.play(); });  // screen flip
+      sonido_exp.status = PsychoJS.Status.STARTED;
+    }
+    frameRemains = 0.0 + 3 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if ((sonido_exp.status === PsychoJS.Status.STARTED || sonido_exp.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+      if (3 > 0.5) {  sonido_exp.stop();  // stop the sound (if longer than duration)
+        sonido_exp.status = PsychoJS.Status.FINISHED;
+      }
+    }
+    
+    // *image_exp* updates
+    if (t >= 3 && image_exp.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      image_exp.tStart = t;  // (not accounting for frame time here)
+      image_exp.frameNStart = frameN;  // exact frame index
+      
+      image_exp.setAutoDraw(true);
+    }
+
+    frameRemains = 3 + 25 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if ((image_exp.status === PsychoJS.Status.STARTED || image_exp.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+      image_exp.setAutoDraw(false);
+    }
+    
+    // *slider_exp* updates
+    if (t >= 3 && slider_exp.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      slider_exp.tStart = t;  // (not accounting for frame time here)
+      slider_exp.frameNStart = frameN;  // exact frame index
+      
+      slider_exp.setAutoDraw(true);
+    }
+
+    frameRemains = 3 + 25 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if ((slider_exp.status === PsychoJS.Status.STARTED || slider_exp.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+      slider_exp.setAutoDraw(false);
+    }
+    
+    // Check slider_exp for response to end routine
+    if (slider_exp.getRating() !== undefined && slider_exp.status === PsychoJS.Status.STARTED) {
+      continueRoutine = false; }
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
       return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
@@ -1853,7 +1941,7 @@ function experimentoRoutineEachFrame(snapshot) {
     });
     
     // refresh the screen if continuing
-    if (continueRoutine) {
+    if (continueRoutine && routineTimer.getTime() > 0) {
       return Scheduler.Event.FLIP_REPEAT;
     } else {
       return Scheduler.Event.NEXT;
@@ -1872,14 +1960,14 @@ function experimentoRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     });
+    sonido_exp.stop();  // ensure sound has stopped at end of routine
+    psychoJS.experiment.addData('slider_exp.response', slider_exp.getRating());
+    psychoJS.experiment.addData('slider_exp.rt', slider_exp.getRT());
     rating = slider_exp.getRating();
     Imagenes1 = Imagenes;
     nuestro_slider.push(rating);
     image_slider.push(Imagenes1);
     
-    
-    // the Routine "experimento" was not non-slip safe, so reset the non-slip timer
-    routineTimer.reset();
     
     return Scheduler.Event.NEXT;
   };
