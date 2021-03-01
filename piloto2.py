@@ -103,7 +103,7 @@ mouse_intro.mouseClock = core.Clock()
 # Initialize components for Routine "intro_2"
 intro_2Clock = core.Clock()
 mensaje_intro_2 = visual.TextStim(win=win, name='mensaje_intro_2',
-    text='A continuación, usted participará en un juego de diferentes subastas.\nEste juego dispondrá de múltiples subastas por diferentes productos, donde deberá indicar la suma de dinero que está dispuesto a pagar por ellos. \n• En cada subasta, usted será expuesto a un sonido durante 5 segundos mientras observa una pantalla gris. \n• Al cabo de este tiempo, se le mostrará una pantalla donde en la parte superior habrá un producto alimenticio y en la parte inferior una barra deslizadora que va desde cero hasta 5 mil pesos colombianos. \n• Para responder, usted debe mover el cursor sobre la barra hasta el valor deseado y hacer click. \n• Luego de esto, el sistema seguirá automáticamente a la siguiente ronda donde se repetirá el proceso con un bien distinto. ',
+    text='A continuación, usted participará en varias subastas por diferentes productos, donde deberá indicar la suma de dinero que está dispuesto a pagar por ellos.\n• Antes de cada subasta, usted será expuesto a un sonido durante 5 segundos. \n• Al cabo de este tiempo, se le mostrará una pantalla donde habrá un producto alimenticio y una barra deslizadora que va desde cero hasta 5 mil pesos colombianos. \n• Para responder, usted debe mover el cursor sobre la barra hasta el valor deseado y hacer click. \n• Se repetirá el proceso con distintos bienes ',
     font='Arial',
     pos=(0, 0), height=0.03, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -203,7 +203,7 @@ mouse_intro_exp.mouseClock = core.Clock()
 # Initialize components for Routine "subasta1"
 subasta1Clock = core.Clock()
 text_subasta1 = visual.TextStim(win=win, name='text_subasta1',
-    text='Ahora realizará una subasta. \n\nUsted en este momento posee 20.000 pesos\n\nEsta subasta consiste en comparar una de las valoraciones que usted dio por uno de los artículos, escogida de forma aleatoria, con una respuesta generada aleatoriamente por la computadora.\n\n',
+    text='Ahora realizará una subasta. \n\nUsted en este momento posee 20.000 pesos ficticios \n\nEsta subasta consiste en comparar su oferta por una generada aleatoriamente por el computador. \n\n',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
