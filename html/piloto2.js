@@ -221,7 +221,7 @@ function experimentInit() {
   mensaje_intro_2 = new visual.TextStim({
     win: psychoJS.window,
     name: 'mensaje_intro_2',
-    text: 'A continuación, usted participará en varias subastas por diferentes productos, donde deberá indicar la suma de dinero que está dispuesto a pagar por ellos.\n• Antes de cada subasta, usted será expuesto a un sonido durante 5 segundos. \n• Al cabo de este tiempo, se le mostrará una pantalla donde habrá un producto alimenticio y una barra deslizadora que va desde cero hasta 5 mil pesos colombianos. \n• Para responder, usted debe mover el cursor sobre la barra hasta el valor deseado y hacer click. \n• Se repetirá el proceso con distintos bienes ',
+    text: 'A continuación, usted participará en varias subastas por diferentes productos, donde deberá indicar la suma de dinero que está dispuesto a pagar por algún producto que se comerá inmediatamente despues de recibirlo.\n• Antes de cada subasta, usted será expuesto a un sonido durante 5 segundos. \n• Al cabo de este tiempo, se le mostrará una pantalla donde habrá un producto alimenticio y una barra deslizadora que va desde cero hasta 5 mil pesos colombianos. \n• Para responder, usted debe mover el cursor sobre la barra hasta el valor deseado y hacer click. \n• Se repetirá el proceso con distintos bienes ',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.03,  wrapWidth: undefined, ori: 0,
