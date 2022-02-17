@@ -1201,7 +1201,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="120" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="set every repeat" val="El precio del bien seleccionado aleatoriamente, el precio que usted seleccionó, el producto seleccionado aleatoriamente y el pago que recivirá despues de descuentos se encuentra a continuación" valType="extendedStr"/>
+        <Param name="text" updates="set every repeat" val="El precio del bien seleccionado aleatoriamente, el precio que usted seleccionó, el producto seleccionado aleatoriamente y el pago que recibirá despues de descuentos se encuentra a continuación" valType="extendedStr"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
