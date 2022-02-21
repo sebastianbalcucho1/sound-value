@@ -2617,7 +2617,11 @@ function pago3RoutineBegin(snapshot) {
     routineTimer.add(120.000000);
     // update component parameters for each repeat
     diferencia = (20000 - precio_sujeto);
-    if ((precio_sujeto > precio_aleatorio)) {
+    console.log("Precios en consola");
+    console.log(precio_sujeto);
+    console.log(precio_aleatorio);
+    console.log(precio_sujeto > precio_aleatorio)
+    if (precio_sujeto > precio_aleatorio) {
         mensaje1 = `Usted ha ganado ${diferencia} pesos y el producto por el cual subastó`;
     } else {
         mensaje1 = `Usted ha ganado 20.000 pesos`;
