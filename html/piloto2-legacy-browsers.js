@@ -1982,7 +1982,7 @@ function text_pagoRoutineBegin(snapshot) {
     frameN = -1;
     routineTimer.add(120.000000);
     // update component parameters for each repeat
-    text_3.setText('El precio del bien seleccionado aleatoriamente, el precio que usted seleccionó, el producto seleccionado aleatoriamente y el pago que recivirá despues de descuentos se encuentra a continuación');
+    text_3.setText('El precio del bien seleccionado aleatoriamente, el precio que usted seleccionó, el producto seleccionado aleatoriamente y el pago que recibirá despues de descuentos se encuentra a continuación');
     // setup some python lists for storing info about the mouse_pago1_2
     mouse_pago1_2.clicked_name = [];
     gotValidClick = false; // until a click is received
@@ -2620,7 +2620,7 @@ function pago3RoutineBegin(snapshot) {
     routineTimer.add(120.000000);
     // update component parameters for each repeat
     diferencia = (20000 - precio_sujeto);
-    if ((precio_sujeto > precio_aleatorio)) {
+    if ((Number.parseInt(precio_sujeto) > Number.parseInt(precio_aleatorio))) {
         mensaje1 = `Usted ha ganado ${diferencia} pesos y el producto por el cuál subastó`;
     } else {
         mensaje1 = `Usted ha ganado 20.000 pesos`;
