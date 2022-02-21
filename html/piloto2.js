@@ -2135,7 +2135,6 @@ function pago1RoutineBegin(snapshot) {
     frameN = -1;
     routineTimer.add(120.000000);
     // update component parameters for each repeat
-    var mensaje_precio_aleatorio, n_precio_aleatorio, precio_aleatorio;
     n_precio_aleatorio = Math.random();
     precio_aleatorio = Number.parseInt(Math.round((n_precio_aleatorio * 5000)));
     mensaje_precio_aleatorio = `El número generado aleatoriamente por la computadora es ${precio_aleatorio}.`;
@@ -2294,7 +2293,6 @@ function pago2RoutineBegin(snapshot) {
     frameN = -1;
     routineTimer.add(120.000000);
     // update component parameters for each repeat
-    var mensaje_precio_sujeto, n_precio_sujeto, precio_sujeto, precio_sujeto_pos;
     n_precio_sujeto = Math.random();
     precio_sujeto_pos = Math.round((n_precio_sujeto * nuestro_slider.length));
     precio_sujeto = Number.parseInt(Math.round((nuestro_slider[precio_sujeto_pos] * 1000))-1000);
