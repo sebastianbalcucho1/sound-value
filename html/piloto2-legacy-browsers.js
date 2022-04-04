@@ -341,7 +341,7 @@ function experimentInit() {
   text_subasta1 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_subasta1',
-    text: 'Ahora realizará una subasta. \n\nUsted en este momento posee 20.000 pesos ficticios \n\nEsta subasta consiste en comparar su oferta por una generada aleatoriamente por el computador. \n\n',
+    text: 'Ahora realizará una subasta. \n\nUsted en este momento posee 15.000 pesos  \n\nEsta subasta consiste en comparar su oferta por una generada aleatoriamente por el computador. \n\n',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -367,7 +367,7 @@ function experimentInit() {
   text_subasta2 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_subasta2',
-    text: 'Si la valoración que usted dio es MAYOR a la respuesta que genere la computadora, se le entregará el producto por el cuál realizó esa valoración y se le entregará el resultado de la resta de los 20.000 pesos y el valor del producto.\n\nSi la valoración que usted dio es MENOR a la respuesta que genere la computadora, se le entregarán los 20.000 pesos que tenía inicialmente.',
+    text: 'Si la valoración que usted dio es MAYOR a la respuesta que genere la computadora, se le entregará el producto por el cuál realizó esa valoración y se le entregará el resultado de la resta de los 15.000 pesos y el valor del producto.\n\nSi la valoración que usted dio es MENOR a la respuesta que genere la computadora, se le entregarán los 15.000 pesos que tenía inicialmente.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -2619,7 +2619,7 @@ function pago3RoutineBegin(snapshot) {
     frameN = -1;
     routineTimer.add(120.000000);
     // update component parameters for each repeat
-    diferencia = (20000 - precio_sujeto);
+    diferencia = (15000 - precio_sujeto);
     if ((Number.parseInt(precio_sujeto) > Number.parseInt(precio_aleatorio))) {
         mensaje1 = `Usted ha ganado ${diferencia} pesos y el producto por el cuál subastó`;
     } else {
