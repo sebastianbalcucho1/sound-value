@@ -1,6 +1,0 @@
-Traceback (most recent call last):
-  File "C:\Program Files\PsychoPy3\lib\site-packages\psychopy\app\builder\builder.py", line 1185, in compileScript
-    if self.app.prefs.general['useRunner']:
-  File "C:\Program Files\PsychoPy3\lib\site-packages\configobj.py", line 554, in __getitem__
-    val = dict.__getitem__(self, key)
-KeyError: 'useRunner'
