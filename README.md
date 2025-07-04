@@ -1,2 +1,2 @@
-# sonico
-Repositorio de datos y codigos para el proyecto de WTP y sonido
+# Sonido
+Repository for Willingness To Pay (WTP) and sound project data and code
